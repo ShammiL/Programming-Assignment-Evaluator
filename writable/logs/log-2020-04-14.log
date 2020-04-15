@@ -1,0 +1,148 @@
+CRITICAL - 2020-04-14 14:25:10 --> Invalid file: {0}
+#0 C:\xampp\htdocs\OnlineCodeEvaluator\system\View\View.php(224): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Teachers.php')
+#1 C:\xampp\htdocs\OnlineCodeEvaluator\system\Common.php(1071): CodeIgniter\View\View->render('Teachers', Array, true)
+#2 C:\xampp\htdocs\OnlineCodeEvaluator\app\Controllers\Admin.php(7): view('Teachers')
+#3 C:\xampp\htdocs\OnlineCodeEvaluator\system\CodeIgniter.php(910): App\Controllers\Admin->index()
+#4 C:\xampp\htdocs\OnlineCodeEvaluator\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#5 C:\xampp\htdocs\OnlineCodeEvaluator\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\OnlineCodeEvaluator\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2020-04-14 14:26:05 --> Invalid file: {0}
+#0 C:\xampp\htdocs\OnlineCodeEvaluator\system\View\View.php(224): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Teachers.php')
+#1 C:\xampp\htdocs\OnlineCodeEvaluator\system\Common.php(1071): CodeIgniter\View\View->render('Teachers', Array, true)
+#2 C:\xampp\htdocs\OnlineCodeEvaluator\app\Controllers\Admin.php(7): view('Teachers')
+#3 C:\xampp\htdocs\OnlineCodeEvaluator\system\CodeIgniter.php(910): App\Controllers\Admin->index()
+#4 C:\xampp\htdocs\OnlineCodeEvaluator\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#5 C:\xampp\htdocs\OnlineCodeEvaluator\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\OnlineCodeEvaluator\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2020-04-14 14:26:12 --> Invalid file: {0}
+#0 C:\xampp\htdocs\OnlineCodeEvaluator\system\View\View.php(224): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Teachers.php')
+#1 C:\xampp\htdocs\OnlineCodeEvaluator\system\Common.php(1071): CodeIgniter\View\View->render('Teachers', Array, true)
+#2 C:\xampp\htdocs\OnlineCodeEvaluator\app\Controllers\Admin.php(7): view('Teachers')
+#3 C:\xampp\htdocs\OnlineCodeEvaluator\system\CodeIgniter.php(910): App\Controllers\Admin->index()
+#4 C:\xampp\htdocs\OnlineCodeEvaluator\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#5 C:\xampp\htdocs\OnlineCodeEvaluator\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\OnlineCodeEvaluator\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2020-04-14 14:28:10 --> include(../components/Header.php): failed to open stream: No such file or directory
+#0 C:\xampp\htdocs\OnlineCodeEvaluator\app\Views\admin\Teachers.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(../comp...', 'C:\\xampp\\htdocs...', 1, Array)
+#1 C:\xampp\htdocs\OnlineCodeEvaluator\app\Views\admin\Teachers.php(1): include()
+#2 C:\xampp\htdocs\OnlineCodeEvaluator\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\OnlineCodeEvaluator\system\Common.php(1071): CodeIgniter\View\View->render('./admin/Teacher...', Array, true)
+#4 C:\xampp\htdocs\OnlineCodeEvaluator\app\Controllers\Home.php(7): view('./admin/Teacher...')
+#5 C:\xampp\htdocs\OnlineCodeEvaluator\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#6 C:\xampp\htdocs\OnlineCodeEvaluator\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\OnlineCodeEvaluator\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\OnlineCodeEvaluator\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-04-14 14:31:48 --> include(../components/Header.php): failed to open stream: No such file or directory
+#0 C:\xampp\htdocs\OnlineCodeEvaluator\app\Views\admin\Teachers.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(../comp...', 'C:\\xampp\\htdocs...', 1, Array)
+#1 C:\xampp\htdocs\OnlineCodeEvaluator\app\Views\admin\Teachers.php(1): include()
+#2 C:\xampp\htdocs\OnlineCodeEvaluator\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\OnlineCodeEvaluator\system\Common.php(1071): CodeIgniter\View\View->render('./admin/Teacher...', Array, true)
+#4 C:\xampp\htdocs\OnlineCodeEvaluator\app\Controllers\Home.php(7): view('./admin/Teacher...')
+#5 C:\xampp\htdocs\OnlineCodeEvaluator\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#6 C:\xampp\htdocs\OnlineCodeEvaluator\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\OnlineCodeEvaluator\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\OnlineCodeEvaluator\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-04-14 14:34:58 --> include(../components/Header.php): failed to open stream: No such file or directory
+#0 C:\xampp\htdocs\OnlineCodeEvaluator\app\Views\admin\Teachers.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(../comp...', 'C:\\xampp\\htdocs...', 1, Array)
+#1 C:\xampp\htdocs\OnlineCodeEvaluator\app\Views\admin\Teachers.php(1): include()
+#2 C:\xampp\htdocs\OnlineCodeEvaluator\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\OnlineCodeEvaluator\system\Common.php(1071): CodeIgniter\View\View->render('admin/Teachers', Array, true)
+#4 C:\xampp\htdocs\OnlineCodeEvaluator\app\Controllers\Home.php(7): view('admin/Teachers')
+#5 C:\xampp\htdocs\OnlineCodeEvaluator\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#6 C:\xampp\htdocs\OnlineCodeEvaluator\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\OnlineCodeEvaluator\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\OnlineCodeEvaluator\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-04-14 14:35:09 --> include(../components/Header.php): failed to open stream: No such file or directory
+#0 C:\xampp\htdocs\OnlineCodeEvaluator\app\Views\admin\Teachers.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(../comp...', 'C:\\xampp\\htdocs...', 1, Array)
+#1 C:\xampp\htdocs\OnlineCodeEvaluator\app\Views\admin\Teachers.php(1): include()
+#2 C:\xampp\htdocs\OnlineCodeEvaluator\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\OnlineCodeEvaluator\system\Common.php(1071): CodeIgniter\View\View->render('/admin/Teachers', Array, true)
+#4 C:\xampp\htdocs\OnlineCodeEvaluator\app\Controllers\Home.php(7): view('/admin/Teachers')
+#5 C:\xampp\htdocs\OnlineCodeEvaluator\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#6 C:\xampp\htdocs\OnlineCodeEvaluator\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\OnlineCodeEvaluator\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\OnlineCodeEvaluator\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-04-14 14:35:11 --> include(../components/Header.php): failed to open stream: No such file or directory
+#0 C:\xampp\htdocs\OnlineCodeEvaluator\app\Views\admin\Teachers.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(../comp...', 'C:\\xampp\\htdocs...', 1, Array)
+#1 C:\xampp\htdocs\OnlineCodeEvaluator\app\Views\admin\Teachers.php(1): include()
+#2 C:\xampp\htdocs\OnlineCodeEvaluator\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\OnlineCodeEvaluator\system\Common.php(1071): CodeIgniter\View\View->render('/admin/Teachers', Array, true)
+#4 C:\xampp\htdocs\OnlineCodeEvaluator\app\Controllers\Home.php(7): view('/admin/Teachers')
+#5 C:\xampp\htdocs\OnlineCodeEvaluator\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#6 C:\xampp\htdocs\OnlineCodeEvaluator\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\OnlineCodeEvaluator\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\OnlineCodeEvaluator\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-04-14 14:40:40 --> include(../components/Header.php): failed to open stream: No such file or directory
+#0 C:\xampp\htdocs\OnlineCodeEvaluator\app\Views\admin\Teachers.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(../comp...', 'C:\\xampp\\htdocs...', 1, Array)
+#1 C:\xampp\htdocs\OnlineCodeEvaluator\app\Views\admin\Teachers.php(1): include()
+#2 C:\xampp\htdocs\OnlineCodeEvaluator\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\OnlineCodeEvaluator\system\Common.php(1071): CodeIgniter\View\View->render('/admin/Teachers', Array, true)
+#4 C:\xampp\htdocs\OnlineCodeEvaluator\app\Controllers\Home.php(7): view('/admin/Teachers')
+#5 C:\xampp\htdocs\OnlineCodeEvaluator\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#6 C:\xampp\htdocs\OnlineCodeEvaluator\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\OnlineCodeEvaluator\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\OnlineCodeEvaluator\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-04-14 14:41:02 --> include(../components/Header.php): failed to open stream: No such file or directory
+#0 C:\xampp\htdocs\OnlineCodeEvaluator\app\Views\admin\Teachers.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(../comp...', 'C:\\xampp\\htdocs...', 1, Array)
+#1 C:\xampp\htdocs\OnlineCodeEvaluator\app\Views\admin\Teachers.php(1): include()
+#2 C:\xampp\htdocs\OnlineCodeEvaluator\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\OnlineCodeEvaluator\system\Common.php(1071): CodeIgniter\View\View->render('admin/Teachers', Array, true)
+#4 C:\xampp\htdocs\OnlineCodeEvaluator\app\Controllers\Admin.php(7): view('admin/Teachers')
+#5 C:\xampp\htdocs\OnlineCodeEvaluator\system\CodeIgniter.php(910): App\Controllers\Admin->index()
+#6 C:\xampp\htdocs\OnlineCodeEvaluator\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 C:\xampp\htdocs\OnlineCodeEvaluator\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\OnlineCodeEvaluator\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-04-14 14:52:04 --> include(./components/Header.php): failed to open stream: No such file or directory
+#0 C:\xampp\htdocs\OnlineCodeEvaluator\app\Views\Teachers.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(./compo...', 'C:\\xampp\\htdocs...', 1, Array)
+#1 C:\xampp\htdocs\OnlineCodeEvaluator\app\Views\Teachers.php(1): include()
+#2 C:\xampp\htdocs\OnlineCodeEvaluator\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\OnlineCodeEvaluator\system\Common.php(1071): CodeIgniter\View\View->render('Teachers', Array, true)
+#4 C:\xampp\htdocs\OnlineCodeEvaluator\app\Controllers\Admin.php(7): view('Teachers')
+#5 C:\xampp\htdocs\OnlineCodeEvaluator\system\CodeIgniter.php(910): App\Controllers\Admin->index()
+#6 C:\xampp\htdocs\OnlineCodeEvaluator\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 C:\xampp\htdocs\OnlineCodeEvaluator\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\OnlineCodeEvaluator\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-04-14 14:53:02 --> include(../components/Header.php): failed to open stream: No such file or directory
+#0 C:\xampp\htdocs\OnlineCodeEvaluator\app\Views\admin\Teachers.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(../comp...', 'C:\\xampp\\htdocs...', 1, Array)
+#1 C:\xampp\htdocs\OnlineCodeEvaluator\app\Views\admin\Teachers.php(1): include()
+#2 C:\xampp\htdocs\OnlineCodeEvaluator\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\OnlineCodeEvaluator\system\Common.php(1071): CodeIgniter\View\View->render('Admin/Teachers', Array, true)
+#4 C:\xampp\htdocs\OnlineCodeEvaluator\app\Controllers\Admin.php(7): view('Admin/Teachers')
+#5 C:\xampp\htdocs\OnlineCodeEvaluator\system\CodeIgniter.php(910): App\Controllers\Admin->index()
+#6 C:\xampp\htdocs\OnlineCodeEvaluator\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 C:\xampp\htdocs\OnlineCodeEvaluator\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\OnlineCodeEvaluator\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-04-14 16:35:19 --> include(../components/Header.php): failed to open stream: No such file or directory
+#0 C:\xampp\htdocs\OnlineCodeEvaluator\app\Views\admin\Teachers.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(../comp...', 'C:\\xampp\\htdocs...', 1, Array)
+#1 C:\xampp\htdocs\OnlineCodeEvaluator\app\Views\admin\Teachers.php(1): include()
+#2 C:\xampp\htdocs\OnlineCodeEvaluator\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\OnlineCodeEvaluator\system\Common.php(1071): CodeIgniter\View\View->render('Admin/Teachers', Array, true)
+#4 C:\xampp\htdocs\OnlineCodeEvaluator\app\Controllers\Admin.php(7): view('Admin/Teachers')
+#5 C:\xampp\htdocs\OnlineCodeEvaluator\system\CodeIgniter.php(910): App\Controllers\Admin->index()
+#6 C:\xampp\htdocs\OnlineCodeEvaluator\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 C:\xampp\htdocs\OnlineCodeEvaluator\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\OnlineCodeEvaluator\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-04-14 16:35:25 --> include(../components/Header.php): failed to open stream: No such file or directory
+#0 C:\xampp\htdocs\OnlineCodeEvaluator\app\Views\admin\Teachers.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(../comp...', 'C:\\xampp\\htdocs...', 1, Array)
+#1 C:\xampp\htdocs\OnlineCodeEvaluator\app\Views\admin\Teachers.php(1): include()
+#2 C:\xampp\htdocs\OnlineCodeEvaluator\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\OnlineCodeEvaluator\system\Common.php(1071): CodeIgniter\View\View->render('Admin/Teachers', Array, true)
+#4 C:\xampp\htdocs\OnlineCodeEvaluator\app\Controllers\Admin.php(7): view('Admin/Teachers')
+#5 C:\xampp\htdocs\OnlineCodeEvaluator\system\CodeIgniter.php(910): App\Controllers\Admin->index()
+#6 C:\xampp\htdocs\OnlineCodeEvaluator\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 C:\xampp\htdocs\OnlineCodeEvaluator\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\OnlineCodeEvaluator\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}

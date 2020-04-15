@@ -1,0 +1,60 @@
+CRITICAL - 2020-04-15 05:57:13 --> Invalid file: {0}
+#0 C:\xampp\htdocs\OnlineCodeEvaluator\system\View\View.php(224): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Admin/Login.php')
+#1 C:\xampp\htdocs\OnlineCodeEvaluator\system\Common.php(1071): CodeIgniter\View\View->render('Admin/Login', Array, true)
+#2 C:\xampp\htdocs\OnlineCodeEvaluator\app\Controllers\Admin.php(7): view('Admin/Login')
+#3 C:\xampp\htdocs\OnlineCodeEvaluator\system\CodeIgniter.php(910): App\Controllers\Admin->index()
+#4 C:\xampp\htdocs\OnlineCodeEvaluator\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#5 C:\xampp\htdocs\OnlineCodeEvaluator\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\OnlineCodeEvaluator\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2020-04-15 07:42:05 --> Too few arguments to function App\Controllers\Admin::viewTeacher(), 0 passed in C:\xampp\htdocs\OnlineCodeEvaluator\system\CodeIgniter.php on line 910 and exactly 1 expected
+#0 C:\xampp\htdocs\OnlineCodeEvaluator\system\CodeIgniter.php(910): App\Controllers\Admin->viewTeacher()
+#1 C:\xampp\htdocs\OnlineCodeEvaluator\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#2 C:\xampp\htdocs\OnlineCodeEvaluator\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\OnlineCodeEvaluator\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2020-04-15 07:42:45 --> Too few arguments to function App\Controllers\Admin::viewTeacher(), 0 passed in C:\xampp\htdocs\OnlineCodeEvaluator\system\CodeIgniter.php on line 910 and exactly 1 expected
+#0 C:\xampp\htdocs\OnlineCodeEvaluator\system\CodeIgniter.php(910): App\Controllers\Admin->viewTeacher()
+#1 C:\xampp\htdocs\OnlineCodeEvaluator\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#2 C:\xampp\htdocs\OnlineCodeEvaluator\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\OnlineCodeEvaluator\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2020-04-15 07:42:54 --> Too few arguments to function App\Controllers\Admin::viewTeacher(), 0 passed in C:\xampp\htdocs\OnlineCodeEvaluator\system\CodeIgniter.php on line 910 and exactly 1 expected
+#0 C:\xampp\htdocs\OnlineCodeEvaluator\system\CodeIgniter.php(910): App\Controllers\Admin->viewTeacher()
+#1 C:\xampp\htdocs\OnlineCodeEvaluator\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#2 C:\xampp\htdocs\OnlineCodeEvaluator\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\OnlineCodeEvaluator\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2020-04-15 07:43:07 --> Too few arguments to function App\Controllers\Admin::viewTeacher(), 0 passed in C:\xampp\htdocs\OnlineCodeEvaluator\system\CodeIgniter.php on line 910 and exactly 1 expected
+#0 C:\xampp\htdocs\OnlineCodeEvaluator\system\CodeIgniter.php(910): App\Controllers\Admin->viewTeacher()
+#1 C:\xampp\htdocs\OnlineCodeEvaluator\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#2 C:\xampp\htdocs\OnlineCodeEvaluator\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\OnlineCodeEvaluator\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2020-04-15 07:43:09 --> Too few arguments to function App\Controllers\Admin::viewTeacher(), 0 passed in C:\xampp\htdocs\OnlineCodeEvaluator\system\CodeIgniter.php on line 910 and exactly 1 expected
+#0 C:\xampp\htdocs\OnlineCodeEvaluator\system\CodeIgniter.php(910): App\Controllers\Admin->viewTeacher()
+#1 C:\xampp\htdocs\OnlineCodeEvaluator\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#2 C:\xampp\htdocs\OnlineCodeEvaluator\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\OnlineCodeEvaluator\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2020-04-15 07:43:10 --> Too few arguments to function App\Controllers\Admin::viewTeacher(), 0 passed in C:\xampp\htdocs\OnlineCodeEvaluator\system\CodeIgniter.php on line 910 and exactly 1 expected
+#0 C:\xampp\htdocs\OnlineCodeEvaluator\system\CodeIgniter.php(910): App\Controllers\Admin->viewTeacher()
+#1 C:\xampp\htdocs\OnlineCodeEvaluator\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#2 C:\xampp\htdocs\OnlineCodeEvaluator\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\OnlineCodeEvaluator\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2020-04-15 07:43:12 --> Too few arguments to function App\Controllers\Admin::viewTeacher(), 0 passed in C:\xampp\htdocs\OnlineCodeEvaluator\system\CodeIgniter.php on line 910 and exactly 1 expected
+#0 C:\xampp\htdocs\OnlineCodeEvaluator\system\CodeIgniter.php(910): App\Controllers\Admin->viewTeacher()
+#1 C:\xampp\htdocs\OnlineCodeEvaluator\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#2 C:\xampp\htdocs\OnlineCodeEvaluator\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\OnlineCodeEvaluator\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2020-04-15 10:30:03 --> Invalid file: {0}
+#0 C:\xampp\htdocs\OnlineCodeEvaluator\system\View\View.php(224): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Admin/Login.php')
+#1 C:\xampp\htdocs\OnlineCodeEvaluator\system\Common.php(1071): CodeIgniter\View\View->render('Admin/Login', Array, true)
+#2 C:\xampp\htdocs\OnlineCodeEvaluator\app\Controllers\Admin.php(6): view('Admin/Login')
+#3 C:\xampp\htdocs\OnlineCodeEvaluator\system\CodeIgniter.php(910): App\Controllers\Admin->index()
+#4 C:\xampp\htdocs\OnlineCodeEvaluator\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#5 C:\xampp\htdocs\OnlineCodeEvaluator\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\OnlineCodeEvaluator\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
