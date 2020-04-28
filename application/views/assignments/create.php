@@ -1,40 +1,57 @@
+<?php echo validation_errors(); ?>
 
-  <h2>Create Assignment</h2>
-
-  <?php echo validation_errors(); ?>
-  <?php echo form_open_multipart('assignments/create/' . $course); ?>
-  <div class="form-group">
-    <label>Assignment Name</label>
-    <input type="text" class="form-control" name="name" placeholder="Enter name">
-  </div>
-  <div class="form-group">
-    <label>Description</label>
-    <textarea class="form-control" name="description" placeholder="Enter assignment description">
-    </textarea>
-  </div>
-  <div class="form-group">
-    <label >Select language</label>
-    <select class="form-control" name="language">
-    <option value="none">------Select language------</option>
-    <option value="Java">Java</option>
-      <option value="Python">Python</option>
-      <option value="Javascript">Javascript</option>
-      <option value="C++">C++</option>
-    </select>
-  </div>
-  <div>
-  <label for="start">Start date:</label>
-
-<input type="date" name="deadline"
-       value="dd-mm-yyyy"
-       min="19-04-2020">
-  </div>
-
-  <div class="form-group"><label> Upload file</label>
-  <input type="file" name="userfile" size="100">
-  </div>
-
-  </div>
+<div class="container-fluid row">
+	<div class="col-md-2"></div>
+	<div class="col-md-10 body-card" data-aos="fade-right">
+		<div class="card">
+			<div class="card-header">
+				<h3>Create Assignment</h3>
+			</div>
+			<div class="card-body">
+				<?php echo form_open_multipart('assignments/create/' . $course); ?>
+				<div class="row">
+					<div class="col-md-4">
+						<div class="form-group">
+							<label for="title">Title:</label>
+							<input class="form-control" type="text" name="name" id="title" placeholder="Add Title Here..." required>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<label>Documents:</label>
+						<div class="custom-file">
+							<input type="file" class="custom-file-input" name="userfile" id="documents" size="100">
+							<label class="custom-file-label" for="customFile">Choose files</label>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="form-group">
+							<label for="deadline">Deadline:</label>
+							<input type="date" class="form-control" name="deadline" id="deadline" value="dd-mm-yyyy" min="19-04-2020" required>
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="description">Description:</label>
+					<textarea class="form-control" name="description" id="description" placeholder="Add Description Here..."></textarea>
+				</div>
+				<div class="row">
+					<div class="col-md-4">
+						<label for="language">Select Language:</label>
+						<select id="language" class="form-control" name="language">
+							<option selected value="none" disabled>------ Select Language ------</option>
+							<option value="Java">Java</option>
+							<option value="Python">Python 2.7</option>
+							<option value="Python3">Python 3.7</option>
+							<option value="Javascript">Javascript</option>
+							<option value="Cpp">C++</option>
+						</select>
+					</div>
+				</div>
+				<div class="form-group mt-4">
+					<button class="btn btn-primary" type="submit" name="create">Create Assignment</button>
+				</div>
+				</form>
+			</div>
+		</div>
+	</div>
 </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
-</form>
