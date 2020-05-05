@@ -191,11 +191,12 @@ body {
 }
 
 .test-case-input-left {
-	width: 50%;
+	width: 47%;
+	margin-right: 3%;
 }
 
 .test-case-input-right {
-	width: 50%;
+	width: 47%;
 }
 
 #cases {

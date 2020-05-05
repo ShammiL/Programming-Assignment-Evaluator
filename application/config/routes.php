@@ -2,18 +2,26 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 $route['default_controller'] = 'Welcome/index';
-$route['courses'] = 'Courses';
-$route['assignments/view/(:any)'] = 'Assignments/view/$1';
-$route['assignments/create/(:any)'] = 'Assignments/create/$1';
-$route['assignments/edit/(:any)'] = 'Assignments/edit/$1';
-$route['assignments/update'] = 'Assignments/update';
-$route['courses/(:any)'] = 'courses/index/$1';
-$route['students/login'] = 'students/login';
-$route['teachers/login'] = 'teachers/login';
-$route['teachers'] = 'teachers/index';
-$route['teachers/courses/(:any)'] = 'Courses';
-$route['students/(:any)'] = 'students/view/$1';
-$route['submissions/view/(:any)'] = 'submissions/view/$1';
+$route['course'] = 'Courses';
+
+$route['assignment/view/(:any)'] = 'Assignments/view/$1';
+$route['assignment/edit/(:any)'] = 'Assignments/edit/$1';
+$route['assignment/update'] = 'Assignments/update';
+
+$route['course/(:any)'] = 'courses/index/$1';
+
+$route['student/login'] = 'students/login';
+
+$route['teacher'] = 'teachers/index';
+$route['teacher/login'] = 'teachers/login';
+$route['teacher/grade'] = 'teachers/grade';
+$route['teacher/course/(:any)'] = 'Courses/index/$1';
+$route['teacher/assignment/create/(:any)'] = 'Assignments/create/$1';
+
+$route['student/(:any)'] = 'students/view/$1';
+
+$route['submission/view/(:any)'] = 'submissions/view/$1';
+
 $route['compiler'] = 'compiler/index';
 
 

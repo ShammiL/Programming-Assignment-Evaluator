@@ -14,7 +14,7 @@
                                 <div class="col-md-4">
                                     <label for="file-input">Select file to upload :</label>
                                     <div class="custom-file">
-                                        <input type="file" class="custom-file-input" name="userfile">
+                                        <input type="file" class="custom-file-input" name="userfile" required>
                                         <label class="custom-file-label" for="customFile">Choose file</label>
                                     </div>
                                 </div>

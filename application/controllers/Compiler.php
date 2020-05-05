@@ -79,17 +79,27 @@ class Compiler extends CI_Controller {
 
         $submissionResult_context = stream_context_create($submissionResult_options);
 
-        while (true) {
-            $final_result = file_get_contents($submissionResult_url, false, $submissionResult_context);
-            $final_result = json_decode($final_result, true);
+        $start = time();
 
-            if ($final_result['status'] === "SUCCESS") {
-            	$data['message'] = "Executed in ".$final_result['time']." second(s).";
-                break;
-            }
-        }
+		while (true) {
 
-        $data['final_result'] = $final_result;
+			if ( time()-$start < 100) {
+				$final_result = file_get_contents($submissionResult_url, false, $submissionResult_context);
+				$final_result = json_decode($final_result, true);
+
+				if ($final_result['status'] === "SUCCESS") {
+					$data['message'] = "Executed in " . $final_result['time'] . " second(s).";
+					$data['final_result'] = $final_result;
+					break;
+				}
+			}
+			else {
+
+				$data['message'] = "Terminated due to timeout reached.";
+				break;
+
+			}
+		}
         return $data;
 
 	}
@@ -98,38 +108,44 @@ class Compiler extends CI_Controller {
 
 		$this->load->helper('form');
 
-		$test_cases = $this->assignment_model->get_test_cases($id);		
-		$assignment = $this->assignment_model->get_assignment($id);
+		$test_cases = $this->Testcase_model->get_testcases($id);
+		$assignment = $this->Assignment_model->get_one($id);
+		$passed['grade'] = 0;
+
 		$post['lang'] = $assignment['language'];
 
 		if (isset($_FILES['userfile'])) {
 			$code = file_get_contents($_FILES['userfile']['tmp_name']);
-			$passed = 0;
 
 			foreach ($test_cases as $test_case) {
 
+				$no = $test_case['test_case_no'];
+				$passed[$no]['input'] = $test_case['input'];
 				$post['input'] = $test_case['input'];
 				$final_result = $this->compile($post, $code);
 
 				if ( isset($final_result['final_result']['output']) ) {
-
-					// If code is run without any errors and gien the correct output, 2 mark is given.
+					$passed[$no]['output'] = trim($final_result['final_result']['output']);
+					// If code is run without any errors and given the correct output, 2 mark is given.
 					if ( trim($final_result['final_result']['output']) === trim($test_case['output']) ) {
-						$passed += 2;
-					} 
+						$passed[$no]['message'] = 'passed';
+						$passed['grade'] += 2;
+					}
 					// If code is run without any error 1 mark is given.
 					else {
-						$passed += 1;
+						$passed[$no]['message'] = 'wrong answer';
+						$passed['grade'] += 1;
 					}
-				} 
+				} else {
+					$passed[$no]['message'] = 'failed';
+				}
 			}
-
-			echo 'Grade: '.$passed;
 			
 		}
+		$data['passed'] = $passed;
 
 		$this->load->view('templates/header');
-		$this->load->view('teacher/assignment/grade');
+		$this->load->view('teachers/grade', $data);
 		$this->load->view('templates/footer');
 
 	}

@@ -18,20 +18,21 @@ $( document ).ready(function() {
 	// create assignment
     $("select#test-cases").change(function(){
 
-    	var prev = $("#test-case-container > div").length;
+    	let i;
+		var prev = $("#test-case-container > div").length;
 
     	var cases = parseInt($('#test-cases').find(":selected").val());
     	var cards = "";
 
     	if (prev > cases) {
-    		for (var i = cases+1; i <= prev; i++) {
+    		for (i = cases+1; i <= prev; i++) {
     			$('#case'+i).remove();
     			console.log('#case'+i);
     		}
     	} else {
 
-	    	for (var i = prev+1; i <= cases; i++) {
-	    		if ( i%2 == 1 ) {
+	    	for (let i = prev+1; i <= cases; i++) {
+	    		if ( i%2 === 1 ) {
 	    			cards += '<div class="row test-case-input-left" id="case'+i+'"><div class="col-md-6"><div class="form-group"><label for="input'+i+'">Input '+i+':</label><textarea class="form-control" name="input'+i+'" id="input'+i+'" placeholder="Add input '+i+' here..."></textarea></div></div><div class="col-md-6"><div class="form-group"><label for="output'+i+'">Output '+i+':</label><textarea class="form-control" name="output'+i+'" id="output'+i+'" placeholder="Add output '+i+' here..."></textarea></div></div></div>';
 	    		} else {
 	    			cards += '<div class="row test-case-input-right" id="case'+i+'"><div class="col-md-6"><div class="form-group"><label for="input'+i+'">Input '+i+':</label><textarea class="form-control" name="input'+i+'" id="input'+i+'" placeholder="Add input '+i+' here..."></textarea></div></div><div class="col-md-6"><div class="form-group"><label for="output'+i+'">Output '+i+':</label><textarea class="form-control" name="output'+i+'" id="output'+i+'" placeholder="Add output '+i+' here..."></textarea></div></div></div>';

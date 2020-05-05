@@ -46,6 +46,22 @@
 							<option value="Cpp">C++</option>
 						</select>
 					</div>
+					<div class="col-md-4">
+						<div class="form-group">
+							<label for="test-cases">Number of Test Cases : </label>
+							<select class="form-control" name="test-cases" id="test-cases">
+								<option selected disabled>Select...</option>
+								<?php for ($i=1; $i < 11; $i++) {
+									echo '
+                                         <option value="'.$i.'">'.$i.'</option>';
+								} ?>
+							</select>
+						</div>
+					</div>
+				</div>
+				<label for='language'>Test cases:</label>
+				<div class="form-row" id="test-case-container">
+
 				</div>
 				<div class="form-group mt-4">
 					<button class="btn btn-primary" type="submit" name="create">Create Assignment</button>

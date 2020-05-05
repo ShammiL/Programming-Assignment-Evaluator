@@ -6,11 +6,11 @@
 				<div class="row">
 					<div class="col-md-9">
 						<h3>Course ID</h3>
-						<h4><?php echo $assignment[0]['assignment_name']; ?></h4>
+						<h4><?php echo $assignment['assignment_name']; ?></h4>
 					</div>
 					<div class="col-md-3">
 						<a href="<?php echo base_url('OnlineCodeEvaluator/public/Teacher/Issues') ?>" class="btn btn-primary btn-edit" type="submit" id="view-grade">View Issues</a>
-						<a href="<?php echo base_url();?>assignments/edit/<?php echo $assignment[0]['assignment_id']; ?>" class="btn btn-primary btn-edit mt-1" type="submit" id="view-grade">Edit Assignment</a>
+						<a href="<?php echo base_url();?>assignments/edit/<?php echo $assignment['assignment_id']; ?>" class="btn btn-primary btn-edit mt-1" type="submit" id="view-grade">Edit Assignment</a>
 					</div>
 				</div>
 			</div>
@@ -52,10 +52,10 @@
 					</div>
 				</div>
 				<h5 class="card-title mt-3">Description :</h5>
-				<p> <?php echo $assignment[0]['description']; ?> </p>
+				<p> <?php echo $assignment['description']; ?> </p>
 				<a href="<?= base_url('assets/uploads/reference docs/'); ?>">Reference Document</a>
 				<h5 class="card-title mt-3">Deadline :</h5>
-				<p> <?php echo $assignment[0]['deadline']; ?> </p>
+				<p> <?php echo $assignment['deadline']; ?> </p>
 				<div class="card mt-4">
 					<table class="table table-hover">
 						<thead>
