@@ -19,4 +19,9 @@ class Testcase_model extends CI_Model
 		return $this->db->insert('testcases', $input);
 	}
 
+	public function get_teacher($teacher_id) {
+		$query = $this->db->get_where('lecturer', array('email' => $teacher_id));
+		return $query->result_array()[0];
+	}
+
 }

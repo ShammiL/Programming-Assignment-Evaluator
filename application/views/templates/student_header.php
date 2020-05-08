@@ -1,4 +1,4 @@
-	<!DOCTYPE html>
+<!DOCTYPE html>
 	<html lang="en">
 	<head>
 		<meta charset="utf-8">
@@ -21,10 +21,7 @@
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav ml-auto">
 					<li class="nav-item active">
-						<a class="nav-link" href="<?php echo base_url(); ?>teacher">Courses<span class="sr-only">(current)</span></a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="<?php echo base_url(); ?>compiler">Compiler</a>
+						<a class="nav-link" href="<?php echo base_url(); ?>student">Courses<span class="sr-only">(current)</span></a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href=<?php echo base_url()."login/logout"; ?>>Logout</a>

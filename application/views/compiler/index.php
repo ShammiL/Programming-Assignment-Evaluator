@@ -33,7 +33,7 @@
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <label>Give Custom Inputs :</label>
-                                        <textarea class="form-control" name="input"></textarea>
+										<textarea data-toggle="tooltip" data-placement="left" title="If the code needs any input, add it here..." class="form-control" name="input"></textarea>
                                     </div>
                                 </div>
                             </div>

@@ -4,10 +4,14 @@ class Submission_model extends CI_Model{
         $this->load->database();
     }
 
-    public function get_submissions($assignment_id = 1){
-        
+    public function get_submissions($assignment_id, $student_id=NULL){
 
-        $query = $this->db->get_where('submissions', array('assignment_id' => $assignment_id));
+        if ($student_id) {
+            $query = $this->db->get_where('submissions', array('assignment_id'=>$assignment_id, 'student_id'=>$student_id));
+        } else {
+            $query = $this->db->get_where('submissions', array('assignment_id'=>$assignment_id));
+        }
+        
         return $query->result_array();
        
     }

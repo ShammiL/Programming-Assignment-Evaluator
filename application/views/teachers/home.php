@@ -11,7 +11,7 @@
 				<div class="row row-cols-1 row-cols-md-4">
 					<?php foreach ($courses as $course) { ?>
 						<div class="col mb-4">
-							<a href="<?php echo base_url(); ?>teacher/course/<?php echo $course['course_id'] ?>">
+							<a href="<?php echo base_url(); ?>teacher/courseDetails/<?php echo $course['course_id'] ?>">
 								<div class="card">
 									<div class="row mt-3">
 										<div class="col-md-2"></div>

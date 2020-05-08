@@ -8,6 +8,7 @@
 	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 	<script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
 	<script type="text/javascript" src="<?php echo base_url(); ?>assets/js/owl.carousel.js"></script>
+	<script type="text/javascript" src="<?php echo base_url(); ?>assets/js/typed.js"></script>
 	<script type="text/javascript" src="<?php echo base_url(); ?>assets/js/main.js"></script>
 </body>
 </html>
