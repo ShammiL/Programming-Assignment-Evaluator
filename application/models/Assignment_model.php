@@ -107,8 +107,8 @@ class Assignment_model extends CI_Model{
         return $this->db->insert('assignments', $input);
     }
 
-    public function update_assignment($input){
-        $id = $this->input->post('id');
+    public function update_assignment($input, $id){
+
         $this->db->where('assignment_id', $id);
         return $this->db->update('assignments', $input);
     }

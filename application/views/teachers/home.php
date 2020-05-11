@@ -20,7 +20,7 @@
 										</div>
 										<div class="col-md-2"></div>
 									</div>
-									<div class="card-header mt-2">
+									<div class="card-header mt-2 text-center">
 										<h5 class="card-title"><?php echo $course['course_id'] ?></h5>
 										<p class="card-text"><?php echo $course['course_name'] ?></p>
 									</div>

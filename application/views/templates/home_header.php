@@ -19,8 +19,8 @@
 			<h1 class="font-weight-bold">Programming Assignment<br />Evaluator</h1>
 			<p>We are creating this amazing grader with the plagiarism checker.</p>
 			<div class="header-buttons">
-				<a href="<?php echo base_url(); ?>login">Login</a>
-				<a href="<?php echo base_url(); ?>login">Log in</a>
+				<a href="<?php echo base_url(); ?>login">User</a>
+				<a href="<?php echo base_url(); ?>loginAdmin">Admin</a>
 			</div>
 		</div>
 	</section>

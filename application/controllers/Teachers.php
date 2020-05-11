@@ -115,15 +115,29 @@ class Teachers extends CI_Controller
 		}
 	}
 
-	public function editAssignment($assignment_id) {
+	public function editAssignment($course_id, $assignment_id, $num) {
 
 		$data['title'] = 'Edit Assignment';		
 		$data['assignment'] = $this->assignment_model->get_one($assignment_id);
+		$data['course_id']  = $course_id;
+		$data['num']  = $num;
 		// print_r ($data['assignment']);
 		$this->load->view('templates/header');
 		$this->load->view('teachers/edit_assignment', $data);
 		$this->load->view('templates/footer');
 	}
+
+    public function update($course_id, $assignment_id, $num){
+
+        $input = array(
+            'assignment_name' => $this->input->post('name'),
+            'description' => $this->input->post('description'),
+            'language' => $this->input->post('language'),
+            'deadline' => $this->input->post('deadline'),
+        );
+        $this->assignment_model->update_assignment($input, $assignment_id);
+		$this->viewSubmissions($assignment_id, $num);
+    }
 
 	public function viewAssignments($course_id) {
 

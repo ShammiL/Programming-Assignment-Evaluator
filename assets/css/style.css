@@ -75,6 +75,18 @@ body {
 	transform: scale(-1, 1);
 }
 
+.admin-background {
+	width: 100%;
+	height: 100vh;
+	background-image: url('../images/site/undraw_fill_in_mie5.png');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	transform: scale(-1, 1);
+	opacity: 0.5;
+	position: fixed;
+	z-index: -1;
+}
+
 .header {
 	width: 100%;
 	height: 80vh;
@@ -292,4 +304,14 @@ footer.footer .container > div {
 .submission-error {
 	color: crimson;
 	font-family: 'Merienda', sans-serif;
+}
+
+/* admin */
+.admin-card-img {
+	width: 80%;
+	height: 35vh;
+}
+
+.admin-card {
+	margin: 0 2vh 2vh 2vh;
 }

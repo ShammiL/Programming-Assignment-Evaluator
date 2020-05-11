@@ -9,8 +9,8 @@
 						<h4>Assignment <?php echo $num.' - '.$assignment['assignment_name']; ?></h4>
 					</div>
 					<div class="col-md-3">
-						<a href="<?php echo base_url('OnlineCodeEvaluator/public/Teacher/Issues') ?>" class="btn btn-primary btn-edit" type="submit" id="view-grade">View Issues</a>
-						<a href="<?php echo base_url();?>teachers/editAssignment/<?php echo $assignment['assignment_id']; ?>" class="btn btn-primary btn-edit mt-1" type="submit" id="view-grade">Edit Assignment</a>
+						<a href="#" class="btn btn-primary btn-edit" type="submit" id="view-grade">View Issues</a>
+						<a href="<?php echo base_url();?>teacher/editAssignment/<?php echo $assignment['course_id']; ?>/<?php echo $assignment['assignment_id']; ?>/<?php echo $num; ?>" class="btn btn-primary btn-edit mt-1" type="submit" id="view-grade">Edit Assignment</a>
 					</div>
 				</div>
 			</div>

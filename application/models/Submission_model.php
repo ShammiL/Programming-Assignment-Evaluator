@@ -1,5 +1,6 @@
 <?php
 class Submission_model extends CI_Model{
+
     public function __construct(){
         $this->load->database();
     }
@@ -12,7 +13,6 @@ class Submission_model extends CI_Model{
             $query = $this->db->get_where('submissions', array('assignment_id'=>$assignment_id));
         }
         
-        return $query->result_array();
-       
+        return $query->result_array();    
     }
 }

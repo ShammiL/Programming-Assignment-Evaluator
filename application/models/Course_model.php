@@ -7,6 +7,11 @@ class Course_model extends CI_Model
 		$this->load->database();
 	}
 
+	public function create_course($input) {
+
+		return $this->db->insert('courses', $input);
+	}
+
 	public function get_courses($lecturer_id = NULL) {
 
 		if ($lecturer_id !== NULL) {
@@ -19,6 +24,13 @@ class Course_model extends CI_Model
 		$query = $this->db->get('courses');
 		return $query->result_array();
 
+	}
+
+	public function get_course_count() {
+
+		$this->db->select('COUNT(course_id) AS course_count');
+		$query = $this->db->get('courses');
+		return $query->result_array()[0]['course_count'];
 	}
 
 	function getCourseDetails($course_id){

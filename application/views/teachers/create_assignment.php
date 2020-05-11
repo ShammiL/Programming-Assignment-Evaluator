@@ -3,7 +3,8 @@
 	<div class="col-md-10 body-card" data-aos="fade-right">
 		<div class="card">
 			<div class="card-header">
-				<h3>Create Assignment</h3>
+				<h3><?php echo $course; ?></h3>
+				<h4>Create Assignment</h4>
 			</div>
 			<div class="card-body">
                 <?php echo validation_errors(); 

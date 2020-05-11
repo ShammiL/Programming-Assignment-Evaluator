@@ -8,8 +8,7 @@
 				<h3>Edit Assignment</h3>
 			</div>
 			<div class="card-body">
-				<?php echo form_open('teachers/editAssignment'); ?>
-				<input type="hidden" name="id" value="<?php echo $assignment['assignment_id']; ?>"/>
+				<?php echo form_open('teacher/update/'.$course_id.'/'.$assignment['assignment_id'].'/'.$num); ?>
 				<div class="row">
 					<div class="col-md-4">
 						<div class="form-group">
