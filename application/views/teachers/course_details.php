@@ -21,7 +21,7 @@
 						<div class="card-header"><i class="fas fa-file-code mr-4"></i>View Assignments</div>
 					</div>
 				</a>
-				<a href="<?php echo base_url();?>students/<?=$course?>" class="assignment-link">
+				<a href="<?php echo base_url();?>teacher/viewStudents/<?=$course?>" class="assignment-link">
 					<div class="card mb-2">
 						<div class="card-header"><i class="fas fa-users mr-3"></i>View Students</div>
 					</div>

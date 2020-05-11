@@ -87,7 +87,7 @@ class Teachers extends CI_Controller
 				$file_data = array('upload_data' => $this->upload->data());
 				$input['reference_file'] = $_FILES['userfile']['name'];
 			}
-			$this->Assignment_model->create_assignment($input);
+			$this->assignment_model->create_assignment($input);
 	
 			// $cases = $this->input->post('test-cases');
 	
@@ -162,6 +162,10 @@ class Teachers extends CI_Controller
 
 	public function searchSubmission($assignment_id, $num) {
 
+		if (!$this->session->userdata('lecturer_id')){
+			redirect('login');
+		}
+
 		$student_id = $this->input->post('search-student');
 		$this->viewSubmissions($assignment_id, $num, $student_id);
 
@@ -179,5 +183,38 @@ class Teachers extends CI_Controller
 		else {
 			redirect('login');
 		}
+	}
+
+	public function viewStudents($course_id, $student_id = NULL) {
+
+		if (!$this->session->userdata('lecturer_id')){
+			redirect('login');
+		}
+
+		if ($student_id) {
+			$data['students'] = $this->student_model->get_students($course_id, $student_id);
+		} else {
+			$data['students'] = $this->student_model->get_students($course_id);
+		}
+
+		$data['count'] = $this->student_model->get_student_count($course_id);
+		$data['course_id'] = $course_id;
+		// print_r ($data['students']);
+
+		$this->load->view('templates/header');
+		$this->load->view('teachers/view_students', $data);
+		$this->load->view('templates/footer');
+
+	}
+
+	public function searchStudent($course_id) {
+
+		if (!$this->session->userdata('lecturer_id')){
+			redirect('login');
+		}
+
+		$student_id = $this->input->post('search-student');
+		$this->viewStudents($course_id, $student_id);
+
 	}
 }

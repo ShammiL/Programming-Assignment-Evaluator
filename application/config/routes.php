@@ -21,6 +21,7 @@ $route['teacher/editAssignment/(:any)'] = 'teachers/editAssignment/$1';
 $route['teacher/viewAssignments/(:any)'] = 'teachers/viewAssignments/$1';
 $route['teacher/viewSubmissions/(:any)/(:any)/(:any)'] = 'teachers/viewSubmissions/$1/$2/$3';
 $route['teacher/viewSubmissions/(:any)/(:any)'] = 'teachers/viewSubmissions/$1/$2';
+$route['teacher/viewStudents/(:any)'] = 'teachers/viewStudents/$1';
 $route['teacher/course/(:any)'] = 'Courses/index/$1';
 $route['teacher/assignment/create/(:any)'] = 'Assignments/create/$1';
 

@@ -16,7 +16,7 @@
 			</div>
 			<div class="card-body">
 				<div class="row">
-					<div class="col-md-5">
+					<div class="col-md-6">
 						<div class="row">
 							<div class="col-md-9">
 								<label for="">Number of Enrolled Students :</label>
@@ -34,19 +34,15 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-md-7">
+					<div class="col-md-6">
 						<?php echo form_open('teachers/searchSubmission/'.$assignment["assignment_id"].'/'.$num) ?>
 						    <div class="row">
                                 <div class="col-md-1"></div>
-                                <div class="form-group col-md-7">
+                                <div class="form-group col-md-8">
                                     <input type="text" class="form-control" name="search-student" placeholder="Enter Student ID...">
                                 </div>
-                                <div class="form-group col-md-4">
-                                    <div class="form-row">
-                                        <button type="submit" name="submit-search-student" class="btn btn-primary col-md-5">Search</button>
-                                        <div class="col-md-1"></div>
-                                        <button type="submit" name="submit-all-student" class="btn btn-primary col-md-5">View All</button>
-                                    </div>
+                                <div class="form-group col-md-3">
+                                    <button type="submit" name="submit-search-student" class="btn btn-primary btn-edit">Search</button>
                                 </div>
                             </div>
 						</form>
