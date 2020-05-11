@@ -40,11 +40,10 @@ class Student_model extends CI_Model{
 	   } else {
 		   return FALSE;
 	   }	   
-   }
+   	}
 
-	public function get_students($course_id = 'CS3020', $student_id=NULL){
+	public function get_students($course_id = NULL, $student_id=NULL){
 
-		$this->db->select('students.indexNumber, fname, lname');
 		$this->db->from('studentcourse');
 		$this->db->join('students', 'students.indexNumber = studentcourse.indexNumber');
 
@@ -56,7 +55,17 @@ class Student_model extends CI_Model{
 
 		$query = $this->db->get();
 		return $query->result_array();
+	}
+	
+	public function get_all_students($student_id=NULL){
 
+		if ($student_id) {
+			$this->db->get_where('lecturer', array('students.indexNumber'=>$student_id));
+			return $query->result_array()[0];
+		} 
+
+		$query = $this->db->get('students');
+		return $query->result_array();
 	}
 
 	public function get_student_count($course_id = NULL) {

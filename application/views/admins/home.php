@@ -19,7 +19,7 @@
                                         <i class="fas fa-plus-circle"></i> Add New Course
                                     </div>
                                 </a>
-                                <a href="#">
+                                <a href="<?php echo base_url(); ?>admin/viewCourse">
                                     <div class="card-header">
                                         <i class="fas fa-eye"></i> View All Courses
                                     </div>
@@ -43,7 +43,7 @@
                                         <i class="fas fa-plus-circle"></i> Add New Teacher
                                     </div>
                                 </a>
-                                <a href="#">
+                                <a href="<?php echo base_url(); ?>admin/viewTeacher">
                                     <div class="card-header">
                                         <i class="fas fa-eye"></i> View All Teachers
                                     </div>
@@ -67,7 +67,7 @@
                                         <i class="fas fa-plus-circle"></i> Add New Student
                                     </div>
                                 </a>
-                                <a href="#">
+                                <a href="<?php echo base_url(); ?>admin/viewStudent">
                                     <div class="card-header">
                                         <i class="fas fa-eye"></i> View All Students
                                     </div>

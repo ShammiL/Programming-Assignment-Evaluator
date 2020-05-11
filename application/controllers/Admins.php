@@ -4,7 +4,7 @@ class Admins extends CI_Controller{
 	public function index(){
 
 		if(!$this->session->userdata('admin_id')){
-			redirect('login');
+			redirect('loginAdmin');
 		}
 
 		$admin_id = $this->session->userdata('admin_id');
@@ -21,7 +21,7 @@ class Admins extends CI_Controller{
 	public function addCourse() {
 
 		if(!$this->session->userdata('admin_id')){
-			redirect('login');
+			redirect('loginAdmin');
 		}
 
 		$this->form_validation->set_rules('id', 'id' , 'required');
@@ -55,7 +55,7 @@ class Admins extends CI_Controller{
 	public function addTeacher() {
 
 		if(!$this->session->userdata('admin_id')){
-			redirect('login');
+			redirect('loginAdmin');
 		}
 
 		$this->form_validation->set_rules('nic', 'nic' , 'required');
@@ -101,7 +101,7 @@ class Admins extends CI_Controller{
 	public function addStudent() {
 
 		if(!$this->session->userdata('admin_id')){
-			redirect('login');
+			redirect('loginAdmin');
 		}
 
 		$this->form_validation->set_rules('index', 'index' , 'required');
@@ -142,5 +142,47 @@ class Admins extends CI_Controller{
 			$this->student_model->add_student($input);	
 			$this->index();
 		}
+	}
+
+	public function viewCourse() {
+
+		if(!$this->session->userdata('admin_id')){
+			redirect('loginAdmin');
+		}
+
+		$data['courses'] = $this->course_model->get_courses();
+		$data['count'] = $this->course_model->get_course_count();
+
+		$this->load->view('templates/admin_header');
+		$this->load->view('admins/view_courses', $data);
+		$this->load->view('templates/footer');	
+	}
+
+	public function viewStudent() {
+
+		if(!$this->session->userdata('admin_id')){
+			redirect('loginAdmin');
+		}
+
+		$data['students'] = $this->student_model->get_all_students();
+		$data['count'] = $this->student_model->get_student_count();
+		
+		$this->load->view('templates/admin_header');
+		$this->load->view('admins/view_students', $data);
+		$this->load->view('templates/footer');	
+	}
+
+	public function viewTeacher() {
+
+		if(!$this->session->userdata('admin_id')){
+			redirect('loginAdmin');
+		}
+
+		$data['teachers'] = $this->teacher_model->get_teacher();
+		$data['count'] = $this->teacher_model->get_teacher_count();
+		
+		$this->load->view('templates/admin_header');
+		$this->load->view('admins/view_teachers', $data);
+		$this->load->view('templates/footer');	
 	}
 }

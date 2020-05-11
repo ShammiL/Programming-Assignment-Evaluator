@@ -10,6 +10,9 @@ $route['admin'] = 'admins/index';
 $route['admin/addCourse'] = 'admins/addCourse';
 $route['admin/addTeacher'] = 'admins/addTeacher';
 $route['admin/addStudent'] = 'admins/addStudent';
+$route['admin/viewStudent'] = 'admins/viewStudent';
+$route['admin/viewCourse'] = 'admins/viewCourse';
+$route['admin/viewTeacher'] = 'admins/viewTeacher';
 
 $route['teacher'] = 'teachers/index';
 $route['teacher/grade'] = 'teachers/grade';
