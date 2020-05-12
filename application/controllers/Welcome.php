@@ -20,8 +20,10 @@ class Welcome extends CI_Controller {
 	 */
 	public function index() {
 
+		$data['courses'] = $this->course_model->get_courses();
+
 		$this->load->view('templates/home_header');
-		$this->load->view('home');
+		$this->load->view('home', $data);
 		$this->load->view('templates/footer');
 	}
 }

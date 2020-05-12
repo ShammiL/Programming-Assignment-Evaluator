@@ -1,15 +1,17 @@
 <section>
 	<div class="courses">
-		<h1 class="text-center text-uppercase" data-aos="fade-right">Our Courses</h1>
+		<h1 class="text-center text-uppercase" data-aos="zoom-in">Our Courses</h1>
 		<div class="owl-carousel owl-theme display-course">
+		<?php foreach ($courses as $course) { ?>
 			<div class="course-content" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
 				<img src="<?php echo base_url(); ?>assets/images/site/undraw_resume_folder_2_arse.svg" alt="course-image">
 				<div class="course-title text-center">
-					<h4>Course ID</h4>
-					<h5>Course Title</h5>
+					<h4><?php echo $course['course_id']; ?></h4>
+					<h5><?php echo $course['course_name']; ?></h5>
 					<button class="btn btn-view">View</button>
 				</div>
 			</div>
+		<?php } ?>
 		</div>
 	</div>
 </section>

@@ -8,6 +8,7 @@
 			integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 	<script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 	<script type="text/javascript" src="<?php echo base_url(); ?>assets/js/owl.carousel.js"></script>
 	<script type="text/javascript" src="<?php echo base_url(); ?>assets/js/typed.js"></script>
 	<script type="text/javascript" src="<?php echo base_url(); ?>assets/js/main.js"></script>

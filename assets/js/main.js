@@ -39,7 +39,6 @@ $( document ).ready(function() {
 	    		}
 	    	}
 	    }
-
     	$('#test-case-container').append(cards);
-    });
+	});
 });
