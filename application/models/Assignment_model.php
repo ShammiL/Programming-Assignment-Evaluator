@@ -23,7 +23,7 @@ class Assignment_model extends CI_Model{
         $this->db->from('assignments');
         $this->db->where('assignment_id', $assignment_id);
         $query = $this->db->get();
-        return $query->result_array();
+        return $query->result_array()[0];
 
     }
 

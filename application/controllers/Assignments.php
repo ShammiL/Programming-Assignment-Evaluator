@@ -23,25 +23,22 @@ public function create($course_id){
     $this->form_validation->set_rules('language', 'Language', 'required|callback_select_validate');
     $this->form_validation->set_rules('deadline', 'deadline' , 'required');
 
-//     // print_r ($data['assignments']);
-    
-
     if($this->form_validation->run() === false){
-    $this->load->view('templates/header');
-    $this->load->view('assignments/create', $data);
-    $this->load->view('templates/footer');
+		$this->load->view('templates/header');
+		$this->load->view('assignments/create', $data);
+		$this->load->view('templates/footer');
 
-        }
+    }
         
     else{
-            $input = array(
-                'assignment_name' => $this->input->post('name'),
-                'description' => $this->input->post('description'),
-                'language' => $this->input->post('language'),
-                'course_id' => $course_id,
-                'deadline' => $this->input->post('deadline'),
-                'status' => 'Ongoing'
-            );
+		$input = array(
+			'assignment_name' => $this->input->post('name'),
+			'description' => $this->input->post('description'),
+			'language' => $this->input->post('language'),
+			'course_id' => $course_id,
+			'deadline' => $this->input->post('deadline'),
+			'status' => 'Ongoing'
+		);
         
         $config['upload_path'] = './assets/uploads/reference docs';
         $config['allowed_types'] = 'pdf|doc|zip|rar';
@@ -58,6 +55,18 @@ public function create($course_id){
             $input['reference_file'] = $_FILES['userfile']['name'];
         }
         $this->Assignment_model->create_assignment($input);
+
+        $cases = $this->input->post('test-cases');
+
+        for ($i=1; $i<= $cases; $i++) {
+        	$this->Testcase_model->create(array(
+        		'assignment_id' => 2,
+				'test_case_no' => $i,
+				'input' => $this->input->post('input'.$i),
+				'output' => $this->input->post('output'.$i)
+			));
+		}
+
         $this->view($course_id);
     }
 
@@ -67,12 +76,12 @@ function select_validate($lang)
 {
 
     if($lang=="none"){
-$this->form_validation->set_message('select_validate', 'Please Select a language.');
-return false;
-} 
+		$this->form_validation->set_message('select_validate', 'Please Select a language.');
+		return false;
+    }
     else{
-return true;
-}
+		return true;
+    }
 }
 
 public function edit($assignment_id){
@@ -94,6 +103,19 @@ public function update(){
     );
     $this->Assignment_model->update_assignment($input);
    echo ('success');
+}
+
+public function view_issues($assignment_id){
+     
+
+    $data['title'] = 'Issues reported by students';
+    print_r($assignment_id);
+    $data['issues'] = $this->Issue_model->get_issues($assignment_id);
+    var_dump($data['issues']);
+    $this->load->view('templates/header');
+    $this->load->view('assignments/issues', $data);
+    $this->load->view('templates/footer');
+
 }
 
 }
