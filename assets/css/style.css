@@ -315,3 +315,15 @@ footer.footer .container > div {
 .admin-card {
 	margin: 0 2vh 2vh 2vh;
 }
+
+.change-password-wrong {
+	background-color: crimson;
+    padding: 5px;
+    text-align: center;
+}
+
+.change-password-success {
+	background-color: forestgreen;
+    padding: 5px;
+    text-align: center;
+}

@@ -41,4 +41,9 @@ $( document ).ready(function() {
 	    }
     	$('#test-case-container').append(cards);
 	});
+
+	$(document).on("click", "#btn-toggle-password", function(e) {
+		e.preventDefault();
+		console.log("Clicked");	
+	});
 });

@@ -137,6 +137,45 @@ class Students extends CI_Controller{
 		}
 	}
 
+	public function profile() {
+
+		if(!$this->session->userdata('student_id')){
+			redirect('login');
+		}
+
+		$data['message'] = "";
+		$index_number = $this->session->userdata('student_id');
+
+		$this->form_validation->set_rules('new_pass', 'New Password' , 'required');
+		$this->form_validation->set_rules('renew_pass', 'Re-New Password' , 'required');
+
+		if($this->form_validation->run() === TRUE){
+
+			$new_pass = $this->input->post('new_pass');	
+			$renew_pass = $this->input->post('renew_pass');	
+
+			if ($new_pass == $renew_pass) {
+				$data['message'] = "Password changed successfully.";
+				$this->student_model->change_password($this->session->userdata('student_id'), md5($new_pass));	
+			} else {
+				$data['message'] = "Passwords mismatched.";
+			}
+		}
+
+		$data['student'] = $this->student_model->get_all_students($index_number);
+		$data['password'] = $this->student_model->get_password($index_number);
+
+		$this->load->view('templates/student_header');
+		$this->load->view('students/profile', $data);	
+
+	}
+
+	public function changePassword($index_number) {
+
+
+
+	}
+
 	// public function view1($course_id = "CS3020"){
 
 	// 	$data['title'] = ucfirst('Students following '. $course_id);

@@ -28,6 +28,21 @@ class teacher_model extends CI_Model
 		return $query->result_array();
 	}
 
+	public function get_password($teacher_id) {
+
+		$db2 = $this->load->database('db2',TRUE);
+		$db2->select('password');
+		return $db2->get_where('lecturer', array('email' => $teacher_id))->row(0);
+	}
+	
+	public function change_password($teacher_id, $pwrd) {
+
+		$db2 = $this->load->database('db2',TRUE);
+		$db2->set('password', $pwrd);
+        $db2->where('email',$teacher_id);
+		return $db2->update('lecturer');
+	}
+
 	public function get_teacher_count() {
 			
 		$db2 = $this->load->database('db2',TRUE);

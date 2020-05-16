@@ -11,10 +11,32 @@ class Student_model extends CI_Model{
 		return $db2->insert('student', $input);
 	}
 
-	public function add_student($input) {
+	public function get_password($indexNumber) {
 
+		$db2 = $this->load->database('db2',TRUE);
+		$db2->select('password');
+		return $db2->get_where('student', array('indexNumber' => $indexNumber))->row(0);
+	}
+	
+	public function change_password($index_number, $pwrd) {
+
+		$db2 = $this->load->database('db2',TRUE);
+		$db2->set('password', $pwrd);
+        $db2->where('indexNumber',$index_number);
+		return $db2->update('student');
+	}
+
+	public function add_student($input) {
+		
 		return $this->db->insert('students', $input);
 	}
+
+    function update_student($id, $data){
+
+        $this->db->set($data);
+        $this->db->where('indexNumber',$id);
+        return $this->db->update('students');
+    }
 
 	function getCourses($indexNumber){
 
@@ -42,7 +64,7 @@ class Student_model extends CI_Model{
 	   }	   
    	}
 
-	public function get_students($course_id = NULL, $student_id=NULL){
+	public function get_students($course_id = 'CS3042', $student_id=NULL){
 
 		$this->db->from('studentcourse');
 		$this->db->join('students', 'students.indexNumber = studentcourse.indexNumber');
@@ -60,7 +82,7 @@ class Student_model extends CI_Model{
 	public function get_all_students($student_id=NULL){
 
 		if ($student_id) {
-			$this->db->get_where('lecturer', array('students.indexNumber'=>$student_id));
+			$query = $this->db->get_where('students', array('students.indexNumber'=>$student_id));
 			return $query->result_array()[0];
 		} 
 

@@ -1,11 +1,11 @@
 <div class="container-fluid row">
-	<div class="col-md-2"></div>
+	<div class="col-md-1"></div>
 	<div class="col-md-10 body-card">
 		<div class="card">
 			<div class="card-header">
 				<div class="row">
 					<div class="col-md-10">
-						<h3>Enrolled Students</h3>
+						<h2>Enrolled Students</h2>
 					</div>
 				</div>
 			</div>
@@ -63,4 +63,5 @@
 			</div>
 		</div>
 	</div>
+	<div class="col-md-1"></div>
 </div>

@@ -27,8 +27,12 @@
 						<a class="nav-link" href="<?php echo base_url(); ?>compiler">Compiler</a>
 					</li>
 					<li class="nav-item">
+						<a class="nav-link" href=<?php echo base_url()."teacher/profile"; ?>>Profile</a>
+					</li>
+					<li class="nav-item">
 						<a class="nav-link" href=<?php echo base_url()."login/logout"; ?>>Logout</a>
 					</li>
+				</ul>
 			</div>
 		</div>
 	</nav>

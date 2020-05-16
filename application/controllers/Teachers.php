@@ -165,8 +165,10 @@ class Teachers extends CI_Controller
 			$data['submissions'] = $this->Submission_model->get_submissions($assignment_id);
 		}
 
-		$data['assignment'] = $this->assignment_model->get_one($assignment_id);
+		$assignment = $this->assignment_model->get_one($assignment_id);
 		$data['num'] = $num;
+		$data['students'] = $this->student_model->get_student_count($assignment['course_id']);
+		$data['assignment'] = $assignment;
 
 		// print_r ($data['assignment']);
 		$this->load->view('templates/header');
@@ -229,6 +231,39 @@ class Teachers extends CI_Controller
 
 		$student_id = $this->input->post('search-student');
 		$this->viewStudents($course_id, $student_id);
+
+	}
+
+	public function profile() {
+
+		if(!$this->session->userdata('lecturer_id')){
+			redirect('login');
+		}
+
+		$data['message'] = "";
+		$lecturer_id = $this->session->userdata('lecturer_id');
+
+		$this->form_validation->set_rules('new_pass', 'New Password' , 'required');
+		$this->form_validation->set_rules('renew_pass', 'Re-New Password' , 'required');
+
+		if($this->form_validation->run() === TRUE){
+
+			$new_pass = $this->input->post('new_pass');	
+			$renew_pass = $this->input->post('renew_pass');	
+
+			if ($new_pass == $renew_pass) {
+				$data['message'] = "Password changed successfully.";
+				$this->teacher_model->change_password($lecturer_id, md5($new_pass));	
+			} else {
+				$data['message'] = "Passwords mismatched.";
+			}
+		}
+
+		$data['teacher'] = $this->teacher_model->get_teacher($lecturer_id);
+		$data['password'] = $this->teacher_model->get_password($lecturer_id);
+
+		$this->load->view('templates/header');
+		$this->load->view('teachers/profile', $data);	
 
 	}
 }

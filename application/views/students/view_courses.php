@@ -1,6 +1,6 @@
 <div class="container-fluid">
 	<div class="main row">
-		<div class="col-md-2"></div>
+		<div class="col-md-1"></div>
 		<div class="col-md-10 body-card">
 			<div class="card">
 				<div class="card-header">
@@ -33,5 +33,6 @@
 				</div>
 			</div>
 		</div>
+		<div class="col-md-1"></div>
 	</div>
 </div>

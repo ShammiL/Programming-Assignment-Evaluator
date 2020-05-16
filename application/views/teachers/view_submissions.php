@@ -1,5 +1,5 @@
 <div class="container-fluid row">
-	<div class="col-md-2"></div>
+	<div class="col-md-1"></div>
 	<div class="col-md-10 body-card">
 		<div class="card">
 			<div class="card-header">
@@ -22,7 +22,7 @@
 								<label for="">Number of Enrolled Students :</label>
 							</div>
 							<div class="col-md-3">
-								<label for="">127</label>
+								<label for=""><?php echo $students['student_count']; ?></label>
 							</div>
 						</div>
 						<div class="row">
@@ -50,13 +50,14 @@
 				</div>
 				<h5 class="card-title mt-3">Description :</h5>
 				<p> <?php echo $assignment['description']; ?> </p>
-				<a href="<?= base_url('assets/uploads/reference docs/'); ?>">Reference Document</a>
+				<h5 class="card-title">Resources :</h5>
+				<p class="card-text"><a href="<?= base_url('assets/uploads/reference docs/'); ?>">Reference Document</a></p>		
 				<h5 class="card-title mt-3">Deadline :</h5>
 				<p> <?php echo $assignment['deadline']; ?> </p>
                 <?php if($submissions) { ?>
 				<div class="card mt-4">
 					<table class="table table-hover">
-						<thead>
+						<thead class="card-header">
 						<tr>
 							<th scope="col">Student ID</th>
 							<th scope="col">Submitted at</th>
@@ -84,6 +85,7 @@
 			</div>
 		</div>
 	</div>
+	<div class="col-md-1"></div>
 </div>
 
 

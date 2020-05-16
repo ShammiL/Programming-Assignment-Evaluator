@@ -12,6 +12,7 @@ $route['admin'] = 'admins/index';
 $route['admin/addCourse'] = 'admins/addCourse';
 $route['admin/addTeacher'] = 'admins/addTeacher';
 $route['admin/addStudent'] = 'admins/addStudent';
+$route['admin/editStudent/(:any)'] = 'admins/editStudent/$1';
 $route['admin/viewStudent'] = 'admins/viewStudent';
 $route['admin/viewCourse'] = 'admins/viewCourse';
 $route['admin/viewTeacher'] = 'admins/viewTeacher';
@@ -26,6 +27,7 @@ $route['teacher/viewAssignments/(:any)'] = 'teachers/viewAssignments/$1';
 $route['teacher/viewSubmissions/(:any)/(:any)/(:any)'] = 'teachers/viewSubmissions/$1/$2/$3';
 $route['teacher/viewSubmissions/(:any)/(:any)'] = 'teachers/viewSubmissions/$1/$2';
 $route['teacher/viewStudents/(:any)'] = 'teachers/viewStudents/$1';
+$route['teacher/profile'] = 'teachers/profile';
 $route['teacher/course/(:any)'] = 'Courses/index/$1';
 $route['teacher/assignment/create/(:any)'] = 'Assignments/create/$1';
 
@@ -36,6 +38,7 @@ $route['student/courseDetails/(:any)'] = 'students/courseDetails/$1';
 $route['student/enrollCourse'] = 'students/enrollCourse';
 $route['student/viewGrade/(:any)/(:any)'] = 'students/viewGrade/$1/$2';
 $route['student/viewCourses'] = 'students/viewCourses';
+$route['student/profile'] = 'students/profile';
 $route['student/(:any)'] = 'students/view/$1';
 
 $route['compiler'] = 'compiler/index';

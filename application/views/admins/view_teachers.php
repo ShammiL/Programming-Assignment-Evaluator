@@ -7,10 +7,10 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="row">
-                        <div class="col-md-9">
+                        <div class="col-md-5">
                             <label for="">Number of Teachers :</label>
                         </div>
-                        <div class="col-md-3">
+                        <div class="col-md-7">
                             <label for=""><?php echo $count; ?></label>
                         </div>
                     </div>

@@ -24,8 +24,12 @@
 						<a class="nav-link" href="<?php echo base_url(); ?>student">Courses<span class="sr-only">(current)</span></a>
 					</li>
 					<li class="nav-item">
+						<a class="nav-link" href=<?php echo base_url()."student/profile/"; ?>>Profile</a>
+					</li>
+					<li class="nav-item">
 						<a class="nav-link" href=<?php echo base_url()."login/logout"; ?>>Logout</a>
 					</li>
+				</ul>
 			</div>
 		</div>
 	</nav>

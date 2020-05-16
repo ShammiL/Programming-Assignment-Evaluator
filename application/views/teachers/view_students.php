@@ -1,5 +1,5 @@
 <div class="container-fluid container-user row">
-	<div class="col-md-2"></div>
+	<div class="col-md-1"></div>
 	<div class="col-md-10 body-card">
 		<div class="card">
 			<div class="card-header">
@@ -39,7 +39,7 @@
                 <?php if($students) { ?>
                     <div class="card mt-4">
                         <table class="table table-hover">
-                            <thead>
+                            <thead class="card-header">
                             <tr>
                                 <th scope="col">Student ID</th>
                                 <th scope="col">Name</th>
@@ -63,4 +63,5 @@
 			</div>
 		</div>
 	</div>
+    <div class="col-md-1"></div>
 </div>

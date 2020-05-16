@@ -24,10 +24,11 @@ class Admins extends CI_Controller{
 			redirect('loginAdmin');
 		}
 
-		$this->form_validation->set_rules('id', 'id' , 'required');
-		$this->form_validation->set_rules('description', 'description' , 'required');
-		$this->form_validation->set_rules('title', 'title', 'required');
-	
+		$this->form_validation->set_rules('id', 'Course ID' , 'required');
+		$this->form_validation->set_rules('description', 'Description' , 'required');
+		$this->form_validation->set_rules('title', 'Title', 'required');
+		$this->form_validation->set_error_delimiters('<div class="submission-error mb-5">', '</div>'); 
+
 		if($this->form_validation->run() === false){
 
 			$data['teachers'] = $this->teacher_model->get_teacher();
@@ -58,14 +59,15 @@ class Admins extends CI_Controller{
 			redirect('loginAdmin');
 		}
 
-		$this->form_validation->set_rules('nic', 'nic' , 'required');
-		$this->form_validation->set_rules('fname', 'fname' , 'required');
-		$this->form_validation->set_rules('lname', 'lname', 'required');
-		$this->form_validation->set_rules('email', 'email' , 'required');
-		$this->form_validation->set_rules('phone', 'phone', 'required');
-		$this->form_validation->set_rules('address', 'address', 'required');
-		$this->form_validation->set_rules('bday', 'bday', 'required');
-	
+		$this->form_validation->set_rules('nic', 'NIC' , 'required');
+		$this->form_validation->set_rules('fname', 'First Name' , 'required');
+		$this->form_validation->set_rules('lname', 'LastName', 'required');
+		$this->form_validation->set_rules('email', 'Email Address' , 'required|valid_email');
+		$this->form_validation->set_rules('phone', 'Telephone', 'required');
+		$this->form_validation->set_rules('address', 'Home Address', 'required');
+		$this->form_validation->set_rules('bday', 'Birthday', 'required');
+		$this->form_validation->set_error_delimiters('<div class="submission-error mb-5">', '</div>'); 
+
 		if($this->form_validation->run() === false){
 
 			$this->load->view('templates/admin_header');
@@ -104,13 +106,14 @@ class Admins extends CI_Controller{
 			redirect('loginAdmin');
 		}
 
-		$this->form_validation->set_rules('index', 'index' , 'required');
-		$this->form_validation->set_rules('fname', 'fname' , 'required');
-		$this->form_validation->set_rules('lname', 'lname', 'required');
-		$this->form_validation->set_rules('email', 'email' , 'required');
-		$this->form_validation->set_rules('address', 'address', 'required');
-		$this->form_validation->set_rules('bday', 'bday', 'required');
-	
+		$this->form_validation->set_rules('index', 'Index Number' , 'required');
+		$this->form_validation->set_rules('fname', 'First Name' , 'required');
+		$this->form_validation->set_rules('lname', 'Last Name', 'required');
+		$this->form_validation->set_rules('email', 'Email Address' , 'required|valid_email');
+		$this->form_validation->set_rules('address', 'Home Address', 'required');
+		$this->form_validation->set_rules('bday', 'Birthday', 'required');
+		$this->form_validation->set_error_delimiters('<div class="submission-error mb-5">', '</div>'); 
+
 		if($this->form_validation->run() === false){
 
 			$this->load->view('templates/admin_header');
@@ -169,6 +172,42 @@ class Admins extends CI_Controller{
 		
 		$this->load->view('templates/admin_header');
 		$this->load->view('admins/view_students', $data);
+		$this->load->view('templates/footer');	
+	}
+
+	public function editStudent($index_number) {
+
+		if(!$this->session->userdata('admin_id')){
+			redirect('loginAdmin');
+		}
+
+		$this->form_validation->set_rules('fname', 'First Name' , 'required');
+		$this->form_validation->set_rules('lname', 'Last Name', 'required');
+		$this->form_validation->set_rules('email', 'Email Address' , 'required|valid_email');
+		$this->form_validation->set_rules('address', 'Home Address', 'required');
+		$this->form_validation->set_rules('bday', 'Birthday', 'required');
+		//$this->form_validation->set_rules('phone', 'Telephone Number', 'matches["/^[0-9]{10}/"]', array('matches' => 'The %s you entered is invalid.'));
+		$this->form_validation->set_error_delimiters('<div class="submission-error mb-5">', '</div>'); 
+
+		if($this->form_validation->run() === TRUE){
+
+			$input = array(
+				'fname' => $this->input->post('fname'),
+				'lname' => $this->input->post('lname'),
+				'email' => $this->input->post('email'),
+				'address' => $this->input->post('address'),
+				'phone' => $this->input->post('phone'),
+				'semester' => $this->input->post('semester'),
+				'birthday' => $this->input->post('bday')
+			);
+			
+			$this->student_model->update_student($this->input->post('index'), $input);	
+		}
+
+		$data['student'] = $this->student_model->get_all_students($index_number);
+
+		$this->load->view('templates/admin_header');
+		$this->load->view('admins/edit_student', $data);
 		$this->load->view('templates/footer');	
 	}
 

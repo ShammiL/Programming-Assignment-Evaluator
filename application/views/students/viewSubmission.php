@@ -1,5 +1,5 @@
 <div class="container-fluid row">
-	<div class="col-md-2"></div>
+	<div class="col-md-1"></div>
 	<div class="col-md-10 body-card">
 		<div class="card">
 			<div class="card-header">
@@ -22,7 +22,7 @@
 				<h5 class="card-title">Description :</h5>
 				<p class="card-text"><?php echo $assignment_data['description'] ?></p>
 				<h5 class="card-title">Resources :</h5>
-				<p>Resource files list</p>
+				<p class="card-text"><a href="<?= base_url('assets/uploads/reference docs/'); ?>">Reference Document</a></p>				
 				<h5 class="card-title">Language :</h5>
 				<p><?php echo $assignment_data['language'] ?></p>
 				<h5 class="card-title mt-3">Submit Assignment :</h5>
@@ -96,5 +96,6 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div>	
+	<div class="col-md-1"></div>
 </div>
