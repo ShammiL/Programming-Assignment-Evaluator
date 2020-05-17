@@ -48,7 +48,7 @@
                                 <td><?php echo $teacher['fname'].' '.$teacher['lname']; ?></td>
                                 <td><?php echo $teacher['email']; ?></td>
                                 <td><?php echo $teacher['telephone']; ?></td>
-                                <td><a href="">View</a></td>
+                                <td><a href="<?php echo base_url(); ?>admin/editTeacher/<?php echo $teacher['nic']; ?>">View</a></td>
                             </tr>
                         <?php  } ?>
 						</tbody>

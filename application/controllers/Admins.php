@@ -24,7 +24,7 @@ class Admins extends CI_Controller{
 			redirect('loginAdmin');
 		}
 
-		$this->form_validation->set_rules('id', 'Course ID' , 'required');
+		$this->form_validation->set_rules('id', 'Course ID' , 'required|is_unique[courses.course_id]', array('is_unique' => 'The %s you entered is already exists in the system.'));
 		$this->form_validation->set_rules('description', 'Description' , 'required');
 		$this->form_validation->set_rules('title', 'Title', 'required');
 		$this->form_validation->set_error_delimiters('<div class="submission-error mb-5">', '</div>'); 
@@ -59,10 +59,10 @@ class Admins extends CI_Controller{
 			redirect('loginAdmin');
 		}
 
-		$this->form_validation->set_rules('nic', 'NIC' , 'required');
+		$this->form_validation->set_rules('nic', 'NIC' , 'required|is_unique[lecturer.nic]', array('is_unique' => 'The %s you entered is already exists in the system.'));
 		$this->form_validation->set_rules('fname', 'First Name' , 'required');
 		$this->form_validation->set_rules('lname', 'LastName', 'required');
-		$this->form_validation->set_rules('email', 'Email Address' , 'required|valid_email');
+		$this->form_validation->set_rules('email', 'Email Address' , 'required|valid_email|is_unique[lecturer.email]', array('is_unique' => 'The %s you entered is already exists in the system.'));
 		$this->form_validation->set_rules('phone', 'Telephone', 'required');
 		$this->form_validation->set_rules('address', 'Home Address', 'required');
 		$this->form_validation->set_rules('bday', 'Birthday', 'required');
@@ -90,7 +90,7 @@ class Admins extends CI_Controller{
 			);
 
 			$signup_data = array(
-				'email' => $this->input->post('email'), 
+				'nic' => $this->input->post('nic'), 
 				'password' => md5("1234")
 			);
 			
@@ -106,10 +106,10 @@ class Admins extends CI_Controller{
 			redirect('loginAdmin');
 		}
 
-		$this->form_validation->set_rules('index', 'Index Number' , 'required');
+		$this->form_validation->set_rules('index', 'Index Number' , 'required|is_unique[students.indexNumber]', array('is_unique' => 'The %s you entered is already exists in the system.'));
 		$this->form_validation->set_rules('fname', 'First Name' , 'required');
 		$this->form_validation->set_rules('lname', 'Last Name', 'required');
-		$this->form_validation->set_rules('email', 'Email Address' , 'required|valid_email');
+		$this->form_validation->set_rules('email', 'Email Address' , 'required|valid_email|is_unique[students.email]', array('is_unique' => 'The %s you entered is already exists in the system.'));
 		$this->form_validation->set_rules('address', 'Home Address', 'required');
 		$this->form_validation->set_rules('bday', 'Birthday', 'required');
 		$this->form_validation->set_error_delimiters('<div class="submission-error mb-5">', '</div>'); 
@@ -222,6 +222,43 @@ class Admins extends CI_Controller{
 		
 		$this->load->view('templates/admin_header');
 		$this->load->view('admins/view_teachers', $data);
+		$this->load->view('templates/footer');	
+	}
+
+	public function editTeacher($teacher_id) {
+
+		if(!$this->session->userdata('admin_id')){
+			redirect('loginAdmin');
+		}
+
+		$data['message'] = "";
+
+		$this->form_validation->set_rules('fname', 'First Name' , 'required');
+		$this->form_validation->set_rules('lname', 'Last Name', 'required');
+		$this->form_validation->set_rules('email', 'Email Address' , 'required|valid_email');
+		$this->form_validation->set_rules('address', 'Home Address', 'required');
+		$this->form_validation->set_rules('bday', 'Birthday', 'required');
+		//$this->form_validation->set_rules('phone', 'Telephone Number', 'matches["/^[0-9]{10}/"]', array('matches' => 'The %s you entered is invalid.'));
+		$this->form_validation->set_error_delimiters('<div class="submission-error mb-5">', '</div>'); 
+
+		if($this->form_validation->run() === TRUE){
+
+			$input = array(
+				'fname' => $this->input->post('fname'),
+				'lname' => $this->input->post('lname'),
+				'email' => $this->input->post('email'),
+				'address' => $this->input->post('address'),
+				'telephone' => $this->input->post('phone'),
+				'birthday' => $this->input->post('bday')
+			);
+			
+			$data['message'] = $this->teacher_model->update_teacher($teacher_id, $input);	
+		}
+
+		$data['teacher'] = $this->teacher_model->get_teacher($teacher_id);
+
+		$this->load->view('templates/admin_header');
+		$this->load->view('admins/edit_teacher', $data);
 		$this->load->view('templates/footer');	
 	}
 }

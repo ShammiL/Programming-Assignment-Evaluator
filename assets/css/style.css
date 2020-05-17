@@ -318,12 +318,14 @@ footer.footer .container > div {
 
 .change-password-wrong {
 	background-color: crimson;
+	color: whitesmoke;
     padding: 5px;
     text-align: center;
 }
 
 .change-password-success {
 	background-color: forestgreen;
+	color: whitesmoke;
     padding: 5px;
     text-align: center;
 }

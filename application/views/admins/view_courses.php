@@ -48,7 +48,7 @@
                                 <td><?php echo $course['course_name']; ?></td>
                                 <td><?php echo $course['lecturer_id']; ?></td>
                                 <td><?php echo $course['semester']; ?></td>
-                                <td><a href="">View</a></td>
+                                <td><a href="<?php echo base_url(); ?>admin/editCourse/<?php echo $course['course_id']; ?>">View</a></td>
                             </tr>
                         <?php  } ?>
 						</tbody>
