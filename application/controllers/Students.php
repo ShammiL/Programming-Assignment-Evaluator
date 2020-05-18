@@ -28,7 +28,7 @@ class Students extends CI_Controller{
 
 		if ($this->student_model->checkEnrollment($indexNumber,$course_id)){
 			$data['assignments'] = $this->course_model->getAssignments($course_id);
-			$data['courseDetails'] = $this->course_model->getCourseDetails($course_id);
+			$data['courseDetails'] = $this->course_model->get_course_details($course_id);
 			$data['teacher'] = $this->teacher_model->get_teacher($data['courseDetails']->lecturer_id);
 
 			$this->load->view('templates/student_header');
@@ -167,12 +167,6 @@ class Students extends CI_Controller{
 
 		$this->load->view('templates/student_header');
 		$this->load->view('students/profile', $data);	
-
-	}
-
-	public function changePassword($index_number) {
-
-
 
 	}
 

@@ -53,15 +53,15 @@ class Student_model extends CI_Model{
 
    function checkEnrollment($student_id, $course_id){
 
-	   $this->db->where('course_id', $course_id);
-	   $this->db->where('indexNumber', $student_id);
-	   $result = $this->db->get('studentcourse');
+		$this->db->where('course_id', $course_id);
+		$this->db->where('indexNumber', $student_id);
+		$result = $this->db->get('studentcourse');
 
-	   if($result->num_rows() > 0){
-		   return $result->row(0)->course_id;
-	   } else {
-		   return FALSE;
-	   }	   
+		if($result->num_rows() > 0){
+			return $result->row(0)->course_id;
+		} else {
+			return FALSE;
+		}	   
    	}
 
 	public function get_students($course_id = 'CS3042', $student_id=NULL){

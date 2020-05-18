@@ -7,8 +7,8 @@
             <?php echo validation_errors();
             if ($message == 1) {
                 echo "<p id='change-password-success' class='change-password-success'>New data updated successfully.</p>";
-            } else {
-                echo "<p id='change-password-wrong' class='change-password-wrong'>Ann error occured.</p>";
+            } else if ($message != "") {
+                echo "<p id='change-password-wrong' class='change-password-wrong'>An error occured.</p>";
             }
 			echo form_open_multipart('admin/editTeacher/'.$teacher['nic']); ?>
                 <div class="form-group row">

@@ -32,7 +32,7 @@ class Teachers extends CI_Controller
 		}
 
 		$data['course'] = $course_id;
-		$data['courseDetails'] = $this->course_model->getCourseDetails($course_id);
+		$data['courseDetails'] = $this->course_model->get_course_details($course_id);
 		$data['teacher'] = $this->teacher_model->get_teacher($data['courseDetails']->lecturer_id);
 
 		$this->load->view('templates/header');
@@ -146,7 +146,7 @@ class Teachers extends CI_Controller
 		}
 
 		$data['assignments'] = $this->assignment_model->get_assignments($course_id);
-		$data['courseDetails'] = $this->course_model->getCourseDetails($course_id);
+		$data['courseDetails'] = $this->course_model->get_course_details($course_id);
 		// print_r ($data['assignments']);
 		$this->load->view('templates/header');
 		$this->load->view('teachers/view_assignments', $data);

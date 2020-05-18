@@ -27,11 +27,29 @@
 						<a class="nav-link" href=<?php echo base_url()."student/profile/"; ?>>Profile</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href=<?php echo base_url()."login/logout"; ?>>Logout</a>
+						<a class="nav-link" data-toggle="modal" data-target="#logout-student" href="#" >Logout</a>
 					</li>
 				</ul>
 			</div>
 		</div>
 	</nav>
+
+	<!--Logout Modal -->
+	<div class="modal fade" id="logout-student" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h3 class="modal-title" id="exampleModalLabel">Are you sure ?</h3>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-footer">
+					<a class="btn btn-primary" href="<?php echo base_url().'login/logout'; ?>" >Logout</a>
+					<a class="btn btn-secondary" data-dismiss="modal">Cancel</a>
+				</div>
+			</div>
+		</div>
+	</div>
 
 	<div class="container-fluid mt-5">

@@ -46,8 +46,16 @@
                             <tr>
                                 <td><?php echo $course['course_id']; ?></td>
                                 <td><?php echo $course['course_name']; ?></td>
-                                <td><?php echo $course['lecturer_id']; ?></td>
-                                <td><?php echo $course['semester']; ?></td>
+                                <td><?php if ($course['lecturer_id'] != "") { 
+                                    echo $course['lecturer_id']; 
+                                } else { 
+                                    echo '--- Not Assigned ---'; 
+                                } ?></td>
+                                <td><?php if ($course['semester'] != "") {
+                                    echo $course['semester']; 
+                                } else { 
+                                    echo '--- None ---'; 
+                                } ?></td>
                                 <td><a href="<?php echo base_url(); ?>admin/editCourse/<?php echo $course['course_id']; ?>">View</a></td>
                             </tr>
                         <?php  } ?>
@@ -59,4 +67,25 @@
                 } ?>
         </div>
 	</div>
+</div>
+
+
+<!--Assign Teacher Modal -->
+<div class="modal fade" id="assign-teacher" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
 </div>

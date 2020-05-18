@@ -27,7 +27,7 @@ class Admins extends CI_Controller{
 		$this->form_validation->set_rules('id', 'Course ID' , 'required|is_unique[courses.course_id]', array('is_unique' => 'The %s you entered is already exists in the system.'));
 		$this->form_validation->set_rules('description', 'Description' , 'required');
 		$this->form_validation->set_rules('title', 'Title', 'required');
-		$this->form_validation->set_error_delimiters('<div class="submission-error mb-5">', '</div>'); 
+		$this->form_validation->set_error_delimiters('<div class="change-password-wrong mb-5">', '</div>'); 
 
 		if($this->form_validation->run() === false){
 
@@ -63,10 +63,10 @@ class Admins extends CI_Controller{
 		$this->form_validation->set_rules('fname', 'First Name' , 'required');
 		$this->form_validation->set_rules('lname', 'LastName', 'required');
 		$this->form_validation->set_rules('email', 'Email Address' , 'required|valid_email|is_unique[lecturer.email]', array('is_unique' => 'The %s you entered is already exists in the system.'));
-		$this->form_validation->set_rules('phone', 'Telephone', 'required');
+		$this->form_validation->set_rules('phone', 'Telephone Number', 'required|regex_match[/^[0-9]{10}$/]', array('regex_match' => 'The %s you entered is invalid.'));
 		$this->form_validation->set_rules('address', 'Home Address', 'required');
 		$this->form_validation->set_rules('bday', 'Birthday', 'required');
-		$this->form_validation->set_error_delimiters('<div class="submission-error mb-5">', '</div>'); 
+		$this->form_validation->set_error_delimiters('<div class="change-password-wrong mb-5">', '</div>'); 
 
 		if($this->form_validation->run() === false){
 
@@ -112,7 +112,8 @@ class Admins extends CI_Controller{
 		$this->form_validation->set_rules('email', 'Email Address' , 'required|valid_email|is_unique[students.email]', array('is_unique' => 'The %s you entered is already exists in the system.'));
 		$this->form_validation->set_rules('address', 'Home Address', 'required');
 		$this->form_validation->set_rules('bday', 'Birthday', 'required');
-		$this->form_validation->set_error_delimiters('<div class="submission-error mb-5">', '</div>'); 
+		$this->form_validation->set_rules('phone', 'Telephone Number', 'regex_match[/^[0-9]{10}$/]', array('regex_match' => 'The %s you entered is invalid.'));
+		$this->form_validation->set_error_delimiters('<div class="change-password-wrong mb-5">', '</div>'); 
 
 		if($this->form_validation->run() === false){
 
@@ -123,6 +124,11 @@ class Admins extends CI_Controller{
 			
 		else{
 
+			$semester = $this->input->post('semester');
+			if ($semester == "") {
+				$semester = "1";
+			}
+
 			$input = array(
 				'indexNumber' => $this->input->post('index'),
 				'fname' => $this->input->post('fname'),
@@ -130,7 +136,7 @@ class Admins extends CI_Controller{
 				'email' => $this->input->post('email'),
 				'address' => $this->input->post('address'),
 				'phone' => $this->input->post('phone'),
-				'semester' => $this->input->post('semester'),
+				'semester' => $semester,
 				'birthday' => $this->input->post('bday'),
 				'gender' => $this->input->post('gender'),
 				'nationality' => $this->input->post('nationality')
@@ -161,6 +167,38 @@ class Admins extends CI_Controller{
 		$this->load->view('templates/footer');	
 	}
 
+	public function editCourse($course_id) {
+
+		if(!$this->session->userdata('admin_id')){
+			redirect('loginAdmin');
+		}
+
+		$data['message'] = "";
+
+		$this->form_validation->set_rules('title', 'Course Title' , 'required');
+		$this->form_validation->set_rules('desc', 'Course Description', 'required');
+
+		if($this->form_validation->run() === TRUE){
+
+			$input = array(
+				'course_name' => $this->input->post('title'),
+				'description' => $this->input->post('desc'),
+				'lecturer_id' => $this->input->post('lecturer_id'),
+				'semester' => $this->input->post('semester')
+			);
+			
+			$data['message'] = $this->course_model->update_course($course_id, $input);	
+		}
+
+		$data['course'] = $this->course_model->get_course_details($course_id);
+		$data['teacher'] = $this->teacher_model->get_teacher($data['course']->lecturer_id);
+		$data['teachers'] = $this->teacher_model->get_teacher();
+
+		$this->load->view('templates/admin_header');
+		$this->load->view('admins/edit_course', $data);
+		$this->load->view('templates/footer');	
+	}
+
 	public function viewStudent() {
 
 		if(!$this->session->userdata('admin_id')){
@@ -181,13 +219,15 @@ class Admins extends CI_Controller{
 			redirect('loginAdmin');
 		}
 
+		$data['message'] = "";
+
 		$this->form_validation->set_rules('fname', 'First Name' , 'required');
 		$this->form_validation->set_rules('lname', 'Last Name', 'required');
 		$this->form_validation->set_rules('email', 'Email Address' , 'required|valid_email');
 		$this->form_validation->set_rules('address', 'Home Address', 'required');
 		$this->form_validation->set_rules('bday', 'Birthday', 'required');
-		//$this->form_validation->set_rules('phone', 'Telephone Number', 'matches["/^[0-9]{10}/"]', array('matches' => 'The %s you entered is invalid.'));
-		$this->form_validation->set_error_delimiters('<div class="submission-error mb-5">', '</div>'); 
+		$this->form_validation->set_rules('phone', 'Telephone Number', 'regex_match[/^[0-9]{10}$/]', array('regex_match' => 'The %s you entered is invalid.'));
+		$this->form_validation->set_error_delimiters('<div class="change-password-wrong mb-5">', '</div>'); 
 
 		if($this->form_validation->run() === TRUE){
 
@@ -201,7 +241,7 @@ class Admins extends CI_Controller{
 				'birthday' => $this->input->post('bday')
 			);
 			
-			$this->student_model->update_student($this->input->post('index'), $input);	
+			$data['message'] = $this->student_model->update_student($this->input->post('index'), $input);	
 		}
 
 		$data['student'] = $this->student_model->get_all_students($index_number);
@@ -238,8 +278,8 @@ class Admins extends CI_Controller{
 		$this->form_validation->set_rules('email', 'Email Address' , 'required|valid_email');
 		$this->form_validation->set_rules('address', 'Home Address', 'required');
 		$this->form_validation->set_rules('bday', 'Birthday', 'required');
-		//$this->form_validation->set_rules('phone', 'Telephone Number', 'matches["/^[0-9]{10}/"]', array('matches' => 'The %s you entered is invalid.'));
-		$this->form_validation->set_error_delimiters('<div class="submission-error mb-5">', '</div>'); 
+		$this->form_validation->set_rules('phone', 'Telephone Number', 'required|regex_match[/^[0-9]{10}$/]', array('regex_match' => 'The %s you entered is invalid.'));
+		$this->form_validation->set_error_delimiters('<div class="change-password-wrong mb-5">', '</div>'); 
 
 		if($this->form_validation->run() === TRUE){
 

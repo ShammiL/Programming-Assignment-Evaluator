@@ -5,6 +5,11 @@
         </div>
         <div class="card-body">
             <?php echo validation_errors(); 
+            if ($message == 1) {
+                echo "<p id='change-password-success' class='change-password-success'>New data updated successfully.</p>";
+            } else if ($message != "") {
+                echo "<p id='change-password-wrong' class='change-password-wrong'>An error occured.</p>";
+            }
 			echo form_open_multipart('admin/editStudent/'.$student['indexNumber']); ?>
                 <input type="text" class="form-control" name="index" value="<?php echo $student['indexNumber']; ?>" hidden>
                 <div class="form-group row">

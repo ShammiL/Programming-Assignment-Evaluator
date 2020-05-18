@@ -329,3 +329,7 @@ footer.footer .container > div {
     padding: 5px;
     text-align: center;
 }
+
+.change-link {
+	vertical-align: -webkit-baseline-middle;
+}
