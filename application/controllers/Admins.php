@@ -4,7 +4,7 @@ class Admins extends CI_Controller{
 	public function index(){
 
 		if(!$this->session->userdata('admin_id')){
-			redirect('loginAdmin');
+			redirect('');
 		}
 
 		$admin_id = $this->session->userdata('admin_id');
@@ -21,7 +21,7 @@ class Admins extends CI_Controller{
 	public function addCourse() {
 
 		if(!$this->session->userdata('admin_id')){
-			redirect('loginAdmin');
+			redirect('');
 		}
 
 		$this->form_validation->set_rules('id', 'Course ID' , 'required|is_unique[courses.course_id]', array('is_unique' => 'The %s you entered is already exists in the system.'));
@@ -56,7 +56,7 @@ class Admins extends CI_Controller{
 	public function addTeacher() {
 
 		if(!$this->session->userdata('admin_id')){
-			redirect('loginAdmin');
+			redirect('');
 		}
 
 		$this->form_validation->set_rules('nic', 'NIC' , 'required|is_unique[lecturer.nic]', array('is_unique' => 'The %s you entered is already exists in the system.'));
@@ -86,7 +86,8 @@ class Admins extends CI_Controller{
 				'address' => $this->input->post('address'),
 				'birthday' => $this->input->post('bday'),
 				'gender' => $this->input->post('gender'),
-				'nationality' => $this->input->post('nationality')
+				'nationality' => $this->input->post('nationality'),
+				'status' => '1'
 			);
 
 			$signup_data = array(
@@ -103,7 +104,7 @@ class Admins extends CI_Controller{
 	public function addStudent() {
 
 		if(!$this->session->userdata('admin_id')){
-			redirect('loginAdmin');
+			redirect('');
 		}
 
 		$this->form_validation->set_rules('index', 'Index Number' , 'required|is_unique[students.indexNumber]', array('is_unique' => 'The %s you entered is already exists in the system.'));
@@ -156,7 +157,7 @@ class Admins extends CI_Controller{
 	public function viewCourse() {
 
 		if(!$this->session->userdata('admin_id')){
-			redirect('loginAdmin');
+			redirect('');
 		}
 
 		$data['courses'] = $this->course_model->get_courses();
@@ -170,7 +171,7 @@ class Admins extends CI_Controller{
 	public function editCourse($course_id) {
 
 		if(!$this->session->userdata('admin_id')){
-			redirect('loginAdmin');
+			redirect('');
 		}
 
 		$data['message'] = "";
@@ -202,7 +203,7 @@ class Admins extends CI_Controller{
 	public function viewStudent() {
 
 		if(!$this->session->userdata('admin_id')){
-			redirect('loginAdmin');
+			redirect('');
 		}
 
 		$data['students'] = $this->student_model->get_all_students();
@@ -216,7 +217,7 @@ class Admins extends CI_Controller{
 	public function editStudent($index_number) {
 
 		if(!$this->session->userdata('admin_id')){
-			redirect('loginAdmin');
+			redirect('');
 		}
 
 		$data['message'] = "";
@@ -254,7 +255,7 @@ class Admins extends CI_Controller{
 	public function viewTeacher() {
 
 		if(!$this->session->userdata('admin_id')){
-			redirect('loginAdmin');
+			redirect('');
 		}
 
 		$data['teachers'] = $this->teacher_model->get_teacher();
@@ -268,7 +269,7 @@ class Admins extends CI_Controller{
 	public function editTeacher($teacher_id) {
 
 		if(!$this->session->userdata('admin_id')){
-			redirect('loginAdmin');
+			redirect('');
 		}
 
 		$data['message'] = "";
@@ -296,9 +297,20 @@ class Admins extends CI_Controller{
 		}
 
 		$data['teacher'] = $this->teacher_model->get_teacher($teacher_id);
+		$data['status'] = $this->teacher_model->get_status($teacher_id);
 
 		$this->load->view('templates/admin_header');
 		$this->load->view('admins/edit_teacher', $data);
 		$this->load->view('templates/footer');	
+	}
+
+	public function changeStatus($teacher_id, $status) {
+
+		if(!$this->session->userdata('admin_id')){
+			redirect('');
+		}
+
+		$this->teacher_model->change_status($teacher_id, $status);
+		redirect('admin/editTeacher/'.$teacher_id);
 	}
 }

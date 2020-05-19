@@ -57,6 +57,23 @@ class teacher_model extends CI_Model
 		$db2->select('COUNT(nic) AS teacher_count');
 		$query = $db2->get('lecturer');
 		return $query->result_array()[0]['teacher_count'];
+	}
 
+	public function get_status($teacher_id) {
+
+		$this->db->select('status');
+		$query = $this->db->get_where('lecturer', array('nic' => $teacher_id));
+		return $query->row(0)->status;
+	}
+
+	public function change_status($teacher_id, $status) {
+
+		if ($status == '1') {
+			$this->db->set(array('status' => '1'));
+		} else {
+			$this->db->set(array('status' => '0'));
+		}
+        $this->db->where('nic', $teacher_id);
+        $this->db->update('lecturer');
 	}
 }

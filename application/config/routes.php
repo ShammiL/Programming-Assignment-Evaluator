@@ -1,12 +1,9 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-$route['default_controller'] = 'Welcome/index';
+$route['default_controller'] = 'login/index';
 
 $route['testing/(:any)'] = 'testing/$1';
-
-$route['login'] = 'login/index';
-$route['loginAdmin'] = 'login/adminLogin';
 
 $route['admin'] = 'admins/index';
 $route['admin/addCourse'] = 'admins/addCourse';
@@ -18,6 +15,7 @@ $route['admin/editTeacher/(:any)'] = 'admins/editTeacher/$1';
 $route['admin/viewStudent'] = 'admins/viewStudent';
 $route['admin/viewCourse'] = 'admins/viewCourse';
 $route['admin/viewTeacher'] = 'admins/viewTeacher';
+$route['admin/changeStatus/(:any)/(:any)'] = 'admins/changeStatus/$1/$2';
 
 $route['teacher'] = 'teachers/index';
 $route['teacher/grade'] = 'teachers/grade';

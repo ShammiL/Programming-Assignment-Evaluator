@@ -7,14 +7,14 @@
 			  integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 		<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Merienda:wght@700&family=Roboto+Slab&family=Yanone+Kaffeesatz&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/style.css">
-		<title>MK Blog</title>
+		<title>Programming Assignment Evaluator</title>
 	</head>
 	<body>
 	<div class="navbar-background">
 	</div>
 	<nav class="navbar navbar-expand-lg bg-custom fixed-top">
 		<div class="container p-2 text-uppercase">
-			<a class="navbar-brand" href="<?php echo base_url(); ?>">Logo</a>
+			<a class="navbar-brand" href="#">Logo</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>

@@ -1,7 +1,18 @@
 <div class="container">
 	<div class="card body-card">
         <div class="card-header">
-            <h4>NIC: <?php echo $teacher['nic']; ?></h4>
+            <div class="row">
+                <div class="col-md-10">
+                    <h4>NIC: <?php echo $teacher['nic']; ?></h4>
+                </div>
+                <div class="col-md-2">
+                    <?php if ($status == "1") { ?>
+                        <a href="<?php echo base_url(); ?>admin/changeStatus/<?php echo $teacher['nic']; ?>/0" class="btn btn-danger btn-edit align-middle" type="submit">Disable</a>
+                    <?php } else { ?>
+                        <a href="<?php echo base_url(); ?>admin/changeStatus/<?php echo $teacher['nic']; ?>/1" class="btn btn-primary btn-edit align-middle" type="submit">Enable</a>
+                    <?php } ?>
+                </div>
+            </div>
         </div>
         <div class="card-body">
             <?php echo validation_errors();

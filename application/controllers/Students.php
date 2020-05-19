@@ -13,7 +13,7 @@ class Students extends CI_Controller{
 			$this->load->view('templates/footer');
 		
 		} else {
-			redirect('login');
+			redirect('');
 		}
 	}
 
@@ -21,7 +21,7 @@ class Students extends CI_Controller{
 
 		$course_id = $id;
 		if(!$this->session->userdata('student_id')){
-			redirect('login');
+			redirect('');
 		}
 
 		$indexNumber = $this->session->userdata('student_id');
@@ -48,7 +48,7 @@ class Students extends CI_Controller{
 	function assignmentDetails($assignment_id, $num, $data1=NULL){
 
 		if(!$this->session->userdata('student_id')){
-			redirect('login');
+			redirect('');
 		}
 		
 		$student_id = $this->session->userdata('student_id');
@@ -105,7 +105,7 @@ class Students extends CI_Controller{
 			$this->load->view('templates/footer');
 
 		} else {
-			redirect('login');
+			redirect('');
 		}
 	}
 
@@ -140,7 +140,7 @@ class Students extends CI_Controller{
 	public function profile() {
 
 		if(!$this->session->userdata('student_id')){
-			redirect('login');
+			redirect('');
 		}
 
 		$data['message'] = "";
@@ -167,6 +167,7 @@ class Students extends CI_Controller{
 
 		$this->load->view('templates/student_header');
 		$this->load->view('students/profile', $data);	
+		$this->load->view('templates/footer');
 
 	}
 

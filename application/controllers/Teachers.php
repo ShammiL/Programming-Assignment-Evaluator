@@ -2,13 +2,6 @@
 class Teachers extends CI_Controller
 {
 
-	public function login()
-	{
-
-		$this->load->view('teachers/login');
-
-	}
-
 	public function index() {
 
 		if ($this->session->userdata('lecturer_id')){
@@ -21,14 +14,14 @@ class Teachers extends CI_Controller
 		}
 		
 		else {
-			redirect('login');
+			redirect('');
 		}
 	}
 
 	public function courseDetails($course_id) {
 		
 		if (!$this->session->userdata('lecturer_id')){
-			redirect('login');
+			redirect('');
 		}
 
 		$data['course'] = $course_id;
@@ -43,7 +36,7 @@ class Teachers extends CI_Controller
 	public function createAssignment($course_id){
 
 		if (!$this->session->userdata('lecturer_id')){
-			redirect('login');
+			redirect('');
 		}
 			
 		$data['title'] = 'Create new Assignment';	
@@ -117,6 +110,10 @@ class Teachers extends CI_Controller
 
 	public function editAssignment($course_id, $assignment_id, $num) {
 
+		if (!$this->session->userdata('lecturer_id')){
+			redirect('');
+		}
+
 		$data['title'] = 'Edit Assignment';		
 		$data['assignment'] = $this->assignment_model->get_one($assignment_id);
 		$data['course_id']  = $course_id;
@@ -142,7 +139,7 @@ class Teachers extends CI_Controller
 	public function viewAssignments($course_id) {
 
 		if (!$this->session->userdata('lecturer_id')){
-			redirect('login');
+			redirect('');
 		}
 
 		$data['assignments'] = $this->assignment_model->get_assignments($course_id);
@@ -156,7 +153,7 @@ class Teachers extends CI_Controller
 	public function viewSubmissions($assignment_id, $num, $student_id = NULL) {
 
 		if (!$this->session->userdata('lecturer_id')){
-			redirect('login');
+			redirect('');
 		}
 
 		if ($student_id) {
@@ -179,7 +176,7 @@ class Teachers extends CI_Controller
 	public function searchSubmission($assignment_id, $num) {
 
 		if (!$this->session->userdata('lecturer_id')){
-			redirect('login');
+			redirect('');
 		}
 
 		$student_id = $this->input->post('search-student');
@@ -204,7 +201,7 @@ class Teachers extends CI_Controller
 	public function viewStudents($course_id, $student_id = NULL) {
 
 		if (!$this->session->userdata('lecturer_id')){
-			redirect('login');
+			redirect('');
 		}
 
 		if ($student_id) {
@@ -226,7 +223,7 @@ class Teachers extends CI_Controller
 	public function searchStudent($course_id) {
 
 		if (!$this->session->userdata('lecturer_id')){
-			redirect('login');
+			redirect('');
 		}
 
 		$student_id = $this->input->post('search-student');
@@ -237,7 +234,7 @@ class Teachers extends CI_Controller
 	public function profile() {
 
 		if(!$this->session->userdata('lecturer_id')){
-			redirect('login');
+			redirect('');
 		}
 
 		$data['message'] = "";
@@ -264,6 +261,7 @@ class Teachers extends CI_Controller
 
 		$this->load->view('templates/header');
 		$this->load->view('teachers/profile', $data);	
+		$this->load->view('templates/footer');
 
 	}
 }

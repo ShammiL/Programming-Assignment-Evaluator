@@ -15,7 +15,7 @@
                 }
             } ?>
                 <div class="row">
-                    <label class="col-sm-2 col-form-label">First Name: </label>
+                    <label class="col-sm-2 col-form-label">Name: </label>
                     <p class="col-sm-10 col-form-label"><?php echo $student['fname']." ".$student['lname']; ?></p>
                 </div>
                 <div class="row">
