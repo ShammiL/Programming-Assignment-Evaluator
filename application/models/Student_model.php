@@ -38,7 +38,7 @@ class Student_model extends CI_Model{
         return $this->db->update('students');
     }
 
-	function getCourses($indexNumber){
+	function getCoursesBySemester($indexNumber){
 
 	   $this->db->where('indexNumber', $indexNumber);
 	   $result = $this->db->get('students');
@@ -51,17 +51,31 @@ class Student_model extends CI_Model{
 	   return $courses->result_array();
    }
 
+   function getCoursesByIndex($indexNumber){
+
+	$this->db->where('indexNumber', $indexNumber);
+	$results = $this->db->get('studentcourse')->result_array();
+
+	$courses = [];
+	foreach($results as $result){
+		$this->db->where('course_id', $result['course_id']);
+		array_push($courses, $this->db->get('courses')->result_array());
+
+	}
+	return $courses;
+}
+
    function checkEnrollment($student_id, $course_id){
 
-		$this->db->where('course_id', $course_id);
-		$this->db->where('indexNumber', $student_id);
-		$result = $this->db->get('studentcourse');
+	   $this->db->where('course_id', $course_id);
+	   $this->db->where('indexNumber', $student_id);
+	   $result = $this->db->get('studentcourse');
 
-		if($result->num_rows() > 0){
-			return $result->row(0)->course_id;
-		} else {
-			return FALSE;
-		}	   
+	   if($result->num_rows() > 0){
+		   return $result->row(0)->course_id;
+	   } else {
+		   return FALSE;
+	   }	   
    	}
 
 	public function get_students($course_id = 'CS3042', $student_id=NULL){
@@ -111,4 +125,16 @@ class Student_model extends CI_Model{
 
 		}
 	}
+
+	function enrollCourse($indexNumber,$course_id){
+        $data = array(
+                    'indexNumber' => $indexNumber,
+                    'course_id' => $course_id
+                );
+        $this->db->insert('studentcourse',$data);
+
+        // $this->db->where($data);
+        // $id = $this->db->get('submissions')->row(0)->submission_id;
+        // return $id;
+    }
 }

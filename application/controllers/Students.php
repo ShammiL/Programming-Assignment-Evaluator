@@ -6,13 +6,36 @@ class Students extends CI_Controller{
 		if($this->session->userdata('student_id')){
 
 			$indexNumber = $this->session->userdata('student_id');
-			$data['courses'] = $this->student_model->getCourses($indexNumber);
+			$data['index_courses'] = $this->student_model->getCoursesByIndex($indexNumber);
+			$sem_courses = $this->student_model->getCoursesBySemester($indexNumber);
+
+			$data['sem_courses'] = [];
+			$course_ids = [];
+			foreach($data['index_courses'] as $course){
+				array_push($course_ids, $course[0]['course_id']);
+			}
+
+			foreach($sem_courses as $c){
+				if (!in_array($c['course_id'], $course_ids)){
+					array_push($data['sem_courses'], $c);
+				} 
+			}
+				// print_r($data['sem_courses']);
+			
+			
+			// print_r($course_ids);
+
+			// echo('enrolled in: \n');
+			// print_r($data['index_courses']);
+
 
 			$this->load->view('templates/student_header');
 			$this->load->view('students/view_courses',$data);
 			$this->load->view('templates/footer');
 		
-		} else {
+		}
+	
+		 else {
 			redirect('');
 		}
 	}
@@ -29,7 +52,7 @@ class Students extends CI_Controller{
 		if ($this->student_model->checkEnrollment($indexNumber,$course_id)){
 			$data['assignments'] = $this->course_model->getAssignments($course_id);
 			$data['courseDetails'] = $this->course_model->get_course_details($course_id);
-			$data['teacher'] = $this->teacher_model->get_teacher($data['courseDetails']->lecturer_id);
+			$data['teacher'] = $this->teacher_model->get_teacher($data['courseDetails']->lecturer_nic);
 
 			$this->load->view('templates/student_header');
 			$this->load->view('students/view_assignments',$data);
@@ -43,6 +66,12 @@ class Students extends CI_Controller{
 			$this->load->view('templates/footer');
 		}
 		
+	}
+
+	function enrollCourse($course_id){
+		$student_id = $this->session->userdata('student_id');
+		$this->student_model->enrollCourse($student_id, $course_id);
+		redirect('student/courseDetails/' . $course_id);
 	}
 
 	function assignmentDetails($assignment_id, $num, $data1=NULL){
@@ -170,7 +199,6 @@ class Students extends CI_Controller{
 		$this->load->view('templates/footer');
 
 	}
-
 	// public function view1($course_id = "CS3020"){
 
 	// 	$data['title'] = ucfirst('Students following '. $course_id);
