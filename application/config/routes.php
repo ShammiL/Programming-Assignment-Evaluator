@@ -5,6 +5,7 @@ $route['default_controller'] = 'login/index';
 
 $route['testing/(:any)'] = 'testing/$1';
 
+
 $route['admin'] = 'admins/index';
 $route['admin/addCourse'] = 'admins/addCourse';
 $route['admin/addTeacher'] = 'admins/addTeacher';
@@ -16,6 +17,7 @@ $route['admin/viewStudent'] = 'admins/viewStudent';
 $route['admin/viewCourse'] = 'admins/viewCourse';
 $route['admin/viewTeacher'] = 'admins/viewTeacher';
 $route['admin/changeStatus/(:any)/(:any)'] = 'admins/changeStatus/$1/$2';
+
 
 $route['teacher'] = 'teachers/index';
 $route['teacher/grade'] = 'teachers/grade';
@@ -35,7 +37,7 @@ $route['student'] = 'students/index';
 $route['student/assignmentDetails/(:any)/(:any)/(:any)'] = 'students/assignmentDetails/$1/$2/$3';
 $route['student/assignmentDetails/(:any)/(:any)'] = 'students/assignmentDetails/$1/$2';
 $route['student/courseDetails/(:any)'] = 'students/courseDetails/$1';
-$route['student/enrollCourse'] = 'students/enrollCourse';
+$route['student/enrollCourse/(:any)'] = 'students/enrollCourse/$1';
 $route['student/viewGrade/(:any)/(:any)'] = 'students/viewGrade/$1/$2';
 $route['student/viewCourses'] = 'students/viewCourses';
 $route['student/profile'] = 'students/profile';
