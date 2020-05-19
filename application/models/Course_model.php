@@ -23,7 +23,7 @@ class Course_model extends CI_Model
 
 		if ($lecturer_id !== NULL) {
 
-			$query = $this->db->get_where('courses', array('lecturer_id' => $lecturer_id));
+			$query = $this->db->get_where('courses', array('lecturer_nic' => $lecturer_id));
 			return $query->result_array();
 
 		}

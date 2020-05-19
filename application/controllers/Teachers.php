@@ -26,7 +26,7 @@ class Teachers extends CI_Controller
 
 		$data['course'] = $course_id;
 		$data['courseDetails'] = $this->course_model->get_course_details($course_id);
-		$data['teacher'] = $this->teacher_model->get_teacher($data['courseDetails']->lecturer_id);
+		$data['teacher'] = $this->teacher_model->get_teacher($data['courseDetails']->lecturer_nic);
 
 		$this->load->view('templates/header');
 		$this->load->view('teachers/course_details', $data);
