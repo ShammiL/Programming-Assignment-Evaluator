@@ -304,6 +304,7 @@ class Admins extends CI_Controller{
 		}
 
 		$data['message'] = "";
+		$data['courses'] = "";
 
 		$this->form_validation->set_rules('fname', 'First Name' , 'required');
 		$this->form_validation->set_rules('lname', 'Last Name', 'required');
@@ -329,6 +330,7 @@ class Admins extends CI_Controller{
 
 		$data['teacher'] = $this->teacher_model->get_teacher($teacher_id)[0];
 		$data['status'] = $this->teacher_model->get_status($teacher_id);
+		$data['courses'] =  $this->course_model->get_course_by_lecturer($teacher_id);
 
 		$this->load->view('templates/admin_header');
 		$this->load->view('admins/edit_teacher', $data);

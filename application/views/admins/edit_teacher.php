@@ -60,6 +60,14 @@
                 </div>
                 <button type="submit" class="btn btn-primary">Update Teacher</button>
             </form>
+            <h4 class="mt-5 mb-3">Assigned Courses</h4>
+            <?php if ($courses != "") {
+                foreach ($courses as $course) { 
+                    echo '<p class="mb-1">&raquo;&nbsp;&nbsp;'.$course['course_id'].' - '.$course['course_name'].'</p>'; 
+                } 
+            } else {
+                echo '<p>There are no courses</p>'; 
+            }?>                
         </div>
     </div>
 </div>
