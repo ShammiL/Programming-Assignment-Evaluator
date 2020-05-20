@@ -16,6 +16,9 @@ $route['admin/editTeacher/(:any)'] = 'admins/editTeacher/$1';
 $route['admin/viewStudent'] = 'admins/viewStudent';
 $route['admin/viewCourse'] = 'admins/viewCourse';
 $route['admin/viewTeacher'] = 'admins/viewTeacher';
+$route['admin/searchStudent'] = 'admins/searchStudent';
+$route['admin/searchCourse'] = 'admins/searchCourse';
+$route['admin/searchTeacher'] = 'admins/searchTeacher';
 $route['admin/changeStatus/(:any)/(:any)'] = 'admins/changeStatus/$1/$2';
 
 

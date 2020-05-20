@@ -29,10 +29,32 @@ class teacher_model extends CI_Model
 
 		if ($teacher_id) {
 			$query = $this->db->get_where('lecturer', array('nic' => $teacher_id));
-			return $query->result_array()[0];
+			return $query->result_array();
 		}
 
 		$query = $this->db->get('lecturer');
+		return $query->result_array();
+	}
+
+	public function get_available_teacher($teacher_id = NULL) {
+
+		if ($teacher_id) {
+			$query = $this->db->get_where('lecturer', array('nic' => $teacher_id, 'status' => '1'));
+			return $query->result_array()[0];
+		}
+
+		$query = $this->db->get_where('lecturer', array('status' => '1'));
+			return $query->result_array();
+	}
+
+	public function get_disable_teacher($teacher_id = NULL) {
+
+		if ($teacher_id) {
+			$query = $this->db->get_where('lecturer', array('nic' => $teacher_id, 'status' => '0'));
+			return $query->result_array()[0];
+		}
+
+		$query = $this->db->get_where('lecturer', array('status' => '0'));
 		return $query->result_array();
 	}
 

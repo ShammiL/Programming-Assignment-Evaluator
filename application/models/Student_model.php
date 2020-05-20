@@ -49,23 +49,23 @@ class Student_model extends CI_Model{
 	   $courses = $this->db->get('courses');
 
 	   return $courses->result_array();
-   }
+   	}
 
-   function getCoursesByIndex($indexNumber){
+   	function getCoursesByIndex($indexNumber){
 
-	$this->db->where('indexNumber', $indexNumber);
-	$results = $this->db->get('studentcourse')->result_array();
+		$this->db->where('indexNumber', $indexNumber);
+		$results = $this->db->get('studentcourse')->result_array();
 
-	$courses = [];
-	foreach($results as $result){
-		$this->db->where('course_id', $result['course_id']);
-		array_push($courses, $this->db->get('courses')->result_array());
+		$courses = [];
+		foreach($results as $result){
+			$this->db->where('course_id', $result['course_id']);
+			array_push($courses, $this->db->get('courses')->result_array());
 
+		}
+		return $courses;
 	}
-	return $courses;
-}
 
-   function checkEnrollment($student_id, $course_id){
+   	public function checkEnrollment($student_id, $course_id){
 
 	   $this->db->where('course_id', $course_id);
 	   $this->db->where('indexNumber', $student_id);
@@ -97,7 +97,7 @@ class Student_model extends CI_Model{
 
 		if ($student_id) {
 			$query = $this->db->get_where('students', array('students.indexNumber'=>$student_id));
-			return $query->result_array()[0];
+			return $query->result_array();
 		} 
 
 		$query = $this->db->get('students');

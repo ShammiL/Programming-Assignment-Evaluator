@@ -6,7 +6,7 @@ class Teachers extends CI_Controller
 
 		if ($this->session->userdata('lecturer_id')){
 			
-			$data['courses'] = $this->course_model->get_courses($this->session->userdata('lecturer_id'));
+			$data['courses'] = $this->course_model->get_course_by_lecturer($this->session->userdata('lecturer_id'));
 
 			$this->load->view('templates/header');
 			$this->load->view('teachers/home', $data);
@@ -25,8 +25,8 @@ class Teachers extends CI_Controller
 		}
 
 		$data['course'] = $course_id;
-		$data['courseDetails'] = $this->course_model->get_course_details($course_id);
-		$data['teacher'] = $this->teacher_model->get_teacher($data['courseDetails']->lecturer_nic);
+		$data['courseDetails'] = $this->course_model->get_courses($course_id)[0];
+		$data['teacher'] = $this->teacher_model->get_teacher($data['courseDetails']['lecturer_nic'])[0];
 
 		$this->load->view('templates/header');
 		$this->load->view('teachers/course_details', $data);
@@ -143,7 +143,7 @@ class Teachers extends CI_Controller
 		}
 
 		$data['assignments'] = $this->assignment_model->get_assignments($course_id);
-		$data['courseDetails'] = $this->course_model->get_course_details($course_id);
+		$data['courseDetails'] = $this->course_model->get_courses($course_id)[0];
 		// print_r ($data['assignments']);
 		$this->load->view('templates/header');
 		$this->load->view('teachers/view_assignments', $data);
@@ -256,7 +256,7 @@ class Teachers extends CI_Controller
 			}
 		}
 
-		$data['teacher'] = $this->teacher_model->get_teacher($lecturer_id);
+		$data['teacher'] = $this->teacher_model->get_teacher($lecturer_id)[0];
 		$data['password'] = $this->teacher_model->get_password($lecturer_id);
 
 		$this->load->view('templates/header');

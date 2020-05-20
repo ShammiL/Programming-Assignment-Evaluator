@@ -3,14 +3,14 @@
 	<div class="col-md-10 body-card">
 		<div class="card">
 			<div class="card-header">
-				<h2><?php echo $courseDetails->course_id; ?></h2>
-				<h3><?php echo $courseDetails->course_name; ?></h3>
+				<h2><?php echo $courseDetails['course_id']; ?></h2>
+				<h3><?php echo $courseDetails['course_name']; ?></h3>
 			</div>
 			<div class="card-body">
 				<h5 class="card-title">Teacher: </h5>
 				<p><?php echo $teacher['fname'].' '.$teacher['lname']; ?></p>
 				<h5 class="card-title">Description: </h5>
-				<p class="card-text"><?php echo $courseDetails->description; ?></p>
+				<p class="card-text"><?php echo $courseDetails['description']; ?></p>
 				<?php
 					$x = 1;
 					foreach($assignments as $assignment):

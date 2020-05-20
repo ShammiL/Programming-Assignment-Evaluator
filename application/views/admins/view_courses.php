@@ -5,7 +5,7 @@
         </div>
         <div class="card-body">            
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-5">
                     <div class="row">
                         <div class="col-md-5">
                             <label for="">Number of Courses :</label>
@@ -15,18 +15,24 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <?php echo form_open('admin/searchCourse/') ?>
-                        <div class="row">
-                            <div class="col-md-1"></div>
-                            <div class="form-group col-md-8">
-                                <input type="text" class="form-control" name="search-course" placeholder="Enter Course ID...">
+                <div class="col-md-7">
+                    <div class="row">
+                        <div class="col-md-9">
+                        <?php echo form_open('admin/searchCourse') ?>
+                            <div class="row">
+                                <div class="form-group col-md-8">
+                                    <input type="text" class="form-control" name="search-course" placeholder="Enter Course ID..." required>
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <button type="submit" name="submit-search-course" class="btn btn-primary btn-edit">Search</button>
+                                </div>
                             </div>
-                            <div class="form-group col-md-3">
-                                <button type="submit" name="submit-search-course" class="btn btn-primary btn-edit">Search</button>
-                            </div>
+                        </form>
                         </div>
-                    </form>
+                        <div class="col-md-3">
+                            <a type="submit" href="<?php echo base_url(); ?>admin/viewCourse" class="btn btn-primary btn-edit">View All</a>
+                        </div>
+                    </div>
                 </div>
             </div>
             <?php if($courses) { ?>
@@ -46,8 +52,8 @@
                             <tr>
                                 <td><?php echo $course['course_id']; ?></td>
                                 <td><?php echo $course['course_name']; ?></td>
-                                <td><?php if ($course['lecturer_id'] != "") { 
-                                    echo $course['lecturer_id']; 
+                                <td><?php if ($course['lecturer_nic'] != "") { 
+                                    echo $course['lecturer_nic']; 
                                 } else { 
                                     echo '--- Not Assigned ---'; 
                                 } ?></td>

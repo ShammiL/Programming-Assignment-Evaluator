@@ -19,11 +19,11 @@ class Course_model extends CI_Model
         return $this->db->update('courses');
     }
 
-	public function get_courses($lecturer_id = NULL) {
+	public function get_courses($course_id = NULL) {
 
-		if ($lecturer_id !== NULL) {
+		if ($course_id !== NULL) {
 
-			$query = $this->db->get_where('courses', array('lecturer_nic' => $lecturer_id));
+			$query = $this->db->get_where('courses', array('course_id' => $course_id));
 			return $query->result_array();
 
 		}
@@ -40,12 +40,11 @@ class Course_model extends CI_Model
 		return $query->result_array()[0]['course_count'];
 	}
 
-	function get_course_details($course_id){
+	function get_course_by_lecturer($lecturer_id){
 
-		$this->db->where('course_id',$course_id);
+		$this->db->where('lecturer_nic', $lecturer_id);
 		$result = $this->db->get('courses');
-
-		return $result->row();
+		return $result->result_array();
 	}
 
 	function getAssignments($course_id){

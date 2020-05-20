@@ -51,8 +51,8 @@ class Students extends CI_Controller{
 
 		if ($this->student_model->checkEnrollment($indexNumber,$course_id)){
 			$data['assignments'] = $this->course_model->getAssignments($course_id);
-			$data['courseDetails'] = $this->course_model->get_course_details($course_id);
-			$data['teacher'] = $this->teacher_model->get_teacher($data['courseDetails']->lecturer_nic);
+			$data['courseDetails'] = $this->course_model->get_courses($course_id)[0];
+			$data['teacher'] = $this->teacher_model->get_teacher($data['courseDetails']['lecturer_nic'])[0];
 
 			$this->load->view('templates/student_header');
 			$this->load->view('students/view_assignments',$data);
@@ -191,7 +191,7 @@ class Students extends CI_Controller{
 			}
 		}
 
-		$data['student'] = $this->student_model->get_all_students($index_number);
+		$data['student'] = $this->student_model->get_all_students($index_number)[0];
 		$data['password'] = $this->student_model->get_password($index_number);
 
 		$this->load->view('templates/student_header');

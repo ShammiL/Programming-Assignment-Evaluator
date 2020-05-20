@@ -3,8 +3,8 @@
 	<div class="col-md-10  body-card">
 		<div class="card">
 			<div class="card-header">
-				<h2><?php echo $courseDetails->course_id; ?></h2>
-				<h3><?php echo $courseDetails->course_name; ?></h3>
+				<h2><?php echo $courseDetails['course_id']; ?></h2>
+				<h3><?php echo $courseDetails['course_name']; ?></h3>
 			</div>
 			<div class="card-body">
                 <?php 

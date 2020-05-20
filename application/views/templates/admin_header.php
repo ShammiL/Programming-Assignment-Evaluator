@@ -22,6 +22,15 @@
 						<a class="nav-link" href="<?php echo base_url(); ?>admin">Home<span class="sr-only">(current)</span></a>
 					</li>
 					<li class="nav-item">
+						<a class="nav-link" href="<?php echo base_url(); ?>admin/viewCourse">Courses</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="<?php echo base_url(); ?>admin/viewTeacher">Teachers</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="<?php echo base_url(); ?>admin/viewStudent">Students</a>
+					</li>
+					<li class="nav-item">
 						<a class="nav-link" href="#" data-toggle="modal" data-target="#logout-admin">Logout</a>
 					</li>
 				</ul>
