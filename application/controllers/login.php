@@ -25,7 +25,7 @@ class login extends CI_Controller {
 				$admin_id = $this->login_model->admin_login($username,$password);
 			} else {
 				$student_id = $this->login_model->student_login($username,$password);
-				$lecturer_id = $this->login_model->lecturer_login($username,$password);
+				$lecturer = $this->login_model->lecturer_login($username,$password);
 			}
 
 			if($student_id){
@@ -34,12 +34,18 @@ class login extends CI_Controller {
 				$this->session->set_flashdata('login_success', 'You are now logged in.');
 				redirect('student');
 
-			} else if ($lecturer_id){
+			} else if ($lecturer){
 
-				$this->session->set_userdata('lecturer_id', $lecturer_id);
-				$this->session->set_flashdata('login_success', 'You are now logged in.');
-				redirect('teacher');
-
+				if ($lecturer->status == '1') {
+					$this->session->set_userdata('lecturer_id', $lecturer->nic);
+					$this->session->set_flashdata('login_success', 'You are now logged in.');
+					redirect('teacher');	
+				} else {
+					$this->session->set_flashdata('login_failed', 'You have disabled from the system.');
+					$this->session->set_flashdata('login_failed_enc_password', $enc_password);
+					redirect('login');
+				}
+				
 			} else if ($admin_id)  {
 
 				$this->session->set_userdata('admin_id', $admin_id);

@@ -354,6 +354,12 @@ class Admins extends CI_Controller{
 			redirect('');
 		}
 
+		$courses = $this->course_model->get_course_by_lecturer($teacher_id);
+
+		foreach ($courses as $course) {
+			$this->course_model->update_course($course['course_id'], array('lecturer_nic' => ""));
+		}
+
 		$this->teacher_model->change_status($teacher_id, $status);
 		redirect('admin/editTeacher/'.$teacher_id);
 	}

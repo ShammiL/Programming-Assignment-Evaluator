@@ -23,7 +23,7 @@
 			$db2->where('password',md5($password));
 			$result = $db2->get('lecturer');
 			if($result -> num_rows() == 1 ){
-				return $result->row(0)->nic;
+				return $result->row(0);
 			} else {
 				return FALSE;
 			}
