@@ -1,5 +1,5 @@
 <div class="container">
-	<div class="card body-card">
+	<div class="card mt-100">
         <div class="card-header">
             <h4>Course ID: <?php echo $course->course_id; ?></h4>
         </div>

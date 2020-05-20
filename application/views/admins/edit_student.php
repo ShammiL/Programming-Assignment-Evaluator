@@ -1,5 +1,5 @@
 <div class="container">
-	<div class="card body-card">
+	<div class="card mt-100">
         <div class="card-header">
             <h4>Index Number: <?php echo $student['indexNumber']; ?></h4>
         </div>

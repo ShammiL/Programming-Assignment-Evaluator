@@ -92,7 +92,8 @@ class Admins extends CI_Controller{
 
 			$signup_data = array(
 				'nic' => $this->input->post('nic'), 
-				'password' => md5("1234")
+				'password' => md5("1234"),
+				'status' => '1'
 			);
 			
 			$this->teacher_model->signup_teacher($signup_data);	

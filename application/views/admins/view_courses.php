@@ -1,5 +1,5 @@
 <div class="container">
-	<div class="card body-card">
+	<div class="card mt-100">
         <div class="card-header">
             <h3>View Courses</h3>
         </div>
