@@ -13,7 +13,20 @@
 					<div class="col-md-4">
 						<div class="form-group">
 							<label for="title">Edit Title:</label>
-							<input class="form-control" type="text" name="name" id="title" placeholder="Edit Title Here..." value="<?php echo $assignment['assignment_name']?>">
+							<input class="form-control" type="text" name="name" id="title" placeholder="Edit Title Here..." value="<?php echo $assignment['assignment_name']?>" required>
+						</div>
+					</div>
+					
+					<div class="col-md-4">
+						<div class="form-group">
+							<label for="deadline">Change Deadline:</label>
+							<input type="date" class="form-control" name="deadline" id="deadline" value="<?php echo $assignment['deadline']?>" required>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="form-group">
+							<label for="time">Change Time:</label>
+							<input type="time" class="form-control" name="time" id="time" value="<?php echo $assignment['time']?>" required>
 						</div>
 					</div>
 					<div class="col-md-4">
@@ -23,22 +36,16 @@
 							<label class="custom-file-label" for="customFile">Choose files</label>
 						</div>
 					</div>
-					<div class="col-md-4">
-						<div class="form-group">
-							<label for="deadline">Change Deadline:</label>
-							<input type="date" class="form-control" name="deadline" id="deadline" value="<?php echo $assignment['deadline']?>" min="19-04-2020">
-						</div>
-					</div>
 				</div>
 				<div class="form-group">
 					<label for="description">Change Description:</label>
-					<textarea class="form-control" name="description" id="description" placeholder="Enter New Description Here..."><?php echo $assignment['description']?></textarea>
+					<textarea class="form-control" name="description" id="description" placeholder="Enter New Description Here..." required><?php echo $assignment['description']?></textarea>
 				</div>
 				<div class="row">
 					<div class="col-md-3">
 						<label for="languages[]">Change Languages:</label>
 						<select id="language" class="form-control" name="language">
-							<option selected value="<?php echo $assignment['language']?>" disabled><?php echo $assignment['language']?></option>
+							<option selected value="<?php echo $assignment['language']?>"><?php echo $assignment['language']?></option>
 							<option value="Java">Java</option>
 							<option value="Python">Python 2.7</option>
 							<option value="Python3">Python 3.7</option>
