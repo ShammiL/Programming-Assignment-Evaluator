@@ -16,17 +16,24 @@
 							<input class="form-control" type="text" name="name" id="title" placeholder="Add Title Here..." required>
 						</div>
 					</div>
+					
+					<div class="col-md-4">
+						<div class="form-group">
+							<label for="deadline">Deadline:</label>
+							<input type="date" class="form-control" name="deadline" id="deadline" value="dd-mm-yyyy" required>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="form-group">
+							<label for="time">Time:</label>
+							<input type="time" class="form-control" name="time" id="time" value="hh:mm" required>
+						</div>
+					</div>
 					<div class="col-md-4">
 						<label>Documents:</label>
 						<div class="custom-file">
 							<input type="file" class="custom-file-input" name="userfile" id="documents" size="100">
 							<label class="custom-file-label" for="customFile">Choose files</label>
-						</div>
-					</div>
-					<div class="col-md-4">
-						<div class="form-group">
-							<label for="deadline">Deadline:</label>
-							<input type="date" class="form-control" name="deadline" id="deadline" value="dd-mm-yyyy" min="19-04-2020" required>
 						</div>
 					</div>
 				</div>

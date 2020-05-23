@@ -44,8 +44,10 @@ class Teachers extends CI_Controller
 		// $this->load->library('form_validation'); 
 		$this->form_validation->set_rules('name', 'name' , 'required');
 		$this->form_validation->set_rules('description', 'description' , 'required');
-		$this->form_validation->set_rules('language', 'Language', 'required|callback_select_validate');
-		$this->form_validation->set_rules('deadline', 'deadline' , 'required');
+		$this->form_validation->set_rules('language', 'Language', 'required');
+		$this->form_validation->set_rules('deadline', 'deadline' , 'callback_is_date_correct');
+		$this->form_validation->set_rules('time', 'time', 'required');
+
 	
 		if($this->form_validation->run() === false){
 			
@@ -63,6 +65,7 @@ class Teachers extends CI_Controller
 				'language' => $this->input->post('language'),
 				'course_id' => $course_id,
 				'deadline' => $this->input->post('deadline'),
+				'time' => $this->input->post('time'),
 				'status' => 'ongoing'
 			);
 			
@@ -97,15 +100,17 @@ class Teachers extends CI_Controller
 		}
 	}
 
-	function select_validate($lang) {
-	
-		if($lang=="none"){
-			$this->form_validation->set_message('select_validate', 'Please Select a language.');
-			return false;
+	function is_date_correct($deadline) {
+		$date_now = date("Y-m-d");
 
-		} else {
-			return true;
-		}
+			$date=$this->input->post('deadline');
+	
+
+			if ($date_now > $date) {
+				$this->form_validation->set_message('is_date_correct', 'Please give a future date as the {field}.');
+				return false;
+			}else{
+			return true;				}
 	}
 
 	public function editAssignment($course_id, $assignment_id, $num) {
