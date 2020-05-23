@@ -48,11 +48,12 @@ class Students extends CI_Controller{
 		}
 
 		$indexNumber = $this->session->userdata('student_id');
+		$data['courseDetails'] = $this->course_model->get_courses($course_id)[0];
+		$data['teacher'] = $this->teacher_model->get_teacher($data['courseDetails']['lecturer_nic'])[0];
 
 		if ($this->student_model->checkEnrollment($indexNumber,$course_id)){
+			
 			$data['assignments'] = $this->course_model->getAssignments($course_id);
-			$data['courseDetails'] = $this->course_model->get_courses($course_id)[0];
-			$data['teacher'] = $this->teacher_model->get_teacher($data['courseDetails']['lecturer_nic'])[0];
 
 			$this->load->view('templates/student_header');
 			$this->load->view('students/view_assignments',$data);
@@ -60,7 +61,6 @@ class Students extends CI_Controller{
 
 		} else {
 
-			$data['id'] = $course_id;
 			$this->load->view('templates/student_header');
 			$this->load->view('students/enroll_course',$data);
 			$this->load->view('templates/footer');
