@@ -44,8 +44,10 @@ class Teachers extends CI_Controller
 		// $this->load->library('form_validation'); 
 		$this->form_validation->set_rules('name', 'name' , 'required');
 		$this->form_validation->set_rules('description', 'description' , 'required');
-		$this->form_validation->set_rules('language', 'Language', 'required|callback_select_validate');
-		$this->form_validation->set_rules('deadline', 'deadline' , 'required');
+		$this->form_validation->set_rules('language', 'Language', 'required');
+		$this->form_validation->set_rules('deadline', 'deadline' , 'callback_is_date_correct');
+		$this->form_validation->set_rules('time', 'time', 'required');
+
 	
 		if($this->form_validation->run() === false){
 			
@@ -63,6 +65,7 @@ class Teachers extends CI_Controller
 				'language' => $this->input->post('language'),
 				'course_id' => $course_id,
 				'deadline' => $this->input->post('deadline'),
+				'time' => $this->input->post('time'),
 				'status' => 'ongoing'
 			);
 			
@@ -97,15 +100,17 @@ class Teachers extends CI_Controller
 		}
 	}
 
-	function select_validate($lang) {
-	
-		if($lang=="none"){
-			$this->form_validation->set_message('select_validate', 'Please Select a language.');
-			return false;
+	function is_date_correct($deadline) {
+		$date_now = date("Y-m-d");
 
-		} else {
-			return true;
-		}
+			$date=$this->input->post('deadline');
+	
+
+			if ($date_now > $date) {
+				$this->form_validation->set_message('is_date_correct', 'Please give a future date as the {field}.');
+				return false;
+			}else{
+			return true;				}
 	}
 
 	public function editAssignment($course_id, $assignment_id, $num) {
@@ -113,28 +118,38 @@ class Teachers extends CI_Controller
 		if (!$this->session->userdata('lecturer_id')){
 			redirect('');
 		}
+	
+			$data['title'] = 'Edit Assignment';		
+			$data['assignment'] = $this->assignment_model->get_one($assignment_id);
+			$data['course_id']  = $course_id;
+			$data['num']  = $num;
+			// print_r ($data['assignment']);
+			$this->load->view('templates/header');
+			$this->load->view('teachers/edit_assignment', $data);
+			$this->load->view('templates/footer');	
 
-		$data['title'] = 'Edit Assignment';		
-		$data['assignment'] = $this->assignment_model->get_one($assignment_id);
-		$data['course_id']  = $course_id;
-		$data['num']  = $num;
-		// print_r ($data['assignment']);
-		$this->load->view('templates/header');
-		$this->load->view('teachers/edit_assignment', $data);
-		$this->load->view('templates/footer');
-	}
+}
 
     public function update($course_id, $assignment_id, $num){
 
+		$this->form_validation->set_rules('deadline', 'deadline' , 'callback_is_date_correct');
+
+		if($this->form_validation->run() === false){
+			$this->editAssignment($course_id, $assignment_id, $num);
+		}
+
+		else{
         $input = array(
             'assignment_name' => $this->input->post('name'),
             'description' => $this->input->post('description'),
             'language' => $this->input->post('language'),
             'deadline' => $this->input->post('deadline'),
+            'time' => $this->input->post('time')
         );
         $this->assignment_model->update_assignment($input, $assignment_id);
 		$this->viewSubmissions($assignment_id, $num);
-    }
+	}
+}
 
 	public function viewAssignments($course_id) {
 
