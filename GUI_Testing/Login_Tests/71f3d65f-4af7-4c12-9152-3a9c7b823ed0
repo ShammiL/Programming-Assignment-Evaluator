@@ -1,0 +1,1223 @@
+{
+  "id": "e671a4c6-4317-4cf1-b838-dcf925c5ba9e",
+  "version": "2.0",
+  "name": "Assignment_Evaluator",
+  "url": "http://localhost:8015",
+  "tests": [{
+    "id": "b7eb0195-a668-4e14-b2bb-98ea2b1e636f",
+    "name": "Lecturer_Login_Test_Correct_NIC_Password",
+    "commands": [{
+      "id": "779c312b-2928-4b6c-b8ab-8a40bd7a2586",
+      "comment": "",
+      "command": "open",
+      "target": "/Programming-Assignment-Evaluator/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8c4d8933-9982-4d4f-b46b-392223a012e1",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1366x728",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9b813325-c4a7-4e34-b7c1-70f3669a16b3",
+      "comment": "",
+      "command": "click",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=.one .input", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ff215d1a-ff8b-4802-b966-edd456da89f6",
+      "comment": "",
+      "command": "type",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=.one .input", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "972183261v"
+    }, {
+      "id": "a8428699-b8de-4b35-9ce7-f63259b0c384",
+      "comment": "",
+      "command": "click",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.pass .input", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b4319097-243e-41ec-88d1-ef3a2d246167",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.pass .input", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "1234"
+    }, {
+      "id": "1da63d70-5800-433c-b968-cabc83335248",
+      "comment": "",
+      "command": "click",
+      "target": "id=login",
+      "targets": [
+        ["id=login", "id"],
+        ["css=#login", "css:finder"],
+        ["xpath=//button[@id='login']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "81617ec0-bd65-4716-a769-dc9eadc81a3b",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=h2",
+      "targets": [
+        ["css=h2", "css:finder"],
+        ["xpath=//h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'Assigned Courses')]", "xpath:innerText"]
+      ],
+      "value": "Assigned Courses"
+    }]
+  }, {
+    "id": "193a47db-69dd-4ddf-8e27-74ec295f07c0",
+    "name": "Lecturer_Login_Test_Correct_NIC_Incorrect_Password",
+    "commands": [{
+      "id": "9cba5d55-c9be-40be-ae6d-05e623eac192",
+      "comment": "",
+      "command": "open",
+      "target": "/Programming-Assignment-Evaluator/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1fddf4d9-1c86-4f41-9bed-b6e4bf4d7ab6",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1366x728",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "06d0c792-e88b-49e9-a4ca-280a09c20dac",
+      "comment": "",
+      "command": "click",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=.one .input", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "baab21fd-bc13-45bf-a22c-a68b395bae00",
+      "comment": "",
+      "command": "type",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=.one .input", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "972183261v"
+    }, {
+      "id": "8b975f99-70ad-4feb-a3ae-b12fd8c673f7",
+      "comment": "",
+      "command": "click",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.pass .input", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "88ee2751-82d8-4a87-a02f-5906d41f928f",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.pass .input", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "12345"
+    }, {
+      "id": "0e248705-40da-4016-9968-601c0e107a36",
+      "comment": "",
+      "command": "click",
+      "target": "id=login",
+      "targets": [
+        ["id=login", "id"],
+        ["css=#login", "css:finder"],
+        ["xpath=//button[@id='login']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "db8cafc2-ef66-4dd5-9d29-05dfb61f8291",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=p:nth-child(3)",
+      "targets": [
+        ["css=p:nth-child(3)", "css:finder"],
+        ["xpath=//p", "xpath:position"],
+        ["xpath=//p[contains(.,'Login is Invalid.')]", "xpath:innerText"]
+      ],
+      "value": "Login is Invalid."
+    }]
+  }, {
+    "id": "94b49f01-2e2e-442e-a572-3314fe3b08ef",
+    "name": "Lecturer_Login_Test_NIC_Not_Available",
+    "commands": [{
+      "id": "c0af813d-259c-40f7-9300-1a5dcfc8b651",
+      "comment": "",
+      "command": "open",
+      "target": "/Programming-Assignment-Evaluator/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "832f621e-26a0-4e16-bcdd-c832973081d5",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1366x728",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1f8690a2-00a6-4aa2-8d07-7808e6e1d57e",
+      "comment": "",
+      "command": "click",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=.one .input", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "34109eaa-39f4-466f-84b5-8697bf0c8a10",
+      "comment": "",
+      "command": "type",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=.one .input", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "972183262v"
+    }, {
+      "id": "33001c8e-7ff2-482b-8f78-2c8c312ee4f3",
+      "comment": "",
+      "command": "click",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.pass .input", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "63356bc5-2ea4-4415-ac57-d8a32e8fcf2f",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.pass .input", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "1234"
+    }, {
+      "id": "777c6c11-29c4-4e97-b1e7-9fb29cfe000b",
+      "comment": "",
+      "command": "click",
+      "target": "id=login",
+      "targets": [
+        ["id=login", "id"],
+        ["css=#login", "css:finder"],
+        ["xpath=//button[@id='login']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4fbd55f8-cfb8-4e76-8d13-863f738a46d4",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=p:nth-child(3)",
+      "targets": [
+        ["css=p:nth-child(3)", "css:finder"],
+        ["xpath=//p", "xpath:position"],
+        ["xpath=//p[contains(.,'Login is Invalid.')]", "xpath:innerText"]
+      ],
+      "value": "Login is Invalid."
+    }]
+  }, {
+    "id": "cf5fb3f4-9474-4d13-bca1-85c6b65d77f8",
+    "name": "Lecturer_Login_Test_Correct_Information_But_Disabled",
+    "commands": [{
+      "id": "561a4032-1d1b-44b5-9028-9d4591ee586f",
+      "comment": "",
+      "command": "open",
+      "target": "/Programming-Assignment-Evaluator/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f5d9db3a-c56f-4f4d-b47b-5884831902c1",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1366x728",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1ea14203-e38c-482a-99de-be62a863f5e2",
+      "comment": "",
+      "command": "click",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=.one .input", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "07ab7e50-865f-4ccc-b83b-7170502d75d7",
+      "comment": "",
+      "command": "type",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=.one .input", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "547852317v"
+    }, {
+      "id": "fd7b195f-70e5-4c21-8f73-bb0c323e3318",
+      "comment": "",
+      "command": "click",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.pass .input", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ab86a0b7-265b-4c9b-9b88-176496378d44",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.pass .input", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "1234"
+    }, {
+      "id": "e2381a0a-5bdc-4c8f-ba82-0a683c092ec1",
+      "comment": "",
+      "command": "click",
+      "target": "id=login",
+      "targets": [
+        ["id=login", "id"],
+        ["css=#login", "css:finder"],
+        ["xpath=//button[@id='login']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c56609f8-0ee2-4a03-b942-0b4f8625e418",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=p:nth-child(3)",
+      "targets": [
+        ["css=p:nth-child(3)", "css:finder"],
+        ["xpath=//p", "xpath:position"],
+        ["xpath=//p[contains(.,'You have disabled from the system.')]", "xpath:innerText"]
+      ],
+      "value": "You have disabled from the system."
+    }]
+  }, {
+    "id": "a7713c11-233d-471a-a954-8733286c8065",
+    "name": "Student_Login_Test_Correct_Index_Password",
+    "commands": [{
+      "id": "d711176e-2fdd-40c7-b0b8-a22f1b7d9ea4",
+      "comment": "",
+      "command": "open",
+      "target": "/Programming-Assignment-Evaluator/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4994c1e0-8e70-4f4b-a477-668ab38e7a8e",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1366x728",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fb2bc79f-bb9e-4b32-8583-5d25b1f5018f",
+      "comment": "",
+      "command": "click",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=.one .input", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "16cb2694-8567-4149-97c4-de05da5993bf",
+      "comment": "",
+      "command": "type",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=.one .input", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "170298H"
+    }, {
+      "id": "b7d00acc-f138-4ed6-b82f-27c8d32ab8c4",
+      "comment": "",
+      "command": "click",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.pass .input", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1852ced7-6996-43cc-9c1a-2eb7f47c5f3b",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.pass .input", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "12345"
+    }, {
+      "id": "8915a48d-350a-492c-adb5-535869146b07",
+      "comment": "",
+      "command": "click",
+      "target": "id=login",
+      "targets": [
+        ["id=login", "id"],
+        ["css=#login", "css:finder"],
+        ["xpath=//button[@id='login']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3f7119ea-0c21-4eba-9045-dbcf8172b414",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.col-md-10:nth-child(2) h2",
+      "targets": [
+        ["css=.col-md-10:nth-child(2) h2", "css:finder"],
+        ["xpath=//h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'My Courses')]", "xpath:innerText"]
+      ],
+      "value": "My Courses"
+    }]
+  }, {
+    "id": "1d072fc7-9415-4dd9-9124-1591e56a5739",
+    "name": "Student_Login_Test_Correct_Index_Incorrect_Password",
+    "commands": [{
+      "id": "c218e349-db6e-4633-ae70-268c366c3fb6",
+      "comment": "",
+      "command": "open",
+      "target": "/Programming-Assignment-Evaluator/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "648edcd2-8cd5-49e2-8342-2b30e4822b85",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1366x728",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "94aaf8ca-648e-4d53-821b-b3e0cf61db8e",
+      "comment": "",
+      "command": "click",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=.one .input", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "eacf3dbc-3799-4e44-8fee-8946d674eb6a",
+      "comment": "",
+      "command": "type",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=.one .input", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "170298H"
+    }, {
+      "id": "c27d9257-5a85-46f1-b1f1-2a30fffd9a6d",
+      "comment": "",
+      "command": "click",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.pass .input", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0546f23b-f916-48ec-9e54-d3bddd802cc2",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.pass .input", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "125"
+    }, {
+      "id": "9e29ec90-f7a3-4f6a-a94b-02adbec62b7c",
+      "comment": "",
+      "command": "click",
+      "target": "id=login",
+      "targets": [
+        ["id=login", "id"],
+        ["css=#login", "css:finder"],
+        ["xpath=//button[@id='login']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6b8fc28c-8093-4b60-8d3b-3a555d777c34",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=p:nth-child(3)",
+      "targets": [
+        ["css=p:nth-child(3)", "css:finder"],
+        ["xpath=//p", "xpath:position"],
+        ["xpath=//p[contains(.,'Login is Invalid.')]", "xpath:innerText"]
+      ],
+      "value": "Login is Invalid."
+    }]
+  }, {
+    "id": "bde00b21-2797-4350-a2eb-63ac8d42aec5",
+    "name": "Student_Login_Test_Index_Not_Available",
+    "commands": [{
+      "id": "8f81dbf2-5a50-4058-bb17-14701981431b",
+      "comment": "",
+      "command": "open",
+      "target": "/Programming-Assignment-Evaluator/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "08880b65-1c00-4efe-8c0b-6cf67f94a266",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1366x728",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d546747b-d85b-431b-bada-ad97e132bc9a",
+      "comment": "",
+      "command": "click",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=.one .input", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a58f4e49-0d43-4d11-8bcd-768b7a168333",
+      "comment": "",
+      "command": "type",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=.one .input", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "170306M"
+    }, {
+      "id": "226309b4-ca7e-40fe-ab86-a97388d3965f",
+      "comment": "",
+      "command": "click",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.pass .input", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "43166e70-72ec-483b-a797-e7ab7680be09",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.pass .input", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "12345"
+    }, {
+      "id": "c3f1e19b-38c1-4a92-9e30-10ee35bc7d8a",
+      "comment": "",
+      "command": "click",
+      "target": "id=login",
+      "targets": [
+        ["id=login", "id"],
+        ["css=#login", "css:finder"],
+        ["xpath=//button[@id='login']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1038eaac-da11-4da4-8cfe-3497a79f6cd7",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=p:nth-child(3)",
+      "targets": [
+        ["css=p:nth-child(3)", "css:finder"],
+        ["xpath=//p", "xpath:position"],
+        ["xpath=//p[contains(.,'Login is Invalid.')]", "xpath:innerText"]
+      ],
+      "value": "Login is Invalid."
+    }]
+  }, {
+    "id": "415bf88b-eda0-47ba-b6a4-9eb861f0f71c",
+    "name": "Lecturer_Correct_Information_Checked_Admin",
+    "commands": [{
+      "id": "e318cdd3-5b09-410e-adb5-bfa2122e0ed9",
+      "comment": "",
+      "command": "open",
+      "target": "/Programming-Assignment-Evaluator/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9b808096-b15a-4d8d-8f39-fd57ddfde9a5",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1366x728",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "89db5229-6721-4015-ad0b-13074c1d285f",
+      "comment": "",
+      "command": "click",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=.one .input", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "23f5a50c-20f7-4110-8f90-c090d532f7f8",
+      "comment": "",
+      "command": "type",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=.one .input", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "972183261v"
+    }, {
+      "id": "de00b04b-0646-41ad-8545-67f3f2b561c0",
+      "comment": "",
+      "command": "click",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.pass .input", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "686fc93c-9460-488d-a21d-eb59a407d54e",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.pass .input", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "1234"
+    }, {
+      "id": "8faa69c0-4fa9-4a4e-91da-f119d68e7f2d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.custom-control-label",
+      "targets": [
+        ["css=.custom-control-label", "css:finder"],
+        ["xpath=//label", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cd2ffb60-a2ec-4a42-bc82-5a323df7e053",
+      "comment": "",
+      "command": "click",
+      "target": "id=login",
+      "targets": [
+        ["id=login", "id"],
+        ["css=#login", "css:finder"],
+        ["xpath=//button[@id='login']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "68759ca1-acfa-4705-99dd-7bed67f0c46e",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=p:nth-child(3)",
+      "targets": [
+        ["css=p:nth-child(3)", "css:finder"],
+        ["xpath=//p", "xpath:position"],
+        ["xpath=//p[contains(.,'Login is Invalid.')]", "xpath:innerText"]
+      ],
+      "value": "Login is Invalid."
+    }]
+  }, {
+    "id": "26ef23dd-bf76-43e1-92ba-fbedcb7be537",
+    "name": "Student_Correct_Information_Checked_Admin",
+    "commands": [{
+      "id": "7e08900a-3051-4ef6-a9d9-d9d85e4a2fa8",
+      "comment": "",
+      "command": "open",
+      "target": "/Programming-Assignment-Evaluator/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3770b609-54a4-4e8f-8b5f-3bbff81a2762",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1366x728",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "52345eb7-194e-427d-b467-151554684037",
+      "comment": "",
+      "command": "click",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=.one .input", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c6a1273b-22db-4c60-8be9-27ec0ac9a1c3",
+      "comment": "",
+      "command": "type",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=.one .input", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "170298H"
+    }, {
+      "id": "c893b161-c247-40ca-9ef5-c2e4370f9d95",
+      "comment": "",
+      "command": "click",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.pass .input", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b3f1c602-3d93-4fa1-b6ac-8b50032b403a",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.pass .input", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "12345"
+    }, {
+      "id": "d4ff48de-cc0c-4089-a0c8-d2ece9075f80",
+      "comment": "",
+      "command": "click",
+      "target": "css=.custom-control-label",
+      "targets": [
+        ["css=.custom-control-label", "css:finder"],
+        ["xpath=//label", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fb1c6607-6530-4f15-9742-232fc28599fb",
+      "comment": "",
+      "command": "click",
+      "target": "id=login",
+      "targets": [
+        ["id=login", "id"],
+        ["css=#login", "css:finder"],
+        ["xpath=//button[@id='login']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9019ed95-b89e-457f-be1d-03fe8a277623",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=p:nth-child(3)",
+      "targets": [
+        ["css=p:nth-child(3)", "css:finder"],
+        ["xpath=//p", "xpath:position"],
+        ["xpath=//p[contains(.,'Login is Invalid.')]", "xpath:innerText"]
+      ],
+      "value": "Login is Invalid."
+    }]
+  }, {
+    "id": "f3b13ac5-9aba-4567-bc3f-a08ea5a05022",
+    "name": "Admin_Login_Test_Correct_Email_Password",
+    "commands": [{
+      "id": "5ec4261e-6302-48a8-9fc2-feb03cb8238f",
+      "comment": "",
+      "command": "open",
+      "target": "/Programming-Assignment-Evaluator/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c469b266-955d-4ce8-87b4-ef89eec99a7f",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1366x728",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8552014e-9584-4532-93a5-8edfb3326af2",
+      "comment": "",
+      "command": "click",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=.one .input", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6a945b53-9765-405f-ac63-2ff635fe4bae",
+      "comment": "",
+      "command": "type",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=.one .input", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "melangak@email.com"
+    }, {
+      "id": "27233b60-4239-4cfb-8f17-d118acb347c2",
+      "comment": "",
+      "command": "click",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.pass .input", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c53396b7-5c91-4a4c-9ca7-433802597f90",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.pass .input", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "1234"
+    }, {
+      "id": "db9f83ee-1f34-4c2a-b54f-a5959c7d3a28",
+      "comment": "",
+      "command": "click",
+      "target": "css=.custom-control-label",
+      "targets": [
+        ["css=.custom-control-label", "css:finder"],
+        ["xpath=//label", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cf5c4bf0-2e94-48a9-be86-6b04d5028fbd",
+      "comment": "",
+      "command": "click",
+      "target": "id=login",
+      "targets": [
+        ["id=login", "id"],
+        ["css=#login", "css:finder"],
+        ["xpath=//button[@id='login']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "bfdf3892-71ac-4c45-80a5-72579520d1af",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.col-md-4:nth-child(1) a:nth-child(1) > .card-header",
+      "targets": [
+        ["css=.col-md-4:nth-child(1) a:nth-child(1) > .card-header", "css:finder"],
+        ["xpath=//a/div", "xpath:position"]
+      ],
+      "value": "Add New Course"
+    }]
+  }, {
+    "id": "d79e5551-6402-44fd-835d-2349a2ff2e06",
+    "name": "Admin_Login_Test_Correct_Information_Unchecked_Admin",
+    "commands": [{
+      "id": "5cf21a53-673e-4861-8fe9-51a294f45d55",
+      "comment": "",
+      "command": "open",
+      "target": "/Programming-Assignment-Evaluator/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1f85cd5e-a1d8-4546-be78-6b5e52ff961b",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1366x728",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "dc60e2e8-db35-4f92-b43c-72a6ec01a79f",
+      "comment": "",
+      "command": "click",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=.one .input", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b7c725ac-5dd4-4a6b-85ef-f88798159423",
+      "comment": "",
+      "command": "type",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=.one .input", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "melangak@email.com"
+    }, {
+      "id": "55c0f0f7-162c-4da1-b371-f492dac4aa01",
+      "comment": "",
+      "command": "click",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.pass .input", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "dbc5f4b6-c85b-4744-8704-acb60498067d",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.pass .input", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "1234"
+    }, {
+      "id": "c9661957-ff7f-4e75-8fe7-8a088b664825",
+      "comment": "",
+      "command": "click",
+      "target": "id=login",
+      "targets": [
+        ["id=login", "id"],
+        ["css=#login", "css:finder"],
+        ["xpath=//button[@id='login']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fc2efe9f-acde-4700-8c94-68b8c0b86ba7",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=p:nth-child(3)",
+      "targets": [
+        ["css=p:nth-child(3)", "css:finder"],
+        ["xpath=//p", "xpath:position"],
+        ["xpath=//p[contains(.,'Login is Invalid.')]", "xpath:innerText"]
+      ],
+      "value": "Login is Invalid."
+    }]
+  }, {
+    "id": "4eff5249-028b-4552-a9ce-dfca3d382416",
+    "name": "Admin_Login_Test_Correct_Email_Incorrect_Password",
+    "commands": [{
+      "id": "056b3320-ceb8-4d1d-a57b-c4832385e05f",
+      "comment": "",
+      "command": "open",
+      "target": "/Programming-Assignment-Evaluator/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e7aa538f-5344-416c-bca4-068d67f6fcfb",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1366x728",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a2b401e7-a2a8-472e-a99b-90013811262f",
+      "comment": "",
+      "command": "click",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=.one .input", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ba5f8a0b-f5f9-43fc-bb58-49871cc1ff16",
+      "comment": "",
+      "command": "type",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=.one .input", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "melangak@email.com"
+    }, {
+      "id": "3550e187-eac4-4807-a876-863052350bae",
+      "comment": "",
+      "command": "click",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.pass .input", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "bd8024b8-31c8-4054-bf53-44ab424e5cfe",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.pass .input", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "123456"
+    }, {
+      "id": "c84a1ed4-3895-4b19-89d1-3b2ad25c7b5e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.custom-control-label",
+      "targets": [
+        ["css=.custom-control-label", "css:finder"],
+        ["xpath=//label", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "20fc7f4c-67ab-46d6-bbc9-3f5d4532ccd1",
+      "comment": "",
+      "command": "click",
+      "target": "id=login",
+      "targets": [
+        ["id=login", "id"],
+        ["css=#login", "css:finder"],
+        ["xpath=//button[@id='login']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c79bf23e-fb5d-4127-b4a6-6f013eb62cbd",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=p:nth-child(3)",
+      "targets": [
+        ["css=p:nth-child(3)", "css:finder"],
+        ["xpath=//p", "xpath:position"],
+        ["xpath=//p[contains(.,'Login is Invalid.')]", "xpath:innerText"]
+      ],
+      "value": "Login is Invalid."
+    }]
+  }, {
+    "id": "40a1e453-f4de-498c-890e-13bd1550fae6",
+    "name": "Admin_Login_Test_Email_Not_Available",
+    "commands": [{
+      "id": "83e715ff-a7c2-4c95-bf06-bb873f16e38c",
+      "comment": "",
+      "command": "open",
+      "target": "/Programming-Assignment-Evaluator/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "98e096b1-0544-44ea-9350-46467ee7c7a1",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1366x728",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "87cd3104-d481-467c-8826-88a18ae94ce3",
+      "comment": "",
+      "command": "click",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=.one .input", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fa377a74-1bf9-4613-ba7f-2a3eb1b72215",
+      "comment": "",
+      "command": "type",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=.one .input", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "melangak@gmail.com"
+    }, {
+      "id": "b2ecb6d7-bdcc-464e-9a58-4ae4eb5963c9",
+      "comment": "",
+      "command": "click",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.pass .input", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "47b01f46-7dd4-400b-a23e-0463c7b381ab",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.pass .input", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "1234"
+    }, {
+      "id": "eb038047-1804-4cef-924b-79c7f2062c10",
+      "comment": "",
+      "command": "click",
+      "target": "css=.custom-control-label",
+      "targets": [
+        ["css=.custom-control-label", "css:finder"],
+        ["xpath=//label", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6b59e0da-99c5-4a25-82e5-875974209e1d",
+      "comment": "",
+      "command": "click",
+      "target": "id=login",
+      "targets": [
+        ["id=login", "id"],
+        ["css=#login", "css:finder"],
+        ["xpath=//button[@id='login']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d7770d21-2c54-436f-9354-80db476b7c0f",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=p:nth-child(3)",
+      "targets": [
+        ["css=p:nth-child(3)", "css:finder"],
+        ["xpath=//p", "xpath:position"],
+        ["xpath=//p[contains(.,'Login is Invalid.')]", "xpath:innerText"]
+      ],
+      "value": "Login is Invalid."
+    }]
+  }],
+  "suites": [{
+    "id": "1b7b0caf-9dec-4c1b-aeea-9c99e4dff094",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["b7eb0195-a668-4e14-b2bb-98ea2b1e636f"]
+  }],
+  "urls": ["http://localhost:8015/"],
+  "plugins": []
+}
