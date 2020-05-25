@@ -24,7 +24,7 @@ class Admins extends CI_Controller{
 			redirect('');
 		}
 
-		$this->form_validation->set_rules('id', 'Course ID' , 'required|is_unique[courses.course_id]', array('is_unique' => 'The %s you entered is already exists in the system.'));
+		$this->form_validation->set_rules('id', 'Course ID', 'required|is_unique[courses.course_id]', array('is_unique' => 'The %s you entered is already exists in the system.'));
 		$this->form_validation->set_rules('description', 'Description' , 'required');
 		$this->form_validation->set_rules('title', 'Title', 'required');
 		$this->form_validation->set_error_delimiters('<div class="change-password-wrong mb-5">', '</div>'); 
@@ -45,7 +45,7 @@ class Admins extends CI_Controller{
 				'course_name' => $this->input->post('title'),
 				'description' => $this->input->post('description'),
 				'lecturer_nic' => $this->input->post('teacher'),
-				'semester' => $this->input->post('teacher')
+				'semester' => $this->input->post('semester')
 			);
 			
 			$this->course_model->create_course($input);	

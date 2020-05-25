@@ -29,6 +29,8 @@ class Course_model extends CI_Model
 		}
 
 		$query = $this->db->get('courses');
+		print_r($query->result_array());
+		echo '<br /><br />';
 		return $query->result_array();
 
 	}
@@ -46,14 +48,4 @@ class Course_model extends CI_Model
 		$result = $this->db->get('courses');
 		return $result->result_array();
 	}
-
-	function getAssignments($course_id){
-
-		$this->db->where('course_id',$course_id);
-		$this->db->order_by('deadline','ASC');
-		$result = $this->db->get('assignments');
-
-		return $result->result_array();
-	}
-
 }

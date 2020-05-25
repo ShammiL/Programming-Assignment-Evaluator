@@ -53,7 +53,7 @@ class Students extends CI_Controller{
 
 		if ($this->student_model->checkEnrollment($indexNumber,$course_id)){
 			
-			$data['assignments'] = $this->course_model->getAssignments($course_id);
+			$data['assignments'] = $this->assignment_model->get_assignments($course_id);
 
 			$this->load->view('templates/student_header');
 			$this->load->view('students/view_assignments',$data);

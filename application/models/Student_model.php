@@ -15,7 +15,7 @@ class Student_model extends CI_Model{
 
 		$db2 = $this->load->database('db2',TRUE);
 		$db2->select('password');
-		return $db2->get_where('student', array('indexNumber' => $indexNumber))->row(0);
+		return $db2->get_where('student', array('indexNumber' => $indexNumber))->row(0)->password;
 	}
 	
 	public function change_password($index_number, $pwrd) {
@@ -42,12 +42,10 @@ class Student_model extends CI_Model{
 
 	   $this->db->where('indexNumber', $indexNumber);
 	   $result = $this->db->get('students');
-
 	   $semester = $result->row(0)->semester;
 
 	   $this->db->where('semester', $semester);
 	   $courses = $this->db->get('courses');
-
 	   return $courses->result_array();
    	}
 
@@ -60,7 +58,6 @@ class Student_model extends CI_Model{
 		foreach($results as $result){
 			$this->db->where('course_id', $result['course_id']);
 			array_push($courses, $this->db->get('courses')->result_array());
-
 		}
 		return $courses;
 	}
@@ -78,7 +75,7 @@ class Student_model extends CI_Model{
 	   }	   
    	}
 
-	public function get_students($course_id = 'CS3042', $student_id=NULL){
+	public function get_students($course_id, $student_id=NULL){
 
 		$this->db->from('studentcourse');
 		$this->db->join('students', 'students.indexNumber = studentcourse.indexNumber');
@@ -101,6 +98,7 @@ class Student_model extends CI_Model{
 		} 
 
 		$query = $this->db->get('students');
+		print_r($query->result_array());
 		return $query->result_array();
 	}
 
@@ -131,7 +129,7 @@ class Student_model extends CI_Model{
                     'indexNumber' => $indexNumber,
                     'course_id' => $course_id
                 );
-        $this->db->insert('studentcourse',$data);
+        return $this->db->insert('studentcourse',$data);
 
         // $this->db->where($data);
         // $id = $this->db->get('submissions')->row(0)->submission_id;

@@ -44,7 +44,7 @@ class teacher_model extends CI_Model
 		}
 
 		$query = $this->db->get_where('lecturer', array('status' => '1'));
-			return $query->result_array();
+		return $query->result_array();
 	}
 
 	public function get_disable_teacher($teacher_id = NULL) {
@@ -62,7 +62,8 @@ class teacher_model extends CI_Model
 
 		$db2 = $this->load->database('db2',TRUE);
 		$db2->select('password');
-		return $db2->get_where('lecturer', array('nic' => $teacher_id))->row(0);
+		$query = $db2->get_where('lecturer', array('nic' => $teacher_id));
+		return $query->result_array()[0]['password'];
 	}
 	
 	public function change_password($teacher_id, $pwrd) {
@@ -102,6 +103,6 @@ class teacher_model extends CI_Model
 		$this->db->where('nic', $teacher_id);
 		$this->db->update('lecturer');
 		$db2->where('nic', $teacher_id);
-		$db2->update('lecturer');
+		return $db2->update('lecturer');
 	}
 }

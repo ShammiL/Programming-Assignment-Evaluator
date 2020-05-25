@@ -46,7 +46,7 @@ class Assignment_model extends CI_Model{
         $this->db->where('assignment_id',$assignment_id);
         $lang = $this->db->get('assignments')->row(0)->language;
 
-        if($lang === 'Python'){
+        if($lang === 'Python' or $lang === 'Python3'){
             return 'py';
         } else if ($lang == 'Java'){
             return 'java';
@@ -65,22 +65,21 @@ class Assignment_model extends CI_Model{
         $this->db->insert('submissions',$data);
 
         $this->db->where($data);
-        $id = $this->db->get('submissions')->row(0)->submission_id;
-        return $id;
+        return $this->db->get('submissions')->row(0)->submission_id;
     }
 
     function updateSubmission($id,$filepath){
 
-        $this->db->set('filepath',$filepath);
+        $this->db->set('file_path',$filepath);
         $this->db->where('submission_id',$id);
 
-        $this->db->update('submission');
+        return $this->db->update('submissions');
 
     }
 
     function deleteSubmission($id){
         $this->db->where('submission_id', $id);
-        $this->db->delete('submissions');
+        return $this->db->delete('submissions');
     }
 
     function getGrade($assignment_id,$student_id){
@@ -97,8 +96,13 @@ class Assignment_model extends CI_Model{
         $this->db->select('*');
         $this->db->from('assignments');
         $this->db->where('assignment_id', $assignment_id);
-        $query = $this->db->get();
-        return $query->result_array()[0];
+        $result = $this->db->get();
+
+		if($result->num_rows() > 0){
+			return $result->result_array()[0];
+		} else {
+			return FALSE;
+		}
 
     }
 
