@@ -35,6 +35,8 @@ $route['teacher/viewStudents/(:any)'] = 'teachers/viewStudents/$1';
 $route['teacher/profile'] = 'teachers/profile';
 $route['teacher/course/(:any)'] = 'Courses/index/$1';
 $route['teacher/assignment/create/(:any)'] = 'Assignments/create/$1';
+$route['teacher/viewIssues/(:any)'] = 'teachers/view_issues/$1';
+
 
 $route['student'] = 'students/index';
 $route['student/assignmentDetails/(:any)/(:any)/(:any)'] = 'students/assignmentDetails/$1/$2/$3';

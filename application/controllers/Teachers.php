@@ -279,4 +279,15 @@ class Teachers extends CI_Controller
 		$this->load->view('templates/footer');
 
 	}
+
+	public function view_issues($assignment_id){
+     
+
+		$data['title'] = 'Issues reported by students';
+		$data['issues'] = $this->Issue_model->get_issues($assignment_id);
+		$this->load->view('templates/header');
+		$this->load->view('assignments/issues', $data);
+		$this->load->view('templates/footer');
+	
+	}
 }
