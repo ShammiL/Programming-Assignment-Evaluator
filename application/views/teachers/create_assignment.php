@@ -13,20 +13,20 @@
 					<div class="col-md-4">
 						<div class="form-group">
 							<label for="title">Title:</label>
-							<input class="form-control" type="text" name="name" id="title" placeholder="Add Title Here..." required>
+							<input class="form-control" type="text" name="name" value="<?php echo $inputs['assignment_name'] ?>" id="title" placeholder="Add Title Here..." required>
 						</div>
 					</div>
 					
 					<div class="col-md-4">
 						<div class="form-group">
 							<label for="deadline">Deadline:</label>
-							<input type="date" class="form-control" name="deadline" id="deadline" value="dd-mm-yyyy" required>
+							<input type="date" class="form-control" name="deadline" value="<?php echo $inputs['deadline'] ?>" id="deadline" value="dd-mm-yyyy" required>
 						</div>
 					</div>
 					<div class="col-md-4">
 						<div class="form-group">
 							<label for="time">Time:</label>
-							<input type="time" class="form-control" name="time" id="time" value="hh:mm" required>
+							<input type="time" class="form-control" name="time" value="<?php echo $inputs['time'] ?>" id="time" value="hh:mm" required>
 						</div>
 					</div>
 					<div class="col-md-4">
@@ -39,7 +39,7 @@
 				</div>
 				<div class="form-group">
 					<label for="description">Description:</label>
-					<textarea class="form-control" name="description" id="description" placeholder="Add Description Here..." required></textarea>
+					<textarea class="form-control" name="description" id="description" placeholder="Add Description Here..." required><?php echo $inputs['description'] ?></textarea>
 				</div>
 				<div class="row">
 					<div class="col-md-4">

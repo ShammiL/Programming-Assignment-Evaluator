@@ -38,6 +38,16 @@ class Teachers extends CI_Controller
 		if (!$this->session->userdata('lecturer_id')){
 			redirect('');
 		}
+
+		$input = array(
+			'assignment_name' => $this->input->post('name'),
+			'description' => $this->input->post('description'),
+			'language' => $this->input->post('language'),
+			'course_id' => $course_id,
+			'deadline' => $this->input->post('deadline'),
+			'time' => $this->input->post('time'),
+			'status' => 'ongoing'
+		);
 			
 		$data['title'] = 'Create new Assignment';	
 		$data['course'] = $course_id;
@@ -50,6 +60,8 @@ class Teachers extends CI_Controller
 
 	
 		if($this->form_validation->run() === false){
+
+			$data['inputs'] = $input;
 			
 			$this->load->view('templates/header');
 			$this->load->view('teachers/create_assignment', $data);
@@ -58,16 +70,6 @@ class Teachers extends CI_Controller
 		}
 			
 		else{
-
-			$input = array(
-				'assignment_name' => $this->input->post('name'),
-				'description' => $this->input->post('description'),
-				'language' => $this->input->post('language'),
-				'course_id' => $course_id,
-				'deadline' => $this->input->post('deadline'),
-				'time' => $this->input->post('time'),
-				'status' => 'ongoing'
-			);
 			
 			$config['upload_path'] = './assets/uploads/reference docs';
 			$config['allowed_types'] = 'pdf|doc|zip|rar';

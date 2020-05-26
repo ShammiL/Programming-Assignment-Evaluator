@@ -24,14 +24,28 @@ class Admins extends CI_Controller{
 			redirect('');
 		}
 
+		$input = array(
+			'course_id' => $this->input->post('id'),
+			'course_name' => $this->input->post('title'),
+			'description' => $this->input->post('description'),
+			'lecturer_nic' => $this->input->post('teacher'),
+			'semester' => $this->input->post('semester')
+		);
+
 		$this->form_validation->set_rules('id', 'Course ID', 'required|is_unique[courses.course_id]', array('is_unique' => 'The %s you entered is already exists in the system.'));
 		$this->form_validation->set_rules('description', 'Description' , 'required');
-		$this->form_validation->set_rules('title', 'Title', 'required');
+		$this->form_validation->set_rules('title', 'Title', 'required|is_unique[courses.course_name]', array('is_unique' => 'The %s you entered is already exists in the system.'));
 		$this->form_validation->set_error_delimiters('<div class="change-password-wrong mb-5">', '</div>'); 
 
 		if($this->form_validation->run() === false){
 
 			$data['teachers'] = $this->teacher_model->get_teacher();
+			$data['inputs'] = $input;
+
+			$teacher = $this->input->post('teacher');
+			if ($teacher != "") {
+				$data['teacher'] = $this->teacher_model->get_teacher($teacher);
+			}
 
 			$this->load->view('templates/admin_header');
 			$this->load->view('admins/add_course', $data);
@@ -39,14 +53,6 @@ class Admins extends CI_Controller{
 		}
 			
 		else{
-
-			$input = array(
-				'course_id' => $this->input->post('id'),
-				'course_name' => $this->input->post('title'),
-				'description' => $this->input->post('description'),
-				'lecturer_nic' => $this->input->post('teacher'),
-				'semester' => $this->input->post('semester')
-			);
 			
 			$this->course_model->create_course($input);	
 			$this->index();
@@ -116,6 +122,24 @@ class Admins extends CI_Controller{
 			redirect('');
 		}
 
+		$semester = $this->input->post('semester');
+		if ($semester == "") {
+			$semester = "1";
+		}
+
+		$input = array(
+			'indexNumber' => $this->input->post('index'),
+			'fname' => $this->input->post('fname'),
+			'lname' => $this->input->post('lname'),
+			'email' => $this->input->post('email'),
+			'address' => $this->input->post('address'),
+			'phone' => $this->input->post('phone'),
+			'semester' => $semester,
+			'birthday' => $this->input->post('bday'),
+			'gender' => $this->input->post('gender'),
+			'nationality' => $this->input->post('nationality')
+		);
+
 		$this->form_validation->set_rules('index', 'Index Number' , 'required|is_unique[students.indexNumber]', array('is_unique' => 'The %s you entered is already exists in the system.'));
 		$this->form_validation->set_rules('fname', 'First Name' , 'required');
 		$this->form_validation->set_rules('lname', 'Last Name', 'required');
@@ -127,30 +151,14 @@ class Admins extends CI_Controller{
 
 		if($this->form_validation->run() === false){
 
+			$data['inputs'] = $input;
+
 			$this->load->view('templates/admin_header');
-			$this->load->view('admins/add_student');
+			$this->load->view('admins/add_student', $data);
 			$this->load->view('templates/footer');	
 		}
 			
 		else{
-
-			$semester = $this->input->post('semester');
-			if ($semester == "") {
-				$semester = "1";
-			}
-
-			$input = array(
-				'indexNumber' => $this->input->post('index'),
-				'fname' => $this->input->post('fname'),
-				'lname' => $this->input->post('lname'),
-				'email' => $this->input->post('email'),
-				'address' => $this->input->post('address'),
-				'phone' => $this->input->post('phone'),
-				'semester' => $semester,
-				'birthday' => $this->input->post('bday'),
-				'gender' => $this->input->post('gender'),
-				'nationality' => $this->input->post('nationality')
-			);
 
 			$signup_data = array(
 				'indexNumber' => $this->input->post('index'), 
@@ -232,6 +240,19 @@ class Admins extends CI_Controller{
 			redirect('');
 		}
 
+		$input = array(
+			'email' => $this->input->post('email'),
+			'nic' => $this->input->post('nic'),
+			'fname' => $this->input->post('fname'),
+			'lname' => $this->input->post('lname'),
+			'telephone' => $this->input->post('phone'),
+			'address' => $this->input->post('address'),
+			'birthday' => $this->input->post('bday'),
+			'gender' => $this->input->post('gender'),
+			'nationality' => $this->input->post('nationality'),
+			'status' => '1'
+		);
+
 		$this->form_validation->set_rules('nic', 'NIC' , 'required|is_unique[lecturer.nic]', array('is_unique' => 'The %s you entered is already exists in the system.'));
 		$this->form_validation->set_rules('fname', 'First Name' , 'required');
 		$this->form_validation->set_rules('lname', 'LastName', 'required');
@@ -243,25 +264,14 @@ class Admins extends CI_Controller{
 
 		if($this->form_validation->run() === false){
 
+			$data['inputs'] = $input;
+
 			$this->load->view('templates/admin_header');
-			$this->load->view('admins/add_teacher');
+			$this->load->view('admins/add_teacher', $data);
 			$this->load->view('templates/footer');	
 		}
 			
 		else{
-
-			$input = array(
-				'email' => $this->input->post('email'),
-				'nic' => $this->input->post('nic'),
-				'fname' => $this->input->post('fname'),
-				'lname' => $this->input->post('lname'),
-				'telephone' => $this->input->post('phone'),
-				'address' => $this->input->post('address'),
-				'birthday' => $this->input->post('bday'),
-				'gender' => $this->input->post('gender'),
-				'nationality' => $this->input->post('nationality'),
-				'status' => '1'
-			);
 
 			$signup_data = array(
 				'nic' => $this->input->post('nic'), 

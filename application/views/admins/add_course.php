@@ -9,39 +9,44 @@
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="id">Course ID: </label>
-                    <input type="text" class="form-control" name="id" placeholder="Enter Course ID Here..." required>
+                    <input type="text" class="form-control" name="id" value="<?php echo $inputs['course_id']; ?>" placeholder="Enter Course ID Here..." required>
                 </div>
                 <div class="form-group col-md-6">
                     <label for="name">Course Title: </label>
-                    <input type="text" class="form-control" name="title" placeholder="Enter Course Title Here..." required>
+                    <input type="text" class="form-control" name="title" value="<?php echo $inputs['course_name']; ?>" placeholder="Enter Course Title Here..." required>
                 </div>
             </div>
             <div class="form-group">
                 <label for="description">Description: </label>
-                <textarea class="form-control" name="description" placeholder="Enter Course Description Here..." required></textarea>
+                <textarea class="form-control" name="description" placeholder="Enter Course Description Here..." required><?php echo $inputs['description']; ?></textarea>
             </div>
             <div class="form-row">
                 <div class="form-group col-md-6">
-                    <label for="inputState">Teacher: </label>
+                    <label for="teacher">Teacher: </label>
                     <select name="teacher" class="form-control">
-                        <option selected disabled> ----- Select Teacher ----- </option>
-                        <?php foreach ($teachers as $teacher) {?>
-                            <option value="<?php echo $teacher['email']; ?>"><?php echo $teacher['email']; ?></option>
+						<?php if ($inputs['teacher'] != "") { ?>
+						<option selected value="<?php echo $teacher['nic'] ?>"><?php echo $teacher['nic'].' - '.$teacher['fname'].' '.$teacher['lname']; ?></option>
+						<?php } else { ?>
+						<option selected disabled> ----- Select Teacher ----- </option>
+						<?php }
+                        foreach ($teachers as $teacher) {?>
+                            <option value="<?php echo $teacher['nic']; ?>"><?php echo $teacher['nic'].' - '.$teacher['fname'].' '.$teacher['lname']; ?></option>
                         <?php }?>
                     </select>
                 </div>
                 <div class="form-group col-md-6">
-                <label for="inputState">Semester: </label>
+                <label for="semester">Semester: </label>
                     <select name="semester" class="form-control">
-                        <option selected disabled> ----- Select Semester ----- </option>
-                        <option value="1">Semester 01</option>
-                        <option value="2">Semester 02</option>
-                        <option value="3">Semester 03</option>
-                        <option value="4">Semester 04</option>
-                        <option value="5">Semester 05</option>
-                        <option value="6">Semester 06</option>
-                        <option value="7">Semester 07</option>
-                        <option value="8">Semester 08</option>
+						<?php if ($inputs['semester'] != "") { ?>
+							<option selected value="<?php echo $inputs['semester'] ?>"><?php echo "Semester 0".$inputs['semester'] ?></option>
+						<?php } else { ?>
+							<option selected disabled> ----- Select Semester ----- </option>
+						<?php }
+						for ($i=1; $i < 9; $i++) {
+							if ($i != $inputs['semester']) {
+								echo '<option value='.$i.'>Semester 0'.$i.'</option>';
+							}
+						} ?>
                     </select>
                 </div>
             </div>
