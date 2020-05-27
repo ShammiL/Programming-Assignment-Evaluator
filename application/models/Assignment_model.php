@@ -116,4 +116,10 @@ class Assignment_model extends CI_Model{
         $this->db->where('assignment_id', $id);
         return $this->db->update('assignments', $input);
     }
+
+    public function get_last(){
+        $last = $this->db->order_by('assignment_id',"desc")->limit(1)->get('assignments')->result_array();
+
+        return $last;
+    }
 }

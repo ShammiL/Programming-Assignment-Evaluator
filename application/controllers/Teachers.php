@@ -70,9 +70,40 @@ class Teachers extends CI_Controller
 		}
 			
 		else{
+			$last = $this->assignment_model->get_last();
+			$last_id = $last[0]['assignment_id']+1;
+
+
+			$ref_path = "./assets/uploads/" . strval($last_id) . "/reference";
+
+			if(!is_dir($ref_path)) 
+			{
+			mkdir($ref_path,0755,TRUE);
+			} 
+
+			$input_path = "./assets/uploads/" . strval($last_id) . "/input";
+
+			if(!is_dir($input_path)) 
+			{
+			mkdir($input_path,0755,TRUE);
+			} 
+
+			$output_path = "./assets/uploads/" . strval($last_id) . "/output";
+
+			if(!is_dir($output_path)) 
+			{
+			mkdir($output_path,0755,TRUE);
+			} 
+
+			$submit_path = "./assets/uploads/" . strval($last_id) . "/submission";
+
+			if(!is_dir($submit_path)) 
+			{
+			mkdir($submit_path,0755,TRUE);
+			} 
 			
-			$config['upload_path'] = './assets/uploads/reference docs';
-			$config['allowed_types'] = 'pdf|doc|zip|rar';
+			$config['upload_path'] = $ref_path;
+			$config['allowed_types'] = 'pdf|docx|zip|rar';
 			$config['max_size'] = '.2048';
 	
 			$this->load->library('upload', $config);
@@ -286,7 +317,7 @@ class Teachers extends CI_Controller
      
 
 		$data['title'] = 'Issues reported by students';
-		$data['issues'] = $this->Issue_model->get_issues($assignment_id);
+		$data['issues'] = $this->issue_model->get_issues($assignment_id);
 		$this->load->view('templates/header');
 		$this->load->view('assignments/issues', $data);
 		$this->load->view('templates/footer');
