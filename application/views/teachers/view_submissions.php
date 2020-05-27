@@ -51,7 +51,7 @@
 				<h5 class="card-title mt-3">Description :</h5>
 				<p> <?php echo $assignment['description']; ?> </p>
 				<h5 class="card-title">Resources :</h5>
-				<p class="card-text"><a href="<?= base_url('assets/uploads/reference docs/'); ?>">Reference Document</a></p>		
+				<p class="card-text"><a href="<?= base_url("assets/uploads/" . strval($assignment['assignment_id']) . "/" . "reference/"); ?>">Reference Document</a></p>		
 				<h5 class="card-title mt-3">Deadline :</h5>
 				<p> <?php echo $assignment['deadline']?>, <?php echo date("g:i a", strtotime($assignment['time'])) ?> </p>
                 <?php if($submissions) { ?>
