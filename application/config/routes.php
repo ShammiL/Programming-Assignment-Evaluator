@@ -47,6 +47,9 @@ $route['student/viewGrade/(:any)/(:any)'] = 'students/viewGrade/$1/$2';
 $route['student/viewCourses'] = 'students/viewCourses';
 $route['student/profile'] = 'students/profile';
 $route['student/(:any)'] = 'students/view/$1';
+$route['student/reportIssue/(:any)'] = 'students/report_issue/$1';
+$route['student/viewIssue/(:any)/(:any)'] = 'students/view_issues/$1/$2';
+
 
 $route['compiler'] = 'compiler/index';
 

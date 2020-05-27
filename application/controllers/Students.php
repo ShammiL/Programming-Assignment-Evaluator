@@ -110,6 +110,7 @@ class Students extends CI_Controller{
 		}
 
 		$data['assignment_id'] = $assignment_id;
+		$data['indexNumber'] = $student_id;
 		$data['num'] = $num;
 		$data['error'] = $data1;
 		$data['assignment_data'] = $this->assignment_model->get_one($assignment_id);
@@ -199,6 +200,54 @@ class Students extends CI_Controller{
 		$this->load->view('templates/footer');
 
 	}
+
+	public function report_issue($assignment_id){
+
+		if (!$this->session->userdata('student_id')){
+			redirect('');
+		}
+
+		$input = array(
+			'assignment_id' => $assignment_id,
+			'indexNumber' => $this->session->userdata('student_id'),
+			'content' => $this->input->post('content')
+			
+		);
+			
+		$data['title'] = 'Report Issues';	
+		$data['assignment_id'] = $assignment_id;	
+
+		$this->form_validation->set_rules('content', 'content' , 'required');
+		
+	
+		if($this->form_validation->run() === false){
+
+			$data['inputs'] = $input;
+			
+			$this->load->view('templates/header');
+			$this->load->view('students/report_issue', $data);
+			$this->load->view('templates/footer');
+	
+		}
+			
+		else{
+
+
+			$this->issue_model->create_issue($input);
+	
+			$this->view_issues($this->session->userdata('student_id'), $assignment_id);
+		
+	}
+}
+
+	public function view_issues($indexNumber, $assignment_id){
+		$data['title'] = 'Issues reported by you';
+		$data['issues'] = $this->issue_model->get_issues_student($indexNumber, $assignment_id);
+		$this->load->view('templates/header');
+		$this->load->view('students/view_issues', $data);
+		$this->load->view('templates/footer');
+	}
+
 	// public function view1($course_id = "CS3020"){
 
 	// 	$data['title'] = ucfirst('Students following '. $course_id);

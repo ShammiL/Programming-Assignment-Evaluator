@@ -16,6 +16,12 @@
 							<label class="overdue-banner">Overdue !!!</label>
 						<?php } } ?>
 					</div>
+					<div class="col-md-2">
+						<a href="<?php echo base_url(); ?>student/reportIssue/<?php echo $assignment_id; ?>" class="btn btn-primary btn-edit" type="submit" id="view-grade">Report Issue</a>
+					</div>
+					<div class="col-md-3">
+						<a href="<?php echo base_url(); ?>student/viewIssue/<?php echo $indexNumber; ?>/<?php echo $assignment_id; ?>" class="btn btn-primary btn-edit" type="submit" id="view-grade">View My Issues</a>
+					</div>
 				</div>
 			</div>
 			<div class="card-body">
