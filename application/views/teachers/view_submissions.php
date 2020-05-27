@@ -53,7 +53,7 @@
 				<h5 class="card-title">Resources :</h5>
 				<p class="card-text"><a href="<?= base_url('assets/uploads/reference docs/'); ?>">Reference Document</a></p>		
 				<h5 class="card-title mt-3">Deadline :</h5>
-				<p> <?php echo $assignment['deadline']; ?> </p>
+				<p> <?php echo $assignment['deadline']?>, <?php echo date("g:i a", strtotime($assignment['time'])) ?> </p>
                 <?php if($submissions) { ?>
 				<div class="card mt-4">
 					<table class="table table-hover">
