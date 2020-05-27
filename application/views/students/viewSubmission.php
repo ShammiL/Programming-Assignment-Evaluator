@@ -68,7 +68,7 @@
 						</div>
 						<div class="row">
 							<label class="col-md-3" for="file-input">Due Date :</label>
-							<label class="col-md-9" for="file-input"><?php echo $assignment_data['deadline'] ?></label>
+							<label class="col-md-9" for="file-input"><?php echo $assignment_data['deadline'] ?>, <?php echo date("g:i a", strtotime($assignment_data['time'])) ?></label>
 						</div>
 						<div class="row">
 							<label class="col-md-3" for="file-input">Last Modified :</label>
