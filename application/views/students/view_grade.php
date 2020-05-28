@@ -24,24 +24,6 @@
                         </div>
                     </div>
                 </div>
-                <h5 class="card-title mt-3">Report Issue (Optional) :</h5>
-                <div class="card">
-                    <div class="card-header">
-                        <form action="" method="post" enctype="multipart/form-data">
-                            <div class="form-group">
-                                <label>Title :</label>
-                                <input class="form-control" name="input" required>
-                            </div>
-                            <div class="form-group">
-                                <label>Description :</label>
-                                <textarea class="form-control" name="input" required></textarea>
-                            </div>
-                            <div class="form-group">
-                                <button class="btn btn-primary" type="submit">Report</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
             </div>
         </div>
     </div>

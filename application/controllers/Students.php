@@ -27,9 +27,9 @@ class Students extends CI_Controller{
 
 			// echo('enrolled in: \n');
 			// print_r($data['index_courses']);
+			$data['title'] = "My Courses";
 
-
-			$this->load->view('templates/student_header');
+			$this->load->view('templates/student_header',$data);
 			$this->load->view('students/view_courses',$data);
 			$this->load->view('templates/footer');
 		
@@ -54,14 +54,16 @@ class Students extends CI_Controller{
 		if ($this->student_model->checkEnrollment($indexNumber,$course_id)){
 			
 			$data['assignments'] = $this->assignment_model->get_assignments($course_id);
+			$data['title'] = "View Course";
 
-			$this->load->view('templates/student_header');
+			$this->load->view('templates/student_header',$data);
 			$this->load->view('students/view_assignments',$data);
 			$this->load->view('templates/footer');
 
 		} else {
+			$data['title'] = "Enroll Course";
 
-			$this->load->view('templates/student_header');
+			$this->load->view('templates/student_header',$data);
 			$this->load->view('students/enroll_course',$data);
 			$this->load->view('templates/footer');
 		}
@@ -114,8 +116,9 @@ class Students extends CI_Controller{
 		$data['num'] = $num;
 		$data['error'] = $data1;
 		$data['assignment_data'] = $this->assignment_model->get_one($assignment_id);
+		$data['title'] = "Add Submission";
 
-		$this->load->view('templates/student_header');
+		$this->load->view('templates/student_header',$data);
 		$this->load->view('students/viewSubmission',$data);
 		$this->load->view('templates/footer');
 
@@ -129,8 +132,9 @@ class Students extends CI_Controller{
 			$data['num'] = $num;
 			$data['assignment_data'] = $this->assignment_model->get_one($assignment_id);
 			$data['grade'] = $this->assignment_model->getGrade($assignment_id, $this->session->userdata('student_id'));
+			$data['title'] = "View Grade";
 
-			$this->load->view('templates/student_header');
+			$this->load->view('templates/student_header',$data);
 			$this->load->view('students/view_grade', $data);
 			$this->load->view('templates/footer');
 
@@ -194,8 +198,9 @@ class Students extends CI_Controller{
 
 		$data['student'] = $this->student_model->get_all_students($index_number)[0];
 		$data['password'] = $this->student_model->get_password($index_number);
+		$data['title'] = "My Profile";
 
-		$this->load->view('templates/student_header');
+		$this->load->view('templates/student_header',$data);
 		$this->load->view('students/profile', $data);	
 		$this->load->view('templates/footer');
 
@@ -213,8 +218,7 @@ class Students extends CI_Controller{
 			'content' => $this->input->post('content')
 			
 		);
-			
-		$data['title'] = 'Report Issues';	
+
 		$data['assignment_id'] = $assignment_id;	
 
 		$this->form_validation->set_rules('content', 'content' , 'required');
@@ -223,8 +227,9 @@ class Students extends CI_Controller{
 		if($this->form_validation->run() === false){
 
 			$data['inputs'] = $input;
+			$data['title'] = "Report Issue";
 			
-			$this->load->view('templates/header');
+			$this->load->view('templates/student_header',$data);
 			$this->load->view('students/report_issue', $data);
 			$this->load->view('templates/footer');
 	
@@ -241,9 +246,10 @@ class Students extends CI_Controller{
 }
 
 	public function view_issues($indexNumber, $assignment_id){
-		$data['title'] = 'Issues reported by you';
 		$data['issues'] = $this->issue_model->get_issues_student($indexNumber, $assignment_id);
-		$this->load->view('templates/header');
+		$data['title'] = "View Issues";
+
+		$this->load->view('templates/student_header',$data);
 		$this->load->view('students/view_issues', $data);
 		$this->load->view('templates/footer');
 	}
@@ -257,7 +263,7 @@ class Students extends CI_Controller{
 	// 	$data['count'] = $this->Student_model->get_student_count($course_id);
 	// 	// print_r ($data['students']);
 
-	// 	$this->load->view('templates/student_header');
+	// 	$this->load->view('templates/student_header',$data);
 	// 	$this->load->view('students/view', $data);
 	// 	$this->load->view('templates/footer');
 
@@ -271,7 +277,7 @@ class Students extends CI_Controller{
 	// 	$data['count'] = $this->Student_model->get_student_count($course_id);
 	// 	// print_r ($data['students']);
 
-	// 	$this->load->view('templates/student_header');
+	// 	$this->load->view('templates/student_header',$data);
 	// 	$this->load->view('students/view', $data);
 	// 	$this->load->view('templates/footer');
 

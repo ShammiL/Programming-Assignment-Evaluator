@@ -7,8 +7,9 @@ class Teachers extends CI_Controller
 		if ($this->session->userdata('lecturer_id')){
 			
 			$data['courses'] = $this->course_model->get_course_by_lecturer($this->session->userdata('lecturer_id'));
+			$data['title'] = "Assigned Courses";
 
-			$this->load->view('templates/header');
+			$this->load->view('templates/header', $data);
 			$this->load->view('teachers/home', $data);
 			$this->load->view('templates/footer');
 		}
@@ -27,8 +28,9 @@ class Teachers extends CI_Controller
 		$data['course'] = $course_id;
 		$data['courseDetails'] = $this->course_model->get_courses($course_id)[0];
 		$data['teacher'] = $this->teacher_model->get_teacher($data['courseDetails']['lecturer_nic'])[0];
+		$data['title'] = "Course Details";
 
-		$this->load->view('templates/header');
+		$this->load->view('templates/header', $data);
 		$this->load->view('teachers/course_details', $data);
 		$this->load->view('templates/footer');
 	}
@@ -51,6 +53,7 @@ class Teachers extends CI_Controller
 			
 		$data['title'] = 'Create new Assignment';	
 		$data['course'] = $course_id;
+		$data['title'] = "Create Assignment";
 		// $this->load->library('form_validation'); 
 		$this->form_validation->set_rules('name', 'name' , 'required');
 		$this->form_validation->set_rules('description', 'description' , 'required');
@@ -63,7 +66,7 @@ class Teachers extends CI_Controller
 
 			$data['inputs'] = $input;
 			
-			$this->load->view('templates/header');
+			$this->load->view('templates/header', $data);
 			$this->load->view('teachers/create_assignment', $data);
 			$this->load->view('templates/footer');
 	
@@ -152,14 +155,15 @@ class Teachers extends CI_Controller
 			redirect('');
 		}
 	
-			$data['title'] = 'Edit Assignment';		
-			$data['assignment'] = $this->assignment_model->get_one($assignment_id);
-			$data['course_id']  = $course_id;
-			$data['num']  = $num;
-			// print_r ($data['assignment']);
-			$this->load->view('templates/header');
-			$this->load->view('teachers/edit_assignment', $data);
-			$this->load->view('templates/footer');	
+		$data['title'] = 'Edit Assignment';
+		$data['assignment'] = $this->assignment_model->get_one($assignment_id);
+		$data['course_id']  = $course_id;
+		$data['num']  = $num;
+		$data['title'] = "Edit Assignment";
+		// print_r ($data['assignment']);
+		$this->load->view('templates/header', $data);
+		$this->load->view('teachers/edit_assignment', $data);
+		$this->load->view('templates/footer');
 
 }
 
@@ -192,8 +196,9 @@ class Teachers extends CI_Controller
 
 		$data['assignments'] = $this->assignment_model->get_assignments($course_id);
 		$data['courseDetails'] = $this->course_model->get_courses($course_id)[0];
+		$data['title'] = "View Assignment";
 		// print_r ($data['assignments']);
-		$this->load->view('templates/header');
+		$this->load->view('templates/header', $data);
 		$this->load->view('teachers/view_assignments', $data);
 		$this->load->view('templates/footer');
 	}
@@ -214,9 +219,10 @@ class Teachers extends CI_Controller
 		$data['num'] = $num;
 		$data['students'] = $this->student_model->get_student_count($assignment['course_id']);
 		$data['assignment'] = $assignment;
+		$data['title'] = "Submissions";
 
 		// print_r ($data['assignment']);
-		$this->load->view('templates/header');
+		$this->load->view('templates/header', $data);
 		$this->load->view('teachers/view_submissions', $data);
 		$this->load->view('templates/footer');
 	}
@@ -235,8 +241,9 @@ class Teachers extends CI_Controller
 	public function grade() {
 
 		if ($this->session->userdata('lecturer_id')){
+			$data['title'] = "Grade";
 
-			$this->load->view('templates/header');
+			$this->load->view('templates/header', $data);
 			$this->load->view('teachers/grade');
 			$this->load->view('templates/footer');
 		} 
@@ -260,9 +267,10 @@ class Teachers extends CI_Controller
 
 		$data['count'] = $this->student_model->get_student_count($course_id);
 		$data['course_id'] = $course_id;
+		$data['title'] = "View Students";
 		// print_r ($data['students']);
 
-		$this->load->view('templates/header');
+		$this->load->view('templates/header', $data);
 		$this->load->view('teachers/view_students', $data);
 		$this->load->view('templates/footer');
 
@@ -306,8 +314,9 @@ class Teachers extends CI_Controller
 
 		$data['teacher'] = $this->teacher_model->get_teacher($lecturer_id)[0];
 		$data['password'] = $this->teacher_model->get_password($lecturer_id);
+		$data['title'] = "Profile";
 
-		$this->load->view('templates/header');
+		$this->load->view('templates/header', $data);
 		$this->load->view('teachers/profile', $data);	
 		$this->load->view('templates/footer');
 
@@ -318,7 +327,9 @@ class Teachers extends CI_Controller
 
 		$data['title'] = 'Issues reported by students';
 		$data['issues'] = $this->issue_model->get_issues($assignment_id);
-		$this->load->view('templates/header');
+		$data['title'] = "View Issues";
+
+		$this->load->view('templates/header', $data);
 		$this->load->view('assignments/issues', $data);
 		$this->load->view('templates/footer');
 	

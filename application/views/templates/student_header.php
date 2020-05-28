@@ -7,7 +7,7 @@
 			  integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 		<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Merienda:wght@700&family=Roboto+Slab&family=Yanone+Kaffeesatz&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/style.css">
-		<title>Programming Assignment Evaluator</title>
+		<title><?=$title ?></title>
 	</head>
 	<body>
 	<div class="navbar-background">

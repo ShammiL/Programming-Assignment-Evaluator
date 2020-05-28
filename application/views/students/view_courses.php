@@ -10,7 +10,7 @@
 					<div class="row row-cols-1 row-cols-md-4">
 						<?php foreach($index_courses as $course):
 							$course_id = $course[0]['course_id'];
-							$course_name = $course[0]['course_name']; ?>							
+							$course_name = $course[0]['course_name']; ?>
 							<div class="col mb-4">	
 								<a href="<?php echo site_url('student/courseDetails/'.$course_id); ?>">
 									<div class="card">

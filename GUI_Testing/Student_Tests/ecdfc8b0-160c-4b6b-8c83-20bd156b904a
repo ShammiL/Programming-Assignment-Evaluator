@@ -1,0 +1,1301 @@
+{
+  "id": "dfc1717b-ec04-45bd-a315-ee410d0d8b07",
+  "version": "2.0",
+  "name": "Student_Tests",
+  "url": "http://localhost:8015",
+  "tests": [{
+    "id": "8f64e8bd-fe94-4ddb-95be-fbd9c08d6eb8",
+    "name": "Student_Navigation_Bar_Test",
+    "commands": [{
+      "id": "8a386b00-6f9e-40d2-9c40-ed4dbed7a9e0",
+      "comment": "",
+      "command": "open",
+      "target": "/Programming-Assignment-Evaluator/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e9fc9b36-4b03-4653-a9c5-e33faf08bb57",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1366x728",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3929b93f-a712-4825-a77e-b95fa0eae929",
+      "comment": "",
+      "command": "click",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=.one .input", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "dff96f38-0f52-4c80-b327-951cf9f6bec2",
+      "comment": "",
+      "command": "type",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=.one .input", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "170298H"
+    }, {
+      "id": "828d8a1e-f108-47b5-b099-fa3bbfd04d51",
+      "comment": "",
+      "command": "click",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.pass .input", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d2670310-6ee9-4ec2-8607-a355adc875a9",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.pass .input", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "12345"
+    }, {
+      "id": "748814ee-1094-46bf-b46f-744efc5c3ed2",
+      "comment": "",
+      "command": "click",
+      "target": "id=login",
+      "targets": [
+        ["id=login", "id"],
+        ["css=#login", "css:finder"],
+        ["xpath=//button[@id='login']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9ccf43c8-22e2-40ec-85cd-3788f4aa3b24",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "My Courses",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d8aa7025-1be4-402d-9dc7-9a848f48596a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.nav-item:nth-child(2) > .nav-link",
+      "targets": [
+        ["css=.nav-item:nth-child(2) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Profile')]", "xpath:link"],
+        ["xpath=//div[@id='navbarSupportedContent']/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[@href='http://localhost:8015/Programming-Assignment-Evaluator/student/profile/']", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1f37f65d-3a4c-4bc0-8f6e-e6358fad99d8",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "My Profile",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "34668346-7aa3-4130-a599-eb1017af151e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.active > .nav-link",
+      "targets": [
+        ["css=.active > .nav-link", "css:finder"],
+        ["xpath=//div[@id='navbarSupportedContent']/ul/li/a", "xpath:idRelative"],
+        ["xpath=//a[@href='http://localhost:8015/Programming-Assignment-Evaluator/student']", "xpath:href"],
+        ["xpath=//li/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "85cef247-dfea-40ca-981b-ddb37dc84938",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "My Courses",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5f653088-15d7-4dbe-a3b0-4602753d975b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.nav-item:nth-child(3) > .nav-link",
+      "targets": [
+        ["css=.nav-item:nth-child(3) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Logout')]", "xpath:link"],
+        ["xpath=//div[@id='navbarSupportedContent']/ul/li[3]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '#')])[2]", "xpath:href"],
+        ["xpath=//li[3]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "91c15548-6704-444c-9d35-afca2d5eba23",
+      "comment": "",
+      "command": "verifyText",
+      "target": "linkText=Logout",
+      "targets": [
+        ["linkText=Logout", "linkText"],
+        ["css=.btn-primary", "css:finder"],
+        ["xpath=(//a[contains(text(),'Logout')])[2]", "xpath:link"],
+        ["xpath=//div[@id='logout-student']/div/div/div[2]/a", "xpath:idRelative"],
+        ["xpath=//a[@href='http://localhost:8015/Programming-Assignment-Evaluator/login/logout']", "xpath:href"],
+        ["xpath=//div[2]/a", "xpath:position"]
+      ],
+      "value": "Logout"
+    }, {
+      "id": "b7770e3b-4087-4ac4-af13-1e75f2d755cd",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Logout",
+      "targets": [
+        ["linkText=Logout", "linkText"],
+        ["css=.btn-primary", "css:finder"],
+        ["xpath=(//a[contains(text(),'Logout')])[2]", "xpath:link"],
+        ["xpath=//div[@id='logout-student']/div/div/div[2]/a", "xpath:idRelative"],
+        ["xpath=//a[@href='http://localhost:8015/Programming-Assignment-Evaluator/login/logout']", "xpath:href"],
+        ["xpath=//div[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b913b02f-d157-4eb5-b21f-56926d271361",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "Login",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "7930b1c9-3aa3-4929-a0e0-8350ee214071",
+    "name": "Student_View_Assignment_Test",
+    "commands": [{
+      "id": "8d88defe-a25a-4c78-a388-8645144157ef",
+      "comment": "",
+      "command": "open",
+      "target": "/Programming-Assignment-Evaluator/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4467e393-ff33-45c4-97b5-888de71b517f",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1366x728",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b805101d-49ee-4e4e-bcf0-494ca4eecb17",
+      "comment": "",
+      "command": "click",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=.one .input", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ffd424ac-39fb-450f-bde0-b258a1ab8a10",
+      "comment": "",
+      "command": "type",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=.one .input", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "170298H"
+    }, {
+      "id": "82b3885d-bfc3-4110-aea4-1216a57e308e",
+      "comment": "",
+      "command": "click",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.pass .input", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "399a9687-2fb8-4976-9639-6f207711f0cd",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.pass .input", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "12345"
+    }, {
+      "id": "6ca2b899-aa27-4d93-8d11-84ea06421eda",
+      "comment": "",
+      "command": "click",
+      "target": "id=login",
+      "targets": [
+        ["id=login", "id"],
+        ["css=#login", "css:finder"],
+        ["xpath=//button[@id='login']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a3468148-d1b2-41e5-8456-9f25f64442bc",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "My Courses",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "db408fa2-9586-4e3b-9a0c-c1c4b150aaba",
+      "comment": "",
+      "command": "click",
+      "target": "css=.col:nth-child(2) .card-img-top",
+      "targets": [
+        ["css=.col:nth-child(2) .card-img-top", "css:finder"],
+        ["xpath=(//img[@alt='...'])[2]", "xpath:img"],
+        ["xpath=//div[2]/a/div/div/div[2]/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "aa536158-c3e1-4b19-ab12-53ba3ff60254",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "View Course",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "950e5ae7-e82b-47c9-a797-ad3887f807c6",
+      "comment": "",
+      "command": "click",
+      "target": "css=.assignment-link:nth-child(5) .card-header",
+      "targets": [
+        ["css=.assignment-link:nth-child(5) .card-header", "css:finder"],
+        ["xpath=//a/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7ede2552-39a7-4e17-b72c-8fa1750c1510",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "Add Submission",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "2a495aed-8988-4604-9cc4-011a6c037316",
+    "name": "Student_View_Course_Test ",
+    "commands": [{
+      "id": "154dbde3-a22f-4245-933a-1574610e89bf",
+      "comment": "",
+      "command": "open",
+      "target": "/Programming-Assignment-Evaluator/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2d008bd8-d696-4c93-970b-65ef134c868e",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1366x728",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5eced128-e491-4188-8cff-eb21102cae2f",
+      "comment": "",
+      "command": "click",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=.one .input", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9d1c1bb0-dd63-4469-8767-b766f79a7a95",
+      "comment": "",
+      "command": "type",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=.one .input", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "170298H"
+    }, {
+      "id": "71d31a6f-7115-47d3-a074-f373a793e48a",
+      "comment": "",
+      "command": "click",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.pass .input", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6ca38f8c-b515-4809-b062-8a9c1a480b66",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.pass .input", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "12345"
+    }, {
+      "id": "b7867fa5-25d3-44fe-b4cc-ab191be6f3ae",
+      "comment": "",
+      "command": "click",
+      "target": "id=login",
+      "targets": [
+        ["id=login", "id"],
+        ["css=#login", "css:finder"],
+        ["xpath=//button[@id='login']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "00eb47cd-df74-48a4-8d2f-1fbc531ab745",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "My Courses",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f23ba01f-a77e-49ce-979a-af48a8bb03e1",
+      "comment": "",
+      "command": "click",
+      "target": "css=.col:nth-child(2) .card-img-top",
+      "targets": [
+        ["css=.col:nth-child(2) .card-img-top", "css:finder"],
+        ["xpath=(//img[@alt='...'])[2]", "xpath:img"],
+        ["xpath=//div[2]/a/div/div/div[2]/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8cc8075a-185d-467a-bf74-708a2c6f0b4a",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "View Course",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "81fcb36e-8360-49ef-9bce-f02999fd25da",
+    "name": "Student_View_Profile_Test",
+    "commands": [{
+      "id": "1cabd016-8d62-48fa-afcc-6c7977de5071",
+      "comment": "",
+      "command": "open",
+      "target": "/Programming-Assignment-Evaluator/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a9b1fc34-fc2c-4371-a6fc-7fae4b6d0265",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1366x728",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2643b3f1-625a-42c8-94f9-9ec87327acf2",
+      "comment": "",
+      "command": "click",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=.one .input", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6335a962-b6f6-4d12-95c8-7ef71927eb08",
+      "comment": "",
+      "command": "type",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=.one .input", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "170298H"
+    }, {
+      "id": "ca4915ce-5c61-431f-97cd-5fdb0432339d",
+      "comment": "",
+      "command": "click",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.pass .input", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "76bb0bf4-8f3e-4dcc-9746-1c4ff0c4620d",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.pass .input", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "12345"
+    }, {
+      "id": "e15cc2c3-beb4-46cc-939a-e57696cf0d76",
+      "comment": "",
+      "command": "click",
+      "target": "id=login",
+      "targets": [
+        ["id=login", "id"],
+        ["css=#login", "css:finder"],
+        ["xpath=//button[@id='login']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "91705132-f235-40bf-bc76-80a0faf74784",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "My Courses",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bf45f191-88ea-4f8e-85dc-2e0d08d7a1d1",
+      "comment": "",
+      "command": "click",
+      "target": "css=.nav-item:nth-child(2) > .nav-link",
+      "targets": [
+        ["css=.nav-item:nth-child(2) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Profile')]", "xpath:link"],
+        ["xpath=//div[@id='navbarSupportedContent']/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[@href='http://localhost:8015/Programming-Assignment-Evaluator/student/profile/']", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "028eafc7-5082-48d1-a6c3-eae96b8240cb",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "My Profile",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "d5738152-b950-4438-b427-079b36fc0056",
+    "name": "Student_Change_Password_Correct_Old_Password_Correct_New_Passwords_Test",
+    "commands": [{
+      "id": "02bda285-b367-49f8-8755-6d85097dbacd",
+      "comment": "",
+      "command": "open",
+      "target": "/Programming-Assignment-Evaluator/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0c6cc019-db33-4bcc-9826-08c92630bfbd",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1366x728",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6e0ce548-7b22-424c-b64e-b1f3a74154ba",
+      "comment": "",
+      "command": "click",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=.one .input", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d31ec271-0a75-434d-b197-0de097f3f269",
+      "comment": "",
+      "command": "type",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=.one .input", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "170298H"
+    }, {
+      "id": "b55ecfc9-d293-422e-ac6d-3b8afb689e53",
+      "comment": "",
+      "command": "click",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.pass .input", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ced895b0-2955-4422-96ad-9c97fdfd4679",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.pass .input", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "12345"
+    }, {
+      "id": "bb39f674-b741-4477-9039-cb111513a6ba",
+      "comment": "",
+      "command": "click",
+      "target": "id=login",
+      "targets": [
+        ["id=login", "id"],
+        ["css=#login", "css:finder"],
+        ["xpath=//button[@id='login']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d8285eef-c00c-4b5e-8526-9e4a05f074a0",
+      "comment": "",
+      "command": "click",
+      "target": "css=.nav-item:nth-child(2) > .nav-link",
+      "targets": [
+        ["css=.nav-item:nth-child(2) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Profile')]", "xpath:link"],
+        ["xpath=//div[@id='navbarSupportedContent']/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[@href='http://localhost:8015/Programming-Assignment-Evaluator/student/profile/']", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "af83bb43-b8b7-48fe-a912-b9b9525b64aa",
+      "comment": "",
+      "command": "click",
+      "target": "id=curr_pass",
+      "targets": [
+        ["id=curr_pass", "id"],
+        ["name=curr_pass", "name"],
+        ["css=#curr_pass", "css:finder"],
+        ["xpath=//input[@id='curr_pass']", "xpath:attributes"],
+        ["xpath=//div[@id='change-password']/form/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5dea392e-c011-42c4-94e7-4600c7f15abe",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "My Profile",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "47153cc0-daa7-4338-921c-e075c1025d10",
+      "comment": "",
+      "command": "click",
+      "target": "id=curr_pass",
+      "targets": [
+        ["id=curr_pass", "id"],
+        ["name=curr_pass", "name"],
+        ["css=#curr_pass", "css:finder"],
+        ["xpath=//input[@id='curr_pass']", "xpath:attributes"],
+        ["xpath=//div[@id='change-password']/form/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "22bc46f1-ff89-4c09-b84d-94b5d6e455b3",
+      "comment": "",
+      "command": "click",
+      "target": "css=h4",
+      "targets": [
+        ["css=h4", "css:finder"],
+        ["xpath=//div[@id='change-password']/form/h4", "xpath:idRelative"],
+        ["xpath=//h4", "xpath:position"],
+        ["xpath=//h4[contains(.,'Change Password')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e846962d-29ed-4503-92c5-82f21b45e6f3",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=h4",
+      "targets": [
+        ["css=h4", "css:finder"],
+        ["xpath=//div[@id='change-password']/form/h4", "xpath:idRelative"],
+        ["xpath=//h4", "xpath:position"],
+        ["xpath=//h4[contains(.,'Change Password')]", "xpath:innerText"]
+      ],
+      "value": "Change Password"
+    }, {
+      "id": "a44d260a-2c2b-4700-b1e5-8678af618bc9",
+      "comment": "",
+      "command": "click",
+      "target": "id=curr_pass",
+      "targets": [
+        ["id=curr_pass", "id"],
+        ["name=curr_pass", "name"],
+        ["css=#curr_pass", "css:finder"],
+        ["xpath=//input[@id='curr_pass']", "xpath:attributes"],
+        ["xpath=//div[@id='change-password']/form/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3e1e23d5-0b28-4ec7-a4c1-ff67973848d6",
+      "comment": "",
+      "command": "type",
+      "target": "id=curr_pass",
+      "targets": [
+        ["id=curr_pass", "id"],
+        ["name=curr_pass", "name"],
+        ["css=#curr_pass", "css:finder"],
+        ["xpath=//input[@id='curr_pass']", "xpath:attributes"],
+        ["xpath=//div[@id='change-password']/form/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "12345"
+    }, {
+      "id": "5b243072-9ef7-4d2e-beed-eab06d0be111",
+      "comment": "",
+      "command": "mouseDown",
+      "target": "css=.btn:nth-child(5)",
+      "targets": [
+        ["css=.btn:nth-child(5)", "css:finder"],
+        ["xpath=//div[@id='change-password']/form/button", "xpath:idRelative"],
+        ["xpath=//form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Change Password')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1e114383-074c-4ac4-b094-113433dbf894",
+      "comment": "",
+      "command": "mouseUp",
+      "target": "css=form > .row",
+      "targets": [
+        ["css=form > .row", "css:finder"],
+        ["xpath=//div[@id='change-password']/form/div", "xpath:idRelative"],
+        ["xpath=//form/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a4210139-e217-42cc-9a60-255e3b66d86f",
+      "comment": "",
+      "command": "click",
+      "target": "css=form",
+      "targets": [
+        ["css=form", "css:finder"],
+        ["xpath=//form[@action='http://localhost:8015/Programming-Assignment-Evaluator/students/profile/']", "xpath:attributes"],
+        ["xpath=//div[@id='change-password']/form", "xpath:idRelative"],
+        ["xpath=//form", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1051089e-202d-43b3-bb1c-93385cd95b1b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.col-md-6:nth-child(1) > .col-form-label",
+      "targets": [
+        ["css=.col-md-6:nth-child(1) > .col-form-label", "css:finder"],
+        ["xpath=//div[@id='new-passwords']/div/label", "xpath:idRelative"],
+        ["xpath=//form/div/div[2]/div/label", "xpath:position"],
+        ["xpath=//label[contains(.,'New Password:')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "32f84aed-c1c4-4bb3-8e34-5a648d3d9208",
+      "comment": "",
+      "command": "click",
+      "target": "css=.col-md-6:nth-child(1) > .col-form-label",
+      "targets": [
+        ["css=.col-md-6:nth-child(1) > .col-form-label", "css:finder"],
+        ["xpath=//div[@id='new-passwords']/div/label", "xpath:idRelative"],
+        ["xpath=//form/div/div[2]/div/label", "xpath:position"],
+        ["xpath=//label[contains(.,'New Password:')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "80b9bfbb-3f41-4f20-a531-0467caf26ec9",
+      "comment": "",
+      "command": "click",
+      "target": "css=.col-md-6:nth-child(1)",
+      "targets": [
+        ["css=.col-md-6:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='new-passwords']/div", "xpath:idRelative"],
+        ["xpath=//form/div/div[2]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "73356c2c-103e-4ed9-8342-cc4e10592a59",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.col-md-6:nth-child(1) > .col-form-label",
+      "targets": [
+        ["css=.col-md-6:nth-child(1) > .col-form-label", "css:finder"],
+        ["xpath=//div[@id='new-passwords']/div/label", "xpath:idRelative"],
+        ["xpath=//form/div/div[2]/div/label", "xpath:position"],
+        ["xpath=//label[contains(.,'New Password:')]", "xpath:innerText"]
+      ],
+      "value": "New Password:"
+    }, {
+      "id": "0f53e70a-80e2-482f-9a0e-0e20efdb4c91",
+      "comment": "",
+      "command": "click",
+      "target": "id=new_pass",
+      "targets": [
+        ["id=new_pass", "id"],
+        ["name=new_pass", "name"],
+        ["css=#new_pass", "css:finder"],
+        ["xpath=//input[@id='new_pass']", "xpath:attributes"],
+        ["xpath=//div[@id='new-passwords']/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a90928f5-d739-4891-a98e-72e7068c3998",
+      "comment": "",
+      "command": "type",
+      "target": "id=new_pass",
+      "targets": [
+        ["id=new_pass", "id"],
+        ["name=new_pass", "name"],
+        ["css=#new_pass", "css:finder"],
+        ["xpath=//input[@id='new_pass']", "xpath:attributes"],
+        ["xpath=//div[@id='new-passwords']/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": "12345"
+    }, {
+      "id": "70160617-61d3-4cbb-9b31-a8db78a10dd3",
+      "comment": "",
+      "command": "click",
+      "target": "id=renew_pass",
+      "targets": [
+        ["id=renew_pass", "id"],
+        ["name=renew_pass", "name"],
+        ["css=#renew_pass", "css:finder"],
+        ["xpath=//input[@id='renew_pass']", "xpath:attributes"],
+        ["xpath=//div[@id='new-passwords']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "443679c0-47f2-4afb-8fa6-b2dab79ec6f6",
+      "comment": "",
+      "command": "type",
+      "target": "id=renew_pass",
+      "targets": [
+        ["id=renew_pass", "id"],
+        ["name=renew_pass", "name"],
+        ["css=#renew_pass", "css:finder"],
+        ["xpath=//input[@id='renew_pass']", "xpath:attributes"],
+        ["xpath=//div[@id='new-passwords']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "12345"
+    }, {
+      "id": "cfd07165-8fd2-4c63-a898-222e88ba802c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn:nth-child(5)",
+      "targets": [
+        ["css=.btn:nth-child(5)", "css:finder"],
+        ["xpath=//div[@id='change-password']/form/button", "xpath:idRelative"],
+        ["xpath=//form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Change Password')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "dd101ed8-261f-44f2-bc06-ea9d3342eeec",
+      "comment": "",
+      "command": "click",
+      "target": "id=change-password-success",
+      "targets": [
+        ["id=change-password-success", "id"],
+        ["css=#change-password-success", "css:finder"],
+        ["xpath=//p[@id='change-password-success']", "xpath:attributes"],
+        ["xpath=//p", "xpath:position"],
+        ["xpath=//p[contains(.,'Password changed successfully.')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5fae0ce1-90c6-4546-92c8-54a7547dfa7f",
+      "comment": "",
+      "command": "verifyText",
+      "target": "id=change-password-success",
+      "targets": [
+        ["id=change-password-success", "id"],
+        ["css=#change-password-success", "css:finder"],
+        ["xpath=//p[@id='change-password-success']", "xpath:attributes"],
+        ["xpath=//p", "xpath:position"],
+        ["xpath=//p[contains(.,'Password changed successfully.')]", "xpath:innerText"]
+      ],
+      "value": "Password changed successfully."
+    }]
+  }, {
+    "id": "f4bcf00c-1079-424c-aea2-ba6ffb5efa9a",
+    "name": "Student_Change_Password_Correct_Old_Password_Incorrect_New_Passwords_Test ",
+    "commands": [{
+      "id": "76276977-7b37-4074-96b3-6bddcbf65878",
+      "comment": "",
+      "command": "open",
+      "target": "/Programming-Assignment-Evaluator/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b6803818-593b-4933-8123-7acc68b84816",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1366x728",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "47809024-5924-40a1-a263-ed8374f99000",
+      "comment": "",
+      "command": "click",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=.one .input", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2a16a99e-33a2-4b2f-881d-c68e48c3276f",
+      "comment": "",
+      "command": "type",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=.one .input", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "170298H"
+    }, {
+      "id": "14bf2902-3f95-4d19-85bc-ad337f74f36f",
+      "comment": "",
+      "command": "click",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.pass .input", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d2a16f66-e81d-4e87-bb25-f6cdaa73a267",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.pass .input", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "12345"
+    }, {
+      "id": "51fed01b-4b78-433c-ac22-490007571939",
+      "comment": "",
+      "command": "click",
+      "target": "id=login",
+      "targets": [
+        ["id=login", "id"],
+        ["css=#login", "css:finder"],
+        ["xpath=//button[@id='login']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cf482d79-9545-4efd-b2f9-ec6baac91d65",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "My Courses",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "da504c08-5281-4f24-b436-3dd7c8a7be05",
+      "comment": "",
+      "command": "click",
+      "target": "css=.nav-item:nth-child(2) > .nav-link",
+      "targets": [
+        ["css=.nav-item:nth-child(2) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Profile')]", "xpath:link"],
+        ["xpath=//div[@id='navbarSupportedContent']/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[@href='http://localhost:8015/Programming-Assignment-Evaluator/student/profile/']", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9e7edb2a-bd8a-421f-a78c-fdecfb21dbd8",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "My Profile",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "697f13ba-7e83-4736-ac3b-259a8bbf0dae",
+      "comment": "",
+      "command": "click",
+      "target": "id=curr_pass",
+      "targets": [
+        ["id=curr_pass", "id"],
+        ["name=curr_pass", "name"],
+        ["css=#curr_pass", "css:finder"],
+        ["xpath=//input[@id='curr_pass']", "xpath:attributes"],
+        ["xpath=//div[@id='change-password']/form/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4d5a69cb-14ce-44da-b9b7-512f2395517a",
+      "comment": "",
+      "command": "type",
+      "target": "id=curr_pass",
+      "targets": [
+        ["id=curr_pass", "id"],
+        ["name=curr_pass", "name"],
+        ["css=#curr_pass", "css:finder"],
+        ["xpath=//input[@id='curr_pass']", "xpath:attributes"],
+        ["xpath=//div[@id='change-password']/form/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "12345"
+    }, {
+      "id": "396e114b-a290-428b-8243-bf616ddccefb",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn:nth-child(5)",
+      "targets": [
+        ["css=.btn:nth-child(5)", "css:finder"],
+        ["xpath=//div[@id='change-password']/form/button", "xpath:idRelative"],
+        ["xpath=//form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Change Password')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3238bc01-d7f0-4f9f-96c8-013a21b3c2f9",
+      "comment": "",
+      "command": "type",
+      "target": "id=new_pass",
+      "targets": [
+        ["id=new_pass", "id"],
+        ["name=new_pass", "name"],
+        ["css=#new_pass", "css:finder"],
+        ["xpath=//input[@id='new_pass']", "xpath:attributes"],
+        ["xpath=//div[@id='new-passwords']/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": "12345"
+    }, {
+      "id": "2c2b38f3-8eea-4000-bc1c-77ba082fc818",
+      "comment": "",
+      "command": "click",
+      "target": "id=renew_pass",
+      "targets": [
+        ["id=renew_pass", "id"],
+        ["name=renew_pass", "name"],
+        ["css=#renew_pass", "css:finder"],
+        ["xpath=//input[@id='renew_pass']", "xpath:attributes"],
+        ["xpath=//div[@id='new-passwords']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "748173c4-04ff-4859-ae5d-5e2970ddfe5d",
+      "comment": "",
+      "command": "type",
+      "target": "id=renew_pass",
+      "targets": [
+        ["id=renew_pass", "id"],
+        ["name=renew_pass", "name"],
+        ["css=#renew_pass", "css:finder"],
+        ["xpath=//input[@id='renew_pass']", "xpath:attributes"],
+        ["xpath=//div[@id='new-passwords']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "123456"
+    }, {
+      "id": "ac900b1c-545d-4d87-ae13-8235e26a1246",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn:nth-child(5)",
+      "targets": [
+        ["css=.btn:nth-child(5)", "css:finder"],
+        ["xpath=//div[@id='change-password']/form/button", "xpath:idRelative"],
+        ["xpath=//form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Change Password')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "46ab40e9-839b-477a-be32-7562e3ae72d2",
+      "comment": "",
+      "command": "click",
+      "target": "id=change-password-wrong",
+      "targets": [
+        ["id=change-password-wrong", "id"],
+        ["css=#change-password-wrong", "css:finder"],
+        ["xpath=//p[@id='change-password-wrong']", "xpath:attributes"],
+        ["xpath=//p", "xpath:position"],
+        ["xpath=//p[contains(.,'Passwords mismatched.')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "cf755b76-6d19-47b9-9939-9571af9cf9ce",
+      "comment": "",
+      "command": "verifyText",
+      "target": "id=change-password-wrong",
+      "targets": [],
+      "value": "Passwords mismatched."
+    }]
+  }, {
+    "id": "391dec18-5350-4a44-be3a-182d5f9e68d5",
+    "name": "Student_Change_Password_Incorrect_Old_Password_Test",
+    "commands": [{
+      "id": "55eaabeb-1ab4-4fdc-b11f-2af5af724d8b",
+      "comment": "",
+      "command": "open",
+      "target": "/Programming-Assignment-Evaluator/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "025ad9ca-6263-42db-9e98-cc0daa32ccb5",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1366x728",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2feeb4e4-75b8-4218-96a8-139a926e9f7c",
+      "comment": "",
+      "command": "click",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=.one .input", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8d71a7cb-a1f0-4b97-925a-c93f668238e4",
+      "comment": "",
+      "command": "type",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=.one .input", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "170298H"
+    }, {
+      "id": "ddedd395-770e-4a0c-8745-e2cbef3a5db3",
+      "comment": "",
+      "command": "click",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.pass .input", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b2681d10-c9a6-41b5-a6b8-baad7443bb7f",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.pass .input", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "12345"
+    }, {
+      "id": "82f7dc68-60f3-4c3b-a7cb-1773416be34b",
+      "comment": "",
+      "command": "click",
+      "target": "id=login",
+      "targets": [
+        ["id=login", "id"],
+        ["css=#login", "css:finder"],
+        ["xpath=//button[@id='login']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e4d7eb98-db46-4cd8-9f05-e649db1b04e9",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "My Courses",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c6c1812d-455a-4c49-bd80-a7736e326bbe",
+      "comment": "",
+      "command": "click",
+      "target": "css=.nav-item:nth-child(2) > .nav-link",
+      "targets": [
+        ["css=.nav-item:nth-child(2) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Profile')]", "xpath:link"],
+        ["xpath=//div[@id='navbarSupportedContent']/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[@href='http://localhost:8015/Programming-Assignment-Evaluator/student/profile/']", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e82e425e-aae8-407a-9fb2-4683516e4921",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "My Profile",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "76ebd382-f481-4e4e-98b2-e65b351f6cbd",
+      "comment": "",
+      "command": "click",
+      "target": "id=curr_pass",
+      "targets": [
+        ["id=curr_pass", "id"],
+        ["name=curr_pass", "name"],
+        ["css=#curr_pass", "css:finder"],
+        ["xpath=//input[@id='curr_pass']", "xpath:attributes"],
+        ["xpath=//div[@id='change-password']/form/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "193b4fed-3c4e-4bc7-9aab-68771d80a153",
+      "comment": "",
+      "command": "type",
+      "target": "id=curr_pass",
+      "targets": [
+        ["id=curr_pass", "id"],
+        ["name=curr_pass", "name"],
+        ["css=#curr_pass", "css:finder"],
+        ["xpath=//input[@id='curr_pass']", "xpath:attributes"],
+        ["xpath=//div[@id='change-password']/form/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "123456"
+    }, {
+      "id": "8feedb96-fbe0-44a1-8b4f-2938c45622f1",
+      "comment": "",
+      "command": "mouseDown",
+      "target": "css=.btn:nth-child(5)",
+      "targets": [
+        ["css=.btn:nth-child(5)", "css:finder"],
+        ["xpath=//div[@id='change-password']/form/button", "xpath:idRelative"],
+        ["xpath=//form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Change Password')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c5eeedb2-ea79-4fb5-85ff-e83215ea0ef1",
+      "comment": "",
+      "command": "mouseUp",
+      "target": "id=curr_pass",
+      "targets": [
+        ["id=curr_pass", "id"],
+        ["name=curr_pass", "name"],
+        ["css=#curr_pass", "css:finder"],
+        ["xpath=//input[@id='curr_pass']", "xpath:attributes"],
+        ["xpath=//div[@id='change-password']/form/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e07c65c0-a8a1-44f1-a120-37045f8f74b9",
+      "comment": "",
+      "command": "click",
+      "target": "css=form",
+      "targets": [
+        ["css=form", "css:finder"],
+        ["xpath=//form[@action='http://localhost:8015/Programming-Assignment-Evaluator/students/profile/']", "xpath:attributes"],
+        ["xpath=//div[@id='change-password']/form", "xpath:idRelative"],
+        ["xpath=//form", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9b63c6e6-429e-4f6c-b918-fbed5c26fe8d",
+      "comment": "",
+      "command": "click",
+      "target": "id=error-msg-change-password",
+      "targets": [
+        ["id=error-msg-change-password", "id"],
+        ["css=#error-msg-change-password", "css:finder"],
+        ["xpath=//p[@id='error-msg-change-password']", "xpath:attributes"],
+        ["xpath=//div[@id='change-password']/form/p", "xpath:idRelative"],
+        ["xpath=//form/p", "xpath:position"],
+        ["xpath=//p[contains(.,'Entered password is wrong.')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "dce367e6-fa88-43e9-8414-d197b0113237",
+      "comment": "",
+      "command": "verifyText",
+      "target": "id=error-msg-change-password",
+      "targets": [
+        ["id=error-msg-change-password", "id"],
+        ["css=#error-msg-change-password", "css:finder"],
+        ["xpath=//p[@id='error-msg-change-password']", "xpath:attributes"],
+        ["xpath=//div[@id='change-password']/form/p", "xpath:idRelative"],
+        ["xpath=//form/p", "xpath:position"],
+        ["xpath=//p[contains(.,'Entered password is wrong.')]", "xpath:innerText"]
+      ],
+      "value": "Entered password is wrong."
+    }, {
+      "id": "70520f72-b6dd-49ef-9ca2-2f69d9f854f0",
+      "comment": "",
+      "command": "click",
+      "target": "css=h4",
+      "targets": [
+        ["css=h4", "css:finder"],
+        ["xpath=//div[@id='change-password']/form/h4", "xpath:idRelative"],
+        ["xpath=//h4", "xpath:position"],
+        ["xpath=//h4[contains(.,'Change Password')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "36fbe83b-ccec-4dac-8e5e-b014251316b5",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": ["http://localhost:8015/"],
+  "plugins": []
+}

@@ -12,8 +12,9 @@ class Admins extends CI_Controller{
 		$data['course_count'] = $this->course_model->get_course_count();
 		$data['student_count'] = $this->student_model->get_student_count();
 		$data['teacher_count'] = $this->teacher_model->get_teacher_count();
+		$data['title'] = "Home";
 
-		$this->load->view('templates/admin_header');
+		$this->load->view('templates/admin_header', $data);
 		$this->load->view('admins/home', $data);
 		$this->load->view('templates/footer');
 	}
@@ -46,8 +47,9 @@ class Admins extends CI_Controller{
 			if ($teacher != "") {
 				$data['teacher'] = $this->teacher_model->get_teacher($teacher);
 			}
+			$data['title'] = "Add Course";
 
-			$this->load->view('templates/admin_header');
+			$this->load->view('templates/admin_header', $data);
 			$this->load->view('admins/add_course', $data);
 			$this->load->view('templates/footer');	
 		}
@@ -67,8 +69,9 @@ class Admins extends CI_Controller{
 
 		$data['courses'] = $this->course_model->get_courses($course_id);
 		$data['count'] = $this->course_model->get_course_count();
+		$data['title'] = "View Courses";
 
-		$this->load->view('templates/admin_header');
+		$this->load->view('templates/admin_header', $data);
 		$this->load->view('admins/view_courses', $data);
 		$this->load->view('templates/footer');	
 	}
@@ -99,8 +102,9 @@ class Admins extends CI_Controller{
 		$data['course'] = $this->course_model->get_courses($course_id)[0];
 		$data['teacher'] = $this->teacher_model->get_teacher($data['course']['lecturer_nic'])[0];
 		$data['teachers'] = $this->teacher_model->get_teacher();
+		$data['title'] = "Edit Course";
 
-		$this->load->view('templates/admin_header');
+		$this->load->view('templates/admin_header', $data);
 		$this->load->view('admins/edit_course', $data);
 		$this->load->view('templates/footer');	
 	}
@@ -152,8 +156,9 @@ class Admins extends CI_Controller{
 		if($this->form_validation->run() === false){
 
 			$data['inputs'] = $input;
+			$data['title'] = "Add Student";
 
-			$this->load->view('templates/admin_header');
+			$this->load->view('templates/admin_header', $data);
 			$this->load->view('admins/add_student', $data);
 			$this->load->view('templates/footer');	
 		}
@@ -179,8 +184,9 @@ class Admins extends CI_Controller{
 
 		$data['students'] = $this->student_model->get_all_students($student_id);
 		$data['count'] = $this->student_model->get_student_count();
+		$data['title'] = "View Students";
 		
-		$this->load->view('templates/admin_header');
+		$this->load->view('templates/admin_header', $data);
 		$this->load->view('admins/view_students', $data);
 		$this->load->view('templates/footer');	
 	}
@@ -217,8 +223,9 @@ class Admins extends CI_Controller{
 		}
 
 		$data['student'] = $this->student_model->get_all_students($index_number)[0];
+		$data['title'] = "Edit Student";
 
-		$this->load->view('templates/admin_header');
+		$this->load->view('templates/admin_header', $data);
 		$this->load->view('admins/edit_student', $data);
 		$this->load->view('templates/footer');	
 	}
@@ -265,8 +272,9 @@ class Admins extends CI_Controller{
 		if($this->form_validation->run() === false){
 
 			$data['inputs'] = $input;
+			$data['title'] = "Add Teacher";
 
-			$this->load->view('templates/admin_header');
+			$this->load->view('templates/admin_header', $data);
 			$this->load->view('admins/add_teacher', $data);
 			$this->load->view('templates/footer');	
 		}
@@ -301,8 +309,9 @@ class Admins extends CI_Controller{
 			$data['teachers_disable'] = $this->teacher_model->get_disable_teacher();
 		}
 		$data['count'] = $this->teacher_model->get_teacher_count();
+		$data['title'] = "View Teachers";
 		
-		$this->load->view('templates/admin_header');
+		$this->load->view('templates/admin_header', $data);
 		$this->load->view('admins/view_teachers', $data);
 		$this->load->view('templates/footer');	
 	}
@@ -341,8 +350,9 @@ class Admins extends CI_Controller{
 		$data['teacher'] = $this->teacher_model->get_teacher($teacher_id)[0];
 		$data['status'] = $this->teacher_model->get_status($teacher_id);
 		$data['courses'] =  $this->course_model->get_course_by_lecturer($teacher_id);
+		$data['title'] = "Edit Teacher";
 
-		$this->load->view('templates/admin_header');
+		$this->load->view('templates/admin_header', $data);
 		$this->load->view('admins/edit_teacher', $data);
 		$this->load->view('templates/footer');	
 	}

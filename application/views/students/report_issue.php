@@ -8,18 +8,13 @@
 			<div class="card-body">
                 <?php echo validation_errors(); 
 				echo form_open_multipart('student/reportIssue/' . $assignment_id); ?>
-				<div class="row">
-				<div class="form-group mt-4">
-					<label for="description">Issue:</label>
-					<textarea class="form-control" name="content" id="content" placeholder="Enter issue Here..." required></textarea>
-                </div>
-                </div>
-				
-
-				</div>
-				<div class="form-group mt-4">
-					<button class="btn btn-primary" type="submit" name="create">Submit Issue</button>
-				</div>
+					<div class="form-group">
+						<label for="description">Enter Issue:</label>
+						<textarea class="form-control" name="content" id="content" placeholder="Enter issue Here..." required></textarea>
+					</div>
+					<div class="form-group mt-4">
+						<button class="btn btn-primary" type="submit" name="create">Report</button>
+					</div>
 				</form>
 			</div>
 		</div>

@@ -30,8 +30,9 @@ class Compiler extends CI_Controller {
 			}
 
 		}
+		$data['title'] = "Compiler";
 
-		$this->load->view('templates/header');
+		$this->load->view('templates/header', $data);
 		$this->load->view('compiler/index', $data);
 		$this->load->view('templates/footer');
 
@@ -143,8 +144,9 @@ class Compiler extends CI_Controller {
 			
 		}
 		$data['passed'] = $passed;
+		$data['title'] = "Compiler";
 
-		$this->load->view('templates/header');
+		$this->load->view('templates/header', $data);
 		$this->load->view('teachers/grade', $data);
 		$this->load->view('templates/footer');
 
