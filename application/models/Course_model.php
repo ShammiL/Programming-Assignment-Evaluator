@@ -29,8 +29,6 @@ class Course_model extends CI_Model
 		}
 
 		$query = $this->db->get('courses');
-		print_r($query->result_array());
-		echo '<br /><br />';
 		return $query->result_array();
 
 	}

@@ -98,7 +98,6 @@ class Student_model extends CI_Model{
 		} 
 
 		$query = $this->db->get('students');
-		print_r($query->result_array());
 		return $query->result_array();
 	}
 
