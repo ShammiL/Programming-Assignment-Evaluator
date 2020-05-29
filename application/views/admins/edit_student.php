@@ -39,7 +39,7 @@
                 <div class="form-group row">
                     <label for="phone" class="col-sm-2 col-form-label">Telephone: </label>
                     <div class="col-sm-6">
-                        <input type="text" class="form-control" name="phone" value="<?php echo $student['phone']; ?>">
+                        <input type="text" class="form-control" name="phone" value="<?php echo $student['phone']; ?>" pattern="^[0-9]{10}$">
                     </div>
                 </div>
                 <div class="form-group row">

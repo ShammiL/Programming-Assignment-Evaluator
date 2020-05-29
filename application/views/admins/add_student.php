@@ -86,9 +86,10 @@
             <div class="form-row">
                 <div class="col-md-4">
                 <div class="form-group">
-                        <label for="phone">Telephone: </label>
-                        <input type="text" class="form-control" name="phone" value="<?php echo $inputs['phone']; ?>" placeholder="Enter Telephone Number Here...">
-                    </div>
+					<label for="phone">Telephone: </label>
+					<input type="text" class="form-control" name="phone" value="<?php echo $inputs['phone']; ?>" pattern="^[0-9]{10}$" placeholder="Enter Telephone Number Here...">
+					<small style="color: #357B8E">Telephone number must be a ten digit number.</small>
+				</div>
                 </div>
                 <div class="col-md-8">
                     <div class="form-group">

@@ -70,7 +70,7 @@
                 <div class="col-md-4">
                 <div class="form-group">
                         <label for="phone">Telephone: </label>
-                        <input type="text" class="form-control" name="phone" value="<?php echo $inputs['telephone']; ?>" placeholder="Enter Telephone Number Here..." requied>
+                        <input type="text" class="form-control" name="phone" value="<?php echo $inputs['telephone']; ?>" pattern="^[0-9]{10}$" placeholder="Enter Telephone Number Here..." requied>
                     </div>
                 </div>
                 <div class="col-md-8">
