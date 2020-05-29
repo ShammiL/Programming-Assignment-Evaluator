@@ -21,7 +21,7 @@ class Student_model extends CI_Model{
 	public function change_password($index_number, $pwrd) {
 
 		$db2 = $this->load->database('db2',TRUE);
-		$db2->set('password', $pwrd);
+		$db2->set(array('password'=>$pwrd, 'status'=>1));
         $db2->where('indexNumber',$index_number);
 		return $db2->update('student');
 	}

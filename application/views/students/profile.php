@@ -48,7 +48,8 @@
                         <hr>
                         <h4>Change Password</h4>
                         <p id="error-msg-change-password" class="submission-error"></p>
-                        <div class="row">
+						<small style="color: #357B8E">Password must have minimum eight characters, and contain at least one uppercase letter, one lowercase letter, one number and one special character.</small>
+						<div class="row">
                             <div class="form-group col-md-4">
                                 <label class="col-form-label">Current Password: </label>
                                 <input type="password" name="curr_pass" id="curr_pass" class="form-control" required>
@@ -56,11 +57,11 @@
                             <div id="new-passwords" class="row col-md-8">
                                 <div class="form-group col-md-6 d-none">
                                     <label class="col-form-label">New Password: </label>
-                                    <input type="password" name="new_pass" id="new_pass" class="form-control" required>
+                                    <input type="password" name="new_pass" id="new_pass" class="form-control" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" required>
                                 </div>
                                 <div class="form-group col-md-6 d-none">
                                     <label class="col-form-label">Re Enter Password: </label>
-                                    <input type="password" name="renew_pass" id="renew_pass" class="form-control" required>
+                                    <input type="password" name="renew_pass" id="renew_pass" class="form-control" oninput="check(this)" required>
                                     <label class="col-form-label" id="mismatch-passwords"></label>
                                 </div>
                             </div>
@@ -78,6 +79,14 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/core.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/md5.js"></script>             
 <script>
+	function check(input) {
+		if (input.value != document.getElementById('new_pass').value) {
+			input.setCustomValidity('Passwords are not matched.');
+		} else {
+			// input is valid -- reset the error message
+			input.setCustomValidity('');
+		}
+	}
     const curr = "<?php echo $password; ?>";            
     $('#curr_pass').on('change', function() {      
         if (CryptoJS.MD5($('#curr_pass').val()) == curr) {

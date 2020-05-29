@@ -2,6 +2,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 $route['default_controller'] = 'login/index';
+$route['changeInitialPassword'] = 'login/changeInitialPassword';
 
 $route['testing/(:any)'] = 'testing/$1';
 

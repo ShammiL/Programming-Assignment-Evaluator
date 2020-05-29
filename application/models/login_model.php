@@ -9,7 +9,7 @@
 			$db2->where('password',md5($password));
 			$result = $db2->get('student');
 			if($result -> num_rows() == 1){
-				return $result->row(0)->indexNumber;
+				return $result->result_array()[0];
 			} else {
 				return FALSE;
 			}
@@ -23,7 +23,7 @@
 			$db2->where('password',md5($password));
 			$result = $db2->get('lecturer');
 			if($result -> num_rows() == 1 ){
-				return $result->row(0);
+				return $result->result_array()[0];
 			} else {
 				return FALSE;
 			}
