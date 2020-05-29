@@ -28,7 +28,7 @@
 				<h5 class="card-title">Description :</h5>
 				<p class="card-text"><?php echo $assignment_data['description'] ?></p>
 				<h5 class="card-title">Resources :</h5>
-				<p class="card-text"><a href="<?= base_url('assets/uploads/reference docs/'); ?>">Reference Document</a></p>				
+				<p class="card-text"><a href="<?= base_url("assets/uploads/" . strval($assignment_data['assignment_id']) . "/" . "reference/" . $assignment_data['reference_file']) ?>"><?php echo $assignment_data['reference_file']; ?></a></p>		
 				<h5 class="card-title">Language :</h5>
 				<p><?php echo $assignment_data['language'] ?></p>
 				<h5 class="card-title mt-3">Submit Assignment :</h5>
