@@ -32,7 +32,7 @@
 					<div class="col-md-4">
 						<label>Documents:</label>
 						<div class="custom-file">
-							<input type="file" class="custom-file-input" name="userfile" id="documents" size="100">
+							<input type="file" class="custom-file-input" name="userfile" id="documents" size="8000">
 							<label class="custom-file-label" for="customFile">Choose files</label>
 						</div>
 					</div>

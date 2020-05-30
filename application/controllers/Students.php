@@ -124,6 +124,13 @@ class Students extends CI_Controller{
 
 	}
 
+	public function download_file($assignment_id, $filename){
+		$filepath = "./assets/uploads/" . strval($assignment_id) . "/" . "reference/" . $filename;
+
+		force_download($filepath, NULL);
+		// echo $filepath;
+	}
+
 	public function viewGrade ($assignment_id, $num){
 
 		if ($this->session->userdata('student_id')){

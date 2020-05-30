@@ -51,7 +51,7 @@
 				<h5 class="card-title mt-3">Description :</h5>
 				<p> <?php echo $assignment['description']; ?> </p>
 				<h5 class="card-title">Resources :</h5>
-				<p class="card-text"><a href="<?= base_url("assets/uploads/" . strval($assignment['assignment_id']) . "/" . "reference/" . $assignment['reference_file']); ?>"><?php echo $assignment['reference_file']; ?></a></p>		
+				<p class="card-text"><a href="<?php echo base_url() . "teachers/download_file/" . $assignment['assignment_id'] . "/" . $assignment['reference_file']; ?>"><?php echo $assignment['reference_file']; ?></a></p>		
 				<h5 class="card-title mt-3">Deadline :</h5>
 				<p> <?php echo $assignment['deadline']?>, <?php echo date("g:i a", strtotime($assignment['time'])) ?> </p>
                 <?php if($submissions) { ?>
@@ -89,4 +89,3 @@
 </div>
 
 
-  

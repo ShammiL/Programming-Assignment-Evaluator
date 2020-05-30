@@ -1,4 +1,7 @@
 <?php
+
+use function PHPSTORM_META\type;
+
 class Teachers extends CI_Controller
 {
 
@@ -104,10 +107,10 @@ class Teachers extends CI_Controller
 			{
 			mkdir($submit_path,0755,TRUE);
 			} 
-			
+
 			$config['upload_path'] = $ref_path;
 			$config['allowed_types'] = 'pdf|docx|zip|rar';
-			$config['max_size'] = '.2048';
+			$config['max_size'] = '.8196';
 	
 			$this->load->library('upload', $config);
 	
@@ -116,9 +119,16 @@ class Teachers extends CI_Controller
 				
 			}
 			else{
+				$_FILES['userfile']['name'] = str_replace(" ", "_", $_FILES['userfile']['name']);
+
+				
 				$file_data = array('upload_data' => $this->upload->data());
 				$input['reference_file'] = $_FILES['userfile']['name'];
+
+				// print_r($_FILES['userfile']['name']);
+				// print_r($file_data) ;
 			}
+			$input['assignment_id'] = $last_id;
 			$this->assignment_model->create_assignment($input);
 	
 			// $cases = $this->input->post('test-cases');
@@ -225,6 +235,13 @@ class Teachers extends CI_Controller
 		$this->load->view('templates/header', $data);
 		$this->load->view('teachers/view_submissions', $data);
 		$this->load->view('templates/footer');
+	}
+
+	public function download_file($assignment_id, $filename){
+		$filepath = "./assets/uploads/" . strval($assignment_id) . "/" . "reference/" . $filename;
+
+		force_download($filepath, NULL);
+		// echo $filepath;
 	}
 
 	public function searchSubmission($assignment_id, $num) {
