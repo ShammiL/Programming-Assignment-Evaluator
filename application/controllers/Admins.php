@@ -67,7 +67,12 @@ class Admins extends CI_Controller{
 			redirect('');
 		}
 
-		$data['courses'] = $this->course_model->get_courses($course_id);
+		if ($course_id) {
+			$data['courses'] = $this->course_model->search_course($course_id);
+		} else {
+			$data['courses'] = $this->course_model->get_courses();
+		}
+
 		$data['count'] = $this->course_model->get_course_count();
 		$data['title'] = "View Courses";
 
@@ -182,7 +187,12 @@ class Admins extends CI_Controller{
 			redirect('');
 		}
 
-		$data['students'] = $this->student_model->get_all_students($student_id);
+		if ($student_id) {
+			$data['students'] = $this->student_model->search_student($student_id);
+		}else {
+			$data['students'] = $this->student_model->get_all_students();
+		}
+
 		$data['count'] = $this->student_model->get_student_count();
 		$data['title'] = "View Students";
 		
@@ -256,8 +266,7 @@ class Admins extends CI_Controller{
 			'address' => $this->input->post('address'),
 			'birthday' => $this->input->post('bday'),
 			'gender' => $this->input->post('gender'),
-			'nationality' => $this->input->post('nationality'),
-			'status' => '1'
+			'nationality' => $this->input->post('nationality')
 		);
 
 		$this->form_validation->set_rules('nic', 'NIC' , 'required|is_unique[lecturer.nic]', array('is_unique' => 'The %s you entered is already exists in the system.'));
@@ -283,8 +292,7 @@ class Admins extends CI_Controller{
 
 			$signup_data = array(
 				'nic' => $this->input->post('nic'), 
-				'password' => md5("1234"),
-				'status' => '1'
+				'password' => md5("1234")
 			);
 			
 			$this->teacher_model->signup_teacher($signup_data);	
@@ -303,7 +311,7 @@ class Admins extends CI_Controller{
 		$data['teachers_disable'] = "";
 
 		if ($teacher_id) {
-			$data['teachers_available'] = $this->teacher_model->get_teacher($teacher_id);
+			$data['teachers_available'] = $this->teacher_model->search_teacher($teacher_id);
 		} else {
 			$data['teachers_available'] = $this->teacher_model->get_available_teacher();
 			$data['teachers_disable'] = $this->teacher_model->get_disable_teacher();

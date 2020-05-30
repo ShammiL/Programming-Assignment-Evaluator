@@ -19,6 +19,12 @@ class Course_model extends CI_Model
         return $this->db->update('courses');
     }
 
+	public function search_course($id) {
+		$this->db->like('course_id', $id);
+		$query = $this->db->get('courses');
+		return $query->result_array();
+	}
+
 	public function get_courses($course_id = NULL) {
 
 		if ($course_id !== NULL) {

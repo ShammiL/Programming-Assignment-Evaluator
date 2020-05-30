@@ -24,6 +24,11 @@ class teacher_model extends CI_Model
         return $this->db->update('lecturer');
     }
 
+    public function search_teacher($teacher_id) {
+		$this->db->like('nic', $teacher_id);
+		$query = $this->db->get('lecturer');
+		return $query->result_array();
+	}
 
 	public function get_teacher($teacher_id = NULL) {
 
@@ -39,11 +44,16 @@ class teacher_model extends CI_Model
 	public function get_available_teacher($teacher_id = NULL) {
 
 		if ($teacher_id) {
-			$query = $this->db->get_where('lecturer', array('nic' => $teacher_id, 'status' => '1'));
+			$this->db->where('nic', $teacher_id);
+			$this->db->where('status', '1');
+			$this->db->or_where('status', '-1');
+			$query = $this->db->get('lecturer');
 			return $query->result_array()[0];
 		}
 
-		$query = $this->db->get_where('lecturer', array('status' => '1'));
+		$this->db->where('status', '1');
+		$this->db->or_where('status', '-1');
+		$query = $this->db->get('lecturer');
 		return $query->result_array();
 	}
 
@@ -69,7 +79,7 @@ class teacher_model extends CI_Model
 	public function change_password($teacher_id, $pwrd) {
 
 		$db2 = $this->load->database('db2',TRUE);
-		$db2->set(array('password'=>$pwrd, 'status'=>1));
+		$db2->set('password', $pwrd);
         $db2->where('nic', $teacher_id);
 		return $db2->update('lecturer');
 	}

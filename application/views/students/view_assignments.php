@@ -10,7 +10,7 @@
 				<h5 class="card-title">Teacher: </h5>
 				<p><?php echo $teacher['fname'].' '.$teacher['lname']; ?></p>
 				<h5 class="card-title">Description: </h5>
-				<p class="card-text"><?php echo $courseDetails['description']; ?></p>
+				<p class="card-text"><?php echo nl2br($courseDetails['description']); ?></p>
 				<?php
 					$x = 1;
 					foreach($assignments as $assignment):

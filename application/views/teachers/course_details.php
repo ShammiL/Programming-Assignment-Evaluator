@@ -10,7 +10,7 @@
 				<h5 class="card-title">Teacher: </h5>
 				<p><?php echo $teacher['fname'].' '.$teacher['lname']; ?></p>
 				<h5 class="card-title">Description: </h5>
-				<p class="card-text"><?php echo $courseDetails['description']; ?></p>
+				<p class="card-text"><?php echo nl2br($courseDetails['description']); ?></p>
 				<a href="<?php echo base_url();?>teacher/createAssignment/<?=$course?>" class="assignment-link">
 					<div class="card mb-2">
 						<div class="card-header"><i class="fas fa-plus mr-4"></i>Create New Assignment</div>

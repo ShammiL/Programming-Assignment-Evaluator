@@ -38,6 +38,12 @@ class Student_model extends CI_Model{
         return $this->db->update('students');
     }
 
+	public function search_student($index_number) {
+		$this->db->like('indexNumber', $index_number);
+		$query = $this->db->get('students');
+		return $query->result_array();
+	}
+
 	function getCoursesBySemester($indexNumber){
 
 	   $this->db->where('indexNumber', $indexNumber);
