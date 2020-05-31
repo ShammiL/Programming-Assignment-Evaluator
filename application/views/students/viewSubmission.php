@@ -26,7 +26,7 @@
 			</div>
 			<div class="card-body">
 				<h5 class="card-title">Description :</h5>
-				<p class="card-text"><?php echo $assignment_data['description'] ?></p>
+				<p class="card-text"><?php echo nl2br($assignment_data['description']); ?></p>
 				<h5 class="card-title">Resources :</h5>
 				<p class="card-text"><a href="<?php echo base_url() . "students/download_file/" . $assignment_data['assignment_id'] . "/" . $assignment_data['reference_file']; ?>"><?php echo $assignment_data['reference_file']; ?></a></p>		
 

@@ -15,6 +15,12 @@
 				</div>
 			</div>
 			<div class="card-body">
+				<h5 class="card-title mt-3">Description :</h5>
+				<p> <?php echo nl2br($assignment['description']); ?> </p>
+				<h5 class="card-title">Resources :</h5>
+				<p class="card-text"><a href="<?php echo base_url() . "teachers/download_file/" . $assignment['assignment_id'] . "/" . $assignment['reference_file']; ?>"><?php echo $assignment['reference_file']; ?></a></p>
+				<h5 class="card-title mt-3">Deadline :</h5>
+				<p> <?php echo $assignment['deadline']?>, <?php echo date("g:i a", strtotime($assignment['time'])) ?> </p>
 				<div class="row">
 					<div class="col-md-6">
 						<div class="row">
@@ -35,26 +41,26 @@
 						</div>
 					</div>
 					<div class="col-md-6">
-						<?php echo form_open('teachers/searchSubmission/'.$assignment["assignment_id"].'/'.$num) ?>
-						    <div class="row">
-                                <div class="col-md-1"></div>
-                                <div class="form-group col-md-8">
-                                    <input type="text" class="form-control" name="search-student" placeholder="Enter Student ID...">
-                                </div>
-                                <div class="form-group col-md-3">
-                                    <button type="submit" name="submit-search-student" class="btn btn-primary btn-edit">Search</button>
-                                </div>
-                            </div>
-						</form>
+						<div class="row">
+							<div class="col-md-9">
+								<?php echo form_open('teachers/searchSubmission/'.$assignment["assignment_id"].'/'.$num) ?>
+									<div class="row">
+										<div class="form-group col-md-8">
+											<input type="text" class="form-control" name="search-student" placeholder="Enter Student ID...">
+										</div>
+										<div class="form-group col-md-4">
+											<button type="submit" name="submit-search-student" class="btn btn-primary btn-edit">Search</button>
+										</div>
+									</div>
+								</form>
+							</div>
+							<div class="col-md-3">
+								<a type="submit" href="<?php echo base_url(); ?>teachers/viewSubmissions/<?php echo $assignment["assignment_id"].'/'.$num; ?>" class="btn btn-primary btn-edit">View All</a>
+							</div>
+						</div>
 					</div>
 				</div>
-				<h5 class="card-title mt-3">Description :</h5>
-				<p> <?php echo nl2br($assignment['description']); ?> </p>
-				<h5 class="card-title">Resources :</h5>
-				<p class="card-text"><a href="<?php echo base_url() . "teachers/download_file/" . $assignment['assignment_id'] . "/" . $assignment['reference_file']; ?>"><?php echo $assignment['reference_file']; ?></a></p>		
-				<h5 class="card-title mt-3">Deadline :</h5>
-				<p> <?php echo $assignment['deadline']?>, <?php echo date("g:i a", strtotime($assignment['time'])) ?> </p>
-                <?php if($submissions) { ?>
+				<?php if($submissions) { ?>
 				<div class="card mt-4">
 					<table class="table table-hover">
 						<thead class="card-header">

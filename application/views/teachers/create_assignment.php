@@ -16,7 +16,6 @@
 							<input class="form-control" type="text" name="name" value="<?php echo $inputs['assignment_name'] ?>" id="title" placeholder="Add Title Here..." required>
 						</div>
 					</div>
-					
 					<div class="col-md-4">
 						<div class="form-group">
 							<label for="deadline">Deadline:</label>
@@ -29,6 +28,12 @@
 							<input type="time" class="form-control" name="time" value="<?php echo $inputs['time'] ?>" id="time" value="hh:mm" required>
 						</div>
 					</div>
+				</div>
+				<div class="form-group">
+					<label for="description">Description:</label>
+					<textarea class="form-control" name="description" id="description" placeholder="Add Description Here..." required><?php echo $inputs['description'] ?></textarea>
+				</div>
+				<div class="row">
 					<div class="col-md-4">
 						<label>Documents:</label>
 						<div class="custom-file">
@@ -36,12 +41,6 @@
 							<label class="custom-file-label" for="customFile">Choose files</label>
 						</div>
 					</div>
-				</div>
-				<div class="form-group">
-					<label for="description">Description:</label>
-					<textarea class="form-control" name="description" id="description" placeholder="Add Description Here..." required><?php echo $inputs['description'] ?></textarea>
-				</div>
-				<div class="row">
 					<div class="col-md-4">
 						<label for="language">Select Language:</label>
 						<select id="language" class="form-control" name="language" required>

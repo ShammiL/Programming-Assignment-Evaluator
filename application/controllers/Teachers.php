@@ -285,7 +285,7 @@ class Teachers extends CI_Controller
 		}
 
 		if ($student_id) {
-			$data['students'] = $this->student_model->get_students($course_id, $student_id);
+			$data['students'] = $this->student_model->search_student($student_id, $course_id);
 		} else {
 			$data['students'] = $this->student_model->get_students($course_id);
 		}

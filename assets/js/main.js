@@ -33,9 +33,9 @@ $( document ).ready(function() {
 
 	    	for (let i = prev+1; i <= cases; i++) {
 	    		if ( i%2 === 1 ) {
-	    			cards += '<div class="row test-case-input-left" id="case'+i+'"><div class="col-md-6"><div class="form-group"><label for="input'+i+'">Input '+i+':</label><textarea class="form-control" name="input'+i+'" id="input'+i+'" placeholder="Add input '+i+' here..."></textarea></div></div><div class="col-md-6"><div class="form-group"><label for="output'+i+'">Output '+i+':</label><textarea class="form-control" name="output'+i+'" id="output'+i+'" placeholder="Add output '+i+' here..."></textarea></div></div></div>';
+	    			cards += '<div class="row test-case-input-left" id="case'+i+'"><div class="col-md-6"><label>Input '+i+':</label><div class="custom-file mb-4"><input type="file" class="custom-file-input" name="input'+i+'" id="input'+i+'" size="8000"><label class="custom-file-label" for="input'+i+'">Input '+i+':</label></div></div><div class="col-md-6"><label>Output '+i+':</label><div class="custom-file mb-4"><input type="file" class="custom-file-input" name="output'+i+'" id="output'+i+'" size="8000"><label class="custom-file-label" for="output'+i+'">Output '+i+':</label></div></div></div>';
 	    		} else {
-	    			cards += '<div class="row test-case-input-right" id="case'+i+'"><div class="col-md-6"><div class="form-group"><label for="input'+i+'">Input '+i+':</label><textarea class="form-control" name="input'+i+'" id="input'+i+'" placeholder="Add input '+i+' here..."></textarea></div></div><div class="col-md-6"><div class="form-group"><label for="output'+i+'">Output '+i+':</label><textarea class="form-control" name="output'+i+'" id="output'+i+'" placeholder="Add output '+i+' here..."></textarea></div></div></div>';
+	    			cards += '<div class="row test-case-input-right" id="case'+i+'"><div class="col-md-6"><label>Input '+i+':</label><div class="custom-file mb-4"><input type="file" class="custom-file-input" name="input'+i+'" id="input'+i+'" size="8000"><label class="custom-file-label" for="input'+i+'">Input '+i+':</label></div></div><div class="col-md-6"><label>Output '+i+':</label><div class="custom-file mb-4"><input type="file" class="custom-file-input" name="output'+i+'" id="output'+i+'" size="8000"><label class="custom-file-label" for="output'+i+'">Output '+i+':</label></div></div></div>';
 	    		}
 	    	}
 	    }
