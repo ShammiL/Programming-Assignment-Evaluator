@@ -58,7 +58,7 @@
 							<label for="test-cases">Number of Test Cases : </label>
 							<select class="form-control" name="test-cases" id="test-cases">
 								<option selected disabled>Select...</option>
-								<?php for ($i=1; $i < 11; $i++) {
+								<?php for ($i=1; $i < 6; $i++) {
 									echo '
                                          <option value="'.$i.'">'.$i.'</option>';
 								} ?>

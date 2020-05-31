@@ -75,10 +75,13 @@
 							<label class="col-md-3" for="file-input">Last Modified :</label>
 							<label class="col-md-9" for="file-input" id="modified"><?php echo $last_modified ?></label>
 						</div>
+						<?php if ($last!== ""){?>
 						<div class="row">
 							<label class="col-md-3" for="file-input">Last Submission :</label>
-							<label class="col-md-9" for="file-input" id="modified"><a href = <?php echo base_url() . $last ?>>file</a></label>
+							<label class="col-md-9" for="file-input" id="modified"><a href = "<?php echo base_url() . "students/download_submission/" . $assignment_data['assignment_id'] . "/" . $last; ?>">file</a></label>
 						</div>
+						<?php } ?>
+
 						<?php 
 							if (!$submitted and !$deadline) {
 								echo "<hr>";

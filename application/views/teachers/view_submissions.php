@@ -70,10 +70,10 @@
                         <?php foreach($submissions as $submission) { ?>
                             <tr>
                                 <td><?php echo $submission['student_id']; ?></td>
-                                <td>Friday, 6 March 2020, 11:50 PM</td>
+                                <td><?php echo explode(' ', $submission['submitted_at'])[0] . ', ' . strval(date("g:i a", strtotime(explode(' ', $submission['submitted_at'])[1]))); ?></td>
                                 <td><?php echo $submission['grade']; ?><a class="ml-3" href="">Edit</a></td>
                                 <td>Yes</td>
-                                <td><a href="">Download</a><a class="ml-3" href="">Feedback</a></td>
+                                <td><a href="<?php echo base_url() . "teachers/download_submission/" . $submission['assignment_id'] . "/" . $submission['file_path']; ?>">Download</a><a class="ml-3" href="">Feedback</a></td>
                             </tr>
                         <?php  } ?>
 						</tbody>

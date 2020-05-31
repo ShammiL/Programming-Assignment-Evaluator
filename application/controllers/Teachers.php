@@ -117,6 +117,7 @@ class Teachers extends CI_Controller
 			if(!$this->upload->do_upload()){
 				$errors = array('error' => $this->upload->display_errors());
 				
+				
 			}
 			else{
 				$_FILES['userfile']['name'] = str_replace(" ", "_", $_FILES['userfile']['name']);
@@ -239,6 +240,13 @@ class Teachers extends CI_Controller
 
 	public function download_file($assignment_id, $filename){
 		$filepath = "./assets/uploads/" . strval($assignment_id) . "/" . "reference/" . $filename;
+
+		force_download($filepath, NULL);
+		// echo $filepath;
+	}
+
+	public function download_submission($assignment_id, $filename){
+		$filepath = "./assets/uploads/" . strval($assignment_id) . "/" . "submission/" . $filename;
 
 		force_download($filepath, NULL);
 		// echo $filepath;

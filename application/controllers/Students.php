@@ -84,7 +84,7 @@ class Students extends CI_Controller{
 		
 		$student_id = $this->session->userdata('student_id');
 		$status = $this->assignment_model->checkStatus($assignment_id);
-		$submission_data = $this->assignment_model->checkForSubmission($assignment_id,$student_id);
+		$submission_data = $this->Submission_model->checkForSubmission($assignment_id,$student_id);
 		//echo $status;
 		
 		//echo $this->assignment_model->checkForSubmission('1','170307M');
@@ -177,7 +177,7 @@ class Students extends CI_Controller{
 		$data = array(
 			'assignment_id' => $assignment_id,
 			'student_id' => $student_id,
-			'file_path' => "./assets/uploads/" . strval($assignment_id) . "/submission/" . $_FILES['userfile']['name'],
+			'file_path' => $_FILES['userfile']['name'],
 			'submitted_at' => strval(date("Y-m-d h:i:s a"))
 		);
 
@@ -185,7 +185,7 @@ class Students extends CI_Controller{
 
 		if($this->upload->do_upload()){
 
-			$this->assignment_model->makeSubmission($data);
+			$this->Submission_model->makeSubmission($data);
 			//echo $this->upload->display_errors();
 			//$this->assignmentDetails($assignment_id,$num);
 			$this->assignmentDetails($assignment_id,$num);
@@ -194,6 +194,13 @@ class Students extends CI_Controller{
 			$data = "The file upload was unsuccesssful.<br>The file was not written in the expected language.<br>If you have uploaded the correct file please try again.";
 			$this->assignmentDetails($assignment_id,$num,$data);
 		}
+	}
+
+	public function download_submission($assignment_id, $filename){
+		$filepath = "./assets/uploads/" . strval($assignment_id) . "/" . "submission/" . $filename;
+
+		force_download($filepath, NULL);
+		// echo $filepath;
 	}
 
 	public function profile() {
