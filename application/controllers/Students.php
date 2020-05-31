@@ -178,7 +178,7 @@ class Students extends CI_Controller{
 			'assignment_id' => $assignment_id,
 			'student_id' => $student_id,
 			'file_path' => $_FILES['userfile']['name'],
-			'submitted_at' => strval(date("Y-m-d h:i:s a"))
+			'submitted_at' => strval(date("Y-m-d H:i:s"))
 		);
 
 		$this->load->library('upload',$config);
