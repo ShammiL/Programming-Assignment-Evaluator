@@ -180,5 +180,8 @@ return array(
 	'odt'	=>	'application/vnd.oasis.opendocument.text',
 	'odm'	=>	'application/vnd.oasis.opendocument.text-master',
 	'ott'	=>	'application/vnd.oasis.opendocument.text-template',
-	'oth'	=>	'application/vnd.oasis.opendocument.text-web'
+	'oth'	=>	'application/vnd.oasis.opendocument.text-web',
+	'java'	=>	array('text/x-c', 'text/x-c++', 'text/plain'),
+	'py'	=>	'text/plain',
+	'cpp'	=>	'text/plain'
 );

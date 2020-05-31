@@ -84,7 +84,7 @@ class Students extends CI_Controller{
 		
 		$student_id = $this->session->userdata('student_id');
 		$status = $this->assignment_model->checkStatus($assignment_id);
-		$submissionCheck = $this->assignment_model->checkForSubmission($assignment_id,$student_id);
+		$submission_data = $this->assignment_model->checkForSubmission($assignment_id,$student_id);
 		//echo $status;
 		
 		//echo $this->assignment_model->checkForSubmission('1','170307M');
@@ -93,21 +93,31 @@ class Students extends CI_Controller{
 
 		if($status){
 			$data['deadline'] = FALSE;
-			if($submissionCheck){
+			if($submission_data['submitted']){
 				$data['graded'] = FALSE;
 				$data['submitted'] = TRUE;
+				$data['last'] = $submission_data['filepath'];
+				$data['last_modified'] = explode(' ', $submission_data['submitted_at'])[0] . ', ' . strval(date("g:i a", strtotime(explode(' ', $submission_data['submitted_at'])[1])));
 			} else {
 				$data['submitted'] = FALSE;
 				$data['graded'] = FALSE;
+				$data['last'] = "";
+				$data['last_modified'] = $submission_data['submitted_at'];
 			}
 		} else {
 			$data['deadline'] = TRUE;
-			if($submissionCheck){
+			if($submission_data['submitted']){
 				$data['graded'] = TRUE;
 				$data['submitted'] = TRUE;
+				$data['last'] = $submission_data['filepath'];
+				$data['last_modified'] = explode(' ', $submission_data['submitted_at'])[0] . ', ' . strval(date("g:i a", strtotime(explode(' ', $submission_data['submitted_at'][1]))));
+
 			} else {
 				$data['graded'] = FALSE;
 				$data['submitted'] = FALSE;
+				$data['last'] = "";
+				$data['last_modified'] = $submission_data['submitted_at'];
+
 			}
 		}
 
@@ -155,25 +165,33 @@ class Students extends CI_Controller{
 		$student_id = $this->session->userdata('student_id');
 		//C:\xampp\htdocs\myapp\submissions
 		$lang = $this->assignment_model->getLang($assignment_id);
-		$config['upload_path'] = './submissions/';
+		$config['upload_path'] = "./assets/uploads/" . strval($assignment_id) . "/submission";
 		$config['allowed_types'] = $lang;
 
-		$id = $this->assignment_model->makeSubmission($student_id,$assignment_id);
-		$config['file_name'] = $id;
+		$_FILES['userfile']['name'] = str_replace(" ", "_", $_FILES['userfile']['name']);
+		$_FILES['userfile']['name'] = $student_id . '_' . $_FILES['userfile']['name'];
+
+		date_default_timezone_set('Asia/Colombo');
+
+
+		$data = array(
+			'assignment_id' => $assignment_id,
+			'student_id' => $student_id,
+			'file_path' => "./assets/uploads/" . strval($assignment_id) . "/submission/" . $_FILES['userfile']['name'],
+			'submitted_at' => strval(date("Y-m-d h:i:s a"))
+		);
 
 		$this->load->library('upload',$config);
 
-		if($this->upload->do_upload('userfile')){
+		if($this->upload->do_upload()){
 
-			$filepath = 'C:/xampp/htdocs/Programming-Assignment-Evaluator/submissions/'.$id;
-			$this->assignment_model->updateSubmission($id,$filepath);
+			$this->assignment_model->makeSubmission($data);
 			//echo $this->upload->display_errors();
 			//$this->assignmentDetails($assignment_id,$num);
 			$this->assignmentDetails($assignment_id,$num);
 		} else {
 			//$this->assignmentDetails($assignment_id,$num);
-			$data = "The file upload was unsuccesssful.<br>Either the file was not written in the expected language, if so please do so.<br>If you have uploaded the correct file please try again later.";
-			$this->assignment_model->deleteSubmission($id);
+			$data = "The file upload was unsuccesssful.<br>The file was not written in the expected language.<br>If you have uploaded the correct file please try again.";
 			$this->assignmentDetails($assignment_id,$num,$data);
 		}
 	}

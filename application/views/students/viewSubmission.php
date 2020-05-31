@@ -43,7 +43,7 @@
 										echo "Submitted for grading";
 									} else {
 										if ($deadline) {
-											echo "Not submitted anything";
+											echo "Not submitted";
 										} else {
 											echo "---";
 										}
@@ -73,7 +73,11 @@
 						</div>
 						<div class="row">
 							<label class="col-md-3" for="file-input">Last Modified :</label>
-							<label class="col-md-9" for="file-input" id="modified">---</label>
+							<label class="col-md-9" for="file-input" id="modified"><?php echo $last_modified ?></label>
+						</div>
+						<div class="row">
+							<label class="col-md-3" for="file-input">Last Submission :</label>
+							<label class="col-md-9" for="file-input" id="modified"><a href = <?php echo base_url() . $last ?>>file</a></label>
 						</div>
 						<?php 
 							if (!$submitted and !$deadline) {

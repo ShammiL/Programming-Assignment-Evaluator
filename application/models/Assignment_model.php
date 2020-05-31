@@ -8,7 +8,7 @@ class Assignment_model extends CI_Model{
 
         $this->db->where('assignment_id',$id);
         $status = $this->db->get('assignments')->row(0)->status;
-        if( $status == 'over'){
+        if( $status == 'finished'){
             return FALSE;
         } else {
             return TRUE;
@@ -23,7 +23,12 @@ class Assignment_model extends CI_Model{
         $result = $this->db->get('submissions');
 
         if($result->num_rows() > 0){
-            return TRUE;
+            $sub_data = array(
+                'submitted_at' => $result->row(0)->submitted_at,
+                'filepath' => $result->row(0)->file_path,
+                'submitted' => true
+            );
+            return $sub_data;
         } else {
             return FALSE;
         }
@@ -51,21 +56,18 @@ class Assignment_model extends CI_Model{
         } else if ($lang == 'Java'){
             return 'java';
         } else if ($lang == 'C++'){
-            return 'cc';
+            return 'cpp';
         } else {
             return 'js';
         }
     }
 
-    function makeSubmission($student_id,$assignment_id){
-        $data = array(
-                    'student_id' => $student_id,
-                    'assignment_id' => $assignment_id
-                );
+    function makeSubmission($data){
+        
         $this->db->insert('submissions',$data);
 
-        $this->db->where($data);
-        return $this->db->get('submissions')->row(0)->submission_id;
+        // $this->db->where($data);
+        // return $this->db->get('submissions')->row(0)->submission_id;
     }
 
     function updateSubmission($id,$filepath){
