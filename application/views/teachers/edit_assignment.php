@@ -20,7 +20,7 @@
 					<div class="col-md-4">
 						<div class="form-group">
 							<label for="deadline">Change Deadline:</label>
-							<input type="date" class="form-control" name="deadline" id="deadline" value="<?php echo $assignment['deadline']?>" required>
+							<input type="date" class="form-control" name="deadline" id="deadline" value="<?php echo $assignment['deadline']?>" oninput="checkDeadline(this)" required>
 						</div>
 					</div>
 					<div class="col-md-4">
