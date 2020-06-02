@@ -95,12 +95,12 @@
 											<div class="col-md-4">
 												<label for="file-input">Select file to upload :</label>
 												<div class="custom-file">
-													<input type="file" class="custom-file-input" name="userfile">
+													<input type="file" class="custom-file-input" name="userfile"  oninput="checkDocument(this)">
 													<label class="custom-file-label" for="customFile">Choose file</label>
 												</div>
 											</div>
 										</div>
-										<div class="form-group"></div>
+										<div class="form-group">
 											<button class="btn btn-primary" type="submit" id="submit-assignment">Submit Assignment</button>
 										</div>
 									</div>
@@ -113,3 +113,18 @@
 	</div>	
 	<div class="col-md-1"></div>
 </div>
+<script>
+	function checkDocument(input) {
+		let filepath = input.value.split(".");
+		let fileType = filepath[filepath.length-1];
+		let type = <?php echo $assignment_data['language']; ?>;
+		console.log(type);
+
+		if (type !== fileType) {
+			input.setCustomValidity('Please .');
+		} else {
+			input.setCustomValidity('');
+		}
+	}
+</script>
+

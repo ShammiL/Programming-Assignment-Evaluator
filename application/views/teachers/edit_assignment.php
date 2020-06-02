@@ -29,20 +29,21 @@
 							<input type="time" class="form-control" name="time" id="time" value="<?php echo $assignment['time']?>" required>
 						</div>
 					</div>
-					<div class="col-md-4">
-						<label>Change Documents:</label>
-						<div class="custom-file">
-							<input type="file" class="custom-file-input" name="documents[]" id="documents" multiple="multiple" oninput="checkDocument(this)">
-							<label class="custom-file-label" for="customFile">Choose files</label>
-						</div>
-					</div>
 				</div>
 				<div class="form-group">
 					<label for="description">Change Description:</label>
 					<textarea class="form-control" name="description" id="description" placeholder="Enter New Description Here..." required><?php echo $assignment['description']?></textarea>
 				</div>
 				<div class="row">
-					<div class="col-md-3">
+					<div class="col-md-4">
+						<label>Change Documents:</label>
+						<div class="custom-file">
+							<input type="file" class="custom-file-input" name="documents[]" id="documents" multiple="multiple" oninput="checkDocument(this)">
+							<label class="custom-file-label" for="customFile">Choose files</label>
+						</div>
+						<small style="color: #357B8E">Only use PDF, DOC or Text files as references.</small>
+					</div>
+					<div class="col-md-4">
 						<label for="languages[]">Change Languages:</label>
 						<select id="language" class="form-control" name="language">
 							<option selected value="<?php echo $assignment['language']?>"><?php echo $assignment['language']?></option>
@@ -79,7 +80,7 @@
 	function checkDocument(input) {
 		let filepath = input.value.split(".");
 		let fileType = filepath[filepath.length-1];
-		let types = ['txt', 'doc', 'docx'];
+		let types = ['txt', 'doc', 'docx', 'pdf'];
 
 		if (!types.includes(fileType)) {
 			input.setCustomValidity('Please use a document as reference file.');
