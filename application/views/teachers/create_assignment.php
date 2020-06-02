@@ -19,7 +19,7 @@
 					<div class="col-md-4">
 						<div class="form-group">
 							<label for="deadline">Deadline:</label>
-							<input type="date" class="form-control" name="deadline" value="<?php echo $inputs['deadline'] ?>" id="deadline" value="dd-mm-yyyy" required>
+							<input type="date" class="form-control" name="deadline" value="<?php echo $inputs['deadline'] ?>" id="deadline" oninput="checkDeadline(this)" required>
 						</div>
 					</div>
 					<div class="col-md-4">
@@ -37,14 +37,14 @@
 					<div class="col-md-4">
 						<label>Documents:</label>
 						<div class="custom-file">
-							<input type="file" class="custom-file-input" name="userfile" id="documents" size="8000">
+							<input type="file" class="custom-file-input" name="userfile" id="documents" size="8000" oninput="checkDocument(this)">
 							<label class="custom-file-label" for="customFile">Choose files</label>
 						</div>
 					</div>
 					<div class="col-md-4">
 						<label for="language">Select Language:</label>
 						<select id="language" class="form-control" name="language" required>
-							<option selected value="none" disabled>------ Select Language ------</option>
+							<option selected value="" disabled>------ Select Language ------</option>
 							<option value="Java">Java</option>
 							<option value="Python">Python 2.7</option>
 							<option value="Python3">Python 3.7</option>
@@ -78,3 +78,23 @@
 	</div>
 	<div class="col-md-1"></div>
 </div>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+		integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+
+<script>
+	function checkDeadline(input) {
+		let deadline = input.value;
+		let today = new Date();
+		let date = today.getFullYear()+'-'+(today.getMonth()+1 < 10 ? '0'+(today.getMonth()+1) : today.getMonth()+1)+'-'+(today.getDate() < 10 ? '0'+today.getDate() : today.getDate());
+
+		if (deadline < date) {
+			input.setCustomValidity('Please give a future date as the deadline.');
+		} else {
+			input.setCustomValidity('');
+		}
+	}
+
+	function checkDocument(input) {
+		console.log(input.value);
+	}
+</script>

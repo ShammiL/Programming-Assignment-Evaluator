@@ -13,7 +13,7 @@
 					<div class="col-md-4">
 						<div class="form-group">
 							<label for="title">Edit Title:</label>
-							<input class="form-control" type="text" name="name" id="title" placeholder="Edit Title Here..." value="<?php echo $assignment['assignment_name']?>" required>
+							<input class="form-control" type="text" name="name" id="title" placeholder="Edit Title Here..." value="<?php echo $assignment['assignment_name']?>" oninput="checkDeadline(this)" required>
 						</div>
 					</div>
 					
@@ -63,3 +63,19 @@
 	</div>
 	<div class="col-md-1"></div>
 </div>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+		integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+
+<script>
+	function checkDeadline(input) {
+		let deadline = input.value;
+		let today = new Date();
+		let date = today.getFullYear()+'-'+(today.getMonth()+1 < 10 ? '0'+(today.getMonth()+1) : today.getMonth()+1)+'-'+(today.getDate() < 10 ? '0'+today.getDate() : today.getDate());
+
+		if (deadline < date) {
+			input.setCustomValidity('Please give a future date as the deadline.');
+		} else {
+			input.setCustomValidity('');
+		}
+	}
+</script>
