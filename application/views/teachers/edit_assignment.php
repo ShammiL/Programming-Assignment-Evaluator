@@ -32,7 +32,7 @@
 					<div class="col-md-4">
 						<label>Change Documents:</label>
 						<div class="custom-file">
-							<input type="file" class="custom-file-input" name="documents[]" id="documents" multiple="multiple">
+							<input type="file" class="custom-file-input" name="documents[]" id="documents" multiple="multiple" oninput="checkDocument(this)">
 							<label class="custom-file-label" for="customFile">Choose files</label>
 						</div>
 					</div>
@@ -63,9 +63,6 @@
 	</div>
 	<div class="col-md-1"></div>
 </div>
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-		integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-
 <script>
 	function checkDeadline(input) {
 		let deadline = input.value;
@@ -74,6 +71,18 @@
 
 		if (deadline < date) {
 			input.setCustomValidity('Please give a future date as the deadline.');
+		} else {
+			input.setCustomValidity('');
+		}
+	}
+
+	function checkDocument(input) {
+		let filepath = input.value.split(".");
+		let fileType = filepath[filepath.length-1];
+		let types = ['txt', 'doc', 'docx'];
+
+		if (!types.includes(fileType)) {
+			input.setCustomValidity('Please use a document as reference file.');
 		} else {
 			input.setCustomValidity('');
 		}
