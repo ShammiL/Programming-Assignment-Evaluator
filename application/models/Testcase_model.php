@@ -15,7 +15,7 @@ class Testcase_model extends CI_Model
 	}
 
 	public function create($input){
-
+		// print_r($input);
 		return $this->db->insert('testcases', $input);
 	}
 

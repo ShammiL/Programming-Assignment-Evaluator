@@ -66,7 +66,6 @@ class Teachers extends CI_Controller
 
 	
 		if($this->form_validation->run() === false){
-
 			$data['inputs'] = $input;
 			
 			$this->load->view('templates/header', $data);
@@ -76,6 +75,7 @@ class Teachers extends CI_Controller
 		}
 			
 		else{
+			
 			$last = $this->assignment_model->get_last();
 			$last_id = $last[0]['assignment_id']+1;
 
@@ -108,44 +108,41 @@ class Teachers extends CI_Controller
 			mkdir($submit_path,0755,TRUE);
 			} 
 
-			$config['upload_path'] = $ref_path;
-			$config['allowed_types'] = 'pdf|docx|zip|rar';
-			$config['max_size'] = '.8196';
-	
-			$this->load->library('upload', $config);
-	
-			if(!$this->upload->do_upload()){
-				$errors = array('error' => $this->upload->display_errors());
-				
-				
-			}
-			else{
-				$_FILES['userfile']['name'] = str_replace(" ", "_", $_FILES['userfile']['name']);
+			
+			$_FILES['userfile']['name'] = str_replace(" ", "_", $_FILES['userfile']['name']);
 
 				
-				$file_data = array('upload_data' => $this->upload->data());
-				$input['reference_file'] = $_FILES['userfile']['name'];
+			move_uploaded_file($_FILES['userfile']['tmp_name'], "./assets/uploads/" . strval($last_id) . "/reference/" . $_FILES['userfile']['name']);
+			$input['reference_file'] = $_FILES['userfile']['name'];
 
-				// print_r($_FILES['userfile']['name']);
-				// print_r($file_data) ;
-			}
+
+
 			$input['assignment_id'] = $last_id;
 			$this->assignment_model->create_assignment($input);
 	
-			// $cases = $this->input->post('test-cases');
+			$cases = $this->input->post('test-cases');
 	
-			// for ($i=1; $i<= $cases; $i++) {
-			// 	$this->Testcase_model->create(array(
-			// 		'assignment_id' => 2,
-			// 		'test_case_no' => $i,
-			// 		'input' => $this->input->post('input'.$i),
-			// 		'output' => $this->input->post('output'.$i)
-			// 	));
-			// }
+			for ($i=1; $i<= $cases; $i++) {
+				$_FILES['input']['name'][$i-1] = 'input_' . strval($last_id) . '_' . strval($i) . '.txt';
+				$_FILES['output']['name'][$i-1]  = 'output_' . strval($last_id) . '_' . strval($i) . '.txt';
+
+				$this->Testcase_model->create(array(
+					'assignment_id' => $last_id,
+					'case_id' => $i,
+					'input_name' => 'input_' . strval($last_id) . '_' . strval($i) . '.txt',
+					'output_name' => 'output_' . strval($last_id) . '_' . strval($i) . '.txt'
+				));
+
+				move_uploaded_file($_FILES['input']['tmp_name'][$i-1], "./assets/uploads/" . strval($last_id) . "/input/" . $_FILES['input']['name'][$i-1]);
+				move_uploaded_file($_FILES['output']['tmp_name'][$i-1], "./assets/uploads/" . strval($last_id) . "/output/" . $_FILES['output']['name'][$i-1]);
+
+			}
+			
 	
 			$this->courseDetails($course_id);
 		}
 	}
+
 
 	function is_date_correct($deadline) {
 		$date_now = date("Y-m-d");
