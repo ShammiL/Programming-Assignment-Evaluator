@@ -80,6 +80,7 @@
 							<label class="col-md-3" for="file-input">Last Submission :</label>
 							<label class="col-md-9" for="file-input" id="modified"><a href = "<?php echo base_url() . "students/download_submission/" . $assignment_data['assignment_id'] . "/" . $last; ?>">file</a></label>
 						</div>
+						<?php if (!$deadline){?>
 						<div id="submit-container" class="d-none">
 							<hr>
 							<?php echo form_open_multipart('students/updateSubmission/'.$assignment_id.'/'.$num); ?>
@@ -95,7 +96,7 @@
 							<button class="btn btn-sm btn-outline-secondary mt-1" type="submit" id="cancel-update" onclick="cancelUpdate()">Cancel</button>
 						</div>
 						<button class="btn btn-primary" type="submit" id="edit-submission" onclick="editSubmission()">Edit Submission</button>
-						<?php  } ?>
+						<?php  } } ?>
 
 						<?php 
 							if (!$submitted and !$deadline) {

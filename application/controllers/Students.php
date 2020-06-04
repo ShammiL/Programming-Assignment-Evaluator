@@ -110,7 +110,7 @@ class Students extends CI_Controller{
 				$data['graded'] = TRUE;
 				$data['submitted'] = TRUE;
 				$data['last'] = $submission_data['filepath'];
-				$data['last_modified'] = explode(' ', $submission_data['submitted_at'])[0] . ', ' . strval(date("g:i a", strtotime(explode(' ', $submission_data['submitted_at'][1]))));
+				$data['last_modified'] = explode(' ', $submission_data['submitted_at'])[0] . ', ' . strval(date("g:i a", strtotime(explode(' ', $submission_data['submitted_at'])[1])));
 
 			} else {
 				$data['graded'] = FALSE;
@@ -140,6 +140,7 @@ class Students extends CI_Controller{
 		force_download($filepath, NULL);
 		// echo $filepath;
 	}
+
 
 	public function viewGrade ($assignment_id, $num){
 
@@ -186,6 +187,41 @@ class Students extends CI_Controller{
 		if($this->upload->do_upload()){
 
 			$this->Submission_model->makeSubmission($data);
+			//echo $this->upload->display_errors();
+			//$this->assignmentDetails($assignment_id,$num);
+			$this->assignmentDetails($assignment_id,$num);
+		} else {
+			//$this->assignmentDetails($assignment_id,$num);
+			$data = "The file upload was unsuccesssful.<br>The file was not written in the expected language.<br>If you have uploaded the correct file please try again.";
+			$this->assignmentDetails($assignment_id,$num,$data);
+		}
+	}
+
+	public function updateSubmission($assignment_id,$num){
+		$student_id = $this->session->userdata('student_id');
+		//C:\xampp\htdocs\myapp\submissions
+		$lang = $this->assignment_model->getLang($assignment_id);
+		$config['upload_path'] = "./assets/uploads/" . strval($assignment_id) . "/submission";
+		$config['allowed_types'] = $lang;
+
+		$_FILES['userfile']['name'] = str_replace(" ", "_", $_FILES['userfile']['name']);
+		$_FILES['userfile']['name'] = $student_id . '_' . $_FILES['userfile']['name'];
+
+		date_default_timezone_set('Asia/Colombo');
+
+
+		$data = array(
+			'file_path' => $_FILES['userfile']['name'],
+			'submitted_at' => strval(date("Y-m-d H:i:s"))
+		);
+
+		$this->load->library('upload',$config);
+
+		if($this->upload->do_upload()){
+			$filename = $this->Submission_model->get_file($assignment_id, $student_id);
+			$this->Submission_model->updateSubmission($assignment_id, $student_id, $data);
+			unlink("./assets/uploads/" . strval($assignment_id) . "/submission/" . $filename);
+
 			//echo $this->upload->display_errors();
 			//$this->assignmentDetails($assignment_id,$num);
 			$this->assignmentDetails($assignment_id,$num);

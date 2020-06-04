@@ -45,12 +45,19 @@ class Submission_model extends CI_Model{
         // return $this->db->get('submissions')->row(0)->submission_id;
     }
 
-    function updateSubmission($id,$filepath){
+    function updateSubmission($assignment_id, $student_id,$data){
 
-        $this->db->set('file_path',$filepath);
-        $this->db->where('submission_id',$id);
+        $this->db->where('assignment_id', $assignment_id);
+        $this->db->where('student_id', $student_id);
+        return $this->db->update('submissions', $data);
 
-        return $this->db->update('submissions');
+    }
+
+    public function get_file($assignment_id, $student_id){
+       
+        $this->db->where('assignment_id',$assignment_id);
+        $this->db->where('student_id', $student_id);
+        return $this->db->get('submissions')->row(0)->file_path;
 
     }
 
