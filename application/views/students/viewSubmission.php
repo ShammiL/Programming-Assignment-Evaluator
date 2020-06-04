@@ -80,7 +80,22 @@
 							<label class="col-md-3" for="file-input">Last Submission :</label>
 							<label class="col-md-9" for="file-input" id="modified"><a href = "<?php echo base_url() . "students/download_submission/" . $assignment_data['assignment_id'] . "/" . $last; ?>">file</a></label>
 						</div>
-						<?php } ?>
+						<div id="submit-container" class="d-none">
+							<hr>
+							<?php echo form_open_multipart('students/updateSubmission/'.$assignment_id.'/'.$num); ?>
+								<div class="col-md-4 pl-0">
+									<label for="file-input">Select file to upload :</label>
+									<div class="custom-file mb-3">
+										<input type="file" class="custom-file-input" name="userfile"  oninput="checkDocument(this)">
+										<label class="custom-file-label" for="customFile">Choose file</label>
+									</div>
+									<button class="btn btn-primary" type="submit" id="update-assignment">Update Assignment</button>
+								</div>
+							<?php echo form_close(); ?>
+							<button class="btn btn-sm btn-outline-secondary mt-1" type="submit" id="cancel-update" onclick="cancelUpdate()">Cancel</button>
+						</div>
+						<button class="btn btn-primary" type="submit" id="edit-submission" onclick="editSubmission()">Edit Submission</button>
+						<?php  } ?>
 
 						<?php 
 							if (!$submitted and !$deadline) {
@@ -91,7 +106,7 @@
 								}
 								echo form_open_multipart('students/makeSubmission/'.$assignment_id.'/'.$num); ?>
 									<div id="submit">								
-										<div class="row">
+										<div class="form-row mb-3">
 											<div class="col-md-4">
 												<label for="file-input">Select file to upload :</label>
 												<div class="custom-file">
@@ -104,7 +119,7 @@
 											<button class="btn btn-primary" type="submit" id="submit-assignment">Submit Assignment</button>
 										</div>
 									</div>
-						<?php echo form_close();
+								<?php echo form_close();
 							} ?>
 					</div>
 				</div>
@@ -114,11 +129,20 @@
 	<div class="col-md-1"></div>
 </div>
 <script>
+	function editSubmission() {
+		$('#submit-container').removeClass('d-none');
+		$('#edit-submission').addClass('d-none');
+	}
+
+	function cancelUpdate() {
+		$('#submit-container').addClass('d-none');
+		$('#edit-submission').removeClass('d-none');
+	}
+
 	function checkDocument(input) {
 		let filepath = input.value.split(".");
 		let fileType = filepath[filepath.length-1];
 		let type = <?php echo $assignment_data['language']; ?>;
-		console.log(type);
 
 		if (type !== fileType) {
 			input.setCustomValidity('Please .');
