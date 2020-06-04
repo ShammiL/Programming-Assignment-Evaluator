@@ -184,15 +184,24 @@ class Teachers extends CI_Controller
 		}
 
 		else{
-        $input = array(
-            'assignment_name' => $this->input->post('name'),
-            'description' => $this->input->post('description'),
-            'language' => $this->input->post('language'),
-            'deadline' => $this->input->post('deadline'),
-            'time' => $this->input->post('time')
-        );
-        $this->assignment_model->update_assignment($input, $assignment_id);
-		$this->viewSubmissions($assignment_id, $num);
+			$input = array(
+				'assignment_name' => $this->input->post('name'),
+				'description' => $this->input->post('description'),
+				'language' => $this->input->post('language'),
+				'deadline' => $this->input->post('deadline'),
+				'time' => $this->input->post('time')
+			);
+
+			// print_r($_FILES);
+			$filename = $this->assignment_model->get_file($assignment_id);
+			if(!$_FILES['userfile']['name']==''){
+				unlink("./assets/uploads/" . strval($assignment_id) . "/reference/" . $filename);
+				$_FILES['userfile']['name'] = str_replace(" ", "_", $_FILES['userfile']['name']);
+				move_uploaded_file($_FILES['userfile']['tmp_name'], "./assets/uploads/" . strval($assignment_id) . "/reference/" . $_FILES['userfile']['name']);
+				$input['reference_file'] = $_FILES['userfile']['name'];
+			}
+			$this->assignment_model->update_assignment($input, $assignment_id);
+			$this->viewSubmissions($assignment_id, $num);
 	}
 }
 
