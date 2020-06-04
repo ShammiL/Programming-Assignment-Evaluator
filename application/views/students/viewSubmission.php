@@ -10,7 +10,7 @@
 						<a href="<?php echo base_url(); ?>student/viewGrade/<?php echo $assignment_id; ?>/<?php echo $num; ?>" class="btn btn-primary ml-3" type="submit" id="view-grade">View Grade</a>
 					<?php }  ?>
 					<a href="<?php echo base_url(); ?>student/reportIssue/<?php echo $assignment_id; ?>" class="btn btn-primary ml-3" type="submit">Report Issue</a>
-					<a href="<?php echo base_url(); ?>student/viewIssue/<?php echo $indexNumber; ?>/<?php echo $assignment_id; ?>" class="btn btn-primary ml-3" type="submit" >View My Issues</a>
+					<a href="<?php echo base_url(); ?>student/viewIssue/<?php echo $assignment_id; ?>" class="btn btn-primary ml-3" type="submit" >View My Issues</a>
 				</div>
 			</div>
 			<div class="card-body">
@@ -83,7 +83,10 @@
 							<?php echo form_close(); ?>
 							<button class="btn btn-sm btn-outline-secondary mt-1" type="submit" id="cancel-update" onclick="cancelUpdate()">Cancel</button>
 						</div>
-						<?php if (!$deadline) { ?>
+						<?php if (!$deadline) {
+							if($error != NULL){
+								echo "<p class='submission-error'>".$error."<br></p>";
+							} ?>
 							<button class="btn btn-primary" type="submit" id="edit-submission" onclick="editSubmission()">Edit Submission</button>
 						<?php  }
 						} ?>

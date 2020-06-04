@@ -163,6 +163,10 @@ class Students extends CI_Controller{
 
 	function makeSubmission($assignment_id,$num){
 
+		if(!$this->session->userdata('student_id')){
+			redirect('');
+		}
+
 		$student_id = $this->session->userdata('student_id');
 		//C:\xampp\htdocs\myapp\submissions
 		$lang = $this->assignment_model->getLang($assignment_id);
@@ -192,12 +196,17 @@ class Students extends CI_Controller{
 			$this->assignmentDetails($assignment_id,$num);
 		} else {
 			//$this->assignmentDetails($assignment_id,$num);
-			$data = "The file upload was unsuccesssful.<br>The file was not written in the expected language.<br>If you have uploaded the correct file please try again.";
+			$data = "The file upload was unsuccessful.<br>The file was not written in the expected language.<br>If you have uploaded the correct file please try again.";
 			$this->assignmentDetails($assignment_id,$num,$data);
 		}
 	}
 
 	public function updateSubmission($assignment_id,$num){
+
+		if(!$this->session->userdata('student_id')){
+			redirect('');
+		}
+
 		$student_id = $this->session->userdata('student_id');
 		//C:\xampp\htdocs\myapp\submissions
 		$lang = $this->assignment_model->getLang($assignment_id);
@@ -227,12 +236,17 @@ class Students extends CI_Controller{
 			$this->assignmentDetails($assignment_id,$num);
 		} else {
 			//$this->assignmentDetails($assignment_id,$num);
-			$data = "The file upload was unsuccesssful.<br>The file was not written in the expected language.<br>If you have uploaded the correct file please try again.";
+			$data = "The file upload was unsuccessful.<br>The file was not written in the expected language.<br>If you have uploaded the correct file please try again.";
 			$this->assignmentDetails($assignment_id,$num,$data);
 		}
 	}
 
 	public function download_submission($assignment_id, $filename){
+
+		if(!$this->session->userdata('student_id')){
+			redirect('');
+		}
+
 		$filepath = "./assets/uploads/" . strval($assignment_id) . "/" . "submission/" . $filename;
 
 		force_download($filepath, NULL);
@@ -313,8 +327,13 @@ class Students extends CI_Controller{
 	}
 }
 
-	public function view_issues($indexNumber, $assignment_id){
-		$data['issues'] = $this->issue_model->get_issues_student($indexNumber, $assignment_id);
+	public function view_issues($assignment_id){
+
+		if(!$this->session->userdata('student_id')){
+			redirect('');
+		}
+
+		$data['issues'] = $this->issue_model->get_issues_student($this->session->userdata('student_id'), $assignment_id);
 		$data['title'] = "View Issues";
 
 		$this->load->view('templates/student_header',$data);
