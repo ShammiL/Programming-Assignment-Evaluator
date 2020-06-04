@@ -24,14 +24,16 @@ class Submission_model extends CI_Model{
         $result = $this->db->get('submissions');
 
         if($result->num_rows() > 0){
-            $sub_data = array(
-                'submitted_at' => $result->row(0)->submitted_at,
-                'filepath' => $result->row(0)->file_path,
-                'submitted' => true
-            );
-            return $sub_data;
+			return array(
+				'submitted_at' => $result->row(0)->submitted_at,
+				'filepath' => $result->row(0)->file_path,
+				'submitted' => true
+			);
         } else {
-            return FALSE;
+            return array(
+				'submitted_at' => '---',
+				'submitted' => FALSE
+			);
         }
     }
 
