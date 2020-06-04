@@ -13,7 +13,7 @@
 					<div class="col-md-4">
 						<div class="form-group">
 							<label for="title">Edit Title:</label>
-							<input class="form-control" type="text" name="name" id="title" placeholder="Edit Title Here..." value="<?php echo $assignment['assignment_name']?>" oninput="checkDeadline(this)" required>
+							<input class="form-control" type="text" name="name" id="title" placeholder="Edit Title Here..." value="<?php echo $assignment['assignment_name']?>" required>
 						</div>
 					</div>
 					

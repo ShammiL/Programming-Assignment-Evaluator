@@ -3,25 +3,14 @@
 	<div class="col-md-10 body-card">
 		<div class="card">
 			<div class="card-header">
+				<h2><?php echo $assignment_data['course_id'] ?></h2>
+				<h3>Assignment <?php echo $num." - ".$assignment_data['assignment_name']; if ($deadline && !$submitted) { ?><label class="overdue-banner">!!! Overdue !!!</label><?php } ?></h3>
 				<div class="row">
-					<div class="col-md-10">
-						<h2><?php echo $assignment_data['course_id'] ?></h2>
-						<h3>Assignment <?php echo $num." - ".$assignment_data['assignment_name'] ?></h3>
-					</div>
-					<div class="col-md-2" id="banner">
-						<?php if($deadline){ 
-							if ($submitted) {?>
-								<a href="<?php echo base_url(); ?>student/viewGrade/<?php echo $assignment_id; ?>/<?php echo $num; ?>" class="btn btn-primary btn-grade align-middle" type="submit" id="view-grade">View Grade</a>
-						<?php } else { ?>
-							<label class="overdue-banner">Overdue !!!</label>
-						<?php } } ?>
-					</div>
-					<div class="">
-						<a href="<?php echo base_url(); ?>student/reportIssue/<?php echo $assignment_id; ?>" class="btn btn-primary ml-3" type="submit">Report Issue</a>
-					</div>
-					<div class="">
-						<a href="<?php echo base_url(); ?>student/viewIssue/<?php echo $indexNumber; ?>/<?php echo $assignment_id; ?>" class="btn btn-primary ml-3" type="submit" >View My Issues</a>
-					</div>
+					<?php if($deadline && $submitted){ ?>
+						<a href="<?php echo base_url(); ?>student/viewGrade/<?php echo $assignment_id; ?>/<?php echo $num; ?>" class="btn btn-primary ml-3" type="submit" id="view-grade">View Grade</a>
+					<?php }  ?>
+					<a href="<?php echo base_url(); ?>student/reportIssue/<?php echo $assignment_id; ?>" class="btn btn-primary ml-3" type="submit">Report Issue</a>
+					<a href="<?php echo base_url(); ?>student/viewIssue/<?php echo $indexNumber; ?>/<?php echo $assignment_id; ?>" class="btn btn-primary ml-3" type="submit" >View My Issues</a>
 				</div>
 			</div>
 			<div class="card-body">
@@ -75,12 +64,11 @@
 							<label class="col-md-3" for="file-input">Last Modified :</label>
 							<label class="col-md-9" for="file-input" id="modified"><?php echo $last_modified ?></label>
 						</div>
-						<?php if ($last!== ""){?>
+						<?php if ($last!== "") { ?>
 						<div class="row">
 							<label class="col-md-3" for="file-input">Last Submission :</label>
 							<label class="col-md-9" for="file-input" id="modified"><a href = "<?php echo base_url() . "students/download_submission/" . $assignment_data['assignment_id'] . "/" . $last; ?>">file</a></label>
 						</div>
-						<?php if (!$deadline){?>
 						<div id="submit-container" class="d-none">
 							<hr>
 							<?php echo form_open_multipart('students/updateSubmission/'.$assignment_id.'/'.$num); ?>
@@ -95,8 +83,10 @@
 							<?php echo form_close(); ?>
 							<button class="btn btn-sm btn-outline-secondary mt-1" type="submit" id="cancel-update" onclick="cancelUpdate()">Cancel</button>
 						</div>
-						<button class="btn btn-primary" type="submit" id="edit-submission" onclick="editSubmission()">Edit Submission</button>
-						<?php  } } ?>
+						<?php if (!$deadline) { ?>
+							<button class="btn btn-primary" type="submit" id="edit-submission" onclick="editSubmission()">Edit Submission</button>
+						<?php  }
+						} ?>
 
 						<?php 
 							if (!$submitted and !$deadline) {

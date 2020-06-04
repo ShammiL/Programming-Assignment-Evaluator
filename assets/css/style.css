@@ -287,10 +287,10 @@ footer.footer .container > div {
 .overdue-banner {
 	color: red;
 	font-size: 20px;
-	margin-top: 20px;
 	border: 2px dotted red;
 	border-radius: 5px;
-	padding: 5px 20px;
+	padding: 2px 20px;
+	margin: 0 25px;
 }
 
 .swal2-styled.swal2-confirm {
