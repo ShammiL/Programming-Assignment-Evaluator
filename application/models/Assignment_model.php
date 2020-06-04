@@ -70,6 +70,13 @@ class Assignment_model extends CI_Model{
 
     }
 
+    public function get_file($assignment_id = 1){
+       
+        $this->db->where('assignment_id',$assignment_id);
+        return $this->db->get('assignments')->row(0)->reference_file;
+
+    }
+
     public function create_assignment($input){
 
         return $this->db->insert('assignments', $input);

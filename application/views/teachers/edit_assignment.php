@@ -8,7 +8,7 @@
 				<h3>Edit Assignment</h3>
 			</div>
 			<div class="card-body">
-				<?php echo form_open('teacher/update/'.$course_id.'/'.$assignment['assignment_id'].'/'.$num); ?>
+				<?php echo form_open_multipart('teacher/update/'.$course_id.'/'.$assignment['assignment_id'].'/'.$num); ?>
 				<div class="row">
 					<div class="col-md-4">
 						<div class="form-group">
@@ -38,7 +38,7 @@
 					<div class="col-md-4">
 						<label>Change Documents:</label>
 						<div class="custom-file">
-							<input type="file" class="custom-file-input" name="documents[]" id="documents" multiple="multiple" oninput="checkDocument(this)">
+							<input type="file" class="custom-file-input" name="userfile" id="documents" size="8000" oninput="checkDocument(this)">
 							<label class="custom-file-label" for="customFile">Choose files</label>
 						</div>
 						<small style="color: #357B8E">Only use PDF, DOC or Text files as references.</small>
