@@ -91,35 +91,79 @@ class Students extends CI_Controller{
 		
 		//echo $assignment_id;
 
-		if($status){
-			$data['deadline'] = FALSE;
-			if($submission_data['submitted']){
+		switch ($status) {
+			case -1:
+				$data['deadline'] = FALSE;
 				$data['graded'] = FALSE;
-				$data['submitted'] = TRUE;
-				$data['last'] = $submission_data['filepath'];
-				$data['last_modified'] = explode(' ', $submission_data['submitted_at'])[0] . ', ' . strval(date("g:i a", strtotime(explode(' ', $submission_data['submitted_at'])[1])));
-			} else {
-				$data['submitted'] = FALSE;
+				if ($submission_data['submitted']) {
+					$data['submitted'] = TRUE;
+					$data['last'] = $submission_data['filepath'];
+					$data['last_modified'] = explode(' ', $submission_data['submitted_at'])[0] . ', ' . strval(date("g:i a", strtotime(explode(' ', $submission_data['submitted_at'])[1])));
+				} else {
+					$data['submitted'] = FALSE;
+					$data['last'] = "";
+					$data['last_modified'] = $submission_data['submitted_at'];
+				}
+				break;
+			case 0:
+				$data['deadline'] = TRUE;
 				$data['graded'] = FALSE;
-				$data['last'] = "";
-				$data['last_modified'] = $submission_data['submitted_at'];
-			}
-		} else {
-			$data['deadline'] = TRUE;
-			if($submission_data['submitted']){
-				$data['graded'] = TRUE;
-				$data['submitted'] = TRUE;
-				$data['last'] = $submission_data['filepath'];
-				$data['last_modified'] = explode(' ', $submission_data['submitted_at'])[0] . ', ' . strval(date("g:i a", strtotime(explode(' ', $submission_data['submitted_at'])[1])));
-
-			} else {
-				$data['graded'] = FALSE;
-				$data['submitted'] = FALSE;
-				$data['last'] = "";
-				$data['last_modified'] = $submission_data['submitted_at'];
-
-			}
+				if ($submission_data['submitted']) {
+					$data['submitted'] = TRUE;
+					$data['last'] = $submission_data['filepath'];
+					$data['last_modified'] = explode(' ', $submission_data['submitted_at'])[0] . ', ' . strval(date("g:i a", strtotime(explode(' ', $submission_data['submitted_at'])[1])));
+				} else {
+					$data['submitted'] = FALSE;
+					$data['last'] = "";
+					$data['last_modified'] = $submission_data['submitted_at'];
+				}
+				break;
+			case 1:
+				$data['deadline'] = TRUE;
+				if ($submission_data['submitted']) {
+					$data['graded'] = TRUE;
+					$data['submitted'] = TRUE;
+					$data['last'] = $submission_data['filepath'];
+					$data['last_modified'] = explode(' ', $submission_data['submitted_at'])[0] . ', ' . strval(date("g:i a", strtotime(explode(' ', $submission_data['submitted_at'])[1])));
+				} else {
+					$data['graded'] = FALSE;
+					$data['submitted'] = FALSE;
+					$data['last'] = "";
+					$data['last_modified'] = $submission_data['submitted_at'];
+				}
+				break;
 		}
+
+//		if($status == 1){
+//
+//			$data['deadline'] = FALSE;
+//			if($submission_data['submitted']){
+//				$data['graded'] = FALSE;
+//				$data['submitted'] = TRUE;
+//				$data['last'] = $submission_data['filepath'];
+//				$data['last_modified'] = explode(' ', $submission_data['submitted_at'])[0] . ', ' . strval(date("g:i a", strtotime(explode(' ', $submission_data['submitted_at'])[1])));
+//			} else {
+//				$data['submitted'] = FALSE;
+//				$data['graded'] = FALSE;
+//				$data['last'] = "";
+//				$data['last_modified'] = $submission_data['submitted_at'];
+//			}
+//		} else {
+//			$data['deadline'] = TRUE;
+//			if($submission_data['submitted']){
+//				$data['graded'] = TRUE;
+//				$data['submitted'] = TRUE;
+//				$data['last'] = $submission_data['filepath'];
+//				$data['last_modified'] = explode(' ', $submission_data['submitted_at'])[0] . ', ' . strval(date("g:i a", strtotime(explode(' ', $submission_data['submitted_at'])[1])));
+//
+//			} else {
+//				$data['graded'] = FALSE;
+//				$data['submitted'] = FALSE;
+//				$data['last'] = "";
+//				$data['last_modified'] = $submission_data['submitted_at'];
+//
+//			}
+//		}
 
 		$data['assignment_id'] = $assignment_id;
 		$data['indexNumber'] = $student_id;

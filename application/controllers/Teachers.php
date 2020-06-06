@@ -50,8 +50,7 @@ class Teachers extends CI_Controller
 			'language' => $this->input->post('language'),
 			'course_id' => $course_id,
 			'deadline' => $this->input->post('deadline'),
-			'time' => $this->input->post('time'),
-			'status' => 'ongoing'
+			'time' => $this->input->post('time')
 		);
 			
 		$data['title'] = 'Create new Assignment';	

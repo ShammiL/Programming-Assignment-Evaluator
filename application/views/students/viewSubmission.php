@@ -6,7 +6,7 @@
 				<h2><?php echo $assignment_data['course_id'] ?></h2>
 				<h3>Assignment <?php echo $num." - ".$assignment_data['assignment_name']; if ($deadline && !$submitted) { ?><label class="overdue-banner">!!! Overdue !!!</label><?php } ?></h3>
 				<div class="row">
-					<?php if($deadline && $submitted){ ?>
+					<?php if($graded && $submitted){ ?>
 						<a href="<?php echo base_url(); ?>student/viewGrade/<?php echo $assignment_id; ?>/<?php echo $num; ?>" class="btn btn-primary ml-3" type="submit" id="view-grade">View Grade</a>
 					<?php }  ?>
 					<a href="<?php echo base_url(); ?>student/reportIssue/<?php echo $assignment_id; ?>" class="btn btn-primary ml-3" type="submit">Report Issue</a>
@@ -45,7 +45,7 @@
 							<label class="col-md-9" for="file-input" id="grading-status">
 								<?php 
 									if($submitted){
-										if($deadline){
+										if($graded){
 											echo "Graded";
 										} else {
 											echo "Not graded";

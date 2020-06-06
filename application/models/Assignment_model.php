@@ -7,12 +7,7 @@ class Assignment_model extends CI_Model{
     function checkStatus($id){
 
         $this->db->where('assignment_id',$id);
-        $status = $this->db->get('assignments')->row(0)->status;
-        if( $status == 'finished'){
-            return FALSE;
-        } else {
-            return TRUE;
-        }
+		return $this->db->get('assignments')->row(0)->status;
     }
 
 
