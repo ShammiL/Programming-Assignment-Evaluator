@@ -85,7 +85,10 @@
 						</tbody>
 					</table>
 				</div>
-                <?php } else {
+				<?php if ($assignment['status'] === '0') { // once the button is clicked status should be changed to 2?>
+					<button type="submit" name="grade-assignment" class="btn btn-primary pl-5 pr-5 mt-3">Grade All</button>
+                <?php }
+				} else {
                     echo "<p class='text-center'>There are no submissions.</p>";
                 } ?>
 			</div>

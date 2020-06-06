@@ -105,7 +105,8 @@ class Students extends CI_Controller{
 					$data['last_modified'] = $submission_data['submitted_at'];
 				}
 				break;
-			case 0:
+			case 0 :
+			case 1:
 				$data['deadline'] = TRUE;
 				$data['graded'] = FALSE;
 				if ($submission_data['submitted']) {
@@ -118,7 +119,7 @@ class Students extends CI_Controller{
 					$data['last_modified'] = $submission_data['submitted_at'];
 				}
 				break;
-			case 1:
+			case 2:
 				$data['deadline'] = TRUE;
 				if ($submission_data['submitted']) {
 					$data['graded'] = TRUE;
