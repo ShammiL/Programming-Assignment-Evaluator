@@ -3,8 +3,10 @@
 class Login extends CI_Controller {
 
 	function index(){
+		// echo 'in Login controller';
+		// $this->load->view('login/index');
+		$this->load->view('welcome_message');
 
-		$this->load->view('login/index');
 	}
 
 	function loginUser(){
