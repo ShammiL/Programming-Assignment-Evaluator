@@ -77,7 +77,7 @@
                             <tr>
                                 <td><?php echo $submission['student_id']; ?></td>
                                 <td><?php echo explode(' ', $submission['submitted_at'])[0] . ', ' . strval(date("g:i a", strtotime(explode(' ', $submission['submitted_at'])[1]))); ?></td>
-                                <td><?php echo $submission['grade']; ?><a class="ml-3" href="">Edit</a></td>
+                                <td><?php echo $submission['grade']; ?><a href="">Edit</a></td>
                                 <td>Yes</td>
                                 <td><a href="<?php echo base_url() . "teachers/download_submission/" . $submission['assignment_id'] . "/" . $submission['file_path']; ?>">Download</a><a class="ml-3" href="">Feedback</a></td>
                             </tr>
@@ -85,7 +85,7 @@
 						</tbody>
 					</table>
 				</div>
-				<?php if ($assignment['status'] === '0') { // once the button is clicked status should be changed to 2?>
+				<?php if ($assignment['status'] === '0') { // once the button is clicked status should be changed to 1?>
 					<button type="submit" name="grade-assignment" class="btn btn-primary pl-5 pr-5 mt-3">Grade All</button>
                 <?php }
 				} else {
@@ -96,5 +96,3 @@
 	</div>
 	<div class="col-md-1"></div>
 </div>
-
-
