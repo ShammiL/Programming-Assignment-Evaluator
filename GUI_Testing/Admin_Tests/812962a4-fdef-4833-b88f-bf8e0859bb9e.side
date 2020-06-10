@@ -5,7 +5,7 @@
   "url": "http://localhost:8015",
   "tests": [{
     "id": "edb1700f-b658-413f-941e-89a12ec35f9e",
-    "name": "Admin_Navigation_Bar_Test",
+    "name": "02 Navigation",
     "commands": [{
       "id": "51e750d2-cd3c-4b8e-84eb-e028e616b9dd",
       "comment": "",
@@ -227,7 +227,7 @@
     }]
   }, {
     "id": "9de00604-57db-46cf-a919-e96846866a0d",
-    "name": "Admin_Add_Student_Test",
+    "name": "11 Add_Student",
     "commands": [{
       "id": "63400418-562c-431d-bf88-3bf3c5f595d0",
       "comment": "",
@@ -598,7 +598,7 @@
     }]
   }, {
     "id": "cdc6630a-43ce-4988-ac63-61adf76ff0ab",
-    "name": "Admin_Add_Student_Index_Email_Already_Exists_Test",
+    "name": "14 Add_Student_Index_Email_Already_Exists",
     "commands": [{
       "id": "40c1b9db-cbbb-481a-ba46-b3254a345dd9",
       "comment": "",
@@ -1009,7 +1009,7 @@
     }]
   }, {
     "id": "ada15cd9-39cf-48f2-b8a1-e893da28379f",
-    "name": "Admin_Add_Student_Index_Already_Exists_Test",
+    "name": "13 Add_Student_Index_Already_Exists",
     "commands": [{
       "id": "c3107d7e-c3a8-41ca-b0bf-ca70df641932",
       "comment": "",
@@ -1400,7 +1400,7 @@
     }]
   }, {
     "id": "72196fd3-8878-4058-99a7-27560d45138a",
-    "name": "Admin_Add_Student_Email_Already_Exists_Test",
+    "name": "12 Add_Student_Email_Already_Exists",
     "commands": [{
       "id": "ff5e85a2-4a69-4cef-8352-5271356c80e2",
       "comment": "",
@@ -1791,7 +1791,7 @@
     }]
   }, {
     "id": "149decc0-343a-4237-b8c3-b8c68595c484",
-    "name": "Admin_View_Student_Test",
+    "name": "10 View_Students",
     "commands": [{
       "id": "1a5362dd-0ea6-4206-b2ee-29217efe9d72",
       "comment": "",
@@ -1913,7 +1913,7 @@
     }]
   }, {
     "id": "aaa90ca0-47d3-474b-882b-f60b1644ebd2",
-    "name": "Admin_Search_Student_Incorrect_Index_Test",
+    "name": "16 Search_Student_Incorrect_Index",
     "commands": [{
       "id": "5e4ac9bf-b2c6-46da-8265-8f6a1b7a30c8",
       "comment": "",
@@ -2125,7 +2125,7 @@
     }]
   }, {
     "id": "0beb56c4-753f-40ed-abb9-7c721ef6ef55",
-    "name": "Admin_Search_Student_Correct_Index_Test",
+    "name": "15 Search_Student",
     "commands": [{
       "id": "e3d112d0-8b6f-4749-a0da-169ddbdfb9aa",
       "comment": "",
@@ -2280,7 +2280,7 @@
         ["xpath=//input[@name='search-student']", "xpath:attributes"],
         ["xpath=//input", "xpath:position"]
       ],
-      "value": "170298h"
+      "value": "1702"
     }, {
       "id": "cbc63d05-0f47-4148-8f2e-1d01b7d0e58b",
       "comment": "",
@@ -2326,7 +2326,7 @@
     }]
   }, {
     "id": "1901b7ac-8b63-4280-b7ba-f4711395a04c",
-    "name": "Admin_Edit_Student_Test",
+    "name": "26 Edit_Student",
     "commands": [{
       "id": "330d212e-17ec-476f-b8dd-1bb761ceec4a",
       "comment": "",
@@ -2466,7 +2466,7 @@
         ["xpath=//td", "xpath:position"],
         ["xpath=//td[contains(.,'124563F')]", "xpath:innerText"]
       ],
-      "value": "124563F"
+      "value": "124564F"
     }, {
       "id": "f7082d54-5cad-4fa8-8d7b-477cef66dde4",
       "comment": "",
@@ -2494,6 +2494,13 @@
       ],
       "value": ""
     }, {
+      "id": "b90d3633-27d0-4eb8-b3f8-4c2161629596",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "Edit Student",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "c53de05c-c575-4a7c-a524-613129ae11bb",
       "comment": "",
       "command": "click",
@@ -2514,7 +2521,7 @@
         ["xpath=//h4", "xpath:position"],
         ["xpath=//h4[contains(.,'Index Number: 124563F')]", "xpath:innerText"]
       ],
-      "value": "Index Number: 124563F"
+      "value": "Index Number: 124564F"
     }, {
       "id": "802eeeee-8601-4c74-b292-50eb13d6a729",
       "comment": "",
@@ -2596,399 +2603,8 @@
       "value": ""
     }]
   }, {
-    "id": "3f567272-cba6-43b7-8fe5-b6cebdf294d6",
-    "name": "Admin_Add_Student_Incorrect_Telephone_Test",
-    "commands": [{
-      "id": "91c8fdb3-a188-46e2-9def-a88ae06ee229",
-      "comment": "",
-      "command": "open",
-      "target": "/Programming-Assignment-Evaluator/",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "4502d039-6bc5-4c09-91fb-1d94f0053e0c",
-      "comment": "",
-      "command": "setWindowSize",
-      "target": "1366x728",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "ec2ab0ad-e211-45c7-9f73-e809c45a12d4",
-      "comment": "",
-      "command": "click",
-      "target": "name=username",
-      "targets": [
-        ["name=username", "name"],
-        ["css=.one .input", "css:finder"],
-        ["xpath=//input[@name='username']", "xpath:attributes"],
-        ["xpath=//input", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "0be12a43-3671-4fb8-99a4-b2373a417a87",
-      "comment": "",
-      "command": "type",
-      "target": "name=username",
-      "targets": [
-        ["name=username", "name"],
-        ["css=.one .input", "css:finder"],
-        ["xpath=//input[@name='username']", "xpath:attributes"],
-        ["xpath=//input", "xpath:position"]
-      ],
-      "value": "melangak@email.com"
-    }, {
-      "id": "61ae1f8c-a39f-4340-b54f-2c41478c8b90",
-      "comment": "",
-      "command": "click",
-      "target": "name=password",
-      "targets": [
-        ["name=password", "name"],
-        ["css=.pass .input", "css:finder"],
-        ["xpath=//input[@name='password']", "xpath:attributes"],
-        ["xpath=//div[2]/div[2]/input", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "52eae1d0-5322-42fd-9212-46871cf34ef4",
-      "comment": "",
-      "command": "type",
-      "target": "name=password",
-      "targets": [
-        ["name=password", "name"],
-        ["css=.pass .input", "css:finder"],
-        ["xpath=//input[@name='password']", "xpath:attributes"],
-        ["xpath=//div[2]/div[2]/input", "xpath:position"]
-      ],
-      "value": "1234"
-    }, {
-      "id": "ca1cf3bb-ac1c-4862-9bff-b9c9d91ac4e7",
-      "comment": "",
-      "command": "click",
-      "target": "css=.custom-control-label",
-      "targets": [
-        ["css=.custom-control-label", "css:finder"],
-        ["xpath=//label", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "f657a152-16e0-4e9f-8488-21dadc9d3e48",
-      "comment": "",
-      "command": "click",
-      "target": "id=login",
-      "targets": [
-        ["id=login", "id"],
-        ["css=#login", "css:finder"],
-        ["xpath=//button[@id='login']", "xpath:attributes"],
-        ["xpath=//button", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "613beefa-77a2-4124-b4bb-f27ac468d15f",
-      "comment": "",
-      "command": "verifyTitle",
-      "target": "Home",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "de908307-7eec-465b-87a9-5efa7d88e19b",
-      "comment": "",
-      "command": "verifyText",
-      "target": "css=.col-md-4:nth-child(3) a:nth-child(1) > .card-header",
-      "targets": [
-        ["css=.col-md-4:nth-child(3) a:nth-child(1) > .card-header", "css:finder"],
-        ["xpath=//div[3]/div/div[3]/a/div", "xpath:position"]
-      ],
-      "value": "Add New Student"
-    }, {
-      "id": "dcf32570-658b-484a-982b-db9d0c315f87",
-      "comment": "",
-      "command": "click",
-      "target": "css=.col-md-4:nth-child(3) a:nth-child(1) > .card-header",
-      "targets": [
-        ["css=.col-md-4:nth-child(3) a:nth-child(1) > .card-header", "css:finder"],
-        ["xpath=//div[3]/div/div[3]/a/div", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "5acf7192-4bd4-452c-b282-807748d59be5",
-      "comment": "",
-      "command": "verifyTitle",
-      "target": "Add Student",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "ef9cb1aa-f48a-447b-b8e5-3e71c3b0daa7",
-      "comment": "",
-      "command": "click",
-      "target": "name=index",
-      "targets": [
-        ["name=index", "name"],
-        ["css=.col-md-4:nth-child(1) > .form-control", "css:finder"],
-        ["xpath=//input[@name='index']", "xpath:attributes"],
-        ["xpath=//input", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "992d8013-fccd-4c03-ba18-cd3332fac674",
-      "comment": "",
-      "command": "type",
-      "target": "name=index",
-      "targets": [
-        ["name=index", "name"],
-        ["css=.col-md-4:nth-child(1) > .form-control", "css:finder"],
-        ["xpath=//input[@name='index']", "xpath:attributes"],
-        ["xpath=//input", "xpath:position"]
-      ],
-      "value": "124569F"
-    }, {
-      "id": "948962e4-4b31-4834-82e2-84e5515eddd8",
-      "comment": "",
-      "command": "click",
-      "target": "name=fname",
-      "targets": [
-        ["name=fname", "name"],
-        ["css=.col-md-4:nth-child(2) > .form-control", "css:finder"],
-        ["xpath=//input[@name='fname']", "xpath:attributes"],
-        ["xpath=//div[2]/input", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "4f9ea0c5-ee3d-40fa-ae20-244318624b97",
-      "comment": "",
-      "command": "type",
-      "target": "name=fname",
-      "targets": [
-        ["name=fname", "name"],
-        ["css=.col-md-4:nth-child(2) > .form-control", "css:finder"],
-        ["xpath=//input[@name='fname']", "xpath:attributes"],
-        ["xpath=//div[2]/input", "xpath:position"]
-      ],
-      "value": "Sachini"
-    }, {
-      "id": "d381bb1d-e09e-477b-82cd-8f8f08509cf4",
-      "comment": "",
-      "command": "click",
-      "target": "name=lname",
-      "targets": [
-        ["name=lname", "name"],
-        ["css=.form-group:nth-child(3) > .form-control", "css:finder"],
-        ["xpath=//input[@name='lname']", "xpath:attributes"],
-        ["xpath=//div[3]/input", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "6d5bee1b-c21e-418f-87a6-c60f171fa803",
-      "comment": "",
-      "command": "type",
-      "target": "name=lname",
-      "targets": [
-        ["name=lname", "name"],
-        ["css=.form-group:nth-child(3) > .form-control", "css:finder"],
-        ["xpath=//input[@name='lname']", "xpath:attributes"],
-        ["xpath=//div[3]/input", "xpath:position"]
-      ],
-      "value": "Lakshani"
-    }, {
-      "id": "84dbad31-1c7a-47bd-a733-231b74e62f02",
-      "comment": "",
-      "command": "click",
-      "target": "name=bday",
-      "targets": [
-        ["name=bday", "name"],
-        ["css=.form-row:nth-child(2) > .col-md-4:nth-child(1) .form-control", "css:finder"],
-        ["xpath=//input[@name='bday']", "xpath:attributes"],
-        ["xpath=//div[2]/div/div/input", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "04872712-7c47-464c-a6ed-1a40f766365f",
-      "comment": "",
-      "command": "type",
-      "target": "name=bday",
-      "targets": [
-        ["name=bday", "name"],
-        ["css=.form-row:nth-child(2) > .col-md-4:nth-child(1) .form-control", "css:finder"],
-        ["xpath=//input[@name='bday']", "xpath:attributes"],
-        ["xpath=//div[2]/div/div/input", "xpath:position"]
-      ],
-      "value": "2004-10-24"
-    }, {
-      "id": "49b934e2-c772-4ac1-8cf0-8c74c207add6",
-      "comment": "",
-      "command": "click",
-      "target": "name=gender",
-      "targets": [
-        ["name=gender", "name"],
-        ["css=.col-md-4:nth-child(2) > .form-group > .form-control", "css:finder"],
-        ["xpath=//select[@name='gender']", "xpath:attributes"],
-        ["xpath=//select", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "f5d310dc-a3fe-4544-9d0a-eb7a728abb3b",
-      "comment": "",
-      "command": "select",
-      "target": "name=gender",
-      "targets": [],
-      "value": "label=Female"
-    }, {
-      "id": "8d89bde0-e226-4b2a-9d34-8b5f8c767a6d",
-      "comment": "",
-      "command": "click",
-      "target": "name=nationality",
-      "targets": [
-        ["name=nationality", "name"],
-        ["css=.col-md-4:nth-child(3) > .form-group > .form-control", "css:finder"],
-        ["xpath=//select[@name='nationality']", "xpath:attributes"],
-        ["xpath=//div[3]/div/select", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "1068a536-66ea-41e4-958c-6776ef1535e5",
-      "comment": "",
-      "command": "select",
-      "target": "name=nationality",
-      "targets": [],
-      "value": "label=Sinhala"
-    }, {
-      "id": "04237aa6-5cac-41ba-bb51-d0c68b82ece4",
-      "comment": "",
-      "command": "click",
-      "target": "name=email",
-      "targets": [
-        ["name=email", "name"],
-        ["css=.col-md-6:nth-child(1) > .form-control", "css:finder"],
-        ["xpath=//input[@name='email']", "xpath:attributes"],
-        ["xpath=//div[3]/div/input", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "28a743e8-fd16-48d5-a6ae-01b33ffad77f",
-      "comment": "",
-      "command": "type",
-      "target": "name=email",
-      "targets": [
-        ["name=email", "name"],
-        ["css=.col-md-6:nth-child(1) > .form-control", "css:finder"],
-        ["xpath=//input[@name='email']", "xpath:attributes"],
-        ["xpath=//div[3]/div/input", "xpath:position"]
-      ],
-      "value": "sachini08@email.com"
-    }, {
-      "id": "9c3fba42-d274-41ee-ae27-72c5b01872aa",
-      "comment": "",
-      "command": "click",
-      "target": "name=semester",
-      "targets": [
-        ["name=semester", "name"],
-        ["css=.col-md-6:nth-child(2) > .form-control", "css:finder"],
-        ["xpath=//select[@name='semester']", "xpath:attributes"],
-        ["xpath=//div[2]/select", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "cd235c97-4d4c-4e1f-9842-824473759c30",
-      "comment": "",
-      "command": "click",
-      "target": "name=semester",
-      "targets": [
-        ["name=semester", "name"],
-        ["css=.col-md-6:nth-child(2) > .form-control", "css:finder"],
-        ["xpath=//select[@name='semester']", "xpath:attributes"],
-        ["xpath=//div[2]/select", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "4f392555-0adb-4e59-b207-032adb3de9be",
-      "comment": "",
-      "command": "click",
-      "target": "name=phone",
-      "targets": [
-        ["name=phone", "name"],
-        ["css=.form-row:nth-child(4) > .col-md-4 .form-control", "css:finder"],
-        ["xpath=//input[@name='phone']", "xpath:attributes"],
-        ["xpath=//div[4]/div/div/input", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "d3f1fe63-d1a3-4034-9b70-dfcfcc51d712",
-      "comment": "",
-      "command": "type",
-      "target": "name=phone",
-      "targets": [
-        ["name=phone", "name"],
-        ["css=.form-row:nth-child(4) > .col-md-4 .form-control", "css:finder"],
-        ["xpath=//input[@name='phone']", "xpath:attributes"],
-        ["xpath=//div[4]/div/div/input", "xpath:position"]
-      ],
-      "value": "071366560a"
-    }, {
-      "id": "d6fd9f52-638d-41b1-9fef-f893507d752a",
-      "comment": "",
-      "command": "click",
-      "target": "name=address",
-      "targets": [
-        ["name=address", "name"],
-        ["css=.col-md-8 .form-control", "css:finder"],
-        ["xpath=//input[@name='address']", "xpath:attributes"],
-        ["xpath=//div[2]/div/input", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "359131be-3e3c-46e1-b5ab-4c914126226e",
-      "comment": "",
-      "command": "type",
-      "target": "name=address",
-      "targets": [
-        ["name=address", "name"],
-        ["css=.col-md-8 .form-control", "css:finder"],
-        ["xpath=//input[@name='address']", "xpath:attributes"],
-        ["xpath=//div[2]/div/input", "xpath:position"]
-      ],
-      "value": "Kotagewaththa, Uggoda, Yatiyana, Matara"
-    }, {
-      "id": "e06f12ab-0f53-41e4-be0f-27512a7ce646",
-      "comment": "",
-      "command": "click",
-      "target": "css=.btn:nth-child(5)",
-      "targets": [
-        ["css=.btn:nth-child(5)", "css:finder"],
-        ["xpath=//button[@type='submit']", "xpath:attributes"],
-        ["xpath=//form/button", "xpath:position"],
-        ["xpath=//button[contains(.,'Add Student')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "0d0750a7-f102-4a6a-8d66-31ac339b3e1a",
-      "comment": "",
-      "command": "click",
-      "target": "css=.change-password-wrong:nth-child(1)",
-      "targets": [
-        ["css=.change-password-wrong:nth-child(2)", "css:finder"],
-        ["xpath=//div[2]/div[2]", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "336887d3-ea21-4c85-8935-4697b7c85dbc",
-      "comment": "",
-      "command": "verifyTitle",
-      "target": "Add Student",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "fb0b0f97-349b-4684-a392-5f7d8ea1b9d0",
-      "comment": "",
-      "command": "verifyText",
-      "target": "css=.change-password-wrong:nth-child(1)",
-      "targets": [
-        ["css=.change-password-wrong:nth-child(2)", "css:finder"],
-        ["xpath=//div[2]/div[2]", "xpath:position"]
-      ],
-      "value": "The Telephone Number you entered is invalid."
-    }]
-  }, {
     "id": "99f778e5-b99f-4b86-893e-b5003529e4ca",
-    "name": "Admin_Add_Teacher_Test",
+    "name": "18 Add_Teacher",
     "commands": [{
       "id": "92301dab-4d51-4701-aa09-24f46cf40a8b",
       "comment": "",
@@ -3318,7 +2934,7 @@
     }]
   }, {
     "id": "e7b1c7b4-c73b-4757-9886-ce685fe3e9c0",
-    "name": "Admin_Add_Teacher_NIC_Email_Already_Exists_Test",
+    "name": "21 Add_Teacher_NIC_Email_Already_Exists",
     "commands": [{
       "id": "4aca420a-1333-4a0e-b714-fb88e2a36de9",
       "comment": "",
@@ -3443,7 +3059,7 @@
         ["xpath=//input[@name='nic']", "xpath:attributes"],
         ["xpath=//input", "xpath:position"]
       ],
-      "value": "972183262v"
+      "value": "972183265v"
     }, {
       "id": "8d8cc6ae-74a4-4c49-a85c-be9824e6684c",
       "comment": "",
@@ -3688,7 +3304,7 @@
     }]
   }, {
     "id": "b97df086-d616-459d-910b-dfb263104320",
-    "name": "Admin_Add_Teacher_NIC_Already_Exists_Test",
+    "name": "20 Add_Teacher_NIC_Already_Exists ",
     "commands": [{
       "id": "3ee87923-ca00-49b5-9ed4-61ade5bcfafe",
       "comment": "",
@@ -3813,7 +3429,7 @@
         ["xpath=//input[@name='nic']", "xpath:attributes"],
         ["xpath=//input", "xpath:position"]
       ],
-      "value": "972183262v"
+      "value": "972183265v"
     }, {
       "id": "bb88c44f-e61c-4233-bb24-f7ab1e7ee1b3",
       "comment": "",
@@ -4038,7 +3654,7 @@
     }]
   }, {
     "id": "2024f8e8-3e86-4c97-832d-f4879eca9c61",
-    "name": "Admin_Add_Teacher_Email_Already_Exists_Test",
+    "name": "19 Add_Teacher_Email_Already_Exists",
     "commands": [{
       "id": "66d6fa67-af42-4603-924c-4ecc2dbb3ed5",
       "comment": "",
@@ -4163,7 +3779,7 @@
         ["xpath=//input[@name='nic']", "xpath:attributes"],
         ["xpath=//input", "xpath:position"]
       ],
-      "value": "972183265v"
+      "value": "972183264v"
     }, {
       "id": "f4cf4349-aa9e-4116-ae27-ce3860b54e00",
       "comment": "",
@@ -4388,7 +4004,7 @@
     }]
   }, {
     "id": "df66d38d-cdd5-4eb4-91bc-c79868ec74fa",
-    "name": "Admin_Edit_Teacher_Test",
+    "name": "27 Edit_Teacher",
     "commands": [{
       "id": "18ed6464-5126-4b03-bb55-a037bafe1891",
       "comment": "",
@@ -4528,7 +4144,7 @@
         ["xpath=//td", "xpath:position"],
         ["xpath=//td[contains(.,'147852963v')]", "xpath:innerText"]
       ],
-      "value": "147852963v"
+      "value": "550331471v"
     }, {
       "id": "d54253dc-5b6e-4f2d-a43c-f2688dd79e68",
       "comment": "",
@@ -4570,7 +4186,7 @@
         ["xpath=//h4", "xpath:position"],
         ["xpath=//h4[contains(.,'NIC: 147852963v')]", "xpath:innerText"]
       ],
-      "value": "NIC: 147852963v"
+      "value": "NIC: 550331471v"
     }, {
       "id": "e9867677-d46a-4b75-b01e-6004ff993f3f",
       "comment": "",
@@ -4642,344 +4258,8 @@
       "value": "New data updated successfully."
     }]
   }, {
-    "id": "3f0e8415-8d95-4036-8152-f7f62ddb0b0d",
-    "name": "Admin_Add_Teacher_Incorrect_Telephone_Test",
-    "commands": [{
-      "id": "3ff47f1f-5bc2-49ea-a5aa-8f09dad70601",
-      "comment": "",
-      "command": "open",
-      "target": "/Programming-Assignment-Evaluator/",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "aed6a5d8-9204-46c3-aea1-95e68e3f06df",
-      "comment": "",
-      "command": "setWindowSize",
-      "target": "1366x728",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "39f9f191-1eff-4bce-ab37-0d310d26e455",
-      "comment": "",
-      "command": "click",
-      "target": "name=username",
-      "targets": [
-        ["name=username", "name"],
-        ["css=.one .input", "css:finder"],
-        ["xpath=//input[@name='username']", "xpath:attributes"],
-        ["xpath=//input", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "c6addbda-3880-4f06-a168-ae24e3d06d48",
-      "comment": "",
-      "command": "type",
-      "target": "name=username",
-      "targets": [
-        ["name=username", "name"],
-        ["css=.one .input", "css:finder"],
-        ["xpath=//input[@name='username']", "xpath:attributes"],
-        ["xpath=//input", "xpath:position"]
-      ],
-      "value": "melangak@email.com"
-    }, {
-      "id": "bbf50ad1-31fc-429d-a8f2-5e887b257d50",
-      "comment": "",
-      "command": "click",
-      "target": "name=password",
-      "targets": [
-        ["name=password", "name"],
-        ["css=.pass .input", "css:finder"],
-        ["xpath=//input[@name='password']", "xpath:attributes"],
-        ["xpath=//div[2]/div[2]/input", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "88a6d80a-6e10-43c5-8d21-d2aa356f17ca",
-      "comment": "",
-      "command": "type",
-      "target": "name=password",
-      "targets": [
-        ["name=password", "name"],
-        ["css=.pass .input", "css:finder"],
-        ["xpath=//input[@name='password']", "xpath:attributes"],
-        ["xpath=//div[2]/div[2]/input", "xpath:position"]
-      ],
-      "value": "1234"
-    }, {
-      "id": "7108351e-2214-4b19-a72b-903f65a722d7",
-      "comment": "",
-      "command": "click",
-      "target": "css=.custom-control-label",
-      "targets": [
-        ["css=.custom-control-label", "css:finder"],
-        ["xpath=//label", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "e67489c8-4c3d-4241-bfc9-cc17f24b3697",
-      "comment": "",
-      "command": "click",
-      "target": "id=login",
-      "targets": [
-        ["id=login", "id"],
-        ["css=#login", "css:finder"],
-        ["xpath=//button[@id='login']", "xpath:attributes"],
-        ["xpath=//button", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "496811b5-4588-4f56-a790-11317d7efb38",
-      "comment": "",
-      "command": "click",
-      "target": "css=.col-md-4:nth-child(2) a:nth-child(1) > .card-header",
-      "targets": [
-        ["css=.col-md-4:nth-child(2) a:nth-child(1) > .card-header", "css:finder"],
-        ["xpath=//div[2]/div/div[3]/a/div", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "a4db40bd-5417-4b2d-8297-283478132a4a",
-      "comment": "",
-      "command": "click",
-      "target": "name=nic",
-      "targets": [
-        ["name=nic", "name"],
-        ["css=.col-md-4:nth-child(1) > .form-control", "css:finder"],
-        ["xpath=//input[@name='nic']", "xpath:attributes"],
-        ["xpath=//input", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "4905ac04-5395-46d2-a649-37bc886abaf3",
-      "comment": "",
-      "command": "type",
-      "target": "name=nic",
-      "targets": [
-        ["name=nic", "name"],
-        ["css=.col-md-4:nth-child(1) > .form-control", "css:finder"],
-        ["xpath=//input[@name='nic']", "xpath:attributes"],
-        ["xpath=//input", "xpath:position"]
-      ],
-      "value": "550331471v"
-    }, {
-      "id": "be061252-5837-4c16-addc-343c93e7a3a9",
-      "comment": "",
-      "command": "click",
-      "target": "name=fname",
-      "targets": [
-        ["name=fname", "name"],
-        ["css=.col-md-4:nth-child(2) > .form-control", "css:finder"],
-        ["xpath=//input[@name='fname']", "xpath:attributes"],
-        ["xpath=//div[2]/input", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "731dfea6-3ddd-4219-b967-4bde983bc4a0",
-      "comment": "",
-      "command": "type",
-      "target": "name=fname",
-      "targets": [
-        ["name=fname", "name"],
-        ["css=.col-md-4:nth-child(2) > .form-control", "css:finder"],
-        ["xpath=//input[@name='fname']", "xpath:attributes"],
-        ["xpath=//div[2]/input", "xpath:position"]
-      ],
-      "value": "Supun"
-    }, {
-      "id": "31ed4921-6f9c-4fe7-865c-ed7177326f68",
-      "comment": "",
-      "command": "click",
-      "target": "name=lname",
-      "targets": [
-        ["name=lname", "name"],
-        ["css=.form-group:nth-child(3) > .form-control", "css:finder"],
-        ["xpath=//input[@name='lname']", "xpath:attributes"],
-        ["xpath=//div[3]/input", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "5f7bff84-859c-46df-8927-3892942221e3",
-      "comment": "",
-      "command": "type",
-      "target": "name=lname",
-      "targets": [
-        ["name=lname", "name"],
-        ["css=.form-group:nth-child(3) > .form-control", "css:finder"],
-        ["xpath=//input[@name='lname']", "xpath:attributes"],
-        ["xpath=//div[3]/input", "xpath:position"]
-      ],
-      "value": "Gunawardhana"
-    }, {
-      "id": "59b3b41c-84e4-4035-a7a2-7c54184e1d07",
-      "comment": "",
-      "command": "click",
-      "target": "name=email",
-      "targets": [
-        ["name=email", "name"],
-        ["css=form > .form-group > .form-control", "css:finder"],
-        ["xpath=//input[@name='email']", "xpath:attributes"],
-        ["xpath=//form/div[2]/input", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "e934738f-a257-4403-a995-f8f51501b082",
-      "comment": "",
-      "command": "type",
-      "target": "name=email",
-      "targets": [
-        ["name=email", "name"],
-        ["css=form > .form-group > .form-control", "css:finder"],
-        ["xpath=//input[@name='email']", "xpath:attributes"],
-        ["xpath=//form/div[2]/input", "xpath:position"]
-      ],
-      "value": "supung@email.com"
-    }, {
-      "id": "d7729abe-1b7e-4e60-a331-8a6237489a62",
-      "comment": "",
-      "command": "click",
-      "target": "name=bday",
-      "targets": [
-        ["name=bday", "name"],
-        ["css=.form-row:nth-child(3) > .col-md-4:nth-child(1) .form-control", "css:finder"],
-        ["xpath=//input[@name='bday']", "xpath:attributes"],
-        ["xpath=//div[3]/div/div/input", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "9c501f1d-803f-4b6a-8f61-dfe92a57ad50",
-      "comment": "",
-      "command": "type",
-      "target": "name=bday",
-      "targets": [
-        ["name=bday", "name"],
-        ["css=.form-row:nth-child(3) > .col-md-4:nth-child(1) .form-control", "css:finder"],
-        ["xpath=//input[@name='bday']", "xpath:attributes"],
-        ["xpath=//div[3]/div/div/input", "xpath:position"]
-      ],
-      "value": "1997-11-04"
-    }, {
-      "id": "d51d76c1-1896-474a-ae5c-60c50e1a5bd3",
-      "comment": "",
-      "command": "click",
-      "target": "name=gender",
-      "targets": [
-        ["name=gender", "name"],
-        ["css=.col-md-4:nth-child(2) > .form-group > .form-control", "css:finder"],
-        ["xpath=//select[@name='gender']", "xpath:attributes"],
-        ["xpath=//select", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "92a6d24b-0fda-4e5e-904a-ab7db51de42b",
-      "comment": "",
-      "command": "select",
-      "target": "name=gender",
-      "targets": [],
-      "value": "label=Male"
-    }, {
-      "id": "c3f550cf-ff2d-4a2c-a6fe-b1bdda94fedf",
-      "comment": "",
-      "command": "click",
-      "target": "name=nationality",
-      "targets": [
-        ["name=nationality", "name"],
-        ["css=.col-md-4:nth-child(3) > .form-group > .form-control", "css:finder"],
-        ["xpath=//select[@name='nationality']", "xpath:attributes"],
-        ["xpath=//div[3]/div/select", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "28bcbcac-c58f-4e46-8144-2198acb9ff59",
-      "comment": "",
-      "command": "select",
-      "target": "name=nationality",
-      "targets": [],
-      "value": "label=Muslim"
-    }, {
-      "id": "db71b400-93fa-44e1-b5ce-22d3f8ad5616",
-      "comment": "",
-      "command": "click",
-      "target": "name=phone",
-      "targets": [
-        ["name=phone", "name"],
-        ["css=.form-row:nth-child(4) > .col-md-4 .form-control", "css:finder"],
-        ["xpath=//input[@name='phone']", "xpath:attributes"],
-        ["xpath=//div[4]/div/div/input", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "42a2c282-25ac-4994-a5d3-8a4fcbda52cd",
-      "comment": "",
-      "command": "type",
-      "target": "name=phone",
-      "targets": [
-        ["name=phone", "name"],
-        ["css=.form-row:nth-child(4) > .col-md-4 .form-control", "css:finder"],
-        ["xpath=//input[@name='phone']", "xpath:attributes"],
-        ["xpath=//div[4]/div/div/input", "xpath:position"]
-      ],
-      "value": "0114747"
-    }, {
-      "id": "ac8534a2-57d7-40f9-86fe-dbf3324c1e0d",
-      "comment": "",
-      "command": "click",
-      "target": "name=address",
-      "targets": [
-        ["name=address", "name"],
-        ["css=.col-md-8 .form-control", "css:finder"],
-        ["xpath=//input[@name='address']", "xpath:attributes"],
-        ["xpath=//div[2]/div/input", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "3beb4c15-fdd7-4a46-b092-192489cbe857",
-      "comment": "",
-      "command": "type",
-      "target": "name=address",
-      "targets": [
-        ["name=address", "name"],
-        ["css=.col-md-8 .form-control", "css:finder"],
-        ["xpath=//input[@name='address']", "xpath:attributes"],
-        ["xpath=//div[2]/div/input", "xpath:position"]
-      ],
-      "value": "Kotagewaththa, Uggoda, Yatiyana, Matara"
-    }, {
-      "id": "06595215-0c94-432b-84a6-18369b530a10",
-      "comment": "",
-      "command": "click",
-      "target": "css=.btn:nth-child(5)",
-      "targets": [
-        ["css=.btn:nth-child(5)", "css:finder"],
-        ["xpath=//button[@type='submit']", "xpath:attributes"],
-        ["xpath=//form/button", "xpath:position"],
-        ["xpath=//button[contains(.,'Add Teacher')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "a84bfbfa-3e1d-4ac1-9c86-875c522aaf68",
-      "comment": "",
-      "command": "click",
-      "target": "css=.change-password-wrong",
-      "targets": [
-        ["css=.change-password-wrong", "css:finder"],
-        ["xpath=//div/div[2]/div", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "d5360954-e53d-4e27-800b-d0e90251bd95",
-      "comment": "",
-      "command": "verifyText",
-      "target": "css=.change-password-wrong",
-      "targets": [
-        ["css=.change-password-wrong", "css:finder"],
-        ["xpath=//div/div[2]/div", "xpath:position"]
-      ],
-      "value": "The Telephone Number you entered is invalid."
-    }]
-  }, {
     "id": "f623efb9-d792-439a-99be-2ca0083b0550",
-    "name": "Admin_Add_Course_Test",
+    "name": "04 Add_Course",
     "commands": [{
       "id": "515d90c6-82e8-460b-afd3-fe5879b68aed",
       "comment": "",
@@ -5111,7 +4391,7 @@
         ["xpath=//input[@name='id']", "xpath:attributes"],
         ["xpath=//input", "xpath:position"]
       ],
-      "value": "CS2019"
+      "value": "CS2011"
     }, {
       "id": "549bd468-3d3b-4718-9451-85431625fec5",
       "comment": "",
@@ -5135,7 +4415,7 @@
         ["xpath=//input[@name='title']", "xpath:attributes"],
         ["xpath=//div[2]/input", "xpath:position"]
       ],
-      "value": "Computer Engineering for Future"
+      "value": "Computer Engineering for Future II"
     }, {
       "id": "c0e72963-6328-4805-aa3e-594ea659a516",
       "comment": "",
@@ -5173,12 +4453,12 @@
       ],
       "value": ""
     }, {
-      "id": "8154e666-68da-444a-97c9-4afe576d028d",
+      "id": "215f65bd-3f7e-4325-8a42-e6b7ca92a11e",
       "comment": "",
       "command": "select",
       "target": "name=teacher",
       "targets": [],
-      "value": "label=550331470v - D. B. Ariyasena"
+      "value": "label=582201472v - Sisira Gunawardhana"
     }, {
       "id": "526250d3-4b9a-463f-931c-b993b6f083bb",
       "comment": "",
@@ -5232,7 +4512,7 @@
     }]
   }, {
     "id": "6de94893-b7dd-44d5-8d02-b402f9b668eb",
-    "name": "Admin_Add_Course_ID_Already_Exists_Test",
+    "name": "05 Add_Course_ID_Already_Exists",
     "commands": [{
       "id": "69d054ca-7ad8-4485-b21b-776da19ac01b",
       "comment": "",
@@ -5364,7 +4644,7 @@
         ["xpath=//input[@name='id']", "xpath:attributes"],
         ["xpath=//input", "xpath:position"]
       ],
-      "value": "CS1012"
+      "value": "CS2011"
     }, {
       "id": "6c1e66b8-d1da-4ed9-9848-f1844c7ee44f",
       "comment": "",
@@ -5388,7 +4668,7 @@
         ["xpath=//input[@name='title']", "xpath:attributes"],
         ["xpath=//div[2]/input", "xpath:position"]
       ],
-      "value": "Where can I get "
+      "value": "Test"
     }, {
       "id": "5ea3dff8-e275-484c-a5e9-05ebbd1ed088",
       "comment": "",
@@ -5426,12 +4706,12 @@
       ],
       "value": ""
     }, {
-      "id": "30329e7d-c1b4-4f2f-9c5e-b3fb0e397c8a",
+      "id": "43fde25a-826a-48c8-b3c1-b2a18ef5a2d5",
       "comment": "",
       "command": "select",
       "target": "name=teacher",
       "targets": [],
-      "value": "label=972183263v - Sachini Lakshani"
+      "value": "label=582201472v - Sisira Gunawardhana"
     }, {
       "id": "0b2c0155-7299-40d4-8723-ab3e7c783a81",
       "comment": "",
@@ -5515,7 +4795,7 @@
     }]
   }, {
     "id": "eb29fc39-f778-416e-8012-204cd9625a97",
-    "name": "Admin_Add_Course_ID_Title_Already_Exists_Test",
+    "name": "06 Add_Course_ID_Title_Already_Exists",
     "commands": [{
       "id": "0af4e2fe-74e1-43b8-abd3-946f95d415ca",
       "comment": "",
@@ -5647,7 +4927,31 @@
         ["xpath=//input[@name='id']", "xpath:attributes"],
         ["xpath=//input", "xpath:position"]
       ],
-      "value": "CS1012"
+      "value": "CS2011"
+    }, {
+      "id": "3477c363-2216-472c-bed1-874a82777b12",
+      "comment": "",
+      "command": "click",
+      "target": "name=title",
+      "targets": [
+        ["name=title", "name"],
+        ["css=.form-row:nth-child(1) > .form-group:nth-child(2) > .form-control", "css:finder"],
+        ["xpath=//input[@name='title']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d25b0305-4562-4162-8fe0-39bfd7667d5d",
+      "comment": "",
+      "command": "type",
+      "target": "name=title",
+      "targets": [
+        ["name=title", "name"],
+        ["css=.form-row:nth-child(1) > .form-group:nth-child(2) > .form-control", "css:finder"],
+        ["xpath=//input[@name='title']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "Where can I get"
     }, {
       "id": "68939b56-527d-4475-a0d1-26e186583801",
       "comment": "",
@@ -5685,12 +4989,12 @@
       ],
       "value": ""
     }, {
-      "id": "e10d0fb7-5722-4893-a196-d727c41d9783",
+      "id": "cea1ecb0-dc68-4e11-bdbb-8b24638f0c3d",
       "comment": "",
       "command": "select",
       "target": "name=teacher",
       "targets": [],
-      "value": "label=972183263v - Sachini Lakshani"
+      "value": "label=582201472v - Sisira Gunawardhana"
     }, {
       "id": "53f90a13-957d-4b25-b23e-ac47af8cde39",
       "comment": "",
@@ -5722,30 +5026,6 @@
         ["xpath=//div[2]/select", "xpath:position"]
       ],
       "value": ""
-    }, {
-      "id": "3477c363-2216-472c-bed1-874a82777b12",
-      "comment": "",
-      "command": "click",
-      "target": "name=title",
-      "targets": [
-        ["name=title", "name"],
-        ["css=.form-row:nth-child(1) > .form-group:nth-child(2) > .form-control", "css:finder"],
-        ["xpath=//input[@name='title']", "xpath:attributes"],
-        ["xpath=//div[2]/input", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "d25b0305-4562-4162-8fe0-39bfd7667d5d",
-      "comment": "",
-      "command": "type",
-      "target": "name=title",
-      "targets": [
-        ["name=title", "name"],
-        ["css=.form-row:nth-child(1) > .form-group:nth-child(2) > .form-control", "css:finder"],
-        ["xpath=//input[@name='title']", "xpath:attributes"],
-        ["xpath=//div[2]/input", "xpath:position"]
-      ],
-      "value": "Computer Science for Future"
     }, {
       "id": "b44b7975-0a08-4072-84ab-e5fbf8e52e5d",
       "comment": "",
@@ -5818,7 +5098,7 @@
     }]
   }, {
     "id": "75fbf285-a577-4eb4-80f9-b7c83d1d48e2",
-    "name": "Admin_Add_Course_Title_Already_Exists_Test",
+    "name": "07 Add_Course_Title_Already_Exists",
     "commands": [{
       "id": "5d55d173-8971-48a5-9094-6828b3d2bbae",
       "comment": "",
@@ -5950,7 +5230,31 @@
         ["xpath=//input[@name='id']", "xpath:attributes"],
         ["xpath=//input", "xpath:position"]
       ],
-      "value": "CS1013"
+      "value": "CS1014"
+    }, {
+      "id": "6d2cabba-a9f4-4751-94cd-065a00b1c6cb",
+      "comment": "",
+      "command": "click",
+      "target": "name=title",
+      "targets": [
+        ["name=title", "name"],
+        ["css=.form-row:nth-child(1) > .form-group:nth-child(2) > .form-control", "css:finder"],
+        ["xpath=//input[@name='title']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3804e7cf-4a2d-4eee-a42d-7852eee84625",
+      "comment": "",
+      "command": "type",
+      "target": "name=title",
+      "targets": [
+        ["name=title", "name"],
+        ["css=.form-row:nth-child(1) > .form-group:nth-child(2) > .form-control", "css:finder"],
+        ["xpath=//input[@name='title']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "Computer Science for Future"
     }, {
       "id": "35d53822-9ba3-4b41-9e67-f7c443674ae8",
       "comment": "",
@@ -5988,12 +5292,24 @@
       ],
       "value": ""
     }, {
-      "id": "e3431192-3eac-474d-8d62-46be569213fc",
+      "id": "9a4154e9-c9c0-48e6-93fc-b5bd7acdfb41",
+      "comment": "",
+      "command": "click",
+      "target": "name=teacher",
+      "targets": [
+        ["name=teacher", "name"],
+        ["css=.form-row:nth-child(3) > .form-group:nth-child(1) > .form-control", "css:finder"],
+        ["xpath=//select[@name='teacher']", "xpath:attributes"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9d63521e-0946-4785-8966-b6011e717970",
       "comment": "",
       "command": "select",
       "target": "name=teacher",
       "targets": [],
-      "value": "label=972183263v - Sachini Lakshani"
+      "value": "label=582201472v - Sisira Gunawardhana"
     }, {
       "id": "48eaa1bc-18db-4ffc-945e-063388b44cc1",
       "comment": "",
@@ -6025,30 +5341,6 @@
         ["xpath=//div[2]/select", "xpath:position"]
       ],
       "value": ""
-    }, {
-      "id": "6d2cabba-a9f4-4751-94cd-065a00b1c6cb",
-      "comment": "",
-      "command": "click",
-      "target": "name=title",
-      "targets": [
-        ["name=title", "name"],
-        ["css=.form-row:nth-child(1) > .form-group:nth-child(2) > .form-control", "css:finder"],
-        ["xpath=//input[@name='title']", "xpath:attributes"],
-        ["xpath=//div[2]/input", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "3804e7cf-4a2d-4eee-a42d-7852eee84625",
-      "comment": "",
-      "command": "type",
-      "target": "name=title",
-      "targets": [
-        ["name=title", "name"],
-        ["css=.form-row:nth-child(1) > .form-group:nth-child(2) > .form-control", "css:finder"],
-        ["xpath=//input[@name='title']", "xpath:attributes"],
-        ["xpath=//div[2]/input", "xpath:position"]
-      ],
-      "value": "Computer Science for Future"
     }, {
       "id": "0bad015c-341f-42ae-a42f-f75cebe05093",
       "comment": "",
@@ -6101,7 +5393,7 @@
     }]
   }, {
     "id": "f4084b2a-b698-41d6-9d09-9ce99861038a",
-    "name": "Admin_View_Course_Test",
+    "name": "03 View_Courses",
     "commands": [{
       "id": "079dcccf-858a-41b8-95de-f48eaae568fd",
       "comment": "",
@@ -6223,7 +5515,7 @@
     }]
   }, {
     "id": "f45576ea-fbfd-4f8c-81df-06303056070f",
-    "name": "Admin_View_Teacher_Test",
+    "name": "17 View_Teachers",
     "commands": [{
       "id": "7e1119b3-62d8-4d61-827b-060ab8b44627",
       "comment": "",
@@ -6345,7 +5637,7 @@
     }]
   }, {
     "id": "ff900987-17d9-4409-917b-8e1ee7ec1aeb",
-    "name": "Admin_Search_Course_Correct_ID_Test",
+    "name": "08 Search_Course",
     "commands": [{
       "id": "d75785bf-686c-4ace-ae6a-48305d7ebd1b",
       "comment": "",
@@ -6500,7 +5792,7 @@
         ["xpath=//input[@name='search-course']", "xpath:attributes"],
         ["xpath=//input", "xpath:position"]
       ],
-      "value": "CS1012"
+      "value": "CS101"
     }, {
       "id": "b1f95f54-b2e4-4e79-8d1e-ae751e27ab28",
       "comment": "",
@@ -6546,7 +5838,7 @@
     }]
   }, {
     "id": "0289eea8-3719-4100-9c25-3290ed490d86",
-    "name": "Admin_Search_Course_Incorrect_ID_Test",
+    "name": "09 Search_Course_Incorrect_ID",
     "commands": [{
       "id": "943379d9-cb1f-4719-a15b-d08b3f06e780",
       "comment": "",
@@ -6740,7 +6032,7 @@
     }]
   }, {
     "id": "ffbcfe30-b619-4d6f-acec-2370fcb34dfa",
-    "name": "Admin_Search_Teacher_Correct_NIC_Test",
+    "name": "24 Search_Teacher",
     "commands": [{
       "id": "0a792939-2285-430b-8839-567d35b0b9ce",
       "comment": "",
@@ -6895,7 +6187,7 @@
         ["xpath=//input[@name='search-teacher']", "xpath:attributes"],
         ["xpath=//input", "xpath:position"]
       ],
-      "value": "972183261v"
+      "value": "97218"
     }, {
       "id": "9c95a48c-132f-48da-8777-ea85cbfd98b8",
       "comment": "",
@@ -6937,11 +6229,11 @@
         ["xpath=//td", "xpath:position"],
         ["xpath=//td[contains(.,'972183261v')]", "xpath:innerText"]
       ],
-      "value": "972183261v"
+      "value": "972183263v"
     }]
   }, {
     "id": "a003641b-8c85-4d43-bf83-f6c9629034c4",
-    "name": "Admin_Search_Teacher_Incorrect_NIC_Test",
+    "name": "25 Search_Teacher_Incorrect_NIC",
     "commands": [{
       "id": "a58413f5-2d2c-42d3-952e-76186492b8a7",
       "comment": "",
@@ -7120,7 +6412,7 @@
     }]
   }, {
     "id": "87c1bc0a-a30c-49ae-99da-0c3da095b132",
-    "name": "Admin_Disable_Teacher_Test",
+    "name": "22 Disable_Teacher",
     "commands": [{
       "id": "a4222c54-6902-429d-8c0d-301f77392def",
       "comment": "",
@@ -7335,7 +6627,7 @@
     }]
   }, {
     "id": "ccd06b13-bd57-400d-af3e-27c79b535eba",
-    "name": "Admin_Enable_Teacher_Test",
+    "name": "23 Enable_Teacher",
     "commands": [{
       "id": "4131ac53-97be-42c5-8915-c5c946817aa8",
       "comment": "",
@@ -7534,6 +6826,108 @@
         ["css=.container-fluid", "css:finder"],
         ["xpath=//body/div[2]", "xpath:position"]
       ],
+      "value": ""
+    }]
+  }, {
+    "id": "06498f82-5623-4c83-88dc-d7503e8465cb",
+    "name": "01 Login",
+    "commands": [{
+      "id": "7508b2c5-efd9-47d4-aa31-e9abdf8bf284",
+      "comment": "",
+      "command": "open",
+      "target": "/Programming-Assignment-Evaluator/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "651b1a85-6698-4e3c-946a-8c36dcf4f9bd",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1366x728",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1c60e75c-2faa-4f4a-b8ba-ce48d80bd4d1",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "Login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "207e83b6-3e41-4650-b265-a98dd216a7a7",
+      "comment": "",
+      "command": "click",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=.one .input", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "751dc390-bac5-478e-8b3f-11c51fb15f29",
+      "comment": "",
+      "command": "type",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=.one .input", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "melangak@email.com"
+    }, {
+      "id": "90c18d91-6098-48d4-8fc2-9f6e8fb65036",
+      "comment": "",
+      "command": "click",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.pass .input", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f2745b21-ea7d-49e0-a419-37de5aaa38a1",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.pass .input", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "1234"
+    }, {
+      "id": "9b1f1705-8e56-4581-86af-fc300b534de0",
+      "comment": "",
+      "command": "click",
+      "target": "css=.custom-control-label",
+      "targets": [
+        ["css=.custom-control-label", "css:finder"],
+        ["xpath=//label", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "91500854-30a0-416a-980b-2602eb6faee3",
+      "comment": "",
+      "command": "click",
+      "target": "id=login",
+      "targets": [
+        ["id=login", "id"],
+        ["css=#login", "css:finder"],
+        ["xpath=//button[@id='login']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2c6e136b-9550-4989-8864-2f409bc9d115",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "Home",
+      "targets": [],
       "value": ""
     }]
   }],

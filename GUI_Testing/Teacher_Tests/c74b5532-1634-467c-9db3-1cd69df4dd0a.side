@@ -1,0 +1,3115 @@
+{
+  "id": "3d540f79-3f50-4026-a595-3102670d22eb",
+  "version": "2.0",
+  "name": "Teacher",
+  "url": "http://localhost:8015",
+  "tests": [{
+    "id": "1d71dcb7-40ea-4a8e-95d6-893d2ecac59f",
+    "name": "01 Login",
+    "commands": [{
+      "id": "d478577c-9b23-414c-a471-670c85f87715",
+      "comment": "",
+      "command": "open",
+      "target": "/Programming-Assignment-Evaluator/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "805de8f8-b7a1-4fd8-81eb-dca71a8384eb",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1366x728",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c76b8314-8fd3-4088-a9bf-77f3469fa758",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "Login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "64ff927a-2d23-4917-8a2e-ce794b8bbff9",
+      "comment": "",
+      "command": "click",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=.one .input", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4d01faed-96e8-4522-b1b4-6f2f1a39e7cb",
+      "comment": "",
+      "command": "type",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=.one .input", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "582201472v"
+    }, {
+      "id": "212b71d8-3522-48a2-8c07-db6c426d5ba2",
+      "comment": "",
+      "command": "click",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.pass .input", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a85c2d15-cb4b-4216-8764-cf4b2e827835",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.pass .input", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "Teacher@123"
+    }, {
+      "id": "eae9cd8d-4db4-4b57-97ef-71f2ff54a204",
+      "comment": "",
+      "command": "click",
+      "target": "id=login",
+      "targets": [
+        ["id=login", "id"],
+        ["css=#login", "css:finder"],
+        ["xpath=//button[@id='login']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9a2fddcb-a24c-42b2-800d-2da25a2017e3",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "Assigned Courses",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "d59c936d-8749-4726-a57a-a1c3ffa855ac",
+    "name": "02 Navigation",
+    "commands": [{
+      "id": "9ecb59ad-c780-485c-b3d2-ec5bca25b375",
+      "comment": "",
+      "command": "open",
+      "target": "/Programming-Assignment-Evaluator/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "199b9fff-b79e-4d79-aacf-006092393677",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1366x728",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4ef81a9e-db61-4f22-98b3-5e988eeede7b",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "Login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4dad7e0d-89b2-463a-929a-b3f073d07c19",
+      "comment": "",
+      "command": "click",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=.one .input", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "08ada791-4c11-494a-b802-8fb7c7d30dfb",
+      "comment": "",
+      "command": "type",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=.one .input", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "582201472v"
+    }, {
+      "id": "1803b80b-5e05-4364-8bcb-faf5f44d03e7",
+      "comment": "",
+      "command": "click",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.pass .input", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6bd977fd-39d7-4d42-8686-9f3a863a148f",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.pass .input", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "Teacher@123"
+    }, {
+      "id": "39685c30-7661-42ca-be83-79f3548d9742",
+      "comment": "",
+      "command": "click",
+      "target": "id=login",
+      "targets": [
+        ["id=login", "id"],
+        ["css=#login", "css:finder"],
+        ["xpath=//button[@id='login']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8fb25999-b3b7-4458-9a53-4ef6104b2baf",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "Assigned Courses",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7e3c7091-617a-4ad5-91ad-3bdd83ed916d",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.active > .nav-link",
+      "targets": [
+        ["css=.active > .nav-link", "css:finder"],
+        ["xpath=//div[@id='navbarSupportedContent']/ul/li/a", "xpath:idRelative"],
+        ["xpath=//a[@href='http://localhost:8015/Programming-Assignment-Evaluator/teacher']", "xpath:href"],
+        ["xpath=//li/a", "xpath:position"]
+      ],
+      "value": "COURSES\\n(CURRENT)"
+    }, {
+      "id": "86304658-0d05-409b-85e0-131203e475c4",
+      "comment": "",
+      "command": "click",
+      "target": "css=.active > .nav-link",
+      "targets": [
+        ["css=.active > .nav-link", "css:finder"],
+        ["xpath=//div[@id='navbarSupportedContent']/ul/li/a", "xpath:idRelative"],
+        ["xpath=//a[@href='http://localhost:8015/Programming-Assignment-Evaluator/teacher']", "xpath:href"],
+        ["xpath=//li/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e3853fca-7986-416b-b92c-1574c8a6a043",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "Assigned Courses",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "57d60ae1-9d35-4006-bef4-dc7d20be2639",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.nav-item:nth-child(2) > .nav-link",
+      "targets": [
+        ["css=.nav-item:nth-child(2) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Compiler')]", "xpath:link"],
+        ["xpath=//div[@id='navbarSupportedContent']/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[@href='http://localhost:8015/Programming-Assignment-Evaluator/compiler']", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"]
+      ],
+      "value": "COMPILER"
+    }, {
+      "id": "24a470fd-250b-41f5-bf3b-0da9309b4cdb",
+      "comment": "",
+      "command": "click",
+      "target": "css=.nav-item:nth-child(2) > .nav-link",
+      "targets": [
+        ["css=.nav-item:nth-child(2) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Compiler')]", "xpath:link"],
+        ["xpath=//div[@id='navbarSupportedContent']/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[@href='http://localhost:8015/Programming-Assignment-Evaluator/compiler']", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "bbbd598e-14ef-4ecd-b9a7-02403f99c6d8",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "Compiler",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5b587d98-2aef-4b46-923b-4d1b7722a8e1",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.nav-item:nth-child(3) > .nav-link",
+      "targets": [
+        ["css=.nav-item:nth-child(3) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Profile')]", "xpath:link"],
+        ["xpath=//div[@id='navbarSupportedContent']/ul/li[3]/a", "xpath:idRelative"],
+        ["xpath=//a[@href='http://localhost:8015/Programming-Assignment-Evaluator/teacher/profile']", "xpath:href"],
+        ["xpath=//li[3]/a", "xpath:position"]
+      ],
+      "value": "PROFILE"
+    }, {
+      "id": "1649ca97-122d-4942-a665-fe7b68578982",
+      "comment": "",
+      "command": "click",
+      "target": "css=.nav-item:nth-child(3) > .nav-link",
+      "targets": [
+        ["css=.nav-item:nth-child(3) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Profile')]", "xpath:link"],
+        ["xpath=//div[@id='navbarSupportedContent']/ul/li[3]/a", "xpath:idRelative"],
+        ["xpath=//a[@href='http://localhost:8015/Programming-Assignment-Evaluator/teacher/profile']", "xpath:href"],
+        ["xpath=//li[3]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2c84997d-d517-4d23-94ef-49a6e8f5dab4",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "Profile",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f29562bd-7a31-497f-92a5-07dc8bc60cfb",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.nav-item:nth-child(4) > .nav-link",
+      "targets": [
+        ["css=.nav-item:nth-child(4) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Logout')]", "xpath:link"],
+        ["xpath=//div[@id='navbarSupportedContent']/ul/li[4]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '#')])[2]", "xpath:href"],
+        ["xpath=//li[4]/a", "xpath:position"]
+      ],
+      "value": "LOGOUT"
+    }, {
+      "id": "ddb03986-4805-42ca-aaf5-96b2c7396529",
+      "comment": "",
+      "command": "click",
+      "target": "css=.nav-item:nth-child(4) > .nav-link",
+      "targets": [
+        ["css=.nav-item:nth-child(4) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Logout')]", "xpath:link"],
+        ["xpath=//div[@id='navbarSupportedContent']/ul/li[4]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '#')])[2]", "xpath:href"],
+        ["xpath=//li[4]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a25e64a8-14d6-4a1f-a1a0-5cfe463e43ca",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Logout",
+      "targets": [
+        ["linkText=Logout", "linkText"],
+        ["css=.btn:nth-child(1)", "css:finder"],
+        ["xpath=(//a[contains(text(),'Logout')])[2]", "xpath:link"],
+        ["xpath=//div[@id='logout-teacher']/div/div/div[2]/a", "xpath:idRelative"],
+        ["xpath=//a[@href='http://localhost:8015/Programming-Assignment-Evaluator/login/logout']", "xpath:href"],
+        ["xpath=//div[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4d5e9d8d-0849-440f-885f-02eb8e5cf7e4",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "Login",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "079656b7-fdf4-4009-b99f-cfd185891f09",
+    "name": "03 View_Course",
+    "commands": [{
+      "id": "03a96aed-c28a-40ec-bbb0-a1db978a5fc4",
+      "comment": "",
+      "command": "open",
+      "target": "/Programming-Assignment-Evaluator/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1d43f764-6932-47a2-b288-efd959ee2b03",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1366x728",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1585939a-c693-42c6-a088-c5959e289f0c",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "Login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2957a25e-25db-49e8-879f-c9438616d8ac",
+      "comment": "",
+      "command": "click",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=.one .input", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8b4b630b-d6dc-4c92-96cb-cd3e265acb5b",
+      "comment": "",
+      "command": "type",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=.one .input", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "582201472v"
+    }, {
+      "id": "bf1c926b-96b7-4f19-9ae0-13bf39e8a005",
+      "comment": "",
+      "command": "click",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.pass .input", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c06c6630-f069-4464-80fe-d60e523f43de",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.pass .input", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "Teacher@123"
+    }, {
+      "id": "cf7ccadd-7c12-48b4-b6ba-b197f9ffb164",
+      "comment": "",
+      "command": "click",
+      "target": "id=login",
+      "targets": [
+        ["id=login", "id"],
+        ["css=#login", "css:finder"],
+        ["xpath=//button[@id='login']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "55184b02-9a51-4456-b831-d7fceec9ff27",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "Assigned Courses",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3ea91232-537a-46d5-be45-2a8cf3bec186",
+      "comment": "",
+      "command": "click",
+      "target": "css=a > .card",
+      "targets": [
+        ["css=a > .card", "css:finder"],
+        ["xpath=//a/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "07ac67fb-019a-4315-958e-bb35d0796a5e",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "Course Details",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "f75eff12-2502-4441-9cf2-6e3854664db6",
+    "name": "04 Create_Assignment",
+    "commands": [{
+      "id": "bd1fe3f1-1139-4b7f-8d0e-b7de59e93fcc",
+      "comment": "",
+      "command": "open",
+      "target": "/Programming-Assignment-Evaluator/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0cea928b-3e6a-43bb-99ce-f3d7230256b4",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1366x728",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d03a05d9-5698-4fb4-acdf-4ff09fbbe924",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "Login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "67e6b706-cd89-4cd6-891b-dfeeba2dfb52",
+      "comment": "",
+      "command": "click",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=.one .input", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "80be8284-0b8f-4037-b8df-6d30440eca86",
+      "comment": "",
+      "command": "type",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=.one .input", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "582201472v"
+    }, {
+      "id": "6ee5896a-75ef-4afb-8000-9e3e6ead5e35",
+      "comment": "",
+      "command": "click",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.pass .input", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2a6ecad6-afc4-419d-9aac-39c53339e37b",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.pass .input", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "Teacher@123"
+    }, {
+      "id": "4a3fe990-3b08-42b0-81e5-b2c18f712290",
+      "comment": "",
+      "command": "click",
+      "target": "id=login",
+      "targets": [
+        ["id=login", "id"],
+        ["css=#login", "css:finder"],
+        ["xpath=//button[@id='login']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ab49a672-d528-4266-88f9-b1b086f89c79",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "Assigned Courses",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "05efc1f4-0568-49e2-9a95-36af102b0932",
+      "comment": "",
+      "command": "click",
+      "target": "css=a > .card",
+      "targets": [
+        ["css=a > .card", "css:finder"],
+        ["xpath=//a/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1d844e4a-4ed9-4649-a949-3ad10acdd111",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "Course Details",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b98a06b6-5f32-421b-b6d0-db89d84b6967",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.assignment-link:nth-child(5) .card-header",
+      "targets": [
+        ["css=.assignment-link:nth-child(5) .card-header", "css:finder"],
+        ["xpath=//a/div/div", "xpath:position"]
+      ],
+      "value": "Create New Assignment"
+    }, {
+      "id": "87380139-eeae-4d2b-8bf3-a3ae4fbb126b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.assignment-link:nth-child(5) .card-header",
+      "targets": [
+        ["css=.assignment-link:nth-child(5) .card-header", "css:finder"],
+        ["xpath=//a/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "48d44b7d-9911-45cc-8ac9-9360c9b1c4a4",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "Create Assignment",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f86c38b7-cf3f-484a-9041-59c9e4505d5c",
+      "comment": "",
+      "command": "click",
+      "target": "id=title",
+      "targets": [
+        ["id=title", "id"],
+        ["name=name", "name"],
+        ["css=#title", "css:finder"],
+        ["xpath=//input[@id='title']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "891bfe5d-5c03-49d9-b376-0e5bfbcc711c",
+      "comment": "",
+      "command": "type",
+      "target": "id=title",
+      "targets": [
+        ["id=title", "id"],
+        ["name=name", "name"],
+        ["css=#title", "css:finder"],
+        ["xpath=//input[@id='title']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Practicle 07"
+    }, {
+      "id": "a4bf6cad-7d8f-4613-b866-798bd877dac9",
+      "comment": "",
+      "command": "click",
+      "target": "id=deadline",
+      "targets": [
+        ["id=deadline", "id"],
+        ["name=deadline", "name"],
+        ["css=#deadline", "css:finder"],
+        ["xpath=//input[@id='deadline']", "xpath:attributes"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "beaf862f-d04d-4ae0-9577-0f840cae8e7d",
+      "comment": "",
+      "command": "type",
+      "target": "id=deadline",
+      "targets": [
+        ["id=deadline", "id"],
+        ["name=deadline", "name"],
+        ["css=#deadline", "css:finder"],
+        ["xpath=//input[@id='deadline']", "xpath:attributes"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": "2020-06-12"
+    }, {
+      "id": "7b8fd173-ac89-4efb-a906-5a04c3ec76a3",
+      "comment": "",
+      "command": "click",
+      "target": "id=time",
+      "targets": [
+        ["id=time", "id"],
+        ["name=time", "name"],
+        ["css=#time", "css:finder"],
+        ["xpath=//input[@id='time']", "xpath:attributes"],
+        ["xpath=//div[3]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d53af2be-1640-4774-9fec-075cd6bfa7d3",
+      "comment": "",
+      "command": "type",
+      "target": "id=time",
+      "targets": [
+        ["id=time", "id"],
+        ["name=time", "name"],
+        ["css=#time", "css:finder"],
+        ["xpath=//input[@id='time']", "xpath:attributes"],
+        ["xpath=//div[3]/div/input", "xpath:position"]
+      ],
+      "value": "11:33"
+    }, {
+      "id": "1cbdd379-0f09-4fab-8e30-e2a386add2a0",
+      "comment": "",
+      "command": "click",
+      "target": "id=description",
+      "targets": [
+        ["id=description", "id"],
+        ["name=description", "name"],
+        ["css=#description", "css:finder"],
+        ["xpath=//textarea[@id='description']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "138702fa-1e90-420f-ac45-f6588548fa74",
+      "comment": "",
+      "command": "type",
+      "target": "id=description",
+      "targets": [
+        ["id=description", "id"],
+        ["name=description", "name"],
+        ["css=#description", "css:finder"],
+        ["xpath=//textarea[@id='description']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "Testing process"
+    }, {
+      "id": "7efab456-cf45-4fd4-836f-f1995bc926ca",
+      "comment": "",
+      "command": "click",
+      "target": "id=documents",
+      "targets": [
+        ["id=documents", "id"],
+        ["name=userfile", "name"],
+        ["css=#documents", "css:finder"],
+        ["xpath=//input[@id='documents']", "xpath:attributes"],
+        ["xpath=//div[3]/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7482941c-1a65-49eb-8afb-a832c79b7237",
+      "comment": "",
+      "command": "type",
+      "target": "id=documents",
+      "targets": [
+        ["id=documents", "id"],
+        ["name=userfile", "name"],
+        ["css=#documents", "css:finder"],
+        ["xpath=//input[@id='documents']", "xpath:attributes"],
+        ["xpath=//div[3]/div/div/input", "xpath:position"]
+      ],
+      "value": "C:\\fakepath\\SRS_database project.pdf"
+    }, {
+      "id": "83067f31-6c5f-4aa1-945f-1fe88e5a47b3",
+      "comment": "",
+      "command": "click",
+      "target": "id=language",
+      "targets": [
+        ["id=language", "id"],
+        ["name=language", "name"],
+        ["css=#language", "css:finder"],
+        ["xpath=//select[@id='language']", "xpath:attributes"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "be57f8a2-7b08-40ee-8a5a-736eb84493a8",
+      "comment": "",
+      "command": "select",
+      "target": "id=language",
+      "targets": [],
+      "value": "label=Python 3.7"
+    }, {
+      "id": "abd353af-a2b8-4d2d-a63f-b5c127b1ec73",
+      "comment": "",
+      "command": "click",
+      "target": "id=test-cases",
+      "targets": [
+        ["id=language", "id"],
+        ["name=language", "name"],
+        ["css=#language", "css:finder"],
+        ["xpath=//select[@id='language']", "xpath:attributes"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5e2cfffc-3276-4d61-adf9-03e5e1cb976a",
+      "comment": "",
+      "command": "select",
+      "target": "id=test-cases",
+      "targets": [],
+      "value": "label=2"
+    }, {
+      "id": "1f606c44-3a8c-45de-b948-23640279be20",
+      "comment": "",
+      "command": "click",
+      "target": "id=documents",
+      "targets": [
+        ["id=documents", "id"],
+        ["name=userfile", "name"],
+        ["css=#documents", "css:finder"],
+        ["xpath=//input[@id='documents']", "xpath:attributes"],
+        ["xpath=//div[3]/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "11307285-aeda-429e-9b37-1554ff95f93b",
+      "comment": "",
+      "command": "type",
+      "target": "id=documents",
+      "targets": [
+        ["id=documents", "id"],
+        ["name=userfile", "name"],
+        ["css=#documents", "css:finder"],
+        ["xpath=//input[@id='documents']", "xpath:attributes"],
+        ["xpath=//div[3]/div/div/input", "xpath:position"]
+      ],
+      "value": "C:\\fakepath\\170298H_Assignment_01_TOC.docx"
+    }, {
+      "id": "9840eb2a-3459-4f3b-9fc5-4928f9e9160f",
+      "comment": "",
+      "command": "click",
+      "target": "id=language",
+      "targets": [
+        ["id=language", "id"],
+        ["name=language", "name"],
+        ["css=#language", "css:finder"],
+        ["xpath=//select[@id='language']", "xpath:attributes"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "07bbba1a-566b-4daf-872b-b49de019cc92",
+      "comment": "",
+      "command": "select",
+      "target": "id=language",
+      "targets": [],
+      "value": "label=Python 3.7"
+    }, {
+      "id": "74622c77-b42c-47cc-9f35-17fc633ad85b",
+      "comment": "",
+      "command": "click",
+      "target": "id=language",
+      "targets": [
+        ["id=language", "id"],
+        ["name=language", "name"],
+        ["css=#language", "css:finder"],
+        ["xpath=//select[@id='language']", "xpath:attributes"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "eec2eca0-80fc-49a2-bf2c-5a48761716f2",
+      "comment": "",
+      "command": "click",
+      "target": "id=test-cases",
+      "targets": [
+        ["id=test-cases", "id"],
+        ["name=test-cases", "name"],
+        ["css=#test-cases", "css:finder"],
+        ["xpath=//select[@id='test-cases']", "xpath:attributes"],
+        ["xpath=//div[3]/div[3]/div/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "aa55e474-aee5-4f35-8d5f-b8069cf54e27",
+      "comment": "",
+      "command": "select",
+      "target": "id=test-cases",
+      "targets": [],
+      "value": "label=2"
+    }, {
+      "id": "5c1a8ccb-7f90-4441-a01f-699ff980ed2a",
+      "comment": "",
+      "command": "click",
+      "target": "id=test-cases",
+      "targets": [
+        ["id=test-cases", "id"],
+        ["name=test-cases", "name"],
+        ["css=#test-cases", "css:finder"],
+        ["xpath=//select[@id='test-cases']", "xpath:attributes"],
+        ["xpath=//div[3]/div[3]/div/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ddbae307-07ce-491d-bcd0-15d476621433",
+      "comment": "",
+      "command": "click",
+      "target": "id=input1",
+      "targets": [
+        ["id=input1", "id"],
+        ["name=input[]", "name"],
+        ["css=#input1", "css:finder"],
+        ["xpath=//input[@id='input1']", "xpath:attributes"],
+        ["xpath=//div[@id='case1']/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[5]/div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7aa1161e-eb2c-4310-8c87-8bfecae3a9e8",
+      "comment": "",
+      "command": "type",
+      "target": "id=input1",
+      "targets": [
+        ["id=input1", "id"],
+        ["name=input[]", "name"],
+        ["css=#input1", "css:finder"],
+        ["xpath=//input[@id='input1']", "xpath:attributes"],
+        ["xpath=//div[@id='case1']/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[5]/div/div/div/input", "xpath:position"]
+      ],
+      "value": "C:\\fakepath\\New Text Document.txt"
+    }, {
+      "id": "16ce632b-e5d4-4bfd-9611-08dfe41744f8",
+      "comment": "",
+      "command": "click",
+      "target": "id=output1",
+      "targets": [
+        ["id=output1", "id"],
+        ["name=output[]", "name"],
+        ["css=#output1", "css:finder"],
+        ["xpath=//input[@id='output1']", "xpath:attributes"],
+        ["xpath=//div[@id='case1']/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[5]/div/div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "609286a9-00e3-454b-9ffb-67eae6e34512",
+      "comment": "",
+      "command": "type",
+      "target": "id=output1",
+      "targets": [
+        ["id=output1", "id"],
+        ["name=output[]", "name"],
+        ["css=#output1", "css:finder"],
+        ["xpath=//input[@id='output1']", "xpath:attributes"],
+        ["xpath=//div[@id='case1']/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[5]/div/div[2]/div/input", "xpath:position"]
+      ],
+      "value": "C:\\fakepath\\New Text Document (2).txt"
+    }, {
+      "id": "0060102b-eada-45b9-8100-851e5535f04d",
+      "comment": "",
+      "command": "click",
+      "target": "id=input2",
+      "targets": [
+        ["id=input2", "id"],
+        ["css=#input2", "css:finder"],
+        ["xpath=//input[@id='input2']", "xpath:attributes"],
+        ["xpath=//div[@id='case2']/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1b6efa9e-31ce-42f9-97c1-c52beb8a9900",
+      "comment": "",
+      "command": "type",
+      "target": "id=input2",
+      "targets": [
+        ["id=input2", "id"],
+        ["css=#input2", "css:finder"],
+        ["xpath=//input[@id='input2']", "xpath:attributes"],
+        ["xpath=//div[@id='case2']/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": "C:\\fakepath\\New Text Document.txt"
+    }, {
+      "id": "adbcf3f3-37ad-418a-b3f3-8014367e5809",
+      "comment": "",
+      "command": "click",
+      "target": "id=output2",
+      "targets": [
+        ["id=output2", "id"],
+        ["css=#output2", "css:finder"],
+        ["xpath=//input[@id='output2']", "xpath:attributes"],
+        ["xpath=//div[@id='case2']/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c6820563-cf33-42e3-a845-1059f575fef3",
+      "comment": "",
+      "command": "type",
+      "target": "id=output2",
+      "targets": [
+        ["id=output2", "id"],
+        ["css=#output2", "css:finder"],
+        ["xpath=//input[@id='output2']", "xpath:attributes"],
+        ["xpath=//div[@id='case2']/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": "C:\\fakepath\\New Text Document (2).txt"
+    }, {
+      "id": "15076a86-bbae-43ff-8e33-a92d2c8ac24f",
+      "comment": "",
+      "command": "click",
+      "target": "name=create",
+      "targets": [
+        ["name=create", "name"],
+        ["css=.form-group > .btn", "css:finder"],
+        ["xpath=//button[@name='create']", "xpath:attributes"],
+        ["xpath=//div[6]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Create Assignment')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9cdfbef4-e922-4cfc-b603-f634c915cb7f",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "Course Details",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "8f5f1737-d789-4003-9cc8-ae0771e6cd10",
+    "name": "10 View_Students",
+    "commands": [{
+      "id": "e1bf1953-ed2a-4a2e-b16d-61399e0f639f",
+      "comment": "",
+      "command": "open",
+      "target": "/Programming-Assignment-Evaluator/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2d88d072-a4cb-4347-a4ba-08faf477265a",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1366x728",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "21ec8058-cd77-4b27-80c8-8c5da714d3ec",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "Login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f1388f1c-d966-4a82-8105-6cf4da19b26a",
+      "comment": "",
+      "command": "click",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=.one .input", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8ab475d4-cead-4c9d-8a83-e9808cdd14e2",
+      "comment": "",
+      "command": "type",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=.one .input", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "582201472v"
+    }, {
+      "id": "d2599ef4-dfac-41f8-9d49-6b751c4248dc",
+      "comment": "",
+      "command": "click",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.pass .input", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "82076370-8631-4b38-93b4-942432224942",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.pass .input", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "Teacher@123"
+    }, {
+      "id": "cb171e02-4546-44da-a062-bd575a1b3a25",
+      "comment": "",
+      "command": "click",
+      "target": "id=login",
+      "targets": [
+        ["id=login", "id"],
+        ["css=#login", "css:finder"],
+        ["xpath=//button[@id='login']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ca1200cf-882b-423c-9adb-e55fd59fa806",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "Assigned Courses",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "19bb4cd6-e193-493f-abc5-ca3adbc3634f",
+      "comment": "",
+      "command": "click",
+      "target": "css=a > .card",
+      "targets": [
+        ["css=a > .card", "css:finder"],
+        ["xpath=//a/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d1cf2880-e92a-4d0e-93bd-b6436eb099b0",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "Course Details",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "de78d2a9-37bb-42c7-9565-31c29104b59a",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.assignment-link:nth-child(7) .card-header",
+      "targets": [
+        ["css=.assignment-link:nth-child(7) .card-header", "css:finder"],
+        ["xpath=//a[3]/div/div", "xpath:position"]
+      ],
+      "value": "View Students"
+    }, {
+      "id": "1d893d77-83bc-491b-928a-2ffddb9cd148",
+      "comment": "",
+      "command": "click",
+      "target": "css=.assignment-link:nth-child(7) .card-header",
+      "targets": [
+        ["css=.assignment-link:nth-child(7) .card-header", "css:finder"],
+        ["xpath=//a[3]/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d3260ce6-b190-4c6b-b95b-48c8a94ba864",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "View Students",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "e4fe8fef-1e0d-4724-8c60-5cf8b14a806c",
+    "name": "06 View_Submissions",
+    "commands": [{
+      "id": "2d5e71ab-2105-423a-978c-8a187996ddcc",
+      "comment": "",
+      "command": "open",
+      "target": "/Programming-Assignment-Evaluator/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0f5b4409-2b47-46f3-b278-ee6a483a0d53",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1366x728",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f91308dc-4c7c-4cbe-a3d7-51bca8867d2a",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "Login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fc21355a-6d3e-4496-a965-eb495ef4a7fb",
+      "comment": "",
+      "command": "click",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=.one .input", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5f88fda7-35b1-4153-ad5f-08f0910aaea0",
+      "comment": "",
+      "command": "type",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=.one .input", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "582201472v"
+    }, {
+      "id": "742931c9-20b5-4709-a95b-b6837e45e804",
+      "comment": "",
+      "command": "click",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.pass .input", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6b33a85a-9cbe-4e60-9ffe-474bc448607d",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.pass .input", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "Teacher@123"
+    }, {
+      "id": "d0688690-d3ce-4d7e-8d28-5485ac1b3536",
+      "comment": "",
+      "command": "click",
+      "target": "id=login",
+      "targets": [
+        ["id=login", "id"],
+        ["css=#login", "css:finder"],
+        ["xpath=//button[@id='login']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "922f5cd9-78b4-4468-a7c8-4a9cb40d0da6",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "Assigned Courses",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0c87dd52-b62d-49d2-b93a-f63159a0c0cb",
+      "comment": "",
+      "command": "click",
+      "target": "css=a > .card",
+      "targets": [
+        ["css=a > .card", "css:finder"],
+        ["xpath=//a/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1b891060-44e6-4799-9670-e49aa392432b",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "Course Details",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "312970b8-4302-4318-b02b-7c8e61011329",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.assignment-link:nth-child(6) .card-header",
+      "targets": [
+        ["css=.assignment-link:nth-child(6) .card-header", "css:finder"],
+        ["xpath=//a[2]/div/div", "xpath:position"]
+      ],
+      "value": "View Assignments"
+    }, {
+      "id": "5c32364a-ec61-4f20-a68d-086e9bd369cf",
+      "comment": "",
+      "command": "click",
+      "target": "css=.assignment-link:nth-child(6) .card-header",
+      "targets": [
+        ["css=.assignment-link:nth-child(6) .card-header", "css:finder"],
+        ["xpath=//a[2]/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "df932f65-b317-4f30-aac2-25c03c11fca3",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "View Assignment",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "256020cd-4bbe-4543-8a4e-05302a6b4768",
+      "comment": "",
+      "command": "click",
+      "target": "css=.assignment-link:nth-child(1) .card-header",
+      "targets": [
+        ["css=.assignment-link:nth-child(1) .card-header", "css:finder"],
+        ["xpath=//a/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f5dc77c1-137e-4fb2-a66f-43b9897152d3",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "Submissions",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "cc76336f-a0df-4902-8504-4830b6f80028",
+    "name": "07 View_Issues",
+    "commands": [{
+      "id": "d9322fc9-0aeb-487e-94dc-d9ac09e312df",
+      "comment": "",
+      "command": "open",
+      "target": "/Programming-Assignment-Evaluator/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2781d867-b339-420a-87a0-dfb8b3e75c73",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1366x728",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1533c708-ee98-4389-bad9-6031ab1f12ce",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "Login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6bc133be-6d89-4053-aa33-9056e7042ce5",
+      "comment": "",
+      "command": "click",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=.one .input", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "92adad40-b13b-4c1e-a17d-20ce1de73568",
+      "comment": "",
+      "command": "type",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=.one .input", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "582201472v"
+    }, {
+      "id": "0a206f7a-8258-4261-bd39-314d706a8b2d",
+      "comment": "",
+      "command": "click",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.pass .input", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1d690e26-bb42-4903-9e82-fe80dfcdd4eb",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.pass .input", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "Teacher@123"
+    }, {
+      "id": "f014b138-2099-4263-a3a5-b029abba1b01",
+      "comment": "",
+      "command": "click",
+      "target": "id=login",
+      "targets": [
+        ["id=login", "id"],
+        ["css=#login", "css:finder"],
+        ["xpath=//button[@id='login']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "634d8f96-e6eb-409b-8b33-9497cc7ad524",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "Assigned Courses",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "75cb92ce-13ef-47fb-9107-b8bae35bd742",
+      "comment": "",
+      "command": "click",
+      "target": "css=a > .card",
+      "targets": [
+        ["css=a > .card", "css:finder"],
+        ["xpath=//a/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e130dbf6-4044-4cb2-b42e-c4f3e2b7415e",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "Course Details",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "adc8f49a-368e-4aa0-a212-cf0825c80521",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.assignment-link:nth-child(6) .card-header",
+      "targets": [
+        ["css=.assignment-link:nth-child(6) .card-header", "css:finder"],
+        ["xpath=//a[2]/div/div", "xpath:position"]
+      ],
+      "value": "View Assignments"
+    }, {
+      "id": "55b6fdfd-4031-4433-b545-9fab918dded1",
+      "comment": "",
+      "command": "click",
+      "target": "css=.assignment-link:nth-child(6) .card-header",
+      "targets": [
+        ["css=.assignment-link:nth-child(6) .card-header", "css:finder"],
+        ["xpath=//a[2]/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "bb15b0af-8376-4b4e-bd36-35446b04b48c",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "View Assignment",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "afacf061-75ff-4a33-8241-3f4707dd2e40",
+      "comment": "",
+      "command": "click",
+      "target": "css=.assignment-link:nth-child(1) .card-header",
+      "targets": [
+        ["css=.assignment-link:nth-child(1) .card-header", "css:finder"],
+        ["xpath=//a/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "65e0a42e-04a8-406f-92ce-fc27f235d89e",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "Submissions",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3c5fb9e1-ad20-4122-b22d-d301b4062e63",
+      "comment": "",
+      "command": "verifyText",
+      "target": "id=view-grade",
+      "targets": [
+        ["id=view-grade", "id"],
+        ["linkText=View Issues", "linkText"],
+        ["xpath=//a[contains(text(),'View Issues')]", "xpath:link"],
+        ["xpath=//a[@id='view-grade']", "xpath:attributes"],
+        ["xpath=//a[@href='http://localhost:8015/Programming-Assignment-Evaluator/teacher/viewIssues/1']", "xpath:href"],
+        ["xpath=//div[2]/div/div/div/div[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'View Issues')]", "xpath:innerText"]
+      ],
+      "value": "View Issues"
+    }, {
+      "id": "b03fab37-711c-41fb-87e6-362cf862903f",
+      "comment": "",
+      "command": "click",
+      "target": "id=view-grade",
+      "targets": [
+        ["id=view-grade", "id"],
+        ["linkText=View Issues", "linkText"],
+        ["xpath=//a[contains(text(),'View Issues')]", "xpath:link"],
+        ["xpath=//a[@id='view-grade']", "xpath:attributes"],
+        ["xpath=//a[@href='http://localhost:8015/Programming-Assignment-Evaluator/teacher/viewIssues/1']", "xpath:href"],
+        ["xpath=//div[2]/div/div/div/div[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'View Issues')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "07bb2955-9143-4041-8e25-6187cc652ce5",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "View Issues",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "e753472a-1ecd-45d4-9389-249dd27016b4",
+    "name": "08 Edit_Assignment",
+    "commands": [{
+      "id": "e2943837-0c36-42be-be31-417d7a1e139f",
+      "comment": "",
+      "command": "open",
+      "target": "/Programming-Assignment-Evaluator/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f4041344-a4ef-4951-8d1e-2745cfadddd1",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1366x728",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8f145c70-d23e-4777-af4f-90715484bd38",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "Login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "30d76959-6558-4ce3-897c-e4282f142e1d",
+      "comment": "",
+      "command": "click",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=.one .input", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "db7d1c75-a11f-41eb-8b81-d6ca88164901",
+      "comment": "",
+      "command": "type",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=.one .input", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "582201472v"
+    }, {
+      "id": "0566d10a-bfea-4e55-9292-9417476119d3",
+      "comment": "",
+      "command": "click",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.pass .input", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c3925ad7-ba51-442b-b142-870880e4c304",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.pass .input", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "Teacher@123"
+    }, {
+      "id": "d6286893-eae0-4807-a7b8-e793eabbb16a",
+      "comment": "",
+      "command": "click",
+      "target": "id=login",
+      "targets": [
+        ["id=login", "id"],
+        ["css=#login", "css:finder"],
+        ["xpath=//button[@id='login']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "87e30bdf-2f66-447e-9eef-122a2914cd94",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "Assigned Courses",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e1e7341e-9afe-4ff0-97df-b6c357be1e76",
+      "comment": "",
+      "command": "click",
+      "target": "css=a > .card",
+      "targets": [
+        ["css=a > .card", "css:finder"],
+        ["xpath=//a/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cbe70639-daf9-4349-be2c-d3bc9ff6a68d",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "Course Details",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8fd43926-57c5-4a47-910a-f5d17fec8811",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.assignment-link:nth-child(6) .card-header",
+      "targets": [
+        ["css=.assignment-link:nth-child(6) .card-header", "css:finder"],
+        ["xpath=//a[2]/div/div", "xpath:position"]
+      ],
+      "value": "View Assignments"
+    }, {
+      "id": "c89508d9-720c-41d3-b9f3-fd718723aefc",
+      "comment": "",
+      "command": "click",
+      "target": "css=.assignment-link:nth-child(6) .card-header",
+      "targets": [
+        ["css=.assignment-link:nth-child(6) .card-header", "css:finder"],
+        ["xpath=//a[2]/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "98e4a6de-50c5-4f3d-8f0f-10f9b3f8f3e6",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "View Assignment",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "db229c8c-098a-4010-be74-ccb2332e3b98",
+      "comment": "",
+      "command": "click",
+      "target": "css=.assignment-link:nth-child(1) .card-header",
+      "targets": [
+        ["css=.assignment-link:nth-child(1) .card-header", "css:finder"],
+        ["xpath=//a/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "01cd8629-cb45-4eb1-b0fd-c64137906164",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "Submissions",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4c397cf3-b0c0-4265-a338-9ac4b91542ac",
+      "comment": "",
+      "command": "verifyText",
+      "target": "linkText=Edit Assignment",
+      "targets": [
+        ["linkText=Edit Assignment", "linkText"],
+        ["xpath=//a[contains(text(),'Edit Assignment')]", "xpath:link"],
+        ["xpath=(//a[@id='view-grade'])[2]", "xpath:attributes"],
+        ["xpath=//a[@href='http://localhost:8015/Programming-Assignment-Evaluator/teacher/editAssignment/CS2012/1/1']", "xpath:href"],
+        ["xpath=//div[2]/div/div/div/div[2]/a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Edit Assignment')]", "xpath:innerText"]
+      ],
+      "value": "Edit Assignment"
+    }, {
+      "id": "7de4b82c-a648-4b24-864b-7b4a03a29758",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Edit Assignment",
+      "targets": [
+        ["linkText=Edit Assignment", "linkText"],
+        ["xpath=//a[contains(text(),'Edit Assignment')]", "xpath:link"],
+        ["xpath=(//a[@id='view-grade'])[2]", "xpath:attributes"],
+        ["xpath=//a[@href='http://localhost:8015/Programming-Assignment-Evaluator/teacher/editAssignment/CS2012/1/1']", "xpath:href"],
+        ["xpath=//div[2]/div/div/div/div[2]/a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Edit Assignment')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5e5bdfde-2a52-4b4b-95de-5d4e845eb089",
+      "comment": "",
+      "command": "click",
+      "target": "id=title",
+      "targets": [
+        ["id=title", "id"],
+        ["name=name", "name"],
+        ["css=#title", "css:finder"],
+        ["xpath=//input[@id='title']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7437b5cd-d173-4c53-8395-00ba81ee09e9",
+      "comment": "",
+      "command": "type",
+      "target": "id=title",
+      "targets": [
+        ["id=title", "id"],
+        ["name=name", "name"],
+        ["css=#title", "css:finder"],
+        ["xpath=//input[@id='title']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Practicle 01 - a"
+    }, {
+      "id": "d9df94de-b58b-48f4-a001-7701d0b98966",
+      "comment": "",
+      "command": "click",
+      "target": "id=deadline",
+      "targets": [
+        ["id=deadline", "id"],
+        ["name=deadline", "name"],
+        ["css=#deadline", "css:finder"],
+        ["xpath=//input[@id='deadline']", "xpath:attributes"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "61176012-25fc-41d6-a8ae-51c054ab16fa",
+      "comment": "",
+      "command": "click",
+      "target": "css=.row:nth-child(3)",
+      "targets": [
+        ["css=.row:nth-child(3)", "css:finder"],
+        ["xpath=//form/div[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a1efcd6a-911d-42da-a06e-afabba573993",
+      "comment": "",
+      "command": "click",
+      "target": "id=language",
+      "targets": [
+        ["id=language", "id"],
+        ["name=language", "name"],
+        ["css=#language", "css:finder"],
+        ["xpath=//select[@id='language']", "xpath:attributes"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f36297fd-3846-443d-8e71-29eb039596e1",
+      "comment": "",
+      "command": "click",
+      "target": "name=edit",
+      "targets": [
+        ["name=edit", "name"],
+        ["css=.form-group > .btn", "css:finder"],
+        ["xpath=//button[@name='edit']", "xpath:attributes"],
+        ["xpath=//div[4]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Edit Assignment')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "861b50bc-3d56-44e9-ae1b-5e1e0c5f0e8c",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "Edit Assignment",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "ceca910e-2384-44aa-8a05-a367b7da67bf",
+    "name": "09 Search Submission",
+    "commands": [{
+      "id": "9ba68e15-135f-4446-a8e4-2b1e4f1af835",
+      "comment": "",
+      "command": "open",
+      "target": "/Programming-Assignment-Evaluator/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "53cde40f-e75d-4b3b-be2a-4a21f64bdf95",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1366x728",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b3f88680-6009-42ef-8739-80a5d5bdded6",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "Login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e5d6248d-d7a5-4b4a-bc9d-8971295078ee",
+      "comment": "",
+      "command": "click",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=.one .input", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9ce4c5c6-4360-444c-8cc3-46e89049adf4",
+      "comment": "",
+      "command": "type",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=.one .input", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "582201472v"
+    }, {
+      "id": "dfea0904-eabe-4f19-a97e-48b4aaed6a5f",
+      "comment": "",
+      "command": "click",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.pass .input", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8647c898-0567-4ca4-bb81-289e89c5a3af",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.pass .input", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "Teacher@123"
+    }, {
+      "id": "15783ecc-abf6-41c3-b462-535b3fa5831e",
+      "comment": "",
+      "command": "click",
+      "target": "id=login",
+      "targets": [
+        ["id=login", "id"],
+        ["css=#login", "css:finder"],
+        ["xpath=//button[@id='login']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "402e9fc5-649e-4bb7-9cc9-8e0078b1ea56",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "Assigned Courses",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8d1039c6-5c30-4407-aa04-41a267e3f0fa",
+      "comment": "",
+      "command": "click",
+      "target": "css=a > .card",
+      "targets": [
+        ["css=a > .card", "css:finder"],
+        ["xpath=//a/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1035c2e9-ccca-46dc-ad2d-0f9a97bafbe6",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "Course Details",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "811dce52-3961-4c20-ac84-b3a784cce70f",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.assignment-link:nth-child(6) .card-header",
+      "targets": [
+        ["css=.assignment-link:nth-child(6) .card-header", "css:finder"],
+        ["xpath=//a[2]/div/div", "xpath:position"]
+      ],
+      "value": "View Assignments"
+    }, {
+      "id": "8c288fc9-31a1-45ea-a644-a9fc59bda6f5",
+      "comment": "",
+      "command": "click",
+      "target": "css=.assignment-link:nth-child(6) .card-header",
+      "targets": [
+        ["css=.assignment-link:nth-child(6) .card-header", "css:finder"],
+        ["xpath=//a[2]/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cb4a043e-2dc6-4d0a-8e82-ab84b87d6196",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "View Assignment",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "13f1b31a-3c69-4ba1-864c-68b6b6848030",
+      "comment": "",
+      "command": "click",
+      "target": "css=.assignment-link:nth-child(1) .card-header",
+      "targets": [
+        ["css=.assignment-link:nth-child(1) .card-header", "css:finder"],
+        ["xpath=//a/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ed82c2fd-9306-4faf-a8ed-c592d7041dbf",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "Submissions",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3109cfd8-2827-48a6-996a-847e3347fd86",
+      "comment": "",
+      "command": "click",
+      "target": "name=search-student",
+      "targets": [
+        ["name=search-student", "name"],
+        ["css=.form-control", "css:finder"],
+        ["xpath=//input[@name='search-student']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "768f27d7-43f4-4e5e-a12d-d7955aaaef88",
+      "comment": "",
+      "command": "type",
+      "target": "name=search-student",
+      "targets": [
+        ["name=search-student", "name"],
+        ["css=.form-control", "css:finder"],
+        ["xpath=//input[@name='search-student']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "170"
+    }, {
+      "id": "d1069ec1-94e2-4801-8fc0-d80437365789",
+      "comment": "",
+      "command": "click",
+      "target": "name=submit-search-student",
+      "targets": [
+        ["name=submit-search-student", "name"],
+        ["css=.form-group > .btn", "css:finder"],
+        ["xpath=//button[@name='submit-search-student']", "xpath:attributes"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Search')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "15f85e1d-c8fc-40ff-b396-fce0c5ca4213",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "Submissions",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "200c990e-d29c-4d72-b4b6-7fb9fb7791e0",
+      "comment": "",
+      "command": "click",
+      "target": "css=td:nth-child(1)",
+      "targets": [
+        ["css=td:nth-child(1)", "css:finder"],
+        ["xpath=//td", "xpath:position"],
+        ["xpath=//td[contains(.,'170307M')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4c2cdc24-a6d5-4a83-a548-0d93310712ae",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=td:nth-child(1)",
+      "targets": [
+        ["css=td:nth-child(1)", "css:finder"],
+        ["xpath=//td", "xpath:position"],
+        ["xpath=//td[contains(.,'170307M')]", "xpath:innerText"]
+      ],
+      "value": "170307M"
+    }]
+  }, {
+    "id": "8aa64610-9d76-4432-95d1-f652f5cf36bd",
+    "name": "05 View_Assignments",
+    "commands": [{
+      "id": "18ea2687-dce7-4daf-a8d8-61a17ad9bbda",
+      "comment": "",
+      "command": "open",
+      "target": "/Programming-Assignment-Evaluator/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b7ae191f-4f90-4ea8-b305-1bc568a8dd79",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1366x728",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8c6c8ba1-83b9-43ba-8707-5dba895f58e1",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "Login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f15daa0c-1739-44be-8633-4921df9a359f",
+      "comment": "",
+      "command": "click",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=.one .input", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "03da5da5-5702-40ed-9680-123ac4e0f7be",
+      "comment": "",
+      "command": "type",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=.one .input", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "582201472v"
+    }, {
+      "id": "9b7571be-c4fc-4a67-81d5-82ce59095d7a",
+      "comment": "",
+      "command": "click",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.pass .input", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "eb0c4f33-e3f1-4103-9577-d28f9fcb06d5",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.pass .input", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "Teacher@123"
+    }, {
+      "id": "dd253d83-9fe0-4774-bc76-69b0dffc3e61",
+      "comment": "",
+      "command": "click",
+      "target": "id=login",
+      "targets": [
+        ["id=login", "id"],
+        ["css=#login", "css:finder"],
+        ["xpath=//button[@id='login']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "673a2117-943b-479c-b754-9d2509d84b41",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "Assigned Courses",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "68e0052d-13be-4567-a782-03d4660cb32a",
+      "comment": "",
+      "command": "click",
+      "target": "css=a > .card",
+      "targets": [
+        ["css=a > .card", "css:finder"],
+        ["xpath=//a/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4e2cab11-0c69-4a86-98d7-83d6abd0b325",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "Course Details",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a8cdab1c-9509-4326-917d-ee9590ab883e",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.assignment-link:nth-child(6) .card-header",
+      "targets": [
+        ["css=.assignment-link:nth-child(6) .card-header", "css:finder"],
+        ["xpath=//a[2]/div/div", "xpath:position"]
+      ],
+      "value": "View Assignments"
+    }, {
+      "id": "9dd6753f-e1d9-414a-9027-9f84153a73d4",
+      "comment": "",
+      "command": "click",
+      "target": "css=.assignment-link:nth-child(6) .card-header",
+      "targets": [
+        ["css=.assignment-link:nth-child(6) .card-header", "css:finder"],
+        ["xpath=//a[2]/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "25526529-fb2f-437a-b8a6-a0db3f0bcfcd",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "View Assignment",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "7d11da29-91c1-4e27-ba0b-2473d1cb0d6c",
+    "name": "11 Search_Student",
+    "commands": [{
+      "id": "85f8e38f-b308-42b5-96c9-deef1fb07eb8",
+      "comment": "",
+      "command": "open",
+      "target": "/Programming-Assignment-Evaluator/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9adb4625-29c7-46fb-bdf4-5f2b971486e8",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1366x728",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "48cf1ee7-ee22-41bc-965a-0d5b3ec7b303",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "Login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0bfa4b35-e322-42e0-a182-b22b5f584623",
+      "comment": "",
+      "command": "click",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=.one .input", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "da714c87-d43b-4274-9249-77278e72ce6d",
+      "comment": "",
+      "command": "type",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=.one .input", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "582201472v"
+    }, {
+      "id": "3b37855e-de15-4f16-9881-6d63be2274fd",
+      "comment": "",
+      "command": "click",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.pass .input", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4990b82a-4296-4cfb-a95e-f637fee11e0c",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.pass .input", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "Teacher@123"
+    }, {
+      "id": "abbf8d7b-3b03-4a3b-8978-708f109fdb21",
+      "comment": "",
+      "command": "click",
+      "target": "id=login",
+      "targets": [
+        ["id=login", "id"],
+        ["css=#login", "css:finder"],
+        ["xpath=//button[@id='login']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9975effd-25a4-4a7c-85ee-15b1610f8ed1",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "Assigned Courses",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1c63c208-c7f2-41e6-8829-72de8e242c9f",
+      "comment": "",
+      "command": "click",
+      "target": "css=a > .card",
+      "targets": [
+        ["css=a > .card", "css:finder"],
+        ["xpath=//a/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "eccee012-2e50-4c61-965d-d8bd2ea0bdb7",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "Course Details",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6d5117f6-4b4d-437b-8da8-7966978ed88e",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.assignment-link:nth-child(7) .card-header",
+      "targets": [
+        ["css=.assignment-link:nth-child(7) .card-header", "css:finder"],
+        ["xpath=//a[3]/div/div", "xpath:position"]
+      ],
+      "value": "View Students"
+    }, {
+      "id": "cd249afb-3a50-4cc6-a9f1-1a8616a7bcca",
+      "comment": "",
+      "command": "click",
+      "target": "css=.assignment-link:nth-child(7) .card-header",
+      "targets": [
+        ["css=.assignment-link:nth-child(7) .card-header", "css:finder"],
+        ["xpath=//a[3]/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "11724861-235a-4ece-9539-f8c43d3135b1",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "View Students",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "669aa719-42bd-4095-9abd-9464dfcf1fa0",
+      "comment": "",
+      "command": "click",
+      "target": "name=search-student",
+      "targets": [
+        ["name=search-student", "name"],
+        ["css=.form-control", "css:finder"],
+        ["xpath=//input[@name='search-student']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e64d6314-034f-42bf-9e61-bcc4b964c56a",
+      "comment": "",
+      "command": "type",
+      "target": "name=search-student",
+      "targets": [
+        ["name=search-student", "name"],
+        ["css=.form-control", "css:finder"],
+        ["xpath=//input[@name='search-student']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "170"
+    }, {
+      "id": "a5b67708-14c7-4cc9-b69a-e1f313f32245",
+      "comment": "",
+      "command": "click",
+      "target": "name=submit-search-student",
+      "targets": [
+        ["name=submit-search-student", "name"],
+        ["css=.form-group > .btn", "css:finder"],
+        ["xpath=//button[@name='submit-search-student']", "xpath:attributes"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Search')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "42c207f5-243b-4960-99b7-87d408c43d45",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "View Students",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "91e6497d-d6ec-49b3-8443-a96876ab7cf1",
+      "comment": "",
+      "command": "click",
+      "target": "css=td:nth-child(1)",
+      "targets": [
+        ["css=td:nth-child(1)", "css:finder"],
+        ["xpath=//td", "xpath:position"],
+        ["xpath=//td[contains(.,'170307M')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "20596635-7917-4b6d-b20c-0b899db0b243",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=td:nth-child(1)",
+      "targets": [
+        ["css=td:nth-child(1)", "css:finder"],
+        ["xpath=//td", "xpath:position"],
+        ["xpath=//td[contains(.,'170307M')]", "xpath:innerText"]
+      ],
+      "value": "170307M"
+    }]
+  }, {
+    "id": "d4184a72-fd58-4fe6-9882-31ddc6684d7b",
+    "name": "12 View_Profile",
+    "commands": [{
+      "id": "a478d35c-91f3-4780-a806-41fccf6f4b4b",
+      "comment": "",
+      "command": "open",
+      "target": "/Programming-Assignment-Evaluator/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4a638e1f-9a96-4699-ab74-de612e9f2979",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1366x728",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1e0c1f9d-a2dd-402f-a0bf-bd5034c8e1d8",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "Login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ecfb00a4-195b-414d-8d8c-3bbfd5d63b3a",
+      "comment": "",
+      "command": "click",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=.one .input", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c2af2ac2-c749-4284-95bf-7a9be01c4e48",
+      "comment": "",
+      "command": "type",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=.one .input", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "582201472v"
+    }, {
+      "id": "aab38592-90a8-40a2-8c78-5cfa79997c3c",
+      "comment": "",
+      "command": "click",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.pass .input", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ac58811b-1c6f-4e8b-84fa-f6cf4660c975",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.pass .input", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "Teacher@123"
+    }, {
+      "id": "52e7afb8-c68c-4c89-ae70-5ffd093f9b73",
+      "comment": "",
+      "command": "click",
+      "target": "id=login",
+      "targets": [
+        ["id=login", "id"],
+        ["css=#login", "css:finder"],
+        ["xpath=//button[@id='login']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f6d54cf7-55b5-47e4-a472-d06fba6b8120",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "Assigned Courses",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8d243583-c306-4185-99c1-d75aa9ca5f65",
+      "comment": "",
+      "command": "click",
+      "target": "css=.nav-item:nth-child(3) > .nav-link",
+      "targets": [
+        ["css=.nav-item:nth-child(3) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Profile')]", "xpath:link"],
+        ["xpath=//div[@id='navbarSupportedContent']/ul/li[3]/a", "xpath:idRelative"],
+        ["xpath=//a[@href='http://localhost:8015/Programming-Assignment-Evaluator/teacher/profile']", "xpath:href"],
+        ["xpath=//li[3]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "58a5ff0c-7a28-49a6-a677-ea8112b4723c",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "Profile",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "7fca6854-d396-475a-aba7-523fb08edf9d",
+    "name": "14 Change_Password",
+    "commands": [{
+      "id": "e117dcfb-abe0-43a7-b5da-59113d92cc71",
+      "comment": "",
+      "command": "open",
+      "target": "/Programming-Assignment-Evaluator/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ee8197da-1d8c-4efe-b29c-1b075b178e14",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1366x728",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "da6bc124-2149-4461-befa-8f87939a80e5",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "Login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bb2178c2-e5a2-4937-b4ff-d89b3b167120",
+      "comment": "",
+      "command": "click",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=.one .input", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1042a3c4-96af-43de-b2ed-86351a609ca7",
+      "comment": "",
+      "command": "type",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=.one .input", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "582201472v"
+    }, {
+      "id": "8d7178d8-4f32-4b9e-b846-c4c808895991",
+      "comment": "",
+      "command": "click",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.pass .input", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "58add5b0-f5e3-4764-9e58-e4ad2e3574eb",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.pass .input", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "Teacher@123"
+    }, {
+      "id": "99d15353-048d-424d-a57d-9408e123229d",
+      "comment": "",
+      "command": "click",
+      "target": "id=login",
+      "targets": [
+        ["id=login", "id"],
+        ["css=#login", "css:finder"],
+        ["xpath=//button[@id='login']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "77d6cbcb-007d-4327-b872-6cf63070c8a5",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "Assigned Courses",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0aed9145-6036-44d9-8464-19f7b24b5024",
+      "comment": "",
+      "command": "click",
+      "target": "css=.nav-item:nth-child(3) > .nav-link",
+      "targets": [
+        ["css=.nav-item:nth-child(3) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Profile')]", "xpath:link"],
+        ["xpath=//div[@id='navbarSupportedContent']/ul/li[3]/a", "xpath:idRelative"],
+        ["xpath=//a[@href='http://localhost:8015/Programming-Assignment-Evaluator/teacher/profile']", "xpath:href"],
+        ["xpath=//li[3]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "176b3abe-08cd-489d-acf4-815d609aa6fe",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "Profile",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7a7984e5-a1f9-4e6e-9865-17b54eae982a",
+      "comment": "",
+      "command": "click",
+      "target": "id=curr_pass",
+      "targets": [
+        ["id=curr_pass", "id"],
+        ["name=curr_pass", "name"],
+        ["css=#curr_pass", "css:finder"],
+        ["xpath=//input[@id='curr_pass']", "xpath:attributes"],
+        ["xpath=//div[@id='change-password']/form/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1ae3147d-6845-439f-89ce-cd49c824f028",
+      "comment": "",
+      "command": "type",
+      "target": "id=curr_pass",
+      "targets": [
+        ["id=curr_pass", "id"],
+        ["name=curr_pass", "name"],
+        ["css=#curr_pass", "css:finder"],
+        ["xpath=//input[@id='curr_pass']", "xpath:attributes"],
+        ["xpath=//div[@id='change-password']/form/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Teacher@123"
+    }, {
+      "id": "b7319b38-00e5-4556-b4a0-5df82580dd54",
+      "comment": "",
+      "command": "mouseDown",
+      "target": "css=.btn:nth-child(6)",
+      "targets": [
+        ["css=.btn:nth-child(6)", "css:finder"],
+        ["xpath=//div[@id='change-password']/form/button", "xpath:idRelative"],
+        ["xpath=//form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Change Password')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "83f94c6f-6fb7-4977-ae10-8f2705958040",
+      "comment": "",
+      "command": "mouseUp",
+      "target": "css=.col-md-4",
+      "targets": [
+        ["css=.col-md-4", "css:finder"],
+        ["xpath=//div[@id='change-password']/form/div/div", "xpath:idRelative"],
+        ["xpath=//form/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "85838469-eef2-4a92-acf6-58808d27d4cc",
+      "comment": "",
+      "command": "click",
+      "target": "css=form",
+      "targets": [
+        ["css=form", "css:finder"],
+        ["xpath=//form[@action='http://localhost:8015/Programming-Assignment-Evaluator/teachers/profile/']", "xpath:attributes"],
+        ["xpath=//div[@id='change-password']/form", "xpath:idRelative"],
+        ["xpath=//form", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cea45312-4773-4351-9b56-6321aaea8b4f",
+      "comment": "",
+      "command": "click",
+      "target": "id=new_pass",
+      "targets": [
+        ["id=new_pass", "id"],
+        ["name=new_pass", "name"],
+        ["css=#new_pass", "css:finder"],
+        ["xpath=//input[@id='new_pass']", "xpath:attributes"],
+        ["xpath=//div[@id='new-passwords']/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "66dcaad7-e83c-4f6c-9d6b-b03a65970510",
+      "comment": "",
+      "command": "type",
+      "target": "id=new_pass",
+      "targets": [
+        ["id=new_pass", "id"],
+        ["name=new_pass", "name"],
+        ["css=#new_pass", "css:finder"],
+        ["xpath=//input[@id='new_pass']", "xpath:attributes"],
+        ["xpath=//div[@id='new-passwords']/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": "Teacher@1234"
+    }, {
+      "id": "3dbc1c4f-8fb5-46df-b4f2-f9dadd2d97f0",
+      "comment": "",
+      "command": "click",
+      "target": "id=renew_pass",
+      "targets": [
+        ["id=renew_pass", "id"],
+        ["name=renew_pass", "name"],
+        ["css=#renew_pass", "css:finder"],
+        ["xpath=//input[@id='renew_pass']", "xpath:attributes"],
+        ["xpath=//div[@id='new-passwords']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a4f99d9f-397c-421f-9e60-1a5402c20bd8",
+      "comment": "",
+      "command": "type",
+      "target": "id=renew_pass",
+      "targets": [
+        ["id=renew_pass", "id"],
+        ["name=renew_pass", "name"],
+        ["css=#renew_pass", "css:finder"],
+        ["xpath=//input[@id='renew_pass']", "xpath:attributes"],
+        ["xpath=//div[@id='new-passwords']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "Teacher@1234"
+    }, {
+      "id": "fe380023-a2cd-45a1-a226-5fd3c0cce63b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn:nth-child(6)",
+      "targets": [
+        ["css=.btn:nth-child(6)", "css:finder"],
+        ["xpath=//div[@id='change-password']/form/button", "xpath:idRelative"],
+        ["xpath=//form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Change Password')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6e6f1821-08a9-43b4-a7f1-ddd9bd770990",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "Profile",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "45c69045-08ff-4680-807c-ae966f28eb6b",
+      "comment": "",
+      "command": "click",
+      "target": "id=change-password-success",
+      "targets": [
+        ["id=change-password-success", "id"],
+        ["css=#change-password-success", "css:finder"],
+        ["xpath=//p[@id='change-password-success']", "xpath:attributes"],
+        ["xpath=//p", "xpath:position"],
+        ["xpath=//p[contains(.,'Password changed successfully.')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5e9a674d-9f98-4cb3-a8f9-53b72d3dce50",
+      "comment": "",
+      "command": "verifyText",
+      "target": "id=change-password-success",
+      "targets": [
+        ["id=change-password-success", "id"],
+        ["css=#change-password-success", "css:finder"],
+        ["xpath=//p[@id='change-password-success']", "xpath:attributes"],
+        ["xpath=//p", "xpath:position"],
+        ["xpath=//p[contains(.,'Password changed successfully.')]", "xpath:innerText"]
+      ],
+      "value": "Password changed successfully."
+    }]
+  }, {
+    "id": "e4f7aa10-38ac-47f4-9466-f2d58791d38a",
+    "name": "15 Change_Password_Incorrect_Current",
+    "commands": [{
+      "id": "070f638d-e01c-4cd7-86f3-444abdcf3ea2",
+      "comment": "",
+      "command": "open",
+      "target": "/Programming-Assignment-Evaluator/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f95a5971-f777-4aff-809b-847ec5eb98f6",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1366x728",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5a98a5a7-f84c-4d55-affd-71579887f4bc",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "Login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "99593567-82f8-435b-b887-aa935df80a3b",
+      "comment": "",
+      "command": "click",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=.one .input", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "27f5b85f-e46f-4e24-ade7-126f28a46d1f",
+      "comment": "",
+      "command": "type",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=.one .input", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "582201472v"
+    }, {
+      "id": "1a41834b-dce8-411b-a9b7-94b60b0249df",
+      "comment": "",
+      "command": "click",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.pass .input", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cf5a3e77-e468-4f02-a366-8d23359ac155",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.pass .input", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "Teacher@123"
+    }, {
+      "id": "3126a989-b23e-48eb-adc9-db1dfdd4762d",
+      "comment": "",
+      "command": "click",
+      "target": "id=login",
+      "targets": [
+        ["id=login", "id"],
+        ["css=#login", "css:finder"],
+        ["xpath=//button[@id='login']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c138c8e1-1696-4b5f-aa87-11e64cd9f403",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "Assigned Courses",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "36504e6a-786b-4d14-9b4e-7757e281670d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.nav-item:nth-child(3) > .nav-link",
+      "targets": [
+        ["css=.nav-item:nth-child(3) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Profile')]", "xpath:link"],
+        ["xpath=//div[@id='navbarSupportedContent']/ul/li[3]/a", "xpath:idRelative"],
+        ["xpath=//a[@href='http://localhost:8015/Programming-Assignment-Evaluator/teacher/profile']", "xpath:href"],
+        ["xpath=//li[3]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fe218700-2907-4dbe-b98e-ca807c2a830d",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "Profile",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "acb7fd3f-3926-4677-acf0-776267490ebb",
+      "comment": "",
+      "command": "click",
+      "target": "id=curr_pass",
+      "targets": [
+        ["id=curr_pass", "id"],
+        ["name=curr_pass", "name"],
+        ["css=#curr_pass", "css:finder"],
+        ["xpath=//input[@id='curr_pass']", "xpath:attributes"],
+        ["xpath=//div[@id='change-password']/form/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2abee538-3c50-4f7b-a2ae-909369edbd3f",
+      "comment": "",
+      "command": "type",
+      "target": "id=curr_pass",
+      "targets": [
+        ["id=curr_pass", "id"],
+        ["name=curr_pass", "name"],
+        ["css=#curr_pass", "css:finder"],
+        ["xpath=//input[@id='curr_pass']", "xpath:attributes"],
+        ["xpath=//div[@id='change-password']/form/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Teacher"
+    }, {
+      "id": "5104ec19-8b7a-409f-93ec-bbe606c82412",
+      "comment": "",
+      "command": "mouseDown",
+      "target": "css=.btn:nth-child(6)",
+      "targets": [
+        ["css=.btn:nth-child(6)", "css:finder"],
+        ["xpath=//div[@id='change-password']/form/button", "xpath:idRelative"],
+        ["xpath=//form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Change Password')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "37c6686a-245a-4482-b45f-40af99a930ac",
+      "comment": "",
+      "command": "mouseUp",
+      "target": "id=curr_pass",
+      "targets": [
+        ["id=curr_pass", "id"],
+        ["name=curr_pass", "name"],
+        ["css=#curr_pass", "css:finder"],
+        ["xpath=//input[@id='curr_pass']", "xpath:attributes"],
+        ["xpath=//div[@id='change-password']/form/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1ba4ef5a-e870-4e08-85d5-841f40769971",
+      "comment": "",
+      "command": "click",
+      "target": "css=form",
+      "targets": [
+        ["css=form", "css:finder"],
+        ["xpath=//form[@action='http://localhost:8015/Programming-Assignment-Evaluator/teachers/profile/']", "xpath:attributes"],
+        ["xpath=//div[@id='change-password']/form", "xpath:idRelative"],
+        ["xpath=//form", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f1b22fbb-d6dc-48f0-b305-8843ab54e28b",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "Profile",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0f73a685-b1a1-4483-942b-6b12e4a48831",
+      "comment": "",
+      "command": "click",
+      "target": "id=error-msg-change-password",
+      "targets": [
+        ["id=error-msg-change-password", "id"],
+        ["css=#error-msg-change-password", "css:finder"],
+        ["xpath=//p[@id='error-msg-change-password']", "xpath:attributes"],
+        ["xpath=//div[@id='change-password']/form/p", "xpath:idRelative"],
+        ["xpath=//form/p", "xpath:position"],
+        ["xpath=//p[contains(.,'Entered password is wrong.')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "03ec7892-1423-4d02-ac19-f681a63a3b38",
+      "comment": "",
+      "command": "verifyText",
+      "target": "id=error-msg-change-password",
+      "targets": [
+        ["id=error-msg-change-password", "id"],
+        ["css=#error-msg-change-password", "css:finder"],
+        ["xpath=//p[@id='error-msg-change-password']", "xpath:attributes"],
+        ["xpath=//div[@id='change-password']/form/p", "xpath:idRelative"],
+        ["xpath=//form/p", "xpath:position"],
+        ["xpath=//p[contains(.,'Entered password is wrong.')]", "xpath:innerText"]
+      ],
+      "value": "Entered password is wrong."
+    }]
+  }, {
+    "id": "a44c48c7-bcdc-4877-9d16-35936f9a95ce",
+    "name": "13 Compiler",
+    "commands": [{
+      "id": "a49529e2-052a-4053-a427-34c17774bccf",
+      "comment": "",
+      "command": "open",
+      "target": "/Programming-Assignment-Evaluator/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8a8fe59f-4a1d-4746-820e-5c40700ffff0",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1366x728",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "31da5115-146a-4cca-bb42-80c3b40a2355",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "Login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "02b7a3ce-e267-431d-ab30-e3a92abd07d1",
+      "comment": "",
+      "command": "click",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=.one .input", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ff6d0475-eb81-4fa7-ae78-1aadfd3b24d0",
+      "comment": "",
+      "command": "type",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=.one .input", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "582201472v"
+    }, {
+      "id": "e35aefd4-da4b-4437-9a7d-f0568dcb6b79",
+      "comment": "",
+      "command": "click",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.pass .input", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fd161bda-d097-4912-a8e0-8be4e83b2d4d",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.pass .input", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "Teacher@123"
+    }, {
+      "id": "59a1863c-febb-4622-98db-a4314becceb3",
+      "comment": "",
+      "command": "click",
+      "target": "id=login",
+      "targets": [
+        ["id=login", "id"],
+        ["css=#login", "css:finder"],
+        ["xpath=//button[@id='login']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "988ce13d-96d7-4089-8c78-7918f335ecd6",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "Assigned Courses",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ad9f40f2-d41a-441c-8035-8e54dda69600",
+      "comment": "",
+      "command": "click",
+      "target": "css=.nav-item:nth-child(2) > .nav-link",
+      "targets": [
+        ["css=.nav-item:nth-child(2) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Compiler')]", "xpath:link"],
+        ["xpath=//div[@id='navbarSupportedContent']/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[@href='http://localhost:8015/Programming-Assignment-Evaluator/compiler']", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "860d5a6e-1915-4bd4-8b65-f0069ca4e602",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "Compiler",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3fbcface-cc9e-4d72-afde-c70327d0f4d5",
+      "comment": "",
+      "command": "click",
+      "target": "name=userfile",
+      "targets": [
+        ["name=userfile", "name"],
+        ["css=.custom-file-input", "css:finder"],
+        ["xpath=//input[@name='userfile']", "xpath:attributes"],
+        ["xpath=//div[@id='body']/div[2]/div/div[2]/div/div/form/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4caeeb54-931f-4d64-941c-9af9e3ba292d",
+      "comment": "",
+      "command": "type",
+      "target": "name=userfile",
+      "targets": [
+        ["name=userfile", "name"],
+        ["css=.custom-file-input", "css:finder"],
+        ["xpath=//input[@name='userfile']", "xpath:attributes"],
+        ["xpath=//div[@id='body']/div[2]/div/div[2]/div/div/form/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "C:\\fakepath\\add_two_numbers.java"
+    }, {
+      "id": "a841ae9b-c759-492b-90cf-78cc92c90d7f",
+      "comment": "",
+      "command": "click",
+      "target": "name=lang",
+      "targets": [
+        ["name=lang", "name"],
+        ["css=.custom-select", "css:finder"],
+        ["xpath=//select[@name='lang']", "xpath:attributes"],
+        ["xpath=//div[@id='body']/div[2]/div/div[2]/div/div/form/div/div[2]/div/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "acf0969f-bc57-43c1-b79a-35ae5c35c40d",
+      "comment": "",
+      "command": "select",
+      "target": "name=lang",
+      "targets": [],
+      "value": "label=Java"
+    }, {
+      "id": "66d3c1af-8ce1-47f2-a08f-16c86fe25805",
+      "comment": "",
+      "command": "click",
+      "target": "name=lang",
+      "targets": [
+        ["name=lang", "name"],
+        ["css=.custom-select", "css:finder"],
+        ["xpath=//select[@name='lang']", "xpath:attributes"],
+        ["xpath=//div[@id='body']/div[2]/div/div[2]/div/div/form/div/div[2]/div/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9916733d-6e9f-4200-b9c9-0ae7e59f17d5",
+      "comment": "",
+      "command": "click",
+      "target": "name=input",
+      "targets": [
+        ["name=input", "name"],
+        ["css=.form-control", "css:finder"],
+        ["xpath=//textarea[@name='input']", "xpath:attributes"],
+        ["xpath=//div[@id='body']/div[2]/div/div[2]/div/div/form/div/div[3]/div/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "99f5bad3-dbd1-4c97-84f0-50856c3a98d8",
+      "comment": "",
+      "command": "type",
+      "target": "name=input",
+      "targets": [
+        ["name=input", "name"],
+        ["css=.form-control", "css:finder"],
+        ["xpath=//textarea[@name='input']", "xpath:attributes"],
+        ["xpath=//div[@id='body']/div[2]/div/div[2]/div/div/form/div/div[3]/div/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "10\\n54"
+    }, {
+      "id": "f403043f-c4a0-4072-bc5c-239d29e0a2f6",
+      "comment": "",
+      "command": "click",
+      "target": "name=upload",
+      "targets": [
+        ["name=upload", "name"],
+        ["css=.form-group > .btn", "css:finder"],
+        ["xpath=//button[@name='upload']", "xpath:attributes"],
+        ["xpath=//div[@id='body']/div[2]/div/div[2]/div/div/form/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Run Code')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2a66365a-e13b-4a9c-aaf1-f9eeaa5da315",
+      "comment": "",
+      "command": "click",
+      "target": "css=.card-title",
+      "targets": [
+        ["css=.card-title", "css:finder"],
+        ["xpath=//div[@id='body']/div[2]/div/div[2]/h5", "xpath:idRelative"],
+        ["xpath=//h5", "xpath:position"],
+        ["xpath=//h5[contains(.,'Output :')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c9aded0e-4225-4b25-b76f-5f2e857e3d2d",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.card-title",
+      "targets": [
+        ["css=.card-title", "css:finder"],
+        ["xpath=//div[@id='body']/div[2]/div/div[2]/h5", "xpath:idRelative"],
+        ["xpath=//h5", "xpath:position"],
+        ["xpath=//h5[contains(.,'Output :')]", "xpath:innerText"]
+      ],
+      "value": "Output :"
+    }]
+  }],
+  "suites": [{
+    "id": "6877900b-9e79-44b6-bc34-37bbfe590602",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": ["http://localhost:8015/"],
+  "plugins": []
+}
