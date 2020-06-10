@@ -254,7 +254,7 @@ class Students extends CI_Controller{
 
 		$student_id = $this->session->userdata('student_id');
 		//C:\xampp\htdocs\myapp\submissions
-		$lang = $this->assignment_model->getLang($assignment_id);
+		// $lang = $this->assignment_model->getLang($assignment_id);
 		$config['upload_path'] = "./assets/uploads/" . strval($assignment_id) . "/submission";
 //		$config['allowed_types'] = $lang;
 

@@ -26,16 +26,22 @@ class Testcase_model extends CI_Model
 	}
 
 	function getOutput($assignment_id){
-        $this->db->select('case_id', 'output_name');
+
+		// echo $assignment_id;
+        $this->db->select('case_id, output_name');
         $this->db->from('testcases');
         $this->db->where('assignment_id', $assignment_id);
-        $result = $this->db->get();
+		$result = $this->db->get();
+		return $result->result_array();
 	}
 	
 	function getInput($assignment_id){
-        $this->db->select('case_id', 'input_name');
+		// echo $assignment_id;
+
+        $this->db->select('case_id, input_name');
         $this->db->from('testcases');
         $this->db->where('assignment_id', $assignment_id);
-        $result = $this->db->get();
+		$result = $this->db->get();
+		return $result->result_array();
     }
 }
