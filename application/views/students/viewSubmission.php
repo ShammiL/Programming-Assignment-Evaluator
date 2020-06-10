@@ -75,7 +75,7 @@
 								<div class="col-md-4 pl-0">
 									<label for="file-input">Select file to upload :</label>
 									<div class="custom-file mb-3">
-										<input type="file" class="custom-file-input" name="userfile"  oninput="checkDocument(this)">
+										<input type="file" class="custom-file-input" name="userfile" oninput="checkDocument(this)">
 										<label class="custom-file-label" for="customFile">Choose file</label>
 									</div>
 									<button class="btn btn-primary" type="submit" id="update-assignment">Update Assignment</button>
@@ -85,7 +85,7 @@
 						</div>
 						<?php if (!$deadline) {
 							if($error != NULL){
-								echo "<p class='submission-error'>".$error."<br></p>";
+								echo "<p class='submission-error' id='error'>".$error."<br></p>";
 							} ?>
 							<button class="btn btn-primary" type="submit" id="edit-submission" onclick="editSubmission()">Edit Submission</button>
 						<?php  }
@@ -104,7 +104,7 @@
 											<div class="col-md-4">
 												<label for="file-input">Select file to upload :</label>
 												<div class="custom-file">
-													<input type="file" class="custom-file-input" name="userfile"  oninput="checkDocument(this)">
+													<input type="file" class="custom-file-input" name="userfile" oninput="checkDocument(this)">
 													<label class="custom-file-label" for="customFile">Choose file</label>
 												</div>
 											</div>
@@ -126,6 +126,7 @@
 	function editSubmission() {
 		$('#submit-container').removeClass('d-none');
 		$('#edit-submission').addClass('d-none');
+		$('#error').addClass('d-none');
 	}
 
 	function cancelUpdate() {
@@ -136,10 +137,28 @@
 	function checkDocument(input) {
 		let filepath = input.value.split(".");
 		let fileType = filepath[filepath.length-1];
-		let type = <?php echo $assignment_data['language']; ?>;
+		let type = "<?php echo $assignment_data['language']; ?>";
+		let defined = "";
 
-		if (type !== fileType) {
-			input.setCustomValidity('Please .');
+		switch (type) {
+			case "Python":
+				defined = "py";
+				break;
+			case "Java":
+				defined = "java";
+				break;
+			case "Javascript":
+				defined = "js";
+				break;
+			case "C++":
+				defined = "cpp";
+				break;
+			default:
+				break;
+		}
+
+		if (fileType !== defined) {
+			input.setCustomValidity('Please use the assigned language.');
 		} else {
 			input.setCustomValidity('');
 		}

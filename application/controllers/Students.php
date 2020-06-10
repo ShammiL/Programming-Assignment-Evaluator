@@ -186,7 +186,6 @@ class Students extends CI_Controller{
 		// echo $filepath;
 	}
 
-
 	public function viewGrade ($assignment_id, $num){
 
 		if ($this->session->userdata('student_id')){
@@ -216,13 +215,12 @@ class Students extends CI_Controller{
 		//C:\xampp\htdocs\myapp\submissions
 		$lang = $this->assignment_model->getLang($assignment_id);
 		$config['upload_path'] = "./assets/uploads/" . strval($assignment_id) . "/submission";
-		$config['allowed_types'] = $lang;
+//		$config['allowed_types'] = $lang;
 
 		$_FILES['userfile']['name'] = str_replace(" ", "_", $_FILES['userfile']['name']);
 		$_FILES['userfile']['name'] = $student_id . '_' . $_FILES['userfile']['name'];
 
 		date_default_timezone_set('Asia/Colombo');
-
 
 		$data = array(
 			'assignment_id' => $assignment_id,
@@ -256,7 +254,7 @@ class Students extends CI_Controller{
 		//C:\xampp\htdocs\myapp\submissions
 		$lang = $this->assignment_model->getLang($assignment_id);
 		$config['upload_path'] = "./assets/uploads/" . strval($assignment_id) . "/submission";
-		$config['allowed_types'] = $lang;
+//		$config['allowed_types'] = $lang;
 
 		$_FILES['userfile']['name'] = str_replace(" ", "_", $_FILES['userfile']['name']);
 		$_FILES['userfile']['name'] = $student_id . '_' . $_FILES['userfile']['name'];

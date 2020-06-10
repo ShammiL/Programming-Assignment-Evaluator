@@ -92,7 +92,7 @@
 							<div class="form-row">
 								<div class="form-group col-md-4">
 									<label for="uniqueness">Enter Plagiarism Threshold</label>
-									<input type="text" class="form-control" name="uniqueness" onclick="checkValue(this)" placeholder="Enter Plagiarism Threshold...">
+									<input type="text" class="form-control" name="uniqueness" oninput="checkValue(this)" placeholder="Enter Plagiarism Threshold...">
 									<small style="color:#357B8E;">The value must be between 0-100</small>
 								</div>
 							</div>
@@ -117,10 +117,14 @@
 <script>
 	function checkValue(input) {
 		let val = input.value;
-		if (val >= 100 || val <= 0) {
-			input.setCustomValidity('Please enter a value between 0-100');
+		if (!isNaN(val)) {
+			if (val >= 100 || val <= 0) {
+				input.setCustomValidity('Please enter a value between 0-100');
+			} else {
+				input.setCustomValidity('');
+			}
 		} else {
-			input.setCustomValidity('');
+			input.setCustomValidity('Please enter an integer value');
 		}
 	}
 	function getThreshold() {
