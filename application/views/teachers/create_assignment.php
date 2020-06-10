@@ -47,8 +47,7 @@
 						<select id="language" class="form-control" name="language" required>
 							<option selected value="" disabled>------ Select Language ------</option>
 							<option value="Java">Java</option>
-							<option value="Python">Python 2.7</option>
-							<option value="Python3">Python 3.7</option>
+							<option value="Python">Python</option>
 							<option value="Javascript">Javascript</option>
 							<option value="Cpp">C++</option>
 						</select>

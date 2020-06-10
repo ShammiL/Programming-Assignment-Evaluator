@@ -77,7 +77,7 @@
                             <tr>
                                 <td><?php echo $submission['student_id']; ?></td>
                                 <td><?php echo explode(' ', $submission['submitted_at'])[0] . ', ' . strval(date("g:i a", strtotime(explode(' ', $submission['submitted_at'])[1]))); ?></td>
-                                <td><?php echo $submission['grade']; ?><a class="ml-3" href="">Edit</a></td>
+                                <td><?php echo $submission['grade']; ?><a href="">Edit</a></td>
                                 <td>Yes</td>
                                 <td><a href="<?php echo base_url() . "teachers/download_submission/" . $submission['assignment_id'] . "/" . $submission['file_path']; ?>">Download</a><a class="ml-3" href="">Feedback</a></td>
                             </tr>
@@ -85,8 +85,25 @@
 						</tbody>
 					</table>
 				</div>
-				<?php if ($assignment['status'] === '0') { // once the button is clicked status should be changed to 2?>
-					<button type="submit" name="grade-assignment" class="btn btn-primary pl-5 pr-5 mt-3">Grade All</button>
+				<?php if ($assignment['status'] === '0') { // once the button is clicked status should be changed to 1?>
+					<div id="threshold-container" class="d-none">
+						<hr>
+						<?php echo form_open('teachers/grade'); ?>
+							<div class="form-row">
+								<div class="form-group col-md-4">
+									<label for="uniqueness">Enter Plagiarism Threshold</label>
+									<input type="text" class="form-control" name="uniqueness" oninput="checkValue(this)" placeholder="Enter Plagiarism Threshold...">
+									<small style="color:#357B8E;">The value must be between 0-100</small>
+								</div>
+							</div>
+							<div class="form-group">
+								<button type="submit" name="grade-assignments" class="btn btn-primary">Submit</button>
+							</div>
+						<?php echo form_close(); ?>
+						<button class="btn btn-sm btn-outline-secondary mt-1" type="submit" id="cancel-grade" onclick="cancelGrade()">Cancel</button>
+					</div>
+
+					<button type="submit" onclick="getThreshold()" id="btn-threshold" class="btn btn-primary pl-5 pr-5 mt-3">Grade All</button>
                 <?php }
 				} else {
                     echo "<p class='text-center'>There are no submissions.</p>";
@@ -97,4 +114,25 @@
 	<div class="col-md-1"></div>
 </div>
 
-
+<script>
+	function checkValue(input) {
+		let val = input.value;
+		if (!isNaN(val)) {
+			if (val >= 100 || val <= 0) {
+				input.setCustomValidity('Please enter a value between 0-100');
+			} else {
+				input.setCustomValidity('');
+			}
+		} else {
+			input.setCustomValidity('Please enter an integer value');
+		}
+	}
+	function getThreshold() {
+		$('#threshold-container').removeClass('d-none');
+		$('#btn-threshold').addClass('d-none');
+	}
+	function cancelGrade() {
+		$('#threshold-container').addClass('d-none');
+		$('#btn-threshold').removeClass('d-none');
+	}
+</script>

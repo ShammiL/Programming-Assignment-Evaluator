@@ -8,7 +8,9 @@ class Submission_model extends CI_Model{
     public function get_submissions($assignment_id, $student_id=NULL){
 
         if ($student_id) {
-            $query = $this->db->get_where('submissions', array('assignment_id'=>$assignment_id, 'student_id'=>$student_id));
+        	$this->db->where('assignment_id', $assignment_id);
+        	$this->db->like('student_id', $student_id);
+            $query = $this->db->get('submissions');
         } else {
             $query = $this->db->get_where('submissions', array('assignment_id'=>$assignment_id));
         }
@@ -64,12 +66,5 @@ class Submission_model extends CI_Model{
     function deleteSubmission($id){
         $this->db->where('submission_id', $id);
         return $this->db->delete('submissions');
-    }
-
-    function getFiles($assignment_id){
-        $this->db->select('submission_id', 'file_path');
-        $this->db->from('submissions');
-        $this->db->where('assignment_id', $assignment_id);
-        $result = $this->db->get();
     }
 }
