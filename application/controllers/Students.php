@@ -229,19 +229,21 @@ class Students extends CI_Controller{
 			'submitted_at' => strval(date("Y-m-d H:i:s"))
 		);
 
-		$this->load->library('upload',$config);
+		// $this->load->library('upload',$config);
 
-		if($this->upload->do_upload()){
+		// if($this->upload->do_upload()){
 
-			$this->Submission_model->makeSubmission($data);
+		$this->Submission_model->makeSubmission($data);
 			//echo $this->upload->display_errors();
 			//$this->assignmentDetails($assignment_id,$num);
-			$this->assignmentDetails($assignment_id,$num);
-		} else {
-			//$this->assignmentDetails($assignment_id,$num);
-			$data = "The file upload was unsuccessful.<br>The file was not written in the expected language.<br>If you have uploaded the correct file please try again.";
-			$this->assignmentDetails($assignment_id,$num,$data);
-		}
+		move_uploaded_file($_FILES['userfile']['tmp_name'], "./assets/uploads/" . strval($assignment_id) . "/submission/" . $_FILES['userfile']['name']);
+
+		$this->assignmentDetails($assignment_id,$num);
+		// } else {
+		// 	//$this->assignmentDetails($assignment_id,$num);
+		// 	$data = "The file upload was unsuccessful.<br>The file was not written in the expected language.<br>If you have uploaded the correct file please try again.";
+		// 	$this->assignmentDetails($assignment_id,$num,$data);
+		// }
 	}
 
 	public function updateSubmission($assignment_id,$num){
@@ -252,7 +254,7 @@ class Students extends CI_Controller{
 
 		$student_id = $this->session->userdata('student_id');
 		//C:\xampp\htdocs\myapp\submissions
-		$lang = $this->assignment_model->getLang($assignment_id);
+		// $lang = $this->assignment_model->getLang($assignment_id);
 		$config['upload_path'] = "./assets/uploads/" . strval($assignment_id) . "/submission";
 //		$config['allowed_types'] = $lang;
 
@@ -269,19 +271,20 @@ class Students extends CI_Controller{
 
 		$this->load->library('upload',$config);
 
-		if($this->upload->do_upload()){
-			$filename = $this->Submission_model->get_file($assignment_id, $student_id);
-			$this->Submission_model->updateSubmission($assignment_id, $student_id, $data);
-			unlink("./assets/uploads/" . strval($assignment_id) . "/submission/" . $filename);
+		// if($this->upload->do_upload()){
+		$filename = $this->Submission_model->get_file($assignment_id, $student_id);
+		$this->Submission_model->updateSubmission($assignment_id, $student_id, $data);
+		unlink("./assets/uploads/" . strval($assignment_id) . "/submission/" . $filename);
+		move_uploaded_file($_FILES['userfile']['tmp_name'], "./assets/uploads/" . strval($assignment_id) . "/submission/" . $_FILES['userfile']['name']);
 
 			//echo $this->upload->display_errors();
 			//$this->assignmentDetails($assignment_id,$num);
-			$this->assignmentDetails($assignment_id,$num);
-		} else {
-			//$this->assignmentDetails($assignment_id,$num);
-			$data = "The file upload was unsuccessful.<br>The file was not written in the expected language.<br>If you have uploaded the correct file please try again.";
-			$this->assignmentDetails($assignment_id,$num,$data);
-		}
+		$this->assignmentDetails($assignment_id,$num);
+		// } else {
+		// 	//$this->assignmentDetails($assignment_id,$num);
+		// 	$data = "The file upload was unsuccessful.<br>The file was not written in the expected language.<br>If you have uploaded the correct file please try again.";
+		// 	$this->assignmentDetails($assignment_id,$num,$data);
+		// }
 	}
 
 	public function download_submission($assignment_id, $filename){

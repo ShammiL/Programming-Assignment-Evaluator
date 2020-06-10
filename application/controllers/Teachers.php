@@ -268,14 +268,63 @@ class Teachers extends CI_Controller
 
 	}
 
-	public function grade() {
+	public function grade($assignment_id, $num) {
 
 		if ($this->session->userdata('lecturer_id')){
 			$data['title'] = "Grade";
 
-			$this->load->view('templates/header', $data);
-			$this->load->view('teachers/grade');
-			$this->load->view('templates/footer');
+			$thres = $this->input->post('uniqueness');
+			$language = strtolower($this->assignment_model->getLang($assignment_id));
+			$input_data = $this->Testcase_model->getInput($assignment_id);
+			$output_data = $this->Testcase_model->getOutput($assignment_id);
+			$submission_data = $this->Submission_model->getFiles($assignment_id);
+
+			$submissions=[];
+			foreach($submission_data as $data){
+				$submissions[$data['student_id']] = base64_encode(file_get_contents("./assets/uploads/" . strval($assignment_id) . "/submission/" . $data['file_path'])); 
+			}
+
+			$inputs=[];
+			foreach($input_data as $data){
+				$inputs[strval($data['case_id'])] = base64_encode(file_get_contents("./assets/uploads/" . strval($assignment_id) . "/input/" . $data['input_name'])); 
+			}
+
+			$outputs=[];
+			foreach($output_data as $data){
+				$outputs[strval($data['case_id'])] = base64_encode(file_get_contents("./assets/uploads/" . strval($assignment_id) . "/output/" . $data['output_name'])); 
+			}
+
+			$url = 'https://client-specific-api.herokuapp.com/result';
+
+			$client_id = 'kogul';
+			$client_secret = 'kogul17';
+
+			$postfields = array(
+				'assignment_id' => strval($assignment_id),
+				'threshold' => $thres,
+				'lang' => $language,
+				'input' => $inputs,
+				'output' => $outputs,
+				'submissions' => $submissions,
+			  );
+
+			//   print_r($postfields);
+			  $options = array(
+				CURLOPT_URL => $url,
+				CURLOPT_RETURNTRANSFER => TRUE,
+				CURLOPT_POSTFIELDS => json_encode($postfields),
+				CURLOPT_HTTPHEADER => array("Content-Type:application/json", "Authorization: Basic " . base64_encode("$client_id:$client_secret")),
+			  );
+			  
+			  $ch = curl_init();
+			  curl_setopt_array($ch, $options);
+			  $content = curl_exec($ch);
+			  $json = json_decode($content, true);
+			
+
+			$this->assignment_model->changeStatus($assignment_id, 1);
+			$this->viewSubmissions($assignment_id, $num);
+			
 		} 
 		
 		else {

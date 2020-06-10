@@ -67,4 +67,13 @@ class Submission_model extends CI_Model{
         $this->db->where('submission_id', $id);
         return $this->db->delete('submissions');
     }
+
+    function getFiles($assignment_id){
+        $this->db->select('student_id, file_path');
+        $this->db->from('submissions');
+        $this->db->where('assignment_id', $assignment_id);
+        $result = $this->db->get();
+        return $result->result_array();
+
+    }
 }

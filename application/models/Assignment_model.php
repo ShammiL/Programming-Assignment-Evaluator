@@ -26,17 +26,17 @@ class Assignment_model extends CI_Model{
     function getLang($assignment_id){
 
         $this->db->where('assignment_id',$assignment_id);
-        $lang = $this->db->get('assignments')->row(0)->language;
+        return $this->db->get('assignments')->row(0)->language;
 
-        if($lang === 'Python' or $lang === 'Python3'){
-            return 'py';
-        } else if ($lang == 'Java'){
-            return 'java';
-        } else if ($lang == 'C++'){
-            return 'cpp';
-        } else {
-            return 'js';
-        }
+        // if($lang === 'Python' or $lang === 'Python3'){
+        //     return 'py';
+        // } else if ($lang == 'Java'){
+        //     return 'java';
+        // } else if ($lang == 'C++'){
+        //     return 'cpp';
+        // } else {
+        //     return 'js';
+        // }
     }
 
     
@@ -88,4 +88,13 @@ class Assignment_model extends CI_Model{
 
         return $last;
     }
+
+    function changeStatus($assignment_id, $status){
+
+        $this->db->set('status', $status);
+        $this->db->where('assignment_id', $assignment_id);
+        $this->db->update('assignments');
+
+    }
+
 }
