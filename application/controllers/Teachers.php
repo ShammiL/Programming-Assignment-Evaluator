@@ -291,7 +291,7 @@ class Teachers extends CI_Controller
 
 			$outputs=[];
 			foreach($output_data as $data){
-				$outputs[$data['case_id']] = base64_encode(file_get_contents("./assets/uploads/" . strval($assignment_id) . "/output/" . $data['output_name'])); 
+				$outputs[strval($data['case_id'])] = base64_encode(file_get_contents("./assets/uploads/" . strval($assignment_id) . "/output/" . $data['output_name'])); 
 			}
 
 			$url = 'https://client-specific-api.herokuapp.com/result';
@@ -307,6 +307,8 @@ class Teachers extends CI_Controller
 				'output' => $outputs,
 				'submissions' => $submissions,
 			  );
+
+			//   print_r($postfields);
 			  $options = array(
 				CURLOPT_URL => $url,
 				CURLOPT_RETURNTRANSFER => TRUE,
