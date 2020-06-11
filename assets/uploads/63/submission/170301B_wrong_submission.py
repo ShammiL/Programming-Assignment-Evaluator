@@ -1,0 +1,2 @@
+inns = input()
+print('Hello')

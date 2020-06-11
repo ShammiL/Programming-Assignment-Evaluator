@@ -1,0 +1,2 @@
+innn = input()
+print('bye')

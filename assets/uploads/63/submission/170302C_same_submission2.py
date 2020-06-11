@@ -1,0 +1,2 @@
+inn = input()
+print('hi')
