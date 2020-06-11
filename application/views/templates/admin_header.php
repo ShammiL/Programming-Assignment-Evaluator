@@ -12,7 +12,6 @@
 	<body>
 	<nav class="navbar navbar-expand-lg bg-custom fixed-top">
 		<div class="container p-2 text-uppercase">
-			<a class="navbar-brand" href="#">Logo</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
