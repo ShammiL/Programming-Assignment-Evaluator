@@ -195,6 +195,7 @@ class Students extends CI_Controller{
 			$data['assignment_data'] = $this->assignment_model->get_one($assignment_id);
 			$data['grade'] = $this->assignment_model->getGrade($assignment_id, $this->session->userdata('student_id'));
 			$data['title'] = "View Grade";
+			$data['submission'] = $this->Submission_model->get_submissions($assignment_id, $this->session->userdata('student_id'));
 
 			$this->load->view('templates/student_header',$data);
 			$this->load->view('students/view_grade', $data);

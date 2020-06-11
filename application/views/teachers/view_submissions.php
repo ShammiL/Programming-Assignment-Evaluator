@@ -77,9 +77,23 @@
                             <tr>
                                 <td><?php echo $submission['student_id']; ?></td>
                                 <td><?php echo explode(' ', $submission['submitted_at'])[0] . ', ' . strval(date("g:i a", strtotime(explode(' ', $submission['submitted_at'])[1]))); ?></td>
-                                <td><?php echo $submission['grade']; ?><a href="">Edit</a></td>
-                                <td>Yes</td>
-                                <td><a href="<?php echo base_url() . "teachers/download_submission/" . $submission['assignment_id'] . "/" . $submission['file_path']; ?>">Download</a><a class="ml-3" href="">Feedback</a></td>
+                                <td>
+<!--									<div class="row">-->
+										<div class=""><?php echo $submission['grade']; ?></div>
+<!--										<div class="ml-3 d-none" id="--><?php //echo $submission['student_id']; ?><!--">-->
+<!--											--><?php //echo form_open('teachers/addGrade/' . $assignment["assignment_id"] ); ?>
+<!--												<div class="form-row">-->
+<!--													<input type="text" class="form-control col-md-7" name="uniqueness" oninput="checkValue(this)" placeholder="Enter Grade...">-->
+<!--													<div class="col-md-1"></div>-->
+<!--													<button type="submit" name="grade-assignments" class="btn btn-sm btn-primary col-md-4">Submit</button>-->
+<!--												</div>-->
+<!--											--><?php //echo form_close(); ?>
+<!--										</div>-->
+<!--										<div class=""><button class="ml-3" onclick="displayInput()">Edit</button></div>-->
+<!--									</div>-->
+								</td>
+                                <td><?php echo $submission['plag']; ?></td>
+                                <td><a href="<?php echo base_url() . "teachers/download_submission/" . $submission['assignment_id'] . "/" . $submission['file_path']; ?>">Download</a></td>
                             </tr>
                         <?php  } ?>
 						</tbody>
@@ -127,6 +141,10 @@
 			input.setCustomValidity('Please enter an integer value');
 		}
 	}
+	// function displayInput(id) {
+	// 	console.log(id);
+	// 	$(id).removeClass('d-none');
+	// }
 	function getThreshold() {
 		$('#threshold-container').removeClass('d-none');
 		$('#btn-threshold').addClass('d-none');

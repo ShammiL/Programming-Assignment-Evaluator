@@ -550,6 +550,7 @@
 					"student_id" => "170307M",
 					"file_path" => "170307M_check_java.java",
 					"submitted_at" => "2020-05-31 08:48:19 pm",
+					"plag" => "No",
 					"grade" => ""
 				)
 			);
