@@ -413,4 +413,13 @@ class Teachers extends CI_Controller
 		$this->load->view('templates/footer');
 	
 	}
+
+	function gradeManual($assignment_id, $num) {
+
+		$index = $this->input->post('index');
+		$grade = $this->input->post('manual-grade');
+
+		$this->Submission_model->setGrade($assignment_id, $index, $grade);
+		$this->viewSubmissions($assignment_id, $num);
+	}
 }

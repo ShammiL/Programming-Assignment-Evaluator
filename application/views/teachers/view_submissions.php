@@ -77,9 +77,14 @@
                             <tr>
                                 <td><?php echo $submission['student_id']; ?></td>
                                 <td><?php echo explode(' ', $submission['submitted_at'])[0] . ', ' . strval(date("g:i a", strtotime(explode(' ', $submission['submitted_at'])[1]))); ?></td>
-                                <td><?php echo $submission['grade']; ?><a href="">Edit</a></td>
-                                <td>Yes</td>
-                                <td><a href="<?php echo base_url() . "teachers/download_submission/" . $submission['assignment_id'] . "/" . $submission['file_path']; ?>">Download</a><a class="ml-3" href="">Feedback</a></td>
+                                <td>
+									<div class="row">
+										<div class=""><?php echo $submission['grade']; ?></div>
+										<div class=""><a class="ml-3" data-id="<?php echo $submission['student_id']; ?>" data-toggle="modal" href="#grade-input" id="edit-grade-btn">Edit</a></div>
+									</div>
+								</td>
+                                <td><?php echo $submission['plag']; ?></td>
+                                <td><a href="<?php echo base_url() . "teachers/download_submission/" . $submission['assignment_id'] . "/" . $submission['file_path']; ?>">Download</a></td>
                             </tr>
                         <?php  } ?>
 						</tbody>
@@ -114,7 +119,39 @@
 	<div class="col-md-1"></div>
 </div>
 
+<!--Grade Modal -->
+<div class="modal fade" id="grade-input" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<p class="modal-title" id="exampleModalLabel">Change Grade:</p>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<?php echo form_open('teachers/gradeManual/'.$assignment["assignment_id"].'/'.$num); ?>
+				<div class="modal-body">
+					<input type="text" id="index" name="index" hidden>
+					<div class="form-group">
+						<input type="text" class="form-control" name="manual-grade" oninput="checkValue(this)" placeholder="Enter New Grade...">
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button class="btn btn-primary">Submit</button>
+					<a class="btn btn-secondary" data-dismiss="modal">Cancel</a>
+				</div>
+			<?php echo form_close(); ?>
+		</div>
+	</div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+		integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script>
+	$(document).on("click", "#edit-grade-btn", function () {
+		let index = $(this).data('id');
+		$("#index").val(index);
+	});
 	function checkValue(input) {
 		let val = input.value;
 		if (!isNaN(val)) {

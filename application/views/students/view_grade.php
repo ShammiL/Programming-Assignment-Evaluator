@@ -7,21 +7,21 @@
                 <h3>Assignment <?php echo $num.' - '.$assignment_data['assignment_name']; ?></h3>
             </div>
             <div class="card-body">
-                <h5 class="card-title mt-3">Grade :</h5>
+<!--                <h5 class="card-title mt-3">Grade :</h5>-->
                 <div class="card">
                     <div class="card-header">
                         <div class="row">
                             <label class="col-md-3" for="file-input">Grade :</label>
-                            <label class="col-md-9" for="file-input"><?php echo $grade; ?>/100</label>
+                            <label class="col-md-9" for="file-input"><?php echo $submission[0]['grade']; ?>/100</label>
                         </div>
                         <div class="row">
-                            <label class="col-md-3" for="file-input">Plagiarism report :</label>
-                            <label class="col-md-9" for="file-input">Unique</label>
+                            <label class="col-md-3" for="file-input">Plagiarism Report :</label>
+                            <label class="col-md-9" for="file-input"><?php echo $submission[0]['plag']; ?></label>
                         </div>
-                        <div class="row">
-                            <label class="col-md-3" for="file-input">Feedback :</label>
-                            <label class="col-md-9" for="file-input">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur libero mollitia ut. Accusantium beatae eos modi obcaecati, sit vitae voluptatem.</label>
-                        </div>
+<!--                        <div class="row">-->
+<!--                            <label class="col-md-3" for="file-input">Feedback :</label>-->
+<!--                            <label class="col-md-9" for="file-input">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur libero mollitia ut. Accusantium beatae eos modi obcaecati, sit vitae voluptatem.</label>-->
+<!--                        </div>-->
                     </div>
                 </div>
             </div>
