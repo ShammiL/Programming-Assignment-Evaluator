@@ -168,6 +168,10 @@ form{
     background-position: right;
 }
 
+.login-error {
+	color: crimson;
+	font-family: cursive;
+}
 
 @media screen and (max-width: 1050px){
     .container{
