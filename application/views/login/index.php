@@ -24,8 +24,8 @@
                         <?php 
                             //kogul.17@cse.mrt.ac.lk
                             if ($this->session->flashdata('login_failed')){
-                                echo '<p>'.$this->session->flashdata('login_failed').'</p>';
-                                echo '<p>'.$this->session->flashdata('login_failed_enc_password').'</p>';
+                                echo '<p class="login-error">'.$this->session->flashdata('login_failed').'</p>';
+                                echo '<p class="login-error">'.$this->session->flashdata('login_failed_enc_password').'</p>';
                             }
                         ?>  
                         <div class="input-div one">
