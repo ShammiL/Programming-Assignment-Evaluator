@@ -55,6 +55,13 @@ class Submission_model extends CI_Model{
 
     }
 
+    function setGrade($assignment_id, $indexNumber, $grade) {
+
+    	$this->db->where(array('assignment_id' => $assignment_id, 'student_id' => $indexNumber));
+		return $this->db->update('submissions', array('grade' => $grade));
+
+	}
+
     public function get_file($assignment_id, $student_id){
        
         $this->db->where('assignment_id',$assignment_id);
