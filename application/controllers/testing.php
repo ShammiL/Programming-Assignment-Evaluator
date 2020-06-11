@@ -544,7 +544,8 @@
 		function submission_model_test() {
 
 			$all_submissions = array (
-				array ( "submission_id" => 30,
+				array (
+					"submission_id" => 30,
 					"assignment_id" => 1,
 					"student_id" => "170307M",
 					"file_path" => "170307M_check_java.java",
@@ -553,8 +554,139 @@
 				)
 			);
 
+			$submitted = array(
+				'submitted_at' => "2020-05-31 08:48:19 pm",
+				'filepath' => "170307M_check_java.java",
+				'submitted' => true
+			);
 
-			$this->unit->run($this->Submission_model->get_submissions('1'),$all_submissions,'Get submissions test','Get all the submissions for a particular assignment..');
+			$not_submitted = array(
+				'submitted_at' => '---',
+				'submitted' => FALSE
+			);
+
+			$create = array (
+				"assignment_id" => 2,
+				"student_id" => "170307M",
+				"file_path" => "170307M_check_java.java",
+				"submitted_at" => "2020-05-31 08:48:19 pm"
+			);
+
+			$update = array (
+				"file_path" => "170307M_check_java.java",
+				"submitted_at" => "2020-07-31 08:06:19 pm"
+			);
+
+			$files = array(
+				array(
+					"student_id" => "170307M",
+					"file_path" => "170307M_check_java.java"
+				)
+			);
+
+			$this->unit->run($this->Submission_model->get_submissions('1'),$all_submissions,'Get submissions test','Get all the submissions for a particular assignment.');
+			$this->unit->run($this->Submission_model->get_submissions('1', '170307M'),$all_submissions,'Get submissions test','Get the submission for a particular assignment by a particular student.');
+			$this->unit->run($this->Submission_model->checkForSubmission('1', '170307M'),$submitted,'Check for submission test','Student submitted the assignment.');
+			$this->unit->run($this->Submission_model->checkForSubmission('2', '170307M'),$not_submitted,'Check for submission test','Student didn\'t submit the assignment.');
+			$this->unit->run($this->Submission_model->get_file('1', '170307M'),"170307M_check_java.java",'Get file test','Get the filepath for a particular assignment by a particular student.');
+			$this->unit->run($this->Submission_model->getFiles('1'),$files,'Get all files test','Get all the files with the student id for a particular assignment.');
+			$this->unit->run($this->Submission_model->makeSubmission($create),NULL,'Create submission test');
+			$this->unit->run($this->Submission_model->updateSubmission('2', '170307M', $update),TRUE,'Update submission test');
+			$this->unit->run($this->Submission_model->deleteSubmission('34'),TRUE,'Delete submission test');
+
+			$this->load->view('tests');
+		}
+
+		public function issue_model_test() {
+
+			$issues = array(
+				array(
+					'assignment_id' => 1,
+					'indexNumber' => '170307M',
+					'content' => 'The description is not clear. Please give a detailed explanation.'
+				),
+				array(
+					'assignment_id' => 1,
+					'indexNumber' => '170307M',
+					'content' => 'Description is not clear. Please give an explained one.'
+				),
+				array(
+					'assignment_id' => 1,
+					'indexNumber' => '170307M',
+					'content' => 'Description is not clear. Please give an explained one.'
+				),
+				array(
+					'assignment_id' => 1,
+					'indexNumber' => '170307M',
+					'content' => 'Description is not clear. Please give an explained one.'
+				),
+			);
+
+			$create = array(
+				'assignment_id' => 2,
+				'indexNumber' => '170307M',
+				'content' => 'Description is not clear. Please give an explained one.'
+			);
+
+			$this->unit->run($this->issue_model->get_issues('1'),$issues,'Get issues test', 'Get all the issues for a particular assignment.');
+			$this->unit->run($this->issue_model->create_issue($create),TRUE,'Create issue test');
+			$this->unit->run($this->issue_model->get_issues_student('170307M', '1'),$issues,'Get issues by student test', 'Get all the issues for a particular assignment by particular student.');
+
+			$this->load->view('tests');
+		}
+
+		public function testcase_model_test() {
+
+			$test_cases = array(
+				array(
+					'assignment_id' => 8,
+					'case_id' => 1,
+					'input_name' => 'input_8_1.txt',
+					'output_name' => 'output_8_1.txt'
+				),
+				array(
+					'assignment_id' => 8,
+					'case_id' => 2,
+					'input_name' => 'input_8_2.txt',
+					'output_name' => 'output_8_2.txt'
+				)
+			);
+
+			$inputs = array(
+				array(
+					'case_id' => 1,
+					'input_name' => 'input_8_1.txt'
+				),
+				array(
+					'case_id' => 2,
+					'input_name' => 'input_8_2.txt'
+				)
+			);
+
+			$outputs = array(
+				array(
+					'case_id' => 1,
+					'output_name' => 'output_8_1.txt'
+				),
+				array(
+					'case_id' => 2,
+					'output_name' => 'output_8_2.txt'
+				)
+			);
+
+			$input = array(
+				'assignment_id' => 5,
+				'case_id' => 1,
+				'input_name' => 'input_5_1.txt',
+				'output_name' => 'output_5_1.txt'
+			);
+
+			$this->unit->run($this->Testcase_model->get_testcases('8'),$test_cases,'Get test cases test','Get all the test cases for a particular assignment.');
+			$this->unit->run($this->Testcase_model->getInput('8'),$inputs,'Get inputs test','Get input files for a particular assignment.');
+			$this->unit->run($this->Testcase_model->getOutput('8'),$outputs,'Get outputs test','Get output files for a particular assignment.');
+			$this->unit->run($this->Testcase_model->create($input),TRUE,'Create test case test');
+
+			$this->load->view('tests');
 		}
 
 		function doAll(){
@@ -563,6 +695,9 @@
 			$this->course_model_test();
 			$this->assignment_model_test();
 			$this->teacher_model_test();
+			$this->submission_model_test();
+			$this->issue_model_test();
+			$this->testcase_model_test();
 			$this->load->view('tests');
 		}
 	}
