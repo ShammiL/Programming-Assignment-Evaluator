@@ -1,6 +1,6 @@
 <?php
 
-	class Testing extends CI_Controller{
+	class testing extends CI_Controller{
 
 		public function __construct(){
 			parent::__construct();
@@ -39,7 +39,7 @@
 			);
 
 			$add_input = array(
-				'indexNumber' => '170295H',
+				'indexNumber' => '170296H',
 				'fname' => 'Melanga',
 				'lname' => 'Kasun',
 				'email' => 'melangak@gmail.com',
@@ -65,38 +65,22 @@
 			
 			$get_semester_courses = array(
 				array(
-					'course_id' => 'CS2022',
-					'course_name' => 'Theory of Computing',
+					'course_id' => 'CS1032',
+					'course_name' => 'Programming Fundamentals',
 					'semester' => 1,
 					'lecturer_nic' => '972183261v',
-					'description' => 'Theory of computation is the branch of computer science that deals with how efficiently problems can be solved on a model of computation, using an algorithm.'
-				),
-				array(
-					'course_id' => 'CS3042',
-					'course_name' => 'Data structures and Algorithms',
-					'semester' => 1,
-					'lecturer_nic' => '972183261v',
-					'description' => 'In depth exploration of algorithms and data structures and using them to solve promming problems.'
+					'description' => 'On completion of the course, students will be able to'
 				)
 			);
 
 			$get_index_courses = array(
 				array(
 					array(
-						'course_id' => 'CS2022',
-						'course_name' => 'Theory of Computing',
+						'course_id' => 'CS1032',
+						'course_name' => 'Programming Fundamentals',
 						'semester' => 1,
 						'lecturer_nic' => '972183261v',
-						'description' => 'Theory of computation is the branch of computer science that deals with how efficiently problems can be solved on a model of computation, using an algorithm.'
-					)
-				),
-				array(
-					array(
-						'course_id' => 'CS3042',
-						'course_name' => 'Data structures and Algorithms',
-						'semester' => 1,
-						'lecturer_nic' => '972183261v',
-						'description' => 'In depth exploration of algorithms and data structures and using them to solve promming problems.'
+						'description' => 'On completion of the course, students will be able to'
 					)
 				)
 			);
@@ -104,38 +88,37 @@
 			$get_student_course = array(
 				array(
 					'indexNumber' => '170298H',
-					'course_id' => 'CS3042',
-					'fname' => 'Melanga',
-					'lname' => 'Kasun',
-					'email' => 'melangak@gmail.com',
+					'course_id' => 'CS1032',
+					'fname' => 'MelangaK',
+					'lname' => 'MKasun',
+					'email' => 'melangakm@gmail.com',
 					'birthday' => '1997-08-06',
 					'gender' => 'Male',
 					'nationality' => 'Sinhala',
 					'address' => 'abc, Galle',
 					'phone' => '0719717846',
 					'semester' => 1
-				),
-				array(
-					'indexNumber' => '170307M',
-					'course_id' => 'CS3042',
-					'fname' => 'Srikandabala',
-					'lname' => 'Kogul',
-					'email' => 'kogul.17@cse.mrt.ac.lk',
-					'birthday' => '1997-07-10',
-					'gender' => 'Male',
-					'nationality' => 'Sinhala',
-					'address' => 'abc, colombo',
-					'phone' => '0719717847',
-					'semester' => 4
 				)
 			);
 
 			$get_all_students = array(
 				array(
+					'indexNumber' => '124564F',
+					'fname' => 'D. B. Sachini',
+					'lname' => 'Lakshani',
+					'email' => 'sachini04@email.com',
+					'birthday' => '2004-10-24',
+					'gender' => 'Female',
+					'nationality' => 'Sinhala',
+					'address' => 'Kotagewaththa, Uggoda, Yatiyana, Matara',
+					'phone' => '0713665604',
+					'semester' => ""
+				),
+				array(
 					'indexNumber' => '170298H',
-					'fname' => 'Melanga',
-					'lname' => 'Kasun',
-					'email' => 'melangak@gmail.com',
+					'fname' => 'MelangaK',
+					'lname' => 'MKasun',
+					'email' => 'melangakm@gmail.com',
 					'birthday' => '1997-08-06',
 					'gender' => 'Male',
 					'nationality' => 'Sinhala',
@@ -145,34 +128,31 @@
 				),
 				array(
 					'indexNumber' => '170307M',
-					'fname' => 'Srikandabala',
+					'fname' => 'Sikandabala',
 					'lname' => 'Kogul',
 					'email' => 'kogul.17@cse.mrt.ac.lk',
-					'birthday' => '1997-07-10',
+					'birthday' => '1997-06-13',
 					'gender' => 'Male',
-					'nationality' => 'Sinhala',
-					'address' => 'abc, colombo',
-					'phone' => '0719717847',
-					'semester' => 4
+					'nationality' => 'Tamil',
+					'address' => 'Kogul, Colombo, Sri Lanka',
+					'phone' => '0774152632',
+					'semester' => 2
 				)
 			);
 
-			print_r($get_all_students);
-			echo '<br /><br />';
-
-			$this->unit->run($this->student_model->add_student($add_input),TRUE,'Add student test','Add student details to the database.');
-			$this->unit->run($this->student_model->get_password('170307M'),'81dc9bdb52d04dc20036dbd8313ed055','Get student password test');
-			$this->unit->run($this->student_model->change_password('170298H', md5(12345)),TRUE,'Update student password test');
-			$this->unit->run($this->student_model->update_student('170298H', $update_input),TRUE,'Update student details test');
 			$this->unit->run($this->student_model->getCoursesBySemester('170298H'),$get_semester_courses,'Get courses for semester. test','Get a specific students\'s courses by semester');
 			$this->unit->run($this->student_model->getCoursesByIndex('170298H'),$get_index_courses,'Get enrolled courses test','Get a specific student\'s enrolled courses');
-			$this->unit->run($this->student_model->checkEnrollment('170298H','CS3042'),'CS3042','Check Enrollment test','Correct student id and course id');
+			$this->unit->run($this->student_model->checkEnrollment('170298H','CS1032'),'CS1032','Check Enrollment test','Correct student id and course id');
 			$this->unit->run($this->student_model->checkEnrollment('170298H','CS3043'),FALSE,'Check Enrollment test','Correct student id and incorrect course id');
 			$this->unit->run($this->student_model->checkEnrollment('170475H','CS3043'),FALSE,'Check Enrollment test','Incorrect student id and incorrect course id');
-			$this->unit->run($this->student_model->get_students('CS3042'),$get_student_course,'Get students by course test');
-			$this->unit->run($this->student_model->get_all_students(),$get_student_course,'Get all the students test');
-			$this->unit->run($this->student_model->get_student_count('CS3042'),array('student_count' => 2),'Get students count test','Get the students count for a particular course');
-			$this->unit->run($this->student_model->get_student_count(),6,'Get students count test','Get the students count in the system');
+			$this->unit->run($this->student_model->get_students('CS1032'),$get_student_course,'Get students by course test');
+			$this->unit->run($this->student_model->get_student_count('CS1032'),array('student_count' => 1),'Get students count test','Get the students count for a particular course');
+			$this->unit->run($this->student_model->get_student_count(),3,'Get students count test','Get the students count in the system');
+			$this->unit->run($this->student_model->add_student($add_input),TRUE,'Add student test','Add student details to the database.');
+			$this->unit->run($this->student_model->get_password('170307M'),'93c5ae2ecd4fe11a0273523d43bb80c8','Get student password test');
+			$this->unit->run($this->student_model->change_password('170298H', md5(12345)),TRUE,'Update student password test');
+			$this->unit->run($this->student_model->update_student('170298H', $update_input),TRUE,'Update student details test');
+//			$this->unit->run($this->student_model->get_all_students(),$get_student_course,'Get all the students test');
 //			$this->unit->run($this->student_model->enrollCourse('170307M','CS2044'),TRUE,'Enroll to course test','Check to see if student is enrolled.');
 
 			$this->load->view('tests');
@@ -198,100 +178,70 @@
 			$courses = array(
 				array(
 					'course_id' => 'CS1012',
+					'course_name' => 'Where can I get',
+					'description' => 'aaaa',
+					'lecturer_nic' => '582201472v',
+					'semester' => 3
+				),
+				array(
+					'course_id' => 'CS1013',
 					'course_name' => 'Computer Science for Future',
-					'description' => 'Pictures, abstract symbols, materials, and colors are among the ingredients with which a designer or engineer works. To design is to discover relationships and to make arrangements and rearrangements among these ingredients.',
-					'lecturer_nic' => '147852963v',
-					'semester' => 2
+					'description' => 'aaaa',
+					'lecturer_nic' => '582201472v',
+					'semester' => 3
 				),
 				array(
-					'course_id' => 'CS1452',
-					'course_name' => 'JavaScript Programming',
-					'description' => 'Don\'t sweat it - neither has Bono. Maybe one of our other 3,000+ icons are a better fit? No? You can always check our icon leaderboard to see if our community already asked for it.',
-					'lecturer_nic' => '972183261v',
-					'semester' => 2
-				),
-				array(
-					'course_id' => 'CS2022',
-					'course_name' => 'Theory of Computing',
-					'description' => 'Theory of computation is the branch of computer science that deals with how efficiently problems can be solved on a model of computation, using an algorithm.',
+					'course_id' => 'CS1032',
+					'course_name' => 'Programming Fundamentals',
+					'description' => 'On completion of the course, students will be able to',
 					'lecturer_nic' => '972183261v',
 					'semester' => 1
 				),
 				array(
-					'course_id' => 'CS3020',
-					'course_name' => 'Computer Science',
-					'description' => 'computer science',
-					'lecturer_nic' => '972183261v',
-					'semester' => 4
+					'course_id' => 'CS2011',
+					'course_name' => 'Computer Engineering for Future II',
+					'description' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
+					'lecturer_nic' => '582201472v',
+					'semester' => 6
 				),
 				array(
-					'course_id' => 'CS3021',
-					'course_name' => 'Network',
-					'description' => 'Network',
-					'lecturer_nic' => NULL,
-					'semester' => NULL
-				),
-				array(
-					'course_id' => 'CS3022',
-					'course_name' => 'Object Oriented Programming',
-					'description' => 'Discussion of object oriented concepts and their real world applications.',
-					'lecturer_nic' => '547852317v',
-					'semester' => NULL
-				),
-				array(
-					'course_id' => 'CS3042',
-					'course_name' => 'Data structures and Algorithms',
-					'description' => 'In depth exploration of algorithms and data structures and using them to solve promming problems.',
-					'lecturer_nic' => '972183261v',
-					'semester' => 1
-				),
-				array(
-					'course_id' => 'CS3043',
-					'course_name' => 'Database Systems',
-					'description' => 'Learning Outcomes After completing this module, students should be able to explain the role of database systems in information management. describe the basic fundamental concepts of data modelling and relational databases. apply entity-relationship modelling and normalization for simple database requirements. demonstrate the use of a query language to create, update and query a simple database. construct simple applications that requires manipulating data in a DBMS.',
-					'lecturer_nic' => '547852317v',
-					'semester' => 4
-				),
-				array(
-					'course_id' => 'CS3412',
-					'course_name' => 'Environmental Software Engineering',
-					'description' => 'Pictures, abstract symbols, materials, and colors are among the ingredients with which a designer or engineer works. To design is to discover relationships and to make arrangements and rearrangements among these ingredients.',
-					'lecturer_nic' => '550331470v',
-					'semester' => 4
+					'course_id' => 'CS2012',
+					'course_name' => 'Principles of Object Oriented Programming',
+					'description' => 'At the end of the module the student will be able to',
+					'lecturer_nic' => '582201472v',
+					'semester' => 2
 				)
 			);
-
-			print_r($courses);
-			echo '<br /><br />';
 
 			$course = array(
 				array(
 					'course_id' => 'CS1012',
-					'course_name' => 'Computer Science for Future',
-					'description' => 'Pictures, abstract symbols, materials, and colors are among the ingredients with which a designer or engineer works. To design is to discover relationships and to make arrangements and rearrangements among these ingredients.',
-					'lecturer_nic' => '147852963v',
-					'semester' => 2
+					'course_name' => 'Where can I get',
+					'description' => 'aaaa',
+					'lecturer_nic' => '582201472v',
+					'semester' => 3
 				)
 			);
 
 			$lecturer_courses = array(
 				array(
-					'course_id' => 'CS3043',
-					'course_name' => 'Database Systems',
-					'description' => 'Learning Outcomes After completing this module, students should be able to explain the role of database systems in information management. describe the basic fundamental concepts of data modelling and relational databases. apply entity-relationship modelling and normalization for simple database requirements. demonstrate the use of a query language to create, update and query a simple database. construct simple applications that requires manipulating data in a DBMS.',
-					'lecturer_nic' => '547852317v',
-					'semester' => 4
+					'course_id' => 'CS1032',
+					'course_name' => 'Programming Fundamentals',
+					'description' => 'On completion of the course, students will be able to',
+					'lecturer_nic' => '972183261v',
+					'semester' => 1
 				)
 			);
 
-			$this->unit->run($this->course_model->create_course($create_input),TRUE,'Create course test','Register course in the database.');
-			$this->unit->run($this->course_model->update_course('CS1010', $update_input),TRUE,'Update course details test');
 			$this->unit->run($this->course_model->get_courses(),$courses,'Get courses test', 'Get all the courses in the system.');
 			$this->unit->run($this->course_model->get_courses('CS1012'),$course,'Get courses test', 'Get a specific course details in the system.');
-			$this->unit->run($this->course_model->get_course_count(),'9','Get courses count test', 'Get the number of courses in the system.');
-			$this->unit->run($this->course_model->get_course_by_lecturer('547852317v'),$lecturer_courses,'Get courses by lecturer test', 'Get the courses assigned to a particular lecturer.');
+			$this->unit->run($this->course_model->get_course_count(),'5','Get courses count test', 'Get the number of courses in the system.');
+			$this->unit->run($this->course_model->get_course_by_lecturer('972183261v'),$lecturer_courses,'Get courses by lecturer test', 'Get the courses assigned to a particular lecturer.');
+			$this->unit->run($this->course_model->create_course($create_input),TRUE,'Create course test','Register course in the database.');
+			$this->unit->run($this->course_model->update_course('CS1010', $update_input),TRUE,'Update course details test');
 
 			$this->load->view('tests');
+
 		}
 
 		function assignment_model_test(){
@@ -589,6 +539,22 @@
 			$this->unit->run($this->teacher_model->update_teacher('547896321v',$update_teacher),TRUE,'Update teacher test');
 
 			$this->load->view('tests');
+		}
+
+		function submission_model_test() {
+
+			$all_submissions = array (
+				array ( "submission_id" => 30,
+					"assignment_id" => 1,
+					"student_id" => "170307M",
+					"file_path" => "170307M_check_java.java",
+					"submitted_at" => "2020-05-31 08:48:19 pm",
+					"grade" => ""
+				)
+			);
+
+
+			$this->unit->run($this->Submission_model->get_submissions('1'),$all_submissions,'Get submissions test','Get all the submissions for a particular assignment..');
 		}
 
 		function doAll(){
