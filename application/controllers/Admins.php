@@ -36,7 +36,7 @@ class Admins extends CI_Controller{
 		$this->form_validation->set_rules('id', 'Course ID', 'required|is_unique[courses.course_id]', array('is_unique' => 'The %s you entered is already exists in the system.'));
 		$this->form_validation->set_rules('description', 'Description' , 'required');
 		$this->form_validation->set_rules('title', 'Title', 'required|is_unique[courses.course_name]', array('is_unique' => 'The %s you entered is already exists in the system.'));
-		$this->form_validation->set_error_delimiters('<div class="change-password-wrong mb-5">', '</div>'); 
+		$this->form_validation->set_error_delimiters('<div class="change-password-wrong mb-1">', '</div>');
 
 		if($this->form_validation->run() === false){
 
@@ -156,7 +156,7 @@ class Admins extends CI_Controller{
 		$this->form_validation->set_rules('address', 'Home Address', 'required');
 		$this->form_validation->set_rules('bday', 'Birthday', 'required');
 		$this->form_validation->set_rules('phone', 'Telephone Number', 'regex_match[/^[0-9]{10}$/]', array('regex_match' => 'The %s you entered is invalid.'));
-		$this->form_validation->set_error_delimiters('<div class="change-password-wrong mb-5">', '</div>'); 
+		$this->form_validation->set_error_delimiters('<div class="change-password-wrong mb-1">', '</div>');
 
 		if($this->form_validation->run() === false){
 
@@ -276,7 +276,7 @@ class Admins extends CI_Controller{
 		$this->form_validation->set_rules('phone', 'Telephone Number', 'required|regex_match[/^[0-9]{10}$/]', array('regex_match' => 'The %s you entered is invalid.'));
 		$this->form_validation->set_rules('address', 'Home Address', 'required');
 		$this->form_validation->set_rules('bday', 'Birthday', 'required');
-		$this->form_validation->set_error_delimiters('<div class="change-password-wrong mb-5">', '</div>'); 
+		$this->form_validation->set_error_delimiters('<div class="change-password-wrong mb-1">', '</div>');
 
 		if($this->form_validation->run() === false){
 

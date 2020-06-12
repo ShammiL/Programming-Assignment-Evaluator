@@ -6,7 +6,7 @@
         <div class="card-body">
         <?php echo validation_errors();
 			echo form_open_multipart('admin/addTeacher'); ?>
-            <div class="form-row">
+            <div class="form-row mt-4">
                 <div class="form-group col-md-4">
                     <label for="nic">NIC Number: </label>
                     <input type="text" class="form-control" name="nic" value="<?php echo $inputs['nic']; ?>" placeholder="Enter NIC Number Here..." required>

@@ -6,7 +6,7 @@
         <div class="card-body">
         <?php echo validation_errors();
 			echo form_open_multipart('admin/addCourse'); ?>
-            <div class="form-row">
+            <div class="form-row mt4">
                 <div class="form-group col-md-6">
                     <label for="id">Course ID: </label>
                     <input type="text" class="form-control" name="id" value="<?php echo $inputs['course_id']; ?>" placeholder="Enter Course ID Here..." required>

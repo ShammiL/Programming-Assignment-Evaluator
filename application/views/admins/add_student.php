@@ -6,7 +6,7 @@
         <div class="card-body">
         <?php echo validation_errors();
 			echo form_open_multipart('admin/addStudent'); ?>
-            <div class="form-row">
+            <div class="form-row mt-4">
                 <div class="form-group col-md-4">
                     <label for="index">Index Number: </label>
                     <input type="text" class="form-control" name="index" value="<?php echo $inputs['indexNumber']; ?>" placeholder="Enter Index Number Here..." required>
