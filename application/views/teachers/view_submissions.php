@@ -21,6 +21,11 @@
 				<p class="card-text"><a href="<?php echo base_url() . "teachers/download_file/" . $assignment['assignment_id'] . "/" . $assignment['reference_file']; ?>"><?php echo $assignment['reference_file']; ?></a></p>
 				<h5 class="card-title mt-3">Deadline :</h5>
 				<p> <?php echo $assignment['deadline']?>, <?php echo date("g:i a", strtotime($assignment['time'])) ?> </p>
+				<?php if($assignment['status'] === '2') { ?>
+				<h5 class="card-title mt-3">Plagiarism Report :</h5>
+				<p> <a href="<?php echo nl2br($assignment['report_url']); ?>">View Report</a> </p>
+				<?php  } ?>
+
 				<div class="row">
 					<div class="col-md-6">
 						<div class="row">
