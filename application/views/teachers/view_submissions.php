@@ -93,7 +93,7 @@
 				<?php if ($assignment['status'] === '0') { // once the button is clicked status should be changed to 1?>
 					<div id="threshold-container" class="d-none">
 						<hr>
-						<?php echo form_open('teachers/grade/' . $assignment["assignment_id"] . '/' . $num); ?>
+						<?php echo form_open('teachers/grade/' . $assignment["assignment_id"] . '/' . $assignment['course_id']); ?>
 							<div class="form-row">
 								<div class="form-group col-md-4">
 									<label for="uniqueness">Enter Plagiarism Threshold</label>

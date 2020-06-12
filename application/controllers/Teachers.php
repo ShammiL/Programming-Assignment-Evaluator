@@ -268,7 +268,7 @@ class Teachers extends CI_Controller
 
 	}
 
-	public function grade($assignment_id, $num) {
+	public function grade($assignment_id, $course_id) {
 
 		if ($this->session->userdata('lecturer_id')){
 			$data['title'] = "Grade";
@@ -323,7 +323,7 @@ class Teachers extends CI_Controller
 			
 
 			$this->assignment_model->changeStatus($assignment_id, 1);
-			$this->viewSubmissions($assignment_id, $num);
+			$this->viewAssignments($course_id);
 			
 		} 
 		
