@@ -97,7 +97,7 @@
 							<div class="form-row">
 								<div class="form-group col-md-4">
 									<label for="uniqueness">Enter Plagiarism Threshold</label>
-									<input type="text" class="form-control" name="uniqueness" oninput="checkValue(this)" placeholder="Enter Plagiarism Threshold...">
+									<input type="text" class="form-control" name="uniqueness" oninput="checkValue(this)" placeholder="Enter Plagiarism Threshold..." required>
 									<small style="color:#357B8E;">The value must be between 0-100</small>
 								</div>
 							</div>
@@ -133,7 +133,7 @@
 				<div class="modal-body">
 					<input type="text" id="index" name="index" hidden>
 					<div class="form-group">
-						<input type="text" class="form-control" name="manual-grade" oninput="checkValue(this)" placeholder="Enter New Grade...">
+						<input type="text" class="form-control" name="manual-grade" oninput="checkValue(this)" placeholder="Enter New Grade..." required>
 					</div>
 				</div>
 				<div class="modal-footer">
@@ -160,7 +160,7 @@
 			} else {
 				input.setCustomValidity('');
 			}
-		} else {
+		}  else {
 			input.setCustomValidity('Please enter an integer value');
 		}
 	}
