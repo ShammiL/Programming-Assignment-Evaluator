@@ -188,7 +188,8 @@ class Teachers extends CI_Controller
 				'description' => $this->input->post('description'),
 				'language' => $this->input->post('language'),
 				'deadline' => $this->input->post('deadline'),
-				'time' => $this->input->post('time')
+				'time' => $this->input->post('time'),
+				'status' => '-1'
 			);
 
 			// print_r($_FILES);

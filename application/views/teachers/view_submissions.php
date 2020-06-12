@@ -21,6 +21,11 @@
 				<p class="card-text"><a href="<?php echo base_url() . "teachers/download_file/" . $assignment['assignment_id'] . "/" . $assignment['reference_file']; ?>"><?php echo $assignment['reference_file']; ?></a></p>
 				<h5 class="card-title mt-3">Deadline :</h5>
 				<p> <?php echo $assignment['deadline']?>, <?php echo date("g:i a", strtotime($assignment['time'])) ?> </p>
+				<?php if($assignment['status'] === '2') { ?>
+				<h5 class="card-title mt-3">Plagiarism Report :</h5>
+				<p> <a href="<?php echo nl2br($assignment['report_url']); ?>">View Report</a> </p>
+				<?php  } ?>
+
 				<div class="row">
 					<div class="col-md-6">
 						<div class="row">
@@ -97,7 +102,7 @@
 							<div class="form-row">
 								<div class="form-group col-md-4">
 									<label for="uniqueness">Enter Plagiarism Threshold</label>
-									<input type="text" class="form-control" name="uniqueness" oninput="checkValue(this)" placeholder="Enter Plagiarism Threshold...">
+									<input type="text" class="form-control" name="uniqueness" oninput="checkValue(this)" placeholder="Enter Plagiarism Threshold..." required>
 									<small style="color:#357B8E;">The value must be between 0-100</small>
 								</div>
 							</div>
@@ -133,7 +138,7 @@
 				<div class="modal-body">
 					<input type="text" id="index" name="index" hidden>
 					<div class="form-group">
-						<input type="text" class="form-control" name="manual-grade" oninput="checkValue(this)" placeholder="Enter New Grade...">
+						<input type="text" class="form-control" name="manual-grade" oninput="checkValue(this)" placeholder="Enter New Grade..." required>
 					</div>
 				</div>
 				<div class="modal-footer">
@@ -160,7 +165,7 @@
 			} else {
 				input.setCustomValidity('');
 			}
-		} else {
+		}  else {
 			input.setCustomValidity('Please enter an integer value');
 		}
 	}
